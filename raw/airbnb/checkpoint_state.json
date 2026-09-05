@@ -1,0 +1,7 @@
+{
+  "updated_at_utc": "2026-09-05T17:33:41.136567+00:00",
+  "last_page": 55,
+  "unique_properties": 29,
+  "journal": "data\\raw\\airbnb\\propiedades_airbnb_journal.jsonl",
+  "csv": "data\\raw\\airbnb\\propiedades_airbnb.csv"
+}
