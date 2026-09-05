@@ -68,7 +68,7 @@ from playwright.sync_api import (
 
 BASE_URL = "https://www.airbnb.com.ar"
 DEFAULT_SEARCH_URL = f"{BASE_URL}/s/Buenos-Aires--Argentina/homes"
-DEFAULT_OUTPUT_DIR = Path("data/raw/airbnb")
+DEFAULT_OUTPUT_DIR = Path("data_raw/airbnb")
 PAGE_SIZE = 18
 
 USER_AGENT = (

@@ -28,7 +28,7 @@ from lxml import html
 # =============================================================================
 
 DEFAULT_URL = "https://inmuebles.mercadolibre.com.ar/departamentos/venta/capital-federal/"
-DEFAULT_OUTPUT = Path("data/raw/mercadolibre_inmuebles")
+DEFAULT_OUTPUT = Path("data_raw/mercadolibre_inmuebles_ventas")
 PAGE_SIZE = 48
 HEADERS = {
     "User-Agent": (

@@ -195,7 +195,7 @@ def main() -> int:
         "--operacion", choices=["normal", "temporal", "ambos"], default="ambos"
     )
     parser.add_argument(
-        "--output-dir", type=Path, default=Path("data/raw/mercadolibre_alquileres")
+        "--output-dir", type=Path, default=Path("data_raw/mercadolibre_alquileres")
     )
     parser.add_argument(
         "--barrios",

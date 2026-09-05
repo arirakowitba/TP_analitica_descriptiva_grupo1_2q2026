@@ -53,7 +53,7 @@ from urllib3.util.retry import Retry
 
 BASE_URL = "https://www.zonaprop.com.ar"
 DEFAULT_SEARCH_URL = f"{BASE_URL}/departamentos-venta-capital-federal.html"
-DEFAULT_OUTPUT_DIR = Path("data/raw/zonaprop")
+DEFAULT_OUTPUT_DIR = Path("data_raw/zonaprop")
 
 # A propósito NO se incluye ninguna etiqueta autoidentificatoria (tipo
 # "TP-Analitica/1.0"): un string de navegador real y "limpio" reduce la

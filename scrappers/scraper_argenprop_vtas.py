@@ -45,7 +45,7 @@ from urllib3.util.retry import Retry
 
 BASE_URL = "https://www.argenprop.com"
 DEFAULT_SEARCH_URL = f"{BASE_URL}/departamentos/venta/capital-federal"
-DEFAULT_OUTPUT_DIR = Path("data/raw/argenprop")
+DEFAULT_OUTPUT_DIR = Path("data_raw/argenprop")
 
 USER_AGENT = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
