@@ -1,27 +1,207 @@
 {
-  "started_at_utc": "2026-09-05T19:25:49.142988+00:00",
+  "started_at_utc": "2026-09-05T20:08:12.103491+00:00",
   "operations": {
-    "normal": {
-      "segments_completed": 45,
+    "temporal": {
+      "segments_completed": 0,
       "segments_requested": 48,
       "failures": [
         {
+          "barrio": "agronomia",
+          "error": "RuntimeError('No se pudo descargar https://inmuebles.mercadolibre.com.ar/departamentos/alquiler-temporal/capital-federal/agronomia/: HTTP Error 404: Not Found')"
+        },
+        {
+          "barrio": "almagro",
+          "error": "RuntimeError('No se pudo descargar https://inmuebles.mercadolibre.com.ar/departamentos/alquiler-temporal/capital-federal/almagro/_Desde_241_NoIndex_True: HTTP Error 404: Not Found')"
+        },
+        {
+          "barrio": "balvanera",
+          "error": "RuntimeError('No se pudo descargar https://inmuebles.mercadolibre.com.ar/departamentos/alquiler-temporal/capital-federal/balvanera/_Desde_193_NoIndex_True: HTTP Error 404: Not Found')"
+        },
+        {
+          "barrio": "barracas",
+          "error": "RuntimeError('No se pudo descargar https://inmuebles.mercadolibre.com.ar/departamentos/alquiler-temporal/capital-federal/barracas/_Desde_145_NoIndex_True: HTTP Error 404: Not Found')"
+        },
+        {
+          "barrio": "belgrano",
+          "error": "RuntimeError('No se pudo descargar https://inmuebles.mercadolibre.com.ar/departamentos/alquiler-temporal/capital-federal/belgrano/_Desde_241_NoIndex_True: HTTP Error 404: Not Found')"
+        },
+        {
+          "barrio": "boedo",
+          "error": "RuntimeError('No se pudo descargar https://inmuebles.mercadolibre.com.ar/departamentos/alquiler-temporal/capital-federal/boedo/_Desde_145_NoIndex_True: HTTP Error 404: Not Found')"
+        },
+        {
+          "barrio": "caballito",
+          "error": "RuntimeError('No se pudo descargar https://inmuebles.mercadolibre.com.ar/departamentos/alquiler-temporal/capital-federal/caballito/_Desde_241_NoIndex_True: HTTP Error 404: Not Found')"
+        },
+        {
+          "barrio": "chacarita",
+          "error": "RuntimeError('No se pudo descargar https://inmuebles.mercadolibre.com.ar/departamentos/alquiler-temporal/capital-federal/chacarita/_Desde_145_NoIndex_True: HTTP Error 404: Not Found')"
+        },
+        {
+          "barrio": "coghlan",
+          "error": "RuntimeError('No se pudo descargar https://inmuebles.mercadolibre.com.ar/departamentos/alquiler-temporal/capital-federal/coghlan/_Desde_145_NoIndex_True: HTTP Error 404: Not Found')"
+        },
+        {
+          "barrio": "colegiales",
+          "error": "RuntimeError('No se pudo descargar https://inmuebles.mercadolibre.com.ar/departamentos/alquiler-temporal/capital-federal/colegiales/_Desde_193_NoIndex_True: HTTP Error 404: Not Found')"
+        },
+        {
+          "barrio": "constitucion",
+          "error": "RuntimeError('No se pudo descargar https://inmuebles.mercadolibre.com.ar/departamentos/alquiler-temporal/capital-federal/constitucion/_Desde_145_NoIndex_True: HTTP Error 404: Not Found')"
+        },
+        {
+          "barrio": "flores",
+          "error": "RuntimeError('No se pudo descargar https://inmuebles.mercadolibre.com.ar/departamentos/alquiler-temporal/capital-federal/flores/_Desde_145_NoIndex_True: HTTP Error 404: Not Found')"
+        },
+        {
+          "barrio": "floresta",
+          "error": "RuntimeError('No se pudo descargar https://inmuebles.mercadolibre.com.ar/departamentos/alquiler-temporal/capital-federal/floresta/_Desde_145_NoIndex_True: HTTP Error 404: Not Found')"
+        },
+        {
+          "barrio": "la-boca",
+          "error": "RuntimeError('No se pudo descargar https://inmuebles.mercadolibre.com.ar/departamentos/alquiler-temporal/capital-federal/la-boca/_Desde_145_NoIndex_True: HTTP Error 404: Not Found')"
+        },
+        {
           "barrio": "la-paternal",
-          "error": "RuntimeError('No se pudo descargar https://inmuebles.mercadolibre.com.ar/departamentos/alquiler/capital-federal/la-paternal/_Desde_49_NoIndex_True: HTTP Error 404: Not Found')"
+          "error": "RuntimeError('No se pudo descargar https://inmuebles.mercadolibre.com.ar/departamentos/alquiler-temporal/capital-federal/la-paternal/_Desde_145_NoIndex_True: HTTP Error 404: Not Found')"
+        },
+        {
+          "barrio": "liniers",
+          "error": "RuntimeError('No se pudo descargar https://inmuebles.mercadolibre.com.ar/departamentos/alquiler-temporal/capital-federal/liniers/_Desde_145_NoIndex_True: HTTP Error 404: Not Found')"
+        },
+        {
+          "barrio": "mataderos",
+          "error": "RuntimeError('No se pudo descargar https://inmuebles.mercadolibre.com.ar/departamentos/alquiler-temporal/capital-federal/mataderos/: HTTP Error 404: Not Found')"
+        },
+        {
+          "barrio": "monserrat",
+          "error": "RuntimeError('No se pudo descargar https://inmuebles.mercadolibre.com.ar/departamentos/alquiler-temporal/capital-federal/monserrat/_Desde_193_NoIndex_True: HTTP Error 404: Not Found')"
+        },
+        {
+          "barrio": "monte-castro",
+          "error": "RuntimeError('No se pudo descargar https://inmuebles.mercadolibre.com.ar/departamentos/alquiler-temporal/capital-federal/monte-castro/_Desde_145_NoIndex_True: HTTP Error 404: Not Found')"
+        },
+        {
+          "barrio": "nueva-pompeya",
+          "error": "RuntimeError('No se pudo descargar https://inmuebles.mercadolibre.com.ar/departamentos/alquiler-temporal/capital-federal/nueva-pompeya/: HTTP Error 404: Not Found')"
+        },
+        {
+          "barrio": "nunez",
+          "error": "RuntimeError('No se pudo descargar https://inmuebles.mercadolibre.com.ar/departamentos/alquiler-temporal/capital-federal/nunez/_Desde_241_NoIndex_True: HTTP Error 404: Not Found')"
+        },
+        {
+          "barrio": "palermo",
+          "error": "RuntimeError('No se pudo descargar https://inmuebles.mercadolibre.com.ar/departamentos/alquiler-temporal/capital-federal/palermo/_Desde_1009_NoIndex_True: HTTP Error 404: Not Found')"
+        },
+        {
+          "barrio": "parque-avellaneda",
+          "error": "RuntimeError('No se pudo descargar https://inmuebles.mercadolibre.com.ar/departamentos/alquiler-temporal/capital-federal/parque-avellaneda/_Desde_145_NoIndex_True: HTTP Error 404: Not Found')"
+        },
+        {
+          "barrio": "parque-chacabuco",
+          "error": "RuntimeError('No se pudo descargar https://inmuebles.mercadolibre.com.ar/departamentos/alquiler-temporal/capital-federal/parque-chacabuco/_Desde_145_NoIndex_True: HTTP Error 404: Not Found')"
+        },
+        {
+          "barrio": "parque-chas",
+          "error": "RuntimeError('No se pudo descargar https://inmuebles.mercadolibre.com.ar/departamentos/alquiler-temporal/capital-federal/parque-chas/_Desde_145_NoIndex_True: HTTP Error 404: Not Found')"
+        },
+        {
+          "barrio": "parque-patricios",
+          "error": "RuntimeError('No se pudo descargar https://inmuebles.mercadolibre.com.ar/departamentos/alquiler-temporal/capital-federal/parque-patricios/_Desde_145_NoIndex_True: HTTP Error 404: Not Found')"
+        },
+        {
+          "barrio": "puerto-madero",
+          "error": "RuntimeError('No se pudo descargar https://inmuebles.mercadolibre.com.ar/departamentos/alquiler-temporal/capital-federal/puerto-madero/_Desde_289_NoIndex_True: HTTP Error 404: Not Found')"
+        },
+        {
+          "barrio": "recoleta",
+          "error": "RuntimeError('No se pudo descargar https://inmuebles.mercadolibre.com.ar/departamentos/alquiler-temporal/capital-federal/recoleta/_Desde_481_NoIndex_True: HTTP Error 404: Not Found')"
+        },
+        {
+          "barrio": "retiro",
+          "error": "RuntimeError('No se pudo descargar https://inmuebles.mercadolibre.com.ar/departamentos/alquiler-temporal/capital-federal/retiro/_Desde_241_NoIndex_True: HTTP Error 404: Not Found')"
+        },
+        {
+          "barrio": "saavedra",
+          "error": "RuntimeError('No se pudo descargar https://inmuebles.mercadolibre.com.ar/departamentos/alquiler-temporal/capital-federal/saavedra/_Desde_145_NoIndex_True: HTTP Error 404: Not Found')"
+        },
+        {
+          "barrio": "san-cristobal",
+          "error": "RuntimeError('No se pudo descargar https://inmuebles.mercadolibre.com.ar/departamentos/alquiler-temporal/capital-federal/san-cristobal/_Desde_145_NoIndex_True: HTTP Error 404: Not Found')"
+        },
+        {
+          "barrio": "san-nicolas",
+          "error": "RuntimeError('No se pudo descargar https://inmuebles.mercadolibre.com.ar/departamentos/alquiler-temporal/capital-federal/san-nicolas/_Desde_241_NoIndex_True: HTTP Error 404: Not Found')"
+        },
+        {
+          "barrio": "san-telmo",
+          "error": "RuntimeError('No se pudo descargar https://inmuebles.mercadolibre.com.ar/departamentos/alquiler-temporal/capital-federal/san-telmo/_Desde_241_NoIndex_True: HTTP Error 404: Not Found')"
+        },
+        {
+          "barrio": "velez-sarsfield",
+          "error": "RuntimeError('No se pudo descargar https://inmuebles.mercadolibre.com.ar/departamentos/alquiler-temporal/capital-federal/velez-sarsfield/_Desde_145_NoIndex_True: HTTP Error 404: Not Found')"
+        },
+        {
+          "barrio": "versalles",
+          "error": "RuntimeError('No se pudo descargar https://inmuebles.mercadolibre.com.ar/departamentos/alquiler-temporal/capital-federal/versalles/_Desde_145_NoIndex_True: HTTP Error 404: Not Found')"
+        },
+        {
+          "barrio": "villa-crespo",
+          "error": "RuntimeError('No se pudo descargar https://inmuebles.mercadolibre.com.ar/departamentos/alquiler-temporal/capital-federal/villa-crespo/_Desde_193_NoIndex_True: HTTP Error 404: Not Found')"
+        },
+        {
+          "barrio": "villa-del-parque",
+          "error": "RuntimeError('No se pudo descargar https://inmuebles.mercadolibre.com.ar/departamentos/alquiler-temporal/capital-federal/villa-del-parque/_Desde_145_NoIndex_True: HTTP Error 404: Not Found')"
+        },
+        {
+          "barrio": "villa-devoto",
+          "error": "RuntimeError('No se pudo descargar https://inmuebles.mercadolibre.com.ar/departamentos/alquiler-temporal/capital-federal/villa-devoto/_Desde_145_NoIndex_True: HTTP Error 404: Not Found')"
         },
         {
           "barrio": "villa-general-mitre",
-          "error": "RuntimeError('No se pudo descargar https://inmuebles.mercadolibre.com.ar/departamentos/alquiler/capital-federal/villa-general-mitre/_Desde_49_NoIndex_True: HTTP Error 404: Not Found')"
+          "error": "RuntimeError('No se pudo descargar https://inmuebles.mercadolibre.com.ar/departamentos/alquiler-temporal/capital-federal/villa-general-mitre/_Desde_145_NoIndex_True: HTTP Error 404: Not Found')"
+        },
+        {
+          "barrio": "villa-lugano",
+          "error": "RuntimeError('No se pudo descargar https://inmuebles.mercadolibre.com.ar/departamentos/alquiler-temporal/capital-federal/villa-lugano/_Desde_145_NoIndex_True: HTTP Error 404: Not Found')"
+        },
+        {
+          "barrio": "villa-luro",
+          "error": "RuntimeError('No se pudo descargar https://inmuebles.mercadolibre.com.ar/departamentos/alquiler-temporal/capital-federal/villa-luro/_Desde_145_NoIndex_True: HTTP Error 404: Not Found')"
+        },
+        {
+          "barrio": "villa-ortuzar",
+          "error": "RuntimeError('No se pudo descargar https://inmuebles.mercadolibre.com.ar/departamentos/alquiler-temporal/capital-federal/villa-ortuzar/_Desde_145_NoIndex_True: HTTP Error 404: Not Found')"
+        },
+        {
+          "barrio": "villa-pueyrredon",
+          "error": "RuntimeError('No se pudo descargar https://inmuebles.mercadolibre.com.ar/departamentos/alquiler-temporal/capital-federal/villa-pueyrredon/_Desde_145_NoIndex_True: HTTP Error 404: Not Found')"
+        },
+        {
+          "barrio": "villa-real",
+          "error": "RuntimeError('No se pudo descargar https://inmuebles.mercadolibre.com.ar/departamentos/alquiler-temporal/capital-federal/villa-real/: HTTP Error 404: Not Found')"
+        },
+        {
+          "barrio": "villa-riachuelo",
+          "error": "RuntimeError('No se pudo descargar https://inmuebles.mercadolibre.com.ar/departamentos/alquiler-temporal/capital-federal/villa-riachuelo/: HTTP Error 404: Not Found')"
         },
         {
           "barrio": "villa-santa-rita",
-          "error": "RuntimeError('No se pudo descargar https://inmuebles.mercadolibre.com.ar/departamentos/alquiler/capital-federal/villa-santa-rita/_Desde_49_NoIndex_True: HTTP Error 404: Not Found')"
+          "error": "RuntimeError('No se pudo descargar https://inmuebles.mercadolibre.com.ar/departamentos/alquiler-temporal/capital-federal/villa-santa-rita/_Desde_49_NoIndex_True: HTTP Error 404: Not Found')"
+        },
+        {
+          "barrio": "villa-soldati",
+          "error": "RuntimeError('No se pudo descargar https://inmuebles.mercadolibre.com.ar/departamentos/alquiler-temporal/capital-federal/villa-soldati/: HTTP Error 404: Not Found')"
+        },
+        {
+          "barrio": "villa-urquiza",
+          "error": "RuntimeError('No se pudo descargar https://inmuebles.mercadolibre.com.ar/departamentos/alquiler-temporal/capital-federal/villa-urquiza/_Desde_145_NoIndex_True: HTTP Error 404: Not Found')"
         }
       ],
-      "rows_before_deduplication": 9463,
-      "unique_properties": 9462,
-      "output_csv": "data/raw/mercadolibre_alquileres/normal/propiedades_mercadolibre_consolidado.csv"
+      "rows_before_deduplication": 5802,
+      "unique_properties": 4175,
+      "output_csv": "data/raw/mercadolibre_alquileres/temporal/propiedades_mercadolibre_consolidado.csv"
     }
   },
-  "finished_at_utc": "2026-09-05T20:06:44.357426+00:00"
+  "finished_at_utc": "2026-09-05T20:52:41.743381+00:00"
 }
