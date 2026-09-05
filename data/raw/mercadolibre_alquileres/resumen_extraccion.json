@@ -1,0 +1,27 @@
+{
+  "started_at_utc": "2026-09-05T19:25:49.142988+00:00",
+  "operations": {
+    "normal": {
+      "segments_completed": 45,
+      "segments_requested": 48,
+      "failures": [
+        {
+          "barrio": "la-paternal",
+          "error": "RuntimeError('No se pudo descargar https://inmuebles.mercadolibre.com.ar/departamentos/alquiler/capital-federal/la-paternal/_Desde_49_NoIndex_True: HTTP Error 404: Not Found')"
+        },
+        {
+          "barrio": "villa-general-mitre",
+          "error": "RuntimeError('No se pudo descargar https://inmuebles.mercadolibre.com.ar/departamentos/alquiler/capital-federal/villa-general-mitre/_Desde_49_NoIndex_True: HTTP Error 404: Not Found')"
+        },
+        {
+          "barrio": "villa-santa-rita",
+          "error": "RuntimeError('No se pudo descargar https://inmuebles.mercadolibre.com.ar/departamentos/alquiler/capital-federal/villa-santa-rita/_Desde_49_NoIndex_True: HTTP Error 404: Not Found')"
+        }
+      ],
+      "rows_before_deduplication": 9463,
+      "unique_properties": 9462,
+      "output_csv": "data/raw/mercadolibre_alquileres/normal/propiedades_mercadolibre_consolidado.csv"
+    }
+  },
+  "finished_at_utc": "2026-09-05T20:06:44.357426+00:00"
+}
