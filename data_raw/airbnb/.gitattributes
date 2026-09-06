@@ -1,0 +1,8 @@
+# Estos CSV se versionan byte por byte, sin normalizar finales de linea.
+# Tienen CRLF (pandas en Windows) pero ademas LF sueltos DENTRO de campos
+# entrecomillados: son los saltos de linea que los anfitriones escribieron en
+# las descripciones. Con la normalizacion de git activada, al clonar el repo
+# esos LF internos se convertirian a CRLF, cambiando el contenido de las
+# descripciones y rompiendo los checksums.
+# La regla esta en esta carpeta y no en la raiz para no afectar al resto del repo.
+airbnb_caba_*.csv -text
