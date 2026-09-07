@@ -1,5 +1,8 @@
 beautifulsoup4
 lxml
+numpy
+openpyxl
+pandas
 playwright
 requests
 urllib3
