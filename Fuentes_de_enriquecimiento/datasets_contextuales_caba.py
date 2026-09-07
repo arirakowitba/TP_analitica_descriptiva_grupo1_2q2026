@@ -45,15 +45,31 @@ link_estaciones_ferrocarril = 'https://data.buenosaires.gob.ar/dataset/estacione
 
 def _leer_csv(nombre: str, url: str) -> pd.DataFrame | None:
     """Descarga y lee un CSV, con manejo de errores para no frenar todo el
-    pipeline si un solo dataset falla (encoding, separador, o el recurso
-    cambió de ID)."""
-    try:
-        df = pd.read_csv(url)
-        print(f"OK  {nombre}: {len(df)} filas, {df.shape[1]} columnas.")
-        return df
-    except Exception as exc:
-        print(f"ERROR al leer '{nombre}' desde {url}\n  -> {exc}")
-        return None
+    pipeline si un solo dataset falla. Reintenta con distintos encodings:
+    varios datasets de BA Data vienen en Latin-1/Windows-1252 en vez de
+    UTF-8 (típico en archivos generados desde Excel), y con distinto
+    separador (';' en vez de ',')."""
+    intentos = [
+        {"encoding": "utf-8"},
+        {"encoding": "latin-1"},
+        {"encoding": "cp1252"},
+        {"encoding": "latin-1", "sep": ";"},
+        {"encoding": "utf-8", "sep": ";"},
+    ]
+    ultimo_error = None
+    for kwargs in intentos:
+        try:
+            df = pd.read_csv(url, **kwargs)
+            if df.shape[1] == 1 and "sep" not in kwargs:
+                # Probablemente el separador real es ';' y no ',' -> seguir probando.
+                continue
+            print(f"OK  {nombre}: {len(df)} filas, {df.shape[1]} columnas. ({kwargs})")
+            return df
+        except Exception as exc:
+            ultimo_error = exc
+            continue
+    print(f"ERROR al leer '{nombre}' desde {url}\n  -> {ultimo_error}")
+    return None
 
 
 bibliotecas = _leer_csv("Bibliotecas", link_bibliotecas)
