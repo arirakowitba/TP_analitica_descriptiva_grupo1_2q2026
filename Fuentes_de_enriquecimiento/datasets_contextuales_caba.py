@@ -3,6 +3,7 @@ Datasets contextuales de CABA para enriquecer el análisis de propiedades.
 Fuentes: Buenos Aires Data (GCBA), salvo el Censo 2022.
 """
 
+from pathlib import Path
 import numpy as np
 import pandas as pd
 import requests
@@ -99,9 +100,12 @@ estaciones_ferrocarril = _leer_csv("Estaciones de ferrocarril", link_estaciones_
 #   - Filas 0-4: títulos y encabezado repartido en 3 sub-filas
 #   - Filas 5-20: datos (fila 5 = "Total" de la Ciudad, filas 6-20 = Comuna 1 a 15)
 #   - Filas 21 en adelante: notas al pie (Ley de Comunas, fuentes, etc.)
+CARPETA_SCRIPT = Path(__file__).resolve().parent
+RUTA_CENSO = CARPETA_SCRIPT / "c2022_caba_est_c2_1.xlsx"
+
 try:
     censo_2022 = pd.read_excel(
-        "c2022_caba_est_c2_1.xlsx",
+        RUTA_CENSO,
         sheet_name="Cuadro 2.1",
         skiprows=5,
         header=None,
