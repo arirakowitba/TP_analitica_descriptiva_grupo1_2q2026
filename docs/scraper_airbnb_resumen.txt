@@ -1,0 +1,449 @@
+SCRAPER AIRBNB CABA — DOCUMENTACIÓN TÉCNICA
+
+Corte de datos: 5 y 6 de septiembre de 2026
+Salida: 6 archivos CSV en data_raw/airbnb — 11.276 y 10.369 anuncios
+
+
+1. PROBLEMA QUE RESUELVE
+
+Relevar la oferta de alquiler temporario de Airbnb en la Ciudad de Buenos Aires
+—precio, ubicación, atributos del inmueble, anfitrión y reputación— para poder
+cruzarla contra la oferta de los portales inmobiliarios que releva el resto del
+proyecto.
+
+Airbnb no tiene API pública ni exportación de datos, y el sitio impone cuatro
+obstáculos:
+
+El contenido se renderiza en el cliente. Un GET al HTML no encuentra los datos
+en el DOM. Se evaluó y descartó Selenium y Playwright: Airbnb embebe el estado
+inicial completo de React en el HTML, dentro de una etiqueta script con id
+data-deferred-state-0, así que alcanza con requests y json.loads.
+
+Toda consulta se corta en unos 270 resultados. Máximo 15 páginas por 18
+resultados: no existe una página 16. Un scraper que pagina hasta el final
+obtiene unos cientos de anuncios y cree haber terminado. La solución es un
+quadtree geográfico (ver punto 3).
+
+El barrio ya no viene en los datos. Airbnb dejó de exponerlo: en modo mapa el
+campo title viene nulo, y en modo lista pasó a decir "Departamento en Buenos
+Aires" (la ciudad, no el barrio). La página de detalle tampoco lo trae. Se
+deduce de las coordenadas contra el GeoJSON oficial de los 48 barrios.
+
+El precio no es un atributo del inmueble. Es el resultado de una función de
+fecha de entrada, fecha de salida y cantidad de huéspedes. El mismo
+departamento, relevado el mismo día, devuelve cuatro precios distintos según lo
+que se le pregunte. Por eso todo el relevamiento usa una ventana de fechas fija
+por serie, y la unidad viaja pegada al dato en la columna unidad_precio.
+
+
+2. ARCHIVOS DEL PROYECTO
+
+Seis módulos Python, 1.623 líneas. Sin más dependencias que requests y pandas.
+
+airbnb_common.py (161 líneas) — Infraestructura compartida: la sesión HTTP con
+sus headers, el rate limit (polite_sleep, entre 1,2 y 2 segundos), la extracción
+del JSON embebido con backoff exponencial, la construcción del cursor de
+paginación, y la escritura incremental en JSONL que hace todo reanudable.
+
+scrape_search.py (321 líneas) — ETAPA 1. El censo de anuncios por quadtree
+geográfico sobre el bounding box de CABA. De cada resultado extrae 27 campos.
+Salidas: search_raw.jsonl y cells_pending.json (la cola del quadtree, que es el
+checkpoint).
+
+scrape_pdp.py (366 líneas) — ETAPA 2. La ficha completa de cada anuncio vía
+GraphQL. Contiene PDP_HASH, el identificador frágil del proyecto, y las listas
+de fragmentos a activar. De 23 secciones extrae 55 campos planos más la tabla de
+amenities. Salidas: pdp_raw.jsonl y amenities_raw.jsonl.
+
+barrios.py (134 líneas) — Asignación de barrio por coordenadas con ray casting
+en Python puro, contra barrios_caba.geojson. Sin shapely ni geopandas. Con
+descarte previo por bounding box: 25.000 puntos en 1,4 segundos. Corriéndolo
+directo ejecuta un autotest de 10 puntos conocidos (Obelisco, Caminito, etc.)
+que da 10 de 10.
+
+export_csv.py (528 líneas) — ETAPA 3. Une censo y fichas, normaliza el precio,
+extrae la estructura del inmueble del texto, pivotea amenities, clasifica
+vivienda contra alojamiento hotelero y valida la cobertura. Único módulo que usa
+pandas.
+
+reparse.py (113 líneas) — Re-parsea desde las respuestas crudas guardadas, sin
+tocar la red. Existe porque los JSONL guardan el registro ya parseado: cada
+campo descubierto tarde exigía volver a scrapear. Verificado que reproduce el
+archivo original byte por byte.
+
+barrios_caba.geojson (723 KB) — GeoJSON oficial de los 48 barrios. Es una
+dependencia del código, no un dato relevado: sin él barrios.py no corre.
+
+
+3. CÓMO SE HIZO LA EXTRACCIÓN
+
+Todo sale de dos endpoints de www.airbnb.com.ar:
+
+    Etapa 1, censo:  GET  /s/homes con bounding box, fechas y cursor
+                          devuelve HTML con el JSON embebido
+    Etapa 2, ficha:  POST /api/v3/StaysPdpSections/<hash>
+                          GraphQL persisted query
+
+La API key es pública y viene en el propio HTML.
+
+Etapa 1, el quadtree. El problema es el techo de 270 resultados, y la solución
+es particionar el territorio en vez de paginar. Se arranca con una celda: el
+bounding box completo de CABA. Se pide la página 0 y se lee
+paginationInfo.pageCursors, que devuelve la cantidad real de páginas cuando está
+por debajo del tope. Si son 15, la celda está saturada y se la parte en cuatro;
+cada hija vuelve a la cola. Si son menos de 15, la celda entra completa: se
+recorren sus páginas y se termina. Se repite hasta vaciar la cola.
+
+El criterio de corte no es una estimación propia, es un dato que devuelve
+Airbnb. El árbol baja mucho en Palermo, Recoleta y Centro, y casi nada en el
+sur. La corrida real fueron 147 celdas para 11.276 anuncios.
+
+El detalle que más importó del parseo. El campo del precio viene con dos
+typenames distintos y claves distintas: QualifiedDisplayPriceLine trae "price",
+y DiscountedDisplayPriceLine trae "discountedPrice" más "originalPrice". Leer
+sólo "price" deja el precio nulo sin tirar ningún error. En la serie corta eso
+era el 32% de los anuncios; en la mensual, donde casi todos aplican descuento
+por estadía larga, habría sido el 92%. El parser maneja los dos casos, y una
+lista de typenames conocidos avisa al final de la corrida si Airbnb agrega uno
+nuevo.
+
+Etapa 2, la ficha. Las secciones de la página de detalle no vienen en el HTML
+inicial. Reconstruir las variables del payload a mano devuelve ValidationError;
+la forma exacta se lee de una clave del propio JSON embebido. Activando los
+setenta y pico de flags includeGpXFragment, toda la ficha vuelve en una sola
+llamada: 23 secciones. De ahí salen los ratings por dimensión, la capacidad, el
+anfitrión con sus métricas, las reglas, la descripción y entre 36 y 47 amenities
+por anuncio con un campo de disponibilidad true/false.
+
+La ficha no depende de la ventana de fechas, así que la serie mensual reusó las
+8.861 fichas ya bajadas y sólo pidió 1.508 nuevas: una hora en vez de siete.
+
+Etapa 3, la consolidación. Hay 3.362 nombres distintos de amenities porque
+Airbnb deja que el anfitrión escriba el detalle ("Horno de inducción de acero
+inoxidable de Samsung"), y 1.538 aparecen en un solo anuncio. Se pivotean sólo
+los que están en al menos el 1% de los anuncios (169 columnas) y se agregan 32
+columnas de familias agrupadas por concepto. La tabla larga completa queda
+aparte, sin recortes.
+
+Librerías. requests 2.33.1 para todo el HTTP, pandas 3.0.2 sólo en la etapa 3, y
+de la biblioteca estándar re, json, base64, gzip, argparse, pathlib, time y
+random. No se usa Selenium, Playwright, BeautifulSoup, lxml, shapely ni
+geopandas.
+
+Guardas contra la falla silenciosa. La falla peligrosa de este pipeline no es
+que rompa: es que produzca un dataset incompleto que parece completo. El bug del
+precio no tiró ningún error, sólo dejó el 32% de las filas nulas. Hay dos
+guardas: el parser avisa cuando encuentra estructuras que no sabe leer, con las
+claves exactas que trajeron; y el export compara la cobertura de 16 columnas
+clave contra un piso esperado y grita si alguna cae.
+
+
+4. EL DATASET FINAL
+
+Seis archivos. Las dos series NO se mezclan: cada una cotiza una ventana de
+fechas distinta, así que el precio de una no es comparable con el de la otra sin
+tener en cuenta el descuento por estadía larga, que es del 22,3% mediano.
+
+    Serie corta, ventana 20 al 25 de octubre de 2026, 5 noches, 2 huéspedes
+      airbnb_caba_normalizado.csv       10.326 filas    58 columnas
+      airbnb_caba_listings.csv          11.276 filas   286 columnas
+      airbnb_caba_amenities.csv        416.395 filas     6 columnas
+      Precio mediano: 79 dólares por noche
+
+    Serie mensual, ventana 20 de octubre al 19 de noviembre, 30 noches
+      airbnb_caba_normalizado_mensual.csv   9.596 filas    59 columnas
+      airbnb_caba_listings_mensual.csv     10.369 filas   287 columnas
+      airbnb_caba_amenities_mensual.csv   466.706 filas     6 columnas
+      Precio mediano: 1.783 dólares por mes (60,6 por noche)
+
+El archivo por el que conviene empezar es airbnb_caba_normalizado.csv: sólo
+vivienda entera, con el vocabulario del esquema de portales del proyecto. Sus 58
+columnas, con la cobertura medida:
+
+    Identidad y origen
+      property_id            int64     100%
+      fuente                 texto     100%    "airbnb"
+      tipo_operacion         texto     100%    "alquiler_temporario"
+      unidad_precio          texto     100%    "por_noche_2_huespedes_5_noches"
+      url                    texto     100%
+      scraped_at_utc         texto     100%
+
+    Descripción del inmueble
+      titulo                 texto     100%
+      descripcion            texto     99,8%
+      tipo_propiedad         texto     100%    "Vivienda alquilada entero"
+      room_type              texto     100%    "Entire home/apt"
+      categoria_alojamiento  texto     100%    "vivienda_entera"
+      es_vivienda            booleano  100%
+      acepta_larga_estadia   booleano  100%
+
+    Precio
+      precio_regimen         texto     100%    "por_noche" o "mensual"
+      moneda                 texto     100%    "USD"
+      precio                 decimal   100%    42.0
+      precio_texto           texto     100%    "$ 210 USD"
+      precio_sospechoso      booleano  100%
+
+    Ubicación
+      barrio                 texto     99,2%   "Colegiales"
+      comuna                 decimal   99,2%
+      latitud, longitud      decimal   100%
+
+    Estructura
+      ambientes              decimal   100%
+      dormitorios            decimal   100%
+      banios                 decimal   99,9%
+      toilettes              decimal   99,9%
+      camas                  decimal   98,1%
+      capacidad              int64     100%
+
+    Anfitrión y reputación
+      seller_id              int64     100%
+      seller_nombre          texto     100%
+      seller_superhost       booleano  100%
+      rating                 decimal   87,7%
+      reviews                decimal   87,7%
+
+    Imágenes
+      cantidad_imagenes      int64     100%
+      imagen_principal       texto     100%
+
+    Atributos, todos booleanos al 100%
+      ascensor, balcon_o_patio, terraza, jardin, parrilla, pileta, gimnasio,
+      sauna, laundry, cochera, camaras_seguridad, portero, aire_acondicionado,
+      calefaccion, losa_radiante, internet, vista, zona_trabajo,
+      permite_mascotas, amoblado
+
+    Constantes geográficas
+      localidad, provincia, pais     texto     100%
+
+Los nulos son legítimos: barrio nulo significa fuera del polígono de CABA (95
+anuncios que entran por el margen del bounding box), y rating nulo significa
+anuncio sin reseñas.
+
+Ejemplo de una fila:
+
+    property_id            941997550078704265
+    tipo_operacion         alquiler_temporario
+    unidad_precio          por_noche_2_huespedes_5_noches
+    titulo                 Cálido Mono ambiente con pileta
+    tipo_propiedad         Vivienda alquilada entero
+    categoria_alojamiento  vivienda_entera
+    moneda                 USD
+    precio                 42.0
+    precio_texto           $ 210 USD
+    precio_sospechoso      False
+    barrio                 Colegiales
+    comuna                 13
+    latitud                -34.5752
+    longitud               -58.4481
+    ambientes              2
+    dormitorios            1
+    banios                 1
+    toilettes              0
+    camas                  1
+    capacidad              3
+    seller_id              311393874
+    seller_nombre          Silvia
+    seller_superhost       True
+    rating                 4.86
+    reviews                97
+    cantidad_imagenes      18
+    pileta                 True
+    terraza                True
+    aire_acondicionado     True
+    internet               True
+
+Los archivos listings traen todo sin recortar: 86 columnas de datos, 168
+columnas de amenities individuales y 32 de familias agrupadas. Los archivos
+amenities son la tabla larga, un registro por anuncio y amenity, con los 3.362
+amenities completos y la taxonomía de 16 grupos de Airbnb.
+
+ADVERTENCIAS DE USO
+
+Filtrar precio_sospechoso antes de promediar. 107 anuncios informan más de 1.000
+dólares por noche, con un máximo de 89.012. No es un error de parseo: verificado
+contra el desglose crudo, Airbnb informa eso. Son anfitriones que bloquean el
+calendario con un precio impagable en vez de cerrar las fechas. Con ellos
+adentro la media da 211 dólares y el desvío 2.234; sin ellos, 106 y 94. La
+mediana, 79, no se mueve.
+
+En los amenities, el valor False es dato real. Airbnb lista explícitamente lo que
+el anuncio no tiene. "Detector de humo" aparece mencionado en el 100% de los
+anuncios pero sólo el 25% lo tiene. Para analizar conviene usar las columnas de
+familias, que cuentan disponibilidad real.
+
+El censo es oferta disponible, no el padrón de anuncios. Inside Airbnb reporta
+entre 25 y 30 mil anuncios en CABA; acá hay 11.276 porque la búsqueda sólo
+devuelve lo que acepta esa estadía: queda afuera lo ocupado, lo que exige otro
+mínimo de noches y lo que no entra con 2 huéspedes.
+
+La precisión de las coordenadas es de tres niveles, no uno. Airbnb declara en la
+columna radio_ofuscacion_m el radio del círculo que dibuja en el mapa, y la
+distribución real del dataset es:
+
+    radio 0 m      5.840 anuncios (52%)   coordenada redondeada a 4 decimales,
+                                          o sea una grilla de unos 11 metros,
+                                          con marcador exacto
+    radio 152 m    4.974 anuncios (44%)   coordenada desplazada: el punto real
+                                          está dentro de ese radio
+    radio 500 m      433 anuncios (4%)    idem, dentro de 500 metros
+
+Son dos mecanismos distintos: los de radio 0 tienen la coordenada truncada, y
+los de radio 152 y 500 tienen precisión completa pero desplazada. Hay además 52
+anuncios con sólo 2 decimales, o sea 1,1 km de precisión.
+
+Para agregar por barrio alcanza en los tres grupos. Para algo más fino (manzana,
+distancia a un subte, frente sobre una avenida) sólo sirven los 5.840 de radio
+0. Y en ningún caso permite identificar la unidad: sin calle, altura ni piso no
+hay forma de saber qué inmueble es.
+Una salvedad sobre la interpretación: lo medido es la distribución de
+radio_ofuscacion_m y la cantidad de decimales de cada coordenada. Que los de
+radio 0 tengan la coordenada real, sólo redondeada, y los de radio 152 la tengan
+desplazada, es la lectura más razonable de ese patrón, pero no se pudo
+verificar: haría falta la dirección real de algún anuncio para comparar, y
+Airbnb no la da. Conviene tratar el radio como una cota superior del error y no
+como una medición del error.
+
+
+Una fila es una publicación, no una propiedad. Los archivos normalizado ya vienen
+filtrados a vivienda entera; los listings incluyen además 516 habitaciones
+privadas (varias pueden ser del mismo departamento) y 391 alojamientos
+hoteleros, separados en la columna categoria_alojamiento.
+
+Los archivos listings contienen datos personales: nombre del anfitrión, su
+biografía y la descripción del anuncio, de unos 5.600 anfitriones
+identificables.
+
+LO QUE EL DATASET NO TIENE
+
+Metros cuadrados, dirección exacta, expensas y antigüedad no existen del lado de
+Airbnb. Por eso no hay precio por metro cuadrado y el cruce con los portales es
+a nivel barrio, no a nivel unidad.
+
+Tampoco están los fees de limpieza y servicio (el costo real al huésped es entre
+15 y 25% mayor), el mínimo de noches exacto, el calendario de disponibilidad ni
+el texto de las reseñas.
+
+
+5. CÓMO REPRODUCIRLO DESDE CERO
+
+Requisitos. Python 3.14 (probado en 3.14.3, debería andar en 3.10 o superior).
+Acceso de red a airbnb.com.ar y muscache.com: muchos proxies corporativos los
+bloquean. Unos 400 MB de disco.
+
+Variables de entorno. El pipeline no usa ninguna: no hay claves, tokens ni
+archivos .env, porque la API key de Airbnb es pública. La única que conviene
+setear en Windows es el encoding de la consola, porque los textos tienen acentos
+y la consola usa cp1252 por defecto:
+
+    $env:PYTHONIOENCODING = "utf-8"
+
+Sin eso, los mensajes con acentos pueden cortar el script con UnicodeEncodeError.
+No afecta a los archivos de salida, que siempre se escriben en UTF-8.
+
+Instalación:
+
+    python -m venv .venv
+    .venv\Scripts\activate
+    pip install requests==2.33.1 pandas==3.0.2
+
+Atención: el requirements.txt de la raíz del repo lista beautifulsoup4, lxml,
+playwright, requests y urllib3 —las dependencias de los otros scrapers— y no
+incluye pandas, que este pipeline necesita para la etapa 3. Este scraper corre
+con exactamente dos dependencias directas: requests y pandas. No hace falta
+playwright ni ningún parser de HTML.
+
+Verificar que el GeoJSON de barrios esté bien:
+
+    python barrios.py
+
+Tiene que dar 10 de 10 correctos.
+
+COMANDOS, EN ORDEN
+
+Paso 1, prueba de humo, unos 2 minutos. No saltear: valida red y parseos antes
+de comprometer horas.
+
+    python scrape_search.py --max-cells 2 --checkin 2026-10-20 --checkout 2026-10-25
+    python export_csv.py
+
+Tiene que quedar un search_raw.jsonl con decenas de anuncios y las columnas de
+precio, latitud, longitud y cantidad de fotos pobladas. La validación tiene que
+decir OK.
+
+Paso 2, prueba de la etapa 2, un minuto.
+
+    python scrape_pdp.py --limit 5 --checkin 2026-10-20 --checkout 2026-10-25
+    python export_csv.py
+
+Tiene que quedar un pdp_raw.jsonl con 5 líneas y unos 40 amenities por anuncio,
+con rating, capacidad, superhost y host_id poblados.
+
+Paso 3, censo completo, unos 35 minutos.
+
+    python -u scrape_search.py --reset --checkin 2026-10-20 --checkout 2026-10-25 >> censo.log 2>&1
+
+Dos detalles de ese comando que no son opcionales. El -u: sin él Python
+bufferiza la salida cuando el destino es un archivo y el log queda vacío durante
+horas, así que no se puede monitorear nada. Y las fechas explícitas: el default
+es hoy más 45 y 50 días, así que si el corrido cruza la medianoche y se reanuda,
+la ventana se corre un día sola y contamina los precios en silencio.
+
+Paso 4, fichas completas, unas 8 horas.
+
+    python -u scrape_pdp.py --checkin 2026-10-20 --checkout 2026-10-25 >> pdp.log 2>&1
+
+Unos 2,5 segundos por anuncio. Es reanudable: si se corta, el mismo comando
+retoma donde quedó.
+
+Paso 5, consolidación, 2 minutos.
+
+    python export_csv.py
+
+Paso 6, la serie mensual, 35 minutos más una hora. El parámetro --sufijo manda
+todo a archivos aparte para no mezclar las dos ventanas de fechas, y
+--reusar-fichas saltea los anuncios cuya ficha ya se bajó.
+
+    python -u scrape_search.py --sufijo _mensual --checkin 2026-10-20 --checkout 2026-11-19 >> censo_mensual.log 2>&1
+    python -u scrape_pdp.py --sufijo _mensual --reusar-fichas pdp_raw.jsonl --checkin 2026-10-20 --checkout 2026-11-19 >> pdp_mensual.log 2>&1
+    python export_csv.py --sufijo _mensual
+
+Total, unas 10 horas, casi todo en la etapa 2.
+
+REGLAS QUE NO HAY QUE NEGOCIAR
+
+No bajar el rate limit de 1,2 a 2 segundos ni paralelizar con hilos o async. El
+cuello de botella es deliberado: en unos 23.000 requests no hubo un solo bloqueo.
+
+No borrar los JSONL ni el cells_pending.json durante una corrida: son el
+checkpoint. El parámetro --reset es sólo para empezar de cero a propósito.
+
+No cambiar la ventana de fechas a mitad del corrido: contamina el dataset de
+forma silenciosa e irreversible.
+
+Si algo devuelve "sin estado embebido" repetidamente, parar. Es un bloqueo, no
+un bug. No reintentar en loop ni cambiar el User-Agent para esquivarlo: cortar y
+retomar más tarde, que el script reanuda solo.
+
+FALLAS CONOCIDAS
+
+ValidationError en la etapa 2: Airbnb cambió el hash de la persisted query. Se
+recupera abriendo cualquier anuncio en el navegador con la pestaña de red
+abierta y copiando el hash de la llamada a StaysPdpSections a la constante
+PDP_HASH en scrape_pdp.py.
+
+Columnas de la ficha todas nulas: cambió el nombre de una sección.
+
+VALIDACION FALLIDA en el export: una columna clave cayó por debajo de su
+cobertura esperada. Casi siempre es un cambio de estructura de Airbnb.
+
+"typename de precio DESCONOCIDO": Airbnb agregó un formato de precio. El aviso
+trae las claves exactas que hay que manejar.
+
+"Permission denied" en algunos anuncios: el anuncio se dio de baja entre la
+etapa 1 y la 2. Es normal, fueron 24 de 11.276.
+
+Log del censo vacío: falta el -u en el comando.
+
+UnicodeEncodeError al imprimir: falta la variable PYTHONIOENCODING.
