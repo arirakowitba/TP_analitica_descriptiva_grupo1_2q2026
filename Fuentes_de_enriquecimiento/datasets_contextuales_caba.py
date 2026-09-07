@@ -88,15 +88,42 @@ estaciones_ferrocarril = _leer_csv("Estaciones de ferrocarril", link_estaciones_
 # 2. CENSO POBLACIONAL 2022 (INDEC) — caso aparte
 # =============================================================================
 # A diferencia de los datasets de BA Data, el Censo 2022 del INDEC NO se
-# descarga como un CSV plano de una URL fija: se consulta a través de
-# REDATAM (https://redatam.indec.gob.ar) o se descargan planillas por
-# provincia/radio censal desde https://censo.gob.ar/index.php/datos_definitivos_caba/
-# en formato Excel, con estructura jerárquica (radio censal -> comuna).
+# descarga como un CSV plano de una URL fija: se descargan planillas por
+# comuna desde https://censo.gob.ar/index.php/datos_definitivos_caba/
+# en formato Excel, con estructura jerárquica y varias filas de
+# título/metadata antes de la tabla real.
 #
-# Recomendación: descargar manualmente la planilla de CABA por comuna/radio
-# censal desde ese link, guardarla en este mismo directorio, y cargarla acá:
-#
-censo_2022 = pd.read_excel("c2022_caba_est_c2_1.xlsx", skiprows=...)
+# El archivo 'c2022_caba_est_c2_1.xlsx' (Cuadro 2.1: Total de población y
+# densidad, por superficie, según comuna) tiene esta estructura verificada:
+#   - Hoja: "Cuadro 2.1"
+#   - Filas 0-4: títulos y encabezado repartido en 3 sub-filas
+#   - Filas 5-20: datos (fila 5 = "Total" de la Ciudad, filas 6-20 = Comuna 1 a 15)
+#   - Filas 21 en adelante: notas al pie (Ley de Comunas, fuentes, etc.)
+try:
+    censo_2022 = pd.read_excel(
+        "c2022_caba_est_c2_1.xlsx",
+        sheet_name="Cuadro 2.1",
+        skiprows=5,
+        header=None,
+        nrows=16,
+        usecols="A:E",
+        names=["codigo_comuna_indec", "comuna", "superficie_km2",
+               "poblacion_total", "densidad_hab_km2"],
+    )
+    # La primera fila es el total de la Ciudad, no una comuna -> aparte.
+    censo_2022_total_ciudad = censo_2022.iloc[[0]].copy()
+    censo_2022 = censo_2022.iloc[1:].copy()
+    # "Comuna 1" -> 1 (entero), para poder cruzar con la columna 'comuna'
+    # numérica que ya tenés en ArgenProp/Zonaprop/Meli.
+    censo_2022["numero_comuna"] = (
+        censo_2022["comuna"].str.extract(r"(\d+)").astype(int)
+    )
+    print(f"\nCenso 2022 (INDEC) cargado: {len(censo_2022)} comunas.")
+except FileNotFoundError:
+    censo_2022 = None
+    censo_2022_total_ciudad = None
+    print("\nCenso 2022 (INDEC): no se encontró 'c2022_caba_est_c2_1.xlsx' en el "
+          "directorio de trabajo. Subilo o ajustá la ruta.")
 
 
 # =============================================================================
