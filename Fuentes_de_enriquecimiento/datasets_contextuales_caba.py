@@ -126,8 +126,7 @@ try:
 except FileNotFoundError:
     censo_2022 = None
     censo_2022_total_ciudad = None
-    print("\nCenso 2022 (INDEC): no se encontró 'c2022_caba_est_c2_1.xlsx' en el "
-          "directorio de trabajo. Subilo o ajustá la ruta.")
+    print(f"\nCenso 2022 (INDEC): no se encontró el archivo en {RUTA_CENSO}")
 
 
 # =============================================================================
