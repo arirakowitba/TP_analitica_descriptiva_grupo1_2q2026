@@ -1,0 +1,11 @@
+# Basura de Python
+__pycache__/
+*.pyc
+
+# Salidas del pipeline: los datos van en data_raw/airbnb, no aca
+*.jsonl
+*.jsonl.gz
+*.csv
+!requirements.txt
+cells_pending*.json
+*.log

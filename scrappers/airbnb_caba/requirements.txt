@@ -1,0 +1,12 @@
+# El pipeline corre con requests + pandas y nada más. Python 3.14.
+# Instalación:  pip install -r requirements.txt
+certifi==2026.2.25
+charset-normalizer==3.4.6
+idna==3.11
+numpy==2.4.4
+pandas==3.0.2
+python-dateutil==2.9.0.post0
+requests==2.33.1
+six==1.17.0
+tzdata==2025.3
+urllib3==2.6.3
