@@ -80,12 +80,7 @@ estaciones_ferrocarril = _leer_csv("Estaciones de ferrocarril", link_estaciones_
 # Recomendación: descargar manualmente la planilla de CABA por comuna/radio
 # censal desde ese link, guardarla en este mismo directorio, y cargarla acá:
 #
-# censo_2022 = pd.read_excel("censo_2022_caba_por_comuna.xlsx", skiprows=...)
-#
-# Dejamos la variable en None para que el resto del pipeline no rompa si
-# todavía no se bajó el archivo a mano.
-censo_2022 = None
-print("\nCenso 2022 (INDEC): requiere descarga manual (ver comentario en el código).")
+censo_2022 = pd.read_excel("c2022_caba_est_c2_1.xlsx", skiprows=...)
 
 
 # =============================================================================
