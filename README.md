@@ -1,1 +1,0 @@
-# TP_analitica_descriptiva_grupo1_2q2026
