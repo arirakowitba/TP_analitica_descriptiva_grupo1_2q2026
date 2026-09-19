@@ -16,11 +16,11 @@ Analítica Descriptiva
 
 El mercado inmobiliario de la Ciudad de Buenos Aires se caracteriza por ser remarcablemente activo, dinámico, e incierto. Durante el período de 2025, el alquiler de vivienda representó un 36% de los hogares totales del distrito, junto con un 52% de hogares propietarios, y el restante 12% compuesto por diversas situaciones precarias e informales (1). Esto implica que las condiciones macroeconómicas en cuanto a nivel de precios y desarrollo, así como las tendencias en demografía, crecimiento urbano, y turismo, pueden incidir en una amplia proporción de las unidades habitacionales porteñas.
 
-La oferta tiene esa forma, inclinándose a los alquileres, por las siguientes condiciones económicas y regulatorias. Por un lado, los créditos hipotecarios tienen un acceso limitado: históricamente fue bajo, aunque se recuperó durante 2024-2025. Esto genera que una parte importante de la población quede fuera del mercado de compra y mayor proporción de hogares dependa del alquiler.
+La estructura del mercado debe interpretarse a la luz de distintas condiciones económicas y regulatorias. Por un lado, el crédito hipotecario tuvo históricamente una participación reducida, aunque mostró una recuperación durante 2024-2025. Incluso en ese contexto, una parte importante de las compraventas continúa realizándose sin financiamiento hipotecario. Esto restringe el acceso a la compra a los hogares que disponen de ahorro previo, ingresos suficientes o capital propio, y mantiene al alquiler como principal alternativa de acceso a la vivienda para una parte relevante de la población.
 
 Por otro lado, el marco regulatorio de los alquileres cambió sustancialmente, y puede haber modificado los incentivos de propietarios e inquilinos. La flexibilización contractual, luego de la derogación de la ley de alquileres en 2023, es uno de los motivos del aumento en la oferta publicada de departamentos en alquiler en AMBA, según un informe oficial de la Unidad de Evaluación de Impacto (2).
 
-También hay legislación que regula el alquiler temporario, como la ley 6.255 que establece un Registro de Propiedades de Alquileres Temporarios Turísticos. Esto puede afectar la oferta de alquiler temporario, generando incentivos o fricción para alquileres temporarios en ciertos barrios.
+También existe legislación específica sobre el alquiler temporario. La Ley 6.255 de la Ciudad establece un Registro de Propiedades de Alquileres Temporarios Turísticos y obligaciones para quienes ofrecen este tipo de alojamiento. Este marco puede modificar los costos y los incentivos de los propietarios al elegir entre alquiler permanente y temporario. Sin embargo, dado que el trabajo utiliza un corte transversal, no se atribuirán directamente a la regulación las diferencias observadas entre modalidades.
 
 Todas estas medidas de contexto económico muestran que el mismo patrón observado puede tener distintas explicaciones y, por lo tanto, distintas respuestas de política pública.
 
@@ -32,7 +32,30 @@ En particular, el Instituto de Vivienda de la Ciudad es el encargado de realizar
 
 Al tratarse de un organismo estatal, se tiene como principal objetivo el beneficio social en su conjunto, ponderando equilibrio urbano, desarrollo, y acceso a vivienda, no exclusivamente la rentabilidad económica.
 
-## 1.2 Objetivos generales
+## 1.2 Definición operativa del problema
+
+En este trabajo se denominará **desajuste territorial de la oferta habitacional** a una diferencia observable entre la composición de las publicaciones residenciales de una zona y una o más de las siguientes dimensiones: la estructura demográfica y habitacional de su población, la disponibilidad relativa de alquiler permanente, la concentración de alquiler temporario y el acceso a transporte y servicios urbanos.
+
+El concepto no supone que las publicaciones representen la totalidad del stock de viviendas ni permite afirmar, por sí solo, la existencia de déficit habitacional, demanda insatisfecha, desplazamiento de residentes o sustitución de alquiler permanente por temporario. Las publicaciones se utilizarán como evidencia de la **oferta publicada** durante el período relevado. En consecuencia, los resultados permitirán detectar asociaciones, brechas y zonas que ameriten análisis o intervención prioritaria, pero no demostrar relaciones causales.
+
+El desajuste se analizará inicialmente mediante dimensiones separadas, sin combinarlas de antemano en un único índice:
+
+- **Adecuación tipológica:** relación entre la composición de los hogares y la participación de las distintas tipologías ofrecidas.
+- **Disponibilidad residencial publicada:** cantidad de publicaciones de alquiler permanente en relación con la población, los hogares o el stock de viviendas de la zona, según la granularidad disponible.
+- **Presión potencial del alquiler temporario:** densidad y participación de alojamientos temporarios completos respecto del stock habitacional y de la oferta residencial publicada.
+- **Accesibilidad urbana:** disponibilidad o proximidad de transporte y servicios relevantes para las viviendas y la población de cada zona.
+
+## 1.3 Decisiones públicas que busca informar
+
+El análisis se concentrará en producir evidencia para tres decisiones del Instituto de Vivienda de la Ciudad:
+
+1. **Priorizar zonas para ampliar o fortalecer la oferta de alquiler permanente.** Se identificarán áreas con baja disponibilidad residencial publicada o con una composición de tipologías poco alineada con el perfil de sus hogares.
+2. **Priorizar zonas para monitorear la concentración del alquiler temporario.** Se señalarán barrios donde la densidad de alojamientos temporarios completos coincida con una baja disponibilidad relativa de alquiler permanente o con precios residenciales elevados. Esta coincidencia se interpretará como una señal para profundizar el diagnóstico, no como evidencia automática de desplazamiento.
+3. **Priorizar intervenciones habitacionales o de accesibilidad urbana.** Se buscarán zonas en las que los desajustes de oferta coincidan con menor acceso a transporte o servicios, distinguiendo si la respuesta pertinente corresponde a vivienda, infraestructura, regulación, fiscalización o producción de información adicional.
+
+Una zona será considerada prioritaria cuando combine una brecha de magnitud relevante, una cantidad suficiente de población potencialmente afectada y evidencia basada en un número mínimo de observaciones. Los umbrales definitivos se establecerán después del EDA, para evitar fijar reglas incompatibles con la distribución y calidad real de los datos.
+
+## 1.4 Objetivos generales
 
 - Medir la distribución territorial de las tres modalidades de operación.
 
@@ -48,7 +71,7 @@ Al tratarse de un organismo estatal, se tiene como principal objetivo el benefic
 
 - Identificar zonas prioritarias para políticas de vivienda, infraestructura o regulación del alquiler temporal.
 
-## 1.3 Preguntas de análisis
+## 1.5 Preguntas de análisis
 
 **Nivel descriptivo: características de la oferta publicada**
 
@@ -60,11 +83,11 @@ Al tratarse de un organismo estatal, se tiene como principal objetivo el benefic
 
 **Nivel diagnóstico: explicación de patrones observados**
 
-¿Cómo se relacionan los servicios públicos u otros hitos urbanos con esta distribución de las operaciones?
+¿Cómo se relacionan la composición demográfica, la centralidad, los servicios públicos y otros atributos urbanos con la distribución territorial de las operaciones?
 
-¿En qué zonas se observan desajustes entre la composición de la oferta inmobiliaria publicada y el perfil demográfico y habitacional de la población?
+¿En qué medida la composición demográfica se relaciona con las tipologías residenciales ofrecidas en cada zona?
 
-¿Existen brechas territoriales en cuanto a precios, accesibilidad a servicios y composición de la oferta?
+¿Las brechas territoriales de precio y composición de la oferta se mantienen al comparar propiedades y zonas semejantes?
 
 **Nivel predictivo: estimaciones en función de las variables**
 
@@ -74,11 +97,13 @@ Al tratarse de un organismo estatal, se tiene como principal objetivo el benefic
 
 **Nivel prescriptivo: insights orientados a decisiones**
 
-¿Qué zonas deberían priorizarse para el análisis y eventual implementación de políticas públicas habitacionales, de accesibilidad, o planificación urbana?
+¿Qué zonas deberían priorizarse para fortalecer la oferta de alquiler permanente, monitorear la concentración del alquiler temporario o mejorar la accesibilidad urbana?
 
 ¿Qué indicadores debería monitorear el Instituto de Vivienda para detectar posibles desequilibrios entre alquiler temporal, alquiler permanente y necesidades habitacionales?
 
-## 1.4 Frontera operativa
+¿Qué alternativa de intervención resulta más adecuada para cada tipo de desajuste, considerando la magnitud de la brecha, la población potencialmente afectada, la calidad de la evidencia y las competencias del organismo?
+
+## 1.6 Frontera operativa
 
 El análisis comprende publicaciones de inmuebles residenciales ubicados dentro de la Ciudad Autónoma de Buenos Aires, obtenidas de Mercado Libre, ZonaProp, ArgenProp y Airbnb durante la etapa de extracción realizada entre agosto y septiembre de 2026. Se adopta un diseño de corte transversal: el objetivo es caracterizar la oferta disponible en el momento del relevamiento y no estudiar su evolución histórica.
 
@@ -90,7 +115,7 @@ En Airbnb, los precios corresponden a consultas realizadas para dos huéspedes y
 
 El estudio analizará precios publicados, características de los inmuebles, composición territorial de la oferta y su relación con variables demográficas y de entorno urbano. No se estimarán rentabilidades financieras ni se estudiarán operaciones inmobiliarias efectivamente realizadas. Debido a su naturaleza observacional y transversal, los resultados permitirán identificar asociaciones, brechas y patrones territoriales, pero no establecer por sí solos relaciones causales.
 
-## 1.5 Hoja de ruta
+## 1.7 Hoja de ruta
 
 | **Tarea**                                  | **Semana**       | **Descripción**                                                                                                                                                       |
 |--------------------------------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -204,15 +229,24 @@ Estos indicadores y otros convenientes serán implementados en la etapa de ingen
 
 ## 4.2 Hipótesis a contrastar
 
-Se pretende evaluar las siguientes hipótesis, en base a indicios y creencias previas. Se buscará identificar patrones en la oferta disponible de acuerdo a los servicios disponibles.
+Las hipótesis se formulan como relaciones contrastables entre variables observables. Se distinguirán las hipótesis centrales, directamente vinculadas con las decisiones públicas priorizadas, de los análisis complementarios. Debido al carácter observacional y transversal de los datos, su contrastación permitirá identificar asociaciones, pero no atribuir causalidad.
 
-|     | Formulación                                                                                                                                                                                                                                 | Elementos a medir                                                                                                                                                                                          |
-|-----|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| H1  | Los barrios con mayor atractivo turístico y cultural presentan una mayor concentración de alquileres temporales.                                                                                                                            | Se buscará cercanía con espacios verdes, sitios culturales históricos y gastronómicos, o de interés popular, así como medidas de acceso (transporte o existencia de barreras físicas).                     |
-| H2  | La composición de la oferta inmobiliaria se relaciona con el perfil demográfico y la disponibilidad de servicios de cada zona.                                                                                                              | Se medirán distancias a escuelas, centros de salud, comisarías, etc., así como la densidad de estos servicios y la demografía, en contraposición a la tipología y operación de la publicación              |
-| H3  | La presencia de transporte público se relaciona con un mayor valor de las propiedades de todas las operaciones, a mayor densidad y nivel de servicio.                                                                                         | Se medirán distancias a estaciones y densidades, diferenciando entre distintos medios de transporte (MetroBús, Subte, tren).                                                                               |
-| H3b | La relación entre el acceso al transporte público y el precio podría presentar una magnitud similar entre los tres tipos de operación.                                                                                                         | Se analizará la relación del transporte público con los precios de venta, alquiler temporal y alquiler permanente en sus respectivas escalas.                                                              |
-| H4  | La prominencia del alquiler temporal se correlaciona con mayores precios y menor disponibilidad de otras formas de acceso a la vivienda.                                                                                                    | Se compararán precios de venta y alquiler permanente buscando examinar la asociación de una mayor o menor densidad de alquileres temporales con el precio y la disponibilidad.                             |
+| | Formulación | Variable explicativa principal | Variable de resultado | Comparación y controles previstos |
+|---|---|---|---|---|
+| **H1 — Concentración turística** | Los barrios con mayor atractivo turístico y cultural presentan una mayor densidad de alojamientos temporarios completos. | Densidad de espacios culturales, gastronómicos, turísticos y verdes. | Alojamientos temporarios completos por 1.000 viviendas y participación del alquiler temporario en la oferta publicada. | Control por centralidad, población, stock habitacional, superficie del barrio y accesibilidad al transporte. |
+| **H2a — Adecuación demográfica** | Los barrios o comunas con mayor proporción de hogares unipersonales presentan una mayor participación de monoambientes y unidades de uno o dos ambientes en la oferta publicada. | Proporción de hogares unipersonales. | Participación de unidades pequeñas dentro de la oferta residencial. | Separación por modalidad y fuente; control por centralidad, densidad poblacional y composición del stock habitacional cuando esté disponible. |
+| **H2b — Servicios y concentración de oferta** | Las zonas con mayor disponibilidad de servicios urbanos presentan una mayor intensidad de oferta inmobiliaria publicada. | Densidad o proximidad de establecimientos educativos, sanitarios, culturales y espacios verdes. | Publicaciones por 1.000 habitantes, hogares o viviendas. | Análisis separado por tipo de servicio y modalidad; control por población, stock habitacional, superficie y centralidad. |
+| **H3 — Transporte y precio** | Entre propiedades comparables, una menor distancia al transporte público masivo se asocia con un mayor precio publicado. | Distancia a estaciones de subte, tren y MetroBus, diferenciadas por medio. | Precio por m² para venta y alquiler permanente; precio por dormitorio para comparaciones que incluyan Airbnb. | Comparación dentro de zonas y tipologías semejantes; control por barrio, superficie, ambientes, tipo de propiedad, fuente y amenities disponibles. |
+| **H4 — Presión potencial del alquiler temporario** | Los barrios con mayor densidad de alojamientos temporarios completos presentan una menor disponibilidad relativa de alquiler permanente y mayores precios residenciales publicados. | Alojamientos temporarios completos por 1.000 viviendas. | Alquileres permanentes publicados por 1.000 viviendas y nivel de precios residenciales. | Control por centralidad, atractivo turístico, población, stock habitacional, tipología y accesibilidad. No se interpretará la asociación como evidencia de desplazamiento o sustitución causal. |
+
+### Criterios de contrastación
+
+- Se definirá para cada hipótesis una unidad geográfica común —barrio o comuna— según la menor granularidad compatible entre las fuentes utilizadas.
+- Los conteos de publicaciones se normalizarán por población, hogares, viviendas o superficie, evitando comparar valores absolutos entre zonas de distinto tamaño.
+- Se exigirá un mínimo de observaciones por zona y modalidad antes de calcular indicadores o realizar comparaciones; el umbral se fijará durante el EDA.
+- Las relaciones bivariadas se utilizarán como exploración inicial. Cuando sea posible, se aplicarán modelos multivariados o comparaciones estratificadas para controlar diferencias de centralidad, tipología y composición territorial.
+- Se reportarán magnitud del efecto, incertidumbre y sensibilidad a distintas definiciones, además del p-valor cuando corresponda.
+- Si la granularidad, cobertura o calidad de una fuente no permite contrastar una hipótesis, esta se reformulará o se informará como limitación, en lugar de forzar la integración.
 
 # 5 Fuentes bibliográficas
 
