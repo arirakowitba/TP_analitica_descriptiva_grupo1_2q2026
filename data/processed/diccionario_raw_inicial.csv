@@ -1,0 +1,437 @@
+dataset,columna,tipo_dato,descripcion,ejemplo
+df_raw_meli_alq,item_id,str,Identificador de publicación en Mercado Libre.,MLA2052442697
+df_raw_meli_alq,fuente,str,Portal o fuente de origen del registro.,Mercado Libre
+df_raw_meli_alq,url,str,URL de la publicación.,https://departamento.mercadolibre.com.ar/MLA-2052442697-departamento-en-alquiler-de-4-ambientes-con-dependencia-y-cocher...
+df_raw_meli_alq,search_url,str,URL de búsqueda desde la cual fue capturada la publicación.,https://inmuebles.mercadolibre.com.ar/departamentos/alquiler/capital-federal/
+df_raw_meli_alq,pagina_origen,int64,Página de resultados donde apareció la publicación.,1
+df_raw_meli_alq,scraped_at_utc,str,Fecha y hora de extracción en UTC.,2026-09-03T16:45:14.494669+00:00
+df_raw_meli_alq,titulo,str,Título publicado del aviso.,Departamento En Alquiler De 4 Ambientes Con Dependencia Y Cochera En Palermo Chico Con Amenities
+df_raw_meli_alq,tipo_propiedad,str,Tipo de inmueble declarado o inferido.,departamento
+df_raw_meli_alq,tipo_operacion,str,"Tipo de operación: venta, alquiler o alquiler temporal.",alquiler
+df_raw_meli_alq,moneda,str,Moneda del precio publicado.,USD
+df_raw_meli_alq,precio,float64,Precio numérico extraído de la publicación.,5000.0
+df_raw_meli_alq,precio_texto,str,Precio en formato textual original.,US$ 5.000
+df_raw_meli_alq,desde,int64,Pendiente de documentar según significado en la fuente.,0
+df_raw_meli_alq,inmobiliaria,str,Nombre de inmobiliaria o anunciante cuando está disponible.,Khabbaz Propiedades
+df_raw_meli_alq,direccion,str,Dirección capturada en Mercado Libre.,"Segui Al 3600, Palermo Chico, Capital Federal"
+df_raw_meli_alq,barrio,str,"Barrio declarado, inferido o capturado desde la fuente.",Palermo Chico
+df_raw_meli_alq,localidad,str,Localidad declarada.,Capital Federal
+df_raw_meli_alq,provincia,str,Provincia o jurisdicción declarada.,Capital Federal
+df_raw_meli_alq,ambientes_min,float64,Mínimo de ambientes informado cuando la publicación usa rangos.,4.0
+df_raw_meli_alq,ambientes_max,float64,Máximo de ambientes informado cuando la publicación usa rangos.,4.0
+df_raw_meli_alq,banios_min,float64,Mínimo de baños informado cuando la publicación usa rangos.,3.0
+df_raw_meli_alq,banios_max,float64,Máximo de baños informado cuando la publicación usa rangos.,3.0
+df_raw_meli_alq,dormitorios_min,float64,Mínimo de dormitorios informado cuando la publicación usa rangos.,1.0
+df_raw_meli_alq,dormitorios_max,float64,Máximo de dormitorios informado cuando la publicación usa rangos.,1.0
+df_raw_meli_alq,superficie_min_m2,float64,Superficie mínima en m2 informada o inferida.,210.0
+df_raw_meli_alq,superficie_max_m2,float64,Superficie máxima en m2 informada o inferida.,210.0
+df_raw_meli_alq,tipo_superficie,str,Tipo de superficie usada para el dato de m2.,total
+df_raw_meli_alq,imagen_principal,str,URL de imagen principal.,https://http2.mlstatic.com/D_NQ_NP_2X_926918-MLA116997522333_082026-E.webp
+df_raw_meli_alq,destacado,int64,Pendiente de documentar según significado en la fuente.,1
+df_raw_meli_alq,emprendimiento,int64,Pendiente de documentar según significado en la fuente.,0
+df_raw_meli_alq,posesion,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_meli_alq,unidades_disponibles,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_meli_alq,atributos_texto,str,Pendiente de documentar según significado en la fuente.,4 ambs. | 3 baños | 210 m² totales
+df_raw_meli_alq,texto_tarjeta,str,Pendiente de documentar según significado en la fuente.,PUBLICADO ESTA SEMANA Departamento en alquiler Departamento En Alquiler De 4 Ambientes Con Dependencia Y Cochera En Pale...
+df_raw_meli_alq,parse_warnings,float64,Advertencias del proceso de parseo.,
+df_raw_meli_alq,posicion_pagina,int64,Pendiente de documentar según significado en la fuente.,1
+df_raw_meli_alq,slug,str,Pendiente de documentar según significado en la fuente.,MLA-2052442697-departamento-en-alquiler-de-4-ambientes-con-dependencia-y-cochera-en-palermo-chico-con-amenities-_JM
+df_raw_meli_alq,calle,str,Calle extraída o inferida.,Segui Al
+df_raw_meli_alq,altura,float64,Altura aproximada o declarada.,3600.0
+df_raw_meli_alq,comuna,float64,Comuna de CABA cuando está disponible o inferida.,14.0
+df_raw_meli_alq,precio_anterior,float64,Pendiente de documentar según significado en la fuente.,1957.0
+df_raw_meli_alq,descuento_pct,float64,Pendiente de documentar según significado en la fuente.,-33114.1
+df_raw_meli_alq,precio_m2_min,float64,Precio por metro cuadrado mínimo calculado por Mercado Libre cuando hay rangos.,23.81
+df_raw_meli_alq,precio_m2_max,float64,Precio por metro cuadrado máximo calculado por Mercado Libre cuando hay rangos.,23.81
+df_raw_meli_alq,amplitud_superficie_m2,float64,Pendiente de documentar según significado en la fuente.,0.0
+df_raw_meli_alq,es_rango_superficie,float64,Pendiente de documentar según significado en la fuente.,0.0
+df_raw_meli_alq,es_rango_ambientes,float64,Pendiente de documentar según significado en la fuente.,0.0
+df_raw_meli_alq,monoambiente,int64,Pendiente de documentar según significado en la fuente.,0
+df_raw_meli_alq,apto_credito,int64,Indicador de apto crédito.,0
+df_raw_meli_alq,balcon,int64,Indicador de balcón.,0
+df_raw_meli_alq,terraza,int64,Indicador de terraza.,0
+df_raw_meli_alq,pileta,int64,Indicador de pileta.,0
+df_raw_meli_alq,parrilla,int64,Indicador de parrilla.,0
+df_raw_meli_alq,cochera_mencionada,int64,Indicador de cochera mencionada en Mercado Libre.,1
+df_raw_meli_alq,amenities_mencionadas,int64,Indicador de amenities mencionadas en Mercado Libre.,1
+df_raw_meli_alq,estado_entrega,object,Pendiente de documentar según significado en la fuente.,entrega_inmediata
+df_raw_meli_alq,cantidad_atributos,int64,Pendiente de documentar según significado en la fuente.,3
+df_raw_meli_alq,completitud_pct,float64,Pendiente de documentar según significado en la fuente.,100.0
+df_raw_meli_alq,imagen_id,str,Pendiente de documentar según significado en la fuente.,D_NQ_NP_2X_926918-MLA116997522333_082026-E
+df_raw_meli_alq,imagen_extension,str,Pendiente de documentar según significado en la fuente.,webp
+df_raw_meli_alq,_archivo_origen,str,Pendiente de documentar según significado en la fuente.,data\raw\mercadolibre_inmuebles_alquiler\meli_alq_1.csv
+df_raw_meli_alq_temp,item_id,str,Identificador de publicación en Mercado Libre.,MLA2698335478
+df_raw_meli_alq_temp,fuente,str,Portal o fuente de origen del registro.,Mercado Libre
+df_raw_meli_alq_temp,url,str,URL de la publicación.,https://departamento.mercadolibre.com.ar/MLA-2698335478-departamento-alquiler-temporario-3-ambientes-amoblado-y-equipado...
+df_raw_meli_alq_temp,search_url,str,URL de búsqueda desde la cual fue capturada la publicación.,https://inmuebles.mercadolibre.com.ar/departamentos/alquiler-temporal/capital-federal/
+df_raw_meli_alq_temp,pagina_origen,int64,Página de resultados donde apareció la publicación.,1
+df_raw_meli_alq_temp,scraped_at_utc,str,Fecha y hora de extracción en UTC.,2026-09-03T17:22:27.502870+00:00
+df_raw_meli_alq_temp,titulo,str,Título publicado del aviso.,Departamento Alquiler Temporario 3 Ambientes Amoblado Y Equipado Recoleta
+df_raw_meli_alq_temp,tipo_propiedad,str,Tipo de inmueble declarado o inferido.,departamento
+df_raw_meli_alq_temp,tipo_operacion,str,"Tipo de operación: venta, alquiler o alquiler temporal.",alquiler temporal
+df_raw_meli_alq_temp,moneda,str,Moneda del precio publicado.,USD
+df_raw_meli_alq_temp,precio,float64,Precio numérico extraído de la publicación.,1400.0
+df_raw_meli_alq_temp,precio_texto,str,Precio en formato textual original.,US$ 1.400
+df_raw_meli_alq_temp,desde,int64,Pendiente de documentar según significado en la fuente.,0
+df_raw_meli_alq_temp,inmobiliaria,str,Nombre de inmobiliaria o anunciante cuando está disponible.,Alternativa Propiedades
+df_raw_meli_alq_temp,direccion,str,Dirección capturada en Mercado Libre.,"Av. Cnel. Díaz 2400, Recoleta, Capital Federal"
+df_raw_meli_alq_temp,barrio,str,"Barrio declarado, inferido o capturado desde la fuente.",Recoleta
+df_raw_meli_alq_temp,localidad,str,Localidad declarada.,Capital Federal
+df_raw_meli_alq_temp,provincia,str,Provincia o jurisdicción declarada.,Capital Federal
+df_raw_meli_alq_temp,ambientes_min,float64,Mínimo de ambientes informado cuando la publicación usa rangos.,3.0
+df_raw_meli_alq_temp,ambientes_max,float64,Máximo de ambientes informado cuando la publicación usa rangos.,3.0
+df_raw_meli_alq_temp,banios_min,float64,Mínimo de baños informado cuando la publicación usa rangos.,3.0
+df_raw_meli_alq_temp,banios_max,float64,Máximo de baños informado cuando la publicación usa rangos.,3.0
+df_raw_meli_alq_temp,dormitorios_min,float64,Mínimo de dormitorios informado cuando la publicación usa rangos.,2.0
+df_raw_meli_alq_temp,dormitorios_max,float64,Máximo de dormitorios informado cuando la publicación usa rangos.,2.0
+df_raw_meli_alq_temp,superficie_min_m2,float64,Superficie mínima en m2 informada o inferida.,120.0
+df_raw_meli_alq_temp,superficie_max_m2,float64,Superficie máxima en m2 informada o inferida.,120.0
+df_raw_meli_alq_temp,tipo_superficie,str,Tipo de superficie usada para el dato de m2.,cubierta
+df_raw_meli_alq_temp,imagen_principal,str,URL de imagen principal.,https://http2.mlstatic.com/D_NQ_NP_2X_786192-MLA102668267049_122025-E.webp
+df_raw_meli_alq_temp,destacado,int64,Pendiente de documentar según significado en la fuente.,1
+df_raw_meli_alq_temp,emprendimiento,int64,Pendiente de documentar según significado en la fuente.,0
+df_raw_meli_alq_temp,posesion,object,Pendiente de documentar según significado en la fuente.,Preventa
+df_raw_meli_alq_temp,unidades_disponibles,float64,Pendiente de documentar según significado en la fuente.,4.0
+df_raw_meli_alq_temp,atributos_texto,str,Pendiente de documentar según significado en la fuente.,3 ambs. | 3 baños | 120 m² cubiertos
+df_raw_meli_alq_temp,texto_tarjeta,str,Pendiente de documentar según significado en la fuente.,Departamento en alquiler temporal Departamento Alquiler Temporario 3 Ambientes Amoblado Y Equipado Recoleta US$ 1.400 3 ...
+df_raw_meli_alq_temp,parse_warnings,float64,Advertencias del proceso de parseo.,
+df_raw_meli_alq_temp,posicion_pagina,int64,Pendiente de documentar según significado en la fuente.,1
+df_raw_meli_alq_temp,slug,str,Pendiente de documentar según significado en la fuente.,MLA-2698335478-departamento-alquiler-temporario-3-ambientes-amoblado-y-equipado-recoleta-_JM
+df_raw_meli_alq_temp,calle,str,Calle extraída o inferida.,Av. Cnel. Díaz
+df_raw_meli_alq_temp,altura,float64,Altura aproximada o declarada.,2400.0
+df_raw_meli_alq_temp,comuna,float64,Comuna de CABA cuando está disponible o inferida.,2.0
+df_raw_meli_alq_temp,precio_anterior,float64,Pendiente de documentar según significado en la fuente.,1500.0
+df_raw_meli_alq_temp,descuento_pct,float64,Pendiente de documentar según significado en la fuente.,-46566.67
+df_raw_meli_alq_temp,precio_m2_min,float64,Precio por metro cuadrado mínimo calculado por Mercado Libre cuando hay rangos.,11.67
+df_raw_meli_alq_temp,precio_m2_max,float64,Precio por metro cuadrado máximo calculado por Mercado Libre cuando hay rangos.,11.67
+df_raw_meli_alq_temp,amplitud_superficie_m2,float64,Pendiente de documentar según significado en la fuente.,0.0
+df_raw_meli_alq_temp,es_rango_superficie,float64,Pendiente de documentar según significado en la fuente.,0.0
+df_raw_meli_alq_temp,es_rango_ambientes,float64,Pendiente de documentar según significado en la fuente.,0.0
+df_raw_meli_alq_temp,monoambiente,int64,Pendiente de documentar según significado en la fuente.,0
+df_raw_meli_alq_temp,apto_credito,int64,Indicador de apto crédito.,0
+df_raw_meli_alq_temp,balcon,int64,Indicador de balcón.,0
+df_raw_meli_alq_temp,terraza,int64,Indicador de terraza.,0
+df_raw_meli_alq_temp,pileta,int64,Indicador de pileta.,0
+df_raw_meli_alq_temp,parrilla,int64,Indicador de parrilla.,0
+df_raw_meli_alq_temp,cochera_mencionada,int64,Indicador de cochera mencionada en Mercado Libre.,0
+df_raw_meli_alq_temp,amenities_mencionadas,int64,Indicador de amenities mencionadas en Mercado Libre.,0
+df_raw_meli_alq_temp,estado_entrega,object,Pendiente de documentar según significado en la fuente.,entrega_inmediata
+df_raw_meli_alq_temp,cantidad_atributos,int64,Pendiente de documentar según significado en la fuente.,3
+df_raw_meli_alq_temp,completitud_pct,float64,Pendiente de documentar según significado en la fuente.,85.7
+df_raw_meli_alq_temp,imagen_id,str,Pendiente de documentar según significado en la fuente.,D_NQ_NP_2X_786192-MLA102668267049_122025-E
+df_raw_meli_alq_temp,imagen_extension,str,Pendiente de documentar según significado en la fuente.,webp
+df_raw_meli_alq_temp,_archivo_origen,str,Pendiente de documentar según significado en la fuente.,data\raw\mercadolibre_inmuebles_alquiler temporario\meli_alq_temp_1.csv
+df_raw_meli_vtas,item_id,str,Identificador de publicación en Mercado Libre.,MLA1844045092
+df_raw_meli_vtas,fuente,str,Portal o fuente de origen del registro.,Mercado Libre
+df_raw_meli_vtas,url,str,URL de la publicación.,https://departamento.mercadolibre.com.ar/MLA-1844045092-mine-migueletes-bajo-belgrano-_JM
+df_raw_meli_vtas,search_url,str,URL de búsqueda desde la cual fue capturada la publicación.,https://inmuebles.mercadolibre.com.ar/departamentos/venta/capital-federal/
+df_raw_meli_vtas,pagina_origen,int64,Página de resultados donde apareció la publicación.,1
+df_raw_meli_vtas,scraped_at_utc,str,Fecha y hora de extracción en UTC.,2026-09-03T16:28:55.814717+00:00
+df_raw_meli_vtas,titulo,str,Título publicado del aviso.,Mine Migueletes - Bajo Belgrano
+df_raw_meli_vtas,tipo_propiedad,str,Tipo de inmueble declarado o inferido.,departamento
+df_raw_meli_vtas,tipo_operacion,str,"Tipo de operación: venta, alquiler o alquiler temporal.",venta
+df_raw_meli_vtas,moneda,str,Moneda del precio publicado.,USD
+df_raw_meli_vtas,precio,float64,Precio numérico extraído de la publicación.,198000.0
+df_raw_meli_vtas,precio_texto,str,Precio en formato textual original.,US$ 198.000
+df_raw_meli_vtas,desde,int64,Pendiente de documentar según significado en la fuente.,1
+df_raw_meli_vtas,inmobiliaria,str,Nombre de inmobiliaria o anunciante cuando está disponible.,Martin Pinus
+df_raw_meli_vtas,direccion,str,Dirección capturada en Mercado Libre.,"Migueletes 2306, Belgrano Chico, Capital Federal"
+df_raw_meli_vtas,barrio,str,"Barrio declarado, inferido o capturado desde la fuente.",Belgrano Chico
+df_raw_meli_vtas,localidad,str,Localidad declarada.,Capital Federal
+df_raw_meli_vtas,provincia,str,Provincia o jurisdicción declarada.,Capital Federal
+df_raw_meli_vtas,ambientes_min,float64,Mínimo de ambientes informado cuando la publicación usa rangos.,2.0
+df_raw_meli_vtas,ambientes_max,float64,Máximo de ambientes informado cuando la publicación usa rangos.,2.0
+df_raw_meli_vtas,banios_min,float64,Mínimo de baños informado cuando la publicación usa rangos.,1.0
+df_raw_meli_vtas,banios_max,float64,Máximo de baños informado cuando la publicación usa rangos.,1.0
+df_raw_meli_vtas,dormitorios_min,float64,Mínimo de dormitorios informado cuando la publicación usa rangos.,2.0
+df_raw_meli_vtas,dormitorios_max,float64,Máximo de dormitorios informado cuando la publicación usa rangos.,2.0
+df_raw_meli_vtas,superficie_min_m2,float64,Superficie mínima en m2 informada o inferida.,38.0
+df_raw_meli_vtas,superficie_max_m2,float64,Superficie máxima en m2 informada o inferida.,44.0
+df_raw_meli_vtas,tipo_superficie,str,Tipo de superficie usada para el dato de m2.,cubierta
+df_raw_meli_vtas,imagen_principal,str,URL de imagen principal.,https://http2.mlstatic.com/D_NQ_NP_2X_846087-MLA112858604644_072026-E.webp
+df_raw_meli_vtas,destacado,int64,Pendiente de documentar según significado en la fuente.,1
+df_raw_meli_vtas,emprendimiento,int64,Pendiente de documentar según significado en la fuente.,1
+df_raw_meli_vtas,posesion,str,Pendiente de documentar según significado en la fuente.,Entrega inmediata
+df_raw_meli_vtas,unidades_disponibles,float64,Pendiente de documentar según significado en la fuente.,7.0
+df_raw_meli_vtas,atributos_texto,str,Pendiente de documentar según significado en la fuente.,2 ambs. | 1 baño | 38 - 44 m² cubiertos
+df_raw_meli_vtas,texto_tarjeta,str,Pendiente de documentar según significado en la fuente.,EMPRENDIMIENTO Departamento en venta Mine Migueletes - Bajo Belgrano Desde US$ 198.000 2 ambs. 1 baño 38 - 44 m² cubiert...
+df_raw_meli_vtas,parse_warnings,float64,Advertencias del proceso de parseo.,
+df_raw_meli_vtas,posicion_pagina,int64,Pendiente de documentar según significado en la fuente.,1
+df_raw_meli_vtas,slug,str,Pendiente de documentar según significado en la fuente.,MLA-1844045092-mine-migueletes-bajo-belgrano-_JM
+df_raw_meli_vtas,calle,str,Calle extraída o inferida.,Migueletes
+df_raw_meli_vtas,altura,float64,Altura aproximada o declarada.,2306.0
+df_raw_meli_vtas,comuna,float64,Comuna de CABA cuando está disponible o inferida.,13.0
+df_raw_meli_vtas,precio_anterior,float64,Pendiente de documentar según significado en la fuente.,1300.0
+df_raw_meli_vtas,descuento_pct,float64,Pendiente de documentar según significado en la fuente.,-9130.77
+df_raw_meli_vtas,precio_m2_min,float64,Precio por metro cuadrado mínimo calculado por Mercado Libre cuando hay rangos.,4500.0
+df_raw_meli_vtas,precio_m2_max,float64,Precio por metro cuadrado máximo calculado por Mercado Libre cuando hay rangos.,5210.53
+df_raw_meli_vtas,amplitud_superficie_m2,float64,Pendiente de documentar según significado en la fuente.,6.0
+df_raw_meli_vtas,es_rango_superficie,float64,Pendiente de documentar según significado en la fuente.,1.0
+df_raw_meli_vtas,es_rango_ambientes,float64,Pendiente de documentar según significado en la fuente.,0.0
+df_raw_meli_vtas,monoambiente,int64,Pendiente de documentar según significado en la fuente.,0
+df_raw_meli_vtas,apto_credito,int64,Indicador de apto crédito.,0
+df_raw_meli_vtas,balcon,int64,Indicador de balcón.,0
+df_raw_meli_vtas,terraza,int64,Indicador de terraza.,0
+df_raw_meli_vtas,pileta,int64,Indicador de pileta.,0
+df_raw_meli_vtas,parrilla,int64,Indicador de parrilla.,0
+df_raw_meli_vtas,cochera_mencionada,int64,Indicador de cochera mencionada en Mercado Libre.,0
+df_raw_meli_vtas,amenities_mencionadas,int64,Indicador de amenities mencionadas en Mercado Libre.,0
+df_raw_meli_vtas,estado_entrega,str,Pendiente de documentar según significado en la fuente.,entrega_inmediata
+df_raw_meli_vtas,cantidad_atributos,int64,Pendiente de documentar según significado en la fuente.,3
+df_raw_meli_vtas,completitud_pct,float64,Pendiente de documentar según significado en la fuente.,85.7
+df_raw_meli_vtas,imagen_id,str,Pendiente de documentar según significado en la fuente.,D_NQ_NP_2X_846087-MLA112858604644_072026-E
+df_raw_meli_vtas,imagen_extension,str,Pendiente de documentar según significado en la fuente.,webp
+df_raw_meli_vtas,_archivo_origen,str,Pendiente de documentar según significado en la fuente.,data\raw\mercadolibre_inmuebles_ventas\meli_vtas_1.csv
+df_raw_argenprop,property_id,str,Identificador de publicación o propiedad según fuente.,e197e9f1c643db6d77d3
+df_raw_argenprop,fuente,str,Portal o fuente de origen del registro.,Argenprop
+df_raw_argenprop,url,str,URL de la publicación.,https://www.argenprop.com/departamento-en-venta-en-palermo-chico-5-ambientes--18799423
+df_raw_argenprop,scraped_at_utc,str,Fecha y hora de extracción en UTC.,2026-08-15T23:56:14.395650+00:00
+df_raw_argenprop,search_url,str,URL de búsqueda desde la cual fue capturada la publicación.,https://www.argenprop.com/departamentos/venta/capital-federal
+df_raw_argenprop,pagina_origen,int64,Página de resultados donde apareció la publicación.,1
+df_raw_argenprop,http_status,int64,Código HTTP de respuesta durante scraping.,200
+df_raw_argenprop,parse_ok,int64,Indicador de parseo exitoso.,1
+df_raw_argenprop,parse_warnings,str,Advertencias del proceso de parseo.,modo_listado_sin_ficha_detallada
+df_raw_argenprop,titulo,str,Título publicado del aviso.,TORRE BELLINI! Piso alto de revista! Balcón con espectacular vista panorámica a la ciudad y al río! Todo a nuevo! Full a...
+df_raw_argenprop,descripcion,float64,Descripción textual del aviso cuando está disponible.,
+df_raw_argenprop,tipo_operacion,str,"Tipo de operación: venta, alquiler o alquiler temporal.",venta
+df_raw_argenprop,tipo_propiedad,str,Tipo de inmueble declarado o inferido.,departamento
+df_raw_argenprop,estado_publicacion,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_argenprop,fecha_publicacion,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_argenprop,inmobiliaria,float64,Nombre de inmobiliaria o anunciante cuando está disponible.,
+df_raw_argenprop,seller_id,float64,Identificador del vendedor/anfitrión cuando existe.,
+df_raw_argenprop,moneda,str,Moneda del precio publicado.,USD
+df_raw_argenprop,precio,float64,Precio numérico extraído de la publicación.,2400000.0
+df_raw_argenprop,precio_texto,str,Precio en formato textual original.,USD 2.400.000 + $2.200.000 expensas
+df_raw_argenprop,expensas_moneda,str,Pendiente de documentar según significado en la fuente.,ARS
+df_raw_argenprop,expensas,float64,Pendiente de documentar según significado en la fuente.,124000.0
+df_raw_argenprop,expensas_texto,str,Pendiente de documentar según significado en la fuente.,expensas $124.000
+df_raw_argenprop,precio_m2_calculado,float64,Precio por metro cuadrado calculado por scraper en Argenprop/Zonaprop.,8000.0
+df_raw_argenprop,direccion_completa,str,Dirección capturada en Argenprop/Zonaprop/Airbnb.,Jerónimo Salguero 2700
+df_raw_argenprop,calle,str,Calle extraída o inferida.,Jerónimo Salguero
+df_raw_argenprop,altura,float64,Altura aproximada o declarada.,2700.0
+df_raw_argenprop,piso,str,Pendiente de documentar según significado en la fuente.,1
+df_raw_argenprop,unidad,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_argenprop,barrio,float64,"Barrio declarado, inferido o capturado desde la fuente.",
+df_raw_argenprop,localidad,float64,Localidad declarada.,
+df_raw_argenprop,partido,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_argenprop,provincia,float64,Provincia o jurisdicción declarada.,
+df_raw_argenprop,pais,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_argenprop,codigo_postal,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_argenprop,latitud,float64,Latitud de la publicación cuando la fuente la informa.,
+df_raw_argenprop,longitud,float64,Longitud de la publicación cuando la fuente la informa.,
+df_raw_argenprop,ambientes,float64,Cantidad de ambientes.,2.0
+df_raw_argenprop,dormitorios,float64,Cantidad de dormitorios.,3.0
+df_raw_argenprop,banios,float64,Cantidad de baños.,1.0
+df_raw_argenprop,toilettes,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_argenprop,cocheras,float64,Pendiente de documentar según significado en la fuente.,2.0
+df_raw_argenprop,superficie_total_m2,float64,Superficie total en m2.,300.0
+df_raw_argenprop,superficie_cubierta_m2,float64,Superficie cubierta en m2.,91.0
+df_raw_argenprop,superficie_descubierta_m2,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_argenprop,superficie_semicubierta_m2,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_argenprop,superficie_terreno_m2,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_argenprop,frente_m,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_argenprop,fondo_m,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_argenprop,antiguedad_anios,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_argenprop,estado_inmueble,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_argenprop,disposicion,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_argenprop,orientacion,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_argenprop,luminosidad,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_argenprop,cantidad_plantas,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_argenprop,cantidad_pisos_edificio,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_argenprop,departamentos_por_piso,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_argenprop,apto_credito,float64,Indicador de apto crédito.,
+df_raw_argenprop,apto_profesional,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_argenprop,permite_mascotas,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_argenprop,accesibilidad,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_argenprop,amoblado,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_argenprop,balcon,float64,Indicador de balcón.,
+df_raw_argenprop,terraza,float64,Indicador de terraza.,
+df_raw_argenprop,patio,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_argenprop,jardin,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_argenprop,parrilla,float64,Indicador de parrilla.,
+df_raw_argenprop,pileta,float64,Indicador de pileta.,
+df_raw_argenprop,sum,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_argenprop,gimnasio,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_argenprop,sauna,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_argenprop,laundry,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_argenprop,baulera,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_argenprop,ascensor,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_argenprop,seguridad_24h,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_argenprop,vigilancia,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_argenprop,aire_acondicionado,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_argenprop,calefaccion,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_argenprop,losa_radiante,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_argenprop,gas_natural,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_argenprop,agua_corriente,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_argenprop,electricidad,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_argenprop,cloaca,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_argenprop,internet,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_argenprop,vista_rio,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_argenprop,vista_abierta,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_argenprop,reciclado,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_argenprop,a_refaccionar,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_argenprop,cantidad_imagenes,int64,Cantidad de imágenes detectadas.,9
+df_raw_argenprop,imagen_principal,str,URL de imagen principal.,https://www.argenprop.com/static-content/32499781/e0063af1-49cc-48e2-b1f3-27eb92fa9aaa_u_small.jpg
+df_raw_argenprop,video_url,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_argenprop,tour_virtual_url,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_argenprop,cantidad_atributos_extra,int64,Pendiente de documentar según significado en la fuente.,1
+df_raw_argenprop,atributos_extra_json,str,Pendiente de documentar según significado en la fuente.,"{""texto_tarjeta"": ""+ 38 Ver más fotos 1 /46 Visto 72.002 USD 2.400.000 &plus; $2.200.000 expensas Jerónimo Salguero 2700..."
+df_raw_argenprop,jsonld_raw,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_argenprop,_archivo_origen,str,Pendiente de documentar según significado en la fuente.,data\raw\argenprop\propiedades_argenprop.csv
+df_raw_zonaprop,property_id,str,Identificador de publicación o propiedad según fuente.,174f7e930591b69560cf
+df_raw_zonaprop,fuente,str,Portal o fuente de origen del registro.,Zonaprop
+df_raw_zonaprop,url,str,URL de la publicación.,https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-2-ambientes-a-estrenar-ideal-vivienda-o-inversion-59559283....
+df_raw_zonaprop,scraped_at_utc,str,Fecha y hora de extracción en UTC.,2026-08-17T20:48:48.072806+00:00
+df_raw_zonaprop,search_url,str,URL de búsqueda desde la cual fue capturada la publicación.,https://www.zonaprop.com.ar/departamentos-venta-capital-federal.html
+df_raw_zonaprop,pagina_origen,int64,Página de resultados donde apareció la publicación.,1
+df_raw_zonaprop,http_status,int64,Código HTTP de respuesta durante scraping.,200
+df_raw_zonaprop,parse_ok,int64,Indicador de parseo exitoso.,1
+df_raw_zonaprop,parse_warnings,str,Advertencias del proceso de parseo.,modo_listado_sin_ficha_detallada
+df_raw_zonaprop,titulo,str,Título publicado del aviso.,"Una nueva forma de vivir el sur porteño. Desarrollo de fami&#39;Studio Arquitectura, estudio con más de 35 años de traye..."
+df_raw_zonaprop,descripcion,float64,Descripción textual del aviso cuando está disponible.,
+df_raw_zonaprop,tipo_operacion,str,"Tipo de operación: venta, alquiler o alquiler temporal.",venta
+df_raw_zonaprop,tipo_propiedad,float64,Tipo de inmueble declarado o inferido.,
+df_raw_zonaprop,estado_publicacion,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_zonaprop,fecha_publicacion,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_zonaprop,inmobiliaria,str,Nombre de inmobiliaria o anunciante cuando está disponible.,USD 120.000
+df_raw_zonaprop,seller_id,float64,Identificador del vendedor/anfitrión cuando existe.,
+df_raw_zonaprop,moneda,str,Moneda del precio publicado.,USD
+df_raw_zonaprop,precio,float64,Precio numérico extraído de la publicación.,120000.0
+df_raw_zonaprop,precio_texto,str,Precio en formato textual original.,USD 120.000
+df_raw_zonaprop,expensas_moneda,str,Pendiente de documentar según significado en la fuente.,ARS
+df_raw_zonaprop,expensas,float64,Pendiente de documentar según significado en la fuente.,119.0
+df_raw_zonaprop,expensas_texto,str,Pendiente de documentar según significado en la fuente.,Expensas 119
+df_raw_zonaprop,precio_m2_calculado,float64,Precio por metro cuadrado calculado por scraper en Argenprop/Zonaprop.,2142.86
+df_raw_zonaprop,direccion_completa,str,Dirección capturada en Argenprop/Zonaprop/Airbnb.,"Villa Lugano, Capital Federal"
+df_raw_zonaprop,calle,str,Calle extraída o inferida.,Villa Lugano
+df_raw_zonaprop,altura,float64,Altura aproximada o declarada.,
+df_raw_zonaprop,piso,str,Pendiente de documentar según significado en la fuente.,uerto
+df_raw_zonaprop,unidad,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_zonaprop,barrio,float64,"Barrio declarado, inferido o capturado desde la fuente.",
+df_raw_zonaprop,localidad,float64,Localidad declarada.,
+df_raw_zonaprop,partido,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_zonaprop,provincia,float64,Provincia o jurisdicción declarada.,
+df_raw_zonaprop,pais,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_zonaprop,codigo_postal,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_zonaprop,latitud,float64,Latitud de la publicación cuando la fuente la informa.,
+df_raw_zonaprop,longitud,float64,Longitud de la publicación cuando la fuente la informa.,
+df_raw_zonaprop,ambientes,float64,Cantidad de ambientes.,2.0
+df_raw_zonaprop,dormitorios,float64,Cantidad de dormitorios.,1.0
+df_raw_zonaprop,banios,float64,Cantidad de baños.,1.0
+df_raw_zonaprop,toilettes,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_zonaprop,cocheras,float64,Pendiente de documentar según significado en la fuente.,2.0
+df_raw_zonaprop,superficie_total_m2,float64,Superficie total en m2.,56.0
+df_raw_zonaprop,superficie_cubierta_m2,float64,Superficie cubierta en m2.,85.0
+df_raw_zonaprop,superficie_descubierta_m2,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_zonaprop,superficie_semicubierta_m2,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_zonaprop,superficie_terreno_m2,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_zonaprop,frente_m,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_zonaprop,fondo_m,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_zonaprop,antiguedad_anios,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_zonaprop,estado_inmueble,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_zonaprop,disposicion,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_zonaprop,orientacion,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_zonaprop,luminosidad,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_zonaprop,cantidad_plantas,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_zonaprop,cantidad_pisos_edificio,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_zonaprop,departamentos_por_piso,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_zonaprop,apto_credito,float64,Indicador de apto crédito.,
+df_raw_zonaprop,apto_profesional,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_zonaprop,permite_mascotas,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_zonaprop,accesibilidad,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_zonaprop,amoblado,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_zonaprop,balcon,float64,Indicador de balcón.,
+df_raw_zonaprop,terraza,float64,Indicador de terraza.,
+df_raw_zonaprop,patio,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_zonaprop,jardin,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_zonaprop,parrilla,float64,Indicador de parrilla.,
+df_raw_zonaprop,pileta,float64,Indicador de pileta.,
+df_raw_zonaprop,sum,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_zonaprop,gimnasio,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_zonaprop,sauna,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_zonaprop,laundry,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_zonaprop,baulera,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_zonaprop,ascensor,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_zonaprop,seguridad_24h,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_zonaprop,vigilancia,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_zonaprop,aire_acondicionado,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_zonaprop,calefaccion,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_zonaprop,losa_radiante,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_zonaprop,gas_natural,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_zonaprop,agua_corriente,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_zonaprop,electricidad,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_zonaprop,cloaca,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_zonaprop,internet,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_zonaprop,vista_rio,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_zonaprop,vista_abierta,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_zonaprop,reciclado,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_zonaprop,a_refaccionar,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_zonaprop,cantidad_imagenes,int64,Cantidad de imágenes detectadas.,2
+df_raw_zonaprop,imagen_principal,str,URL de imagen principal.,https://imgar.zonapropcdn.com/avisos/1/00/59/55/92/83/360x266/2064166730.jpg?isFirstImage=true
+df_raw_zonaprop,video_url,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_zonaprop,tour_virtual_url,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_zonaprop,cantidad_atributos_extra,int64,Pendiente de documentar según significado en la fuente.,1
+df_raw_zonaprop,atributos_extra_json,str,Pendiente de documentar según significado en la fuente.,"{""texto_tarjeta"": ""USD 120.000 56 m² tot. 2 amb. 1 dorm. 1 baño Piedra Buena al 4700 Villa Lugano, Capital Federal Una n..."
+df_raw_zonaprop,jsonld_raw,float64,Pendiente de documentar según significado en la fuente.,
+df_raw_zonaprop,_archivo_origen,str,Pendiente de documentar según significado en la fuente.,data\raw\zonaprop\propiedades_zonaprop.csv
+df_raw_airbnb_norm,property_id,int64,Identificador de publicación o propiedad según fuente.,1040554442322631694
+df_raw_airbnb_norm,fuente,str,Portal o fuente de origen del registro.,Airbnb
+df_raw_airbnb_norm,tipo_operacion,str,"Tipo de operación: venta, alquiler o alquiler temporal.",alquiler temporal
+df_raw_airbnb_norm,unidad_precio,str,Unidad de referencia del precio Airbnb.,por_noche_2_huespedes_5_noches
+df_raw_airbnb_norm,url,str,URL de la publicación.,https://www.airbnb.com.ar/rooms/1040554442322631694
+df_raw_airbnb_norm,scraped_at_utc,str,Fecha y hora de extracción en UTC.,2026-09-05T17:38:48Z
+df_raw_airbnb_norm,titulo,str,Título publicado del aviso.,La mejor ubicación en Palermo - La Rural
+df_raw_airbnb_norm,descripcion,str,Descripción textual del aviso cuando está disponible.,"Cómodo y céntrico departamento en el corazón de Palermo, en la misma cuadra de La Rural.<br />Dos ambientes funcionales ..."
+df_raw_airbnb_norm,tipo_propiedad,str,Tipo de inmueble declarado o inferido.,Departamento con servicios incluidos entero
+df_raw_airbnb_norm,room_type,str,Pendiente de documentar según significado en la fuente.,Entire home/apt
+df_raw_airbnb_norm,categoria_alojamiento,str,Pendiente de documentar según significado en la fuente.,vivienda_entera
+df_raw_airbnb_norm,es_vivienda,bool,Pendiente de documentar según significado en la fuente.,True
+df_raw_airbnb_norm,acepta_corta_estadia,bool,Pendiente de documentar según significado en la fuente.,True
+df_raw_airbnb_norm,solo_larga_estadia,bool,Pendiente de documentar según significado en la fuente.,False
+df_raw_airbnb_norm,precio_regimen,str,"Régimen de precio Airbnb: por noche, mensual, etc.",mensual
+df_raw_airbnb_norm,moneda,str,Moneda del precio publicado.,USD
+df_raw_airbnb_norm,precio,float64,Precio numérico extraído de la publicación.,30.0
+df_raw_airbnb_norm,precio_texto,str,Precio en formato textual original.,$ 900 USD
+df_raw_airbnb_norm,precio_sospechoso,bool,Indicador de precio sospechoso en Airbnb normalizado.,False
+df_raw_airbnb_norm,barrio,str,"Barrio declarado, inferido o capturado desde la fuente.",Palermo
+df_raw_airbnb_norm,barrio_norm,str,Barrio normalizado para Airbnb.,palermo
+df_raw_airbnb_norm,comuna,float64,Comuna de CABA cuando está disponible o inferida.,14.0
+df_raw_airbnb_norm,latitud,float64,Latitud de la publicación cuando la fuente la informa.,-34.5794
+df_raw_airbnb_norm,longitud,float64,Longitud de la publicación cuando la fuente la informa.,-58.4236
+df_raw_airbnb_norm,ambientes,float64,Cantidad de ambientes.,2.0
+df_raw_airbnb_norm,dormitorios,float64,Cantidad de dormitorios.,1.0
+df_raw_airbnb_norm,banios,float64,Cantidad de baños.,1.0
+df_raw_airbnb_norm,toilettes,float64,Pendiente de documentar según significado en la fuente.,0.0
+df_raw_airbnb_norm,camas,float64,Pendiente de documentar según significado en la fuente.,2.0
+df_raw_airbnb_norm,capacidad,int64,Pendiente de documentar según significado en la fuente.,2
+df_raw_airbnb_norm,seller_id,int64,Identificador del vendedor/anfitrión cuando existe.,549766754
+df_raw_airbnb_norm,seller_nombre,str,Nombre del anfitrión/vendedor en Airbnb.,Rosi
+df_raw_airbnb_norm,seller_superhost,bool,Indicador de superhost en Airbnb.,False
+df_raw_airbnb_norm,rating,float64,Puntaje promedio de la publicación en Airbnb.,4.8
+df_raw_airbnb_norm,reviews,float64,Cantidad de reseñas en Airbnb.,5.0
+df_raw_airbnb_norm,cantidad_imagenes,int64,Cantidad de imágenes detectadas.,16
+df_raw_airbnb_norm,imagen_principal,str,URL de imagen principal.,https://a0.muscache.com/im/pictures/hosting/Hosting-1040554442322631694/original/bae9af43-2b83-4bbe-8d6a-34c2e1490ba1.jp...
+df_raw_airbnb_norm,ascensor,bool,Pendiente de documentar según significado en la fuente.,True
+df_raw_airbnb_norm,balcon_o_patio,bool,Indicador de balcón o patio en Airbnb.,False
+df_raw_airbnb_norm,terraza,bool,Indicador de terraza.,False
+df_raw_airbnb_norm,jardin,bool,Pendiente de documentar según significado en la fuente.,False
+df_raw_airbnb_norm,parrilla,bool,Indicador de parrilla.,False
+df_raw_airbnb_norm,pileta,bool,Indicador de pileta.,False
+df_raw_airbnb_norm,gimnasio,bool,Pendiente de documentar según significado en la fuente.,False
+df_raw_airbnb_norm,sauna,bool,Pendiente de documentar según significado en la fuente.,False
+df_raw_airbnb_norm,laundry,bool,Pendiente de documentar según significado en la fuente.,False
+df_raw_airbnb_norm,cochera,bool,Indicador de cochera en Airbnb/otros portales.,False
+df_raw_airbnb_norm,camaras_seguridad,bool,Pendiente de documentar según significado en la fuente.,False
+df_raw_airbnb_norm,portero,bool,Pendiente de documentar según significado en la fuente.,False
+df_raw_airbnb_norm,aire_acondicionado,bool,Pendiente de documentar según significado en la fuente.,False
+df_raw_airbnb_norm,calefaccion,bool,Pendiente de documentar según significado en la fuente.,True
+df_raw_airbnb_norm,losa_radiante,bool,Pendiente de documentar según significado en la fuente.,False
+df_raw_airbnb_norm,internet,bool,Pendiente de documentar según significado en la fuente.,True
+df_raw_airbnb_norm,vista,bool,Pendiente de documentar según significado en la fuente.,False
+df_raw_airbnb_norm,zona_trabajo,bool,Pendiente de documentar según significado en la fuente.,True
+df_raw_airbnb_norm,permite_mascotas,bool,Pendiente de documentar según significado en la fuente.,False
+df_raw_airbnb_norm,amoblado,bool,Pendiente de documentar según significado en la fuente.,True
+df_raw_airbnb_norm,localidad,str,Localidad declarada.,Ciudad Autónoma de Buenos Aires
+df_raw_airbnb_norm,provincia,str,Provincia o jurisdicción declarada.,CABA
+df_raw_airbnb_norm,pais,str,Pendiente de documentar según significado en la fuente.,Argentina
+df_raw_airbnb_norm,_archivo_origen,str,Pendiente de documentar según significado en la fuente.,data\raw\airbnb\airbnb_caba_normalizado_mensual.csv

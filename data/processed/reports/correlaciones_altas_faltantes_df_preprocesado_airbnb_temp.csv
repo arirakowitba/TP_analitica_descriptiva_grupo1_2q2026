@@ -1,0 +1,14 @@
+variable_1,variable_2,correlacion,abs_correlacion
+barrio_is_null,barrio_norm_is_null,1.0,1.0
+barrio_is_null,comuna_is_null,1.0,1.0
+barrio_norm_is_null,comuna_is_null,1.0,1.0
+ambientes_is_null,dormitorios_is_null,1.0,1.0
+ambientes_is_null,ambientes_ref_is_null,1.0,1.0
+ambientes_is_null,dormitorios_ref_is_null,1.0,1.0
+dormitorios_is_null,ambientes_ref_is_null,1.0,1.0
+dormitorios_is_null,dormitorios_ref_is_null,1.0,1.0
+banios_is_null,toilettes_is_null,1.0,1.0
+banios_is_null,banios_ref_is_null,1.0,1.0
+toilettes_is_null,banios_ref_is_null,1.0,1.0
+rating_is_null,reviews_is_null,1.0,1.0
+ambientes_ref_is_null,dormitorios_ref_is_null,1.0,1.0

@@ -1,0 +1,437 @@
+dataset,columna,tipo_dato,tipo_variable,n_filas,nulos_iniciales,pct_nulos_iniciales,invalidos_tipo_faltante,pct_invalidos_tipo_faltante,min_cuantitativa,max_cuantitativa,n_labels_categorica,comentario_usabilidad_calidad
+df_raw_airbnb_norm,rating,float64,cuantitativa,9596,1522,15.86,0,0.0,1.0,5.0,,media: usable con controles y posible segmentación
+df_raw_airbnb_norm,reviews,float64,cuantitativa,9596,1522,15.86,0,0.0,1.0,1140.0,,media: usable con controles y posible segmentación
+df_raw_airbnb_norm,camas,float64,cuantitativa,9596,189,1.97,0,0.0,1.0,40.0,,alta: utilizable para análisis inicial
+df_raw_airbnb_norm,barrio,str,categorica/texto/fecha,9596,77,0.8,0,0.0,,,45.0,alta: utilizable para análisis inicial
+df_raw_airbnb_norm,barrio_norm,str,categorica/texto/fecha,9596,77,0.8,0,0.0,,,45.0,alta: utilizable para análisis inicial
+df_raw_airbnb_norm,comuna,float64,cuantitativa,9596,77,0.8,0,0.0,1.0,15.0,,alta: utilizable para análisis inicial
+df_raw_airbnb_norm,descripcion,str,categorica/texto/fecha,9596,33,0.34,0,0.0,,,8800.0,media: alta cardinalidad; revisar si es identificador/texto libre
+df_raw_airbnb_norm,banios,float64,cuantitativa,9596,6,0.06,0,0.0,0.0,17.0,,alta: utilizable para análisis inicial
+df_raw_airbnb_norm,toilettes,float64,cuantitativa,9596,6,0.06,0,0.0,0.0,1.0,,alta: utilizable para análisis inicial
+df_raw_airbnb_norm,titulo,str,categorica/texto/fecha,9596,2,0.02,0,0.0,,,9200.0,media: alta cardinalidad; revisar si es identificador/texto libre
+df_raw_airbnb_norm,ambientes,float64,cuantitativa,9596,2,0.02,0,0.0,1.0,19.0,,alta: utilizable para análisis inicial
+df_raw_airbnb_norm,dormitorios,float64,cuantitativa,9596,2,0.02,0,0.0,0.0,18.0,,alta: utilizable para análisis inicial
+df_raw_airbnb_norm,property_id,int64,cuantitativa,9596,0,0.0,0,0.0,24763,1767738915547914159,,alta: utilizable para análisis inicial
+df_raw_airbnb_norm,fuente,str,categorica/texto/fecha,9596,0,0.0,0,0.0,,,1.0,alta: utilizable para análisis inicial
+df_raw_airbnb_norm,tipo_operacion,str,categorica/texto/fecha,9596,0,0.0,0,0.0,,,1.0,alta: utilizable para análisis inicial
+df_raw_airbnb_norm,unidad_precio,str,categorica/texto/fecha,9596,0,0.0,0,0.0,,,1.0,alta: utilizable para análisis inicial
+df_raw_airbnb_norm,url,str,categorica/texto/fecha,9596,0,0.0,0,0.0,,,9596.0,media: alta cardinalidad; revisar si es identificador/texto libre
+df_raw_airbnb_norm,scraped_at_utc,str,categorica/texto/fecha,9596,0,0.0,0,0.0,,,9596.0,media: alta cardinalidad; revisar si es identificador/texto libre
+df_raw_airbnb_norm,tipo_propiedad,str,categorica/texto/fecha,9596,0,0.0,0,0.0,,,11.0,alta: utilizable para análisis inicial
+df_raw_airbnb_norm,room_type,str,categorica/texto/fecha,9596,0,0.0,0,0.0,,,1.0,alta: utilizable para análisis inicial
+df_raw_airbnb_norm,categoria_alojamiento,str,categorica/texto/fecha,9596,0,0.0,0,0.0,,,1.0,alta: utilizable para análisis inicial
+df_raw_airbnb_norm,es_vivienda,bool,cuantitativa,9596,0,0.0,0,0.0,True,True,,alta: utilizable para análisis inicial
+df_raw_airbnb_norm,acepta_corta_estadia,bool,cuantitativa,9596,0,0.0,0,0.0,False,True,,alta: utilizable para análisis inicial
+df_raw_airbnb_norm,solo_larga_estadia,bool,cuantitativa,9596,0,0.0,0,0.0,False,True,,alta: utilizable para análisis inicial
+df_raw_airbnb_norm,precio_regimen,str,categorica/texto/fecha,9596,0,0.0,0,0.0,,,1.0,alta: utilizable para análisis inicial
+df_raw_airbnb_norm,moneda,str,categorica/texto/fecha,9596,0,0.0,0,0.0,,,1.0,alta: utilizable para análisis inicial
+df_raw_airbnb_norm,precio,float64,cuantitativa,9596,0,0.0,0,0.0,16.833333333333332,69768.0,,alta: utilizable para análisis inicial
+df_raw_airbnb_norm,precio_texto,str,categorica/texto/fecha,9596,0,0.0,0,0.0,,,3468.0,media: alta cardinalidad; revisar si es identificador/texto libre
+df_raw_airbnb_norm,precio_sospechoso,bool,cuantitativa,9596,0,0.0,0,0.0,False,True,,alta: utilizable para análisis inicial
+df_raw_airbnb_norm,latitud,float64,cuantitativa,9596,0,0.0,0,0.0,-34.70302,-34.52706,,alta: utilizable para análisis inicial
+df_raw_airbnb_norm,longitud,float64,cuantitativa,9596,0,0.0,0,0.0,-58.5306,-58.3356,,alta: utilizable para análisis inicial
+df_raw_airbnb_norm,capacidad,int64,cuantitativa,9596,0,0.0,0,0.0,2,26,,alta: utilizable para análisis inicial
+df_raw_airbnb_norm,seller_id,int64,cuantitativa,9596,0,0.0,0,0.0,13426,1767139042701654272,,alta: utilizable para análisis inicial
+df_raw_airbnb_norm,seller_nombre,str,categorica/texto/fecha,9596,0,0.0,0,0.0,,,1836.0,media: alta cardinalidad; revisar si es identificador/texto libre
+df_raw_airbnb_norm,seller_superhost,bool,cuantitativa,9596,0,0.0,0,0.0,False,True,,alta: utilizable para análisis inicial
+df_raw_airbnb_norm,cantidad_imagenes,int64,cuantitativa,9596,0,0.0,0,0.0,1,450,,alta: utilizable para análisis inicial
+df_raw_airbnb_norm,imagen_principal,str,categorica/texto/fecha,9596,0,0.0,0,0.0,,,9399.0,media: alta cardinalidad; revisar si es identificador/texto libre
+df_raw_airbnb_norm,ascensor,bool,cuantitativa,9596,0,0.0,0,0.0,False,True,,alta: utilizable para análisis inicial
+df_raw_airbnb_norm,balcon_o_patio,bool,cuantitativa,9596,0,0.0,0,0.0,False,True,,alta: utilizable para análisis inicial
+df_raw_airbnb_norm,terraza,bool,cuantitativa,9596,0,0.0,0,0.0,False,True,,alta: utilizable para análisis inicial
+df_raw_airbnb_norm,jardin,bool,cuantitativa,9596,0,0.0,0,0.0,False,True,,alta: utilizable para análisis inicial
+df_raw_airbnb_norm,parrilla,bool,cuantitativa,9596,0,0.0,0,0.0,False,True,,alta: utilizable para análisis inicial
+df_raw_airbnb_norm,pileta,bool,cuantitativa,9596,0,0.0,0,0.0,False,True,,alta: utilizable para análisis inicial
+df_raw_airbnb_norm,gimnasio,bool,cuantitativa,9596,0,0.0,0,0.0,False,True,,alta: utilizable para análisis inicial
+df_raw_airbnb_norm,sauna,bool,cuantitativa,9596,0,0.0,0,0.0,False,True,,alta: utilizable para análisis inicial
+df_raw_airbnb_norm,laundry,bool,cuantitativa,9596,0,0.0,0,0.0,False,True,,alta: utilizable para análisis inicial
+df_raw_airbnb_norm,cochera,bool,cuantitativa,9596,0,0.0,0,0.0,False,True,,alta: utilizable para análisis inicial
+df_raw_airbnb_norm,camaras_seguridad,bool,cuantitativa,9596,0,0.0,0,0.0,False,True,,alta: utilizable para análisis inicial
+df_raw_airbnb_norm,portero,bool,cuantitativa,9596,0,0.0,0,0.0,False,True,,alta: utilizable para análisis inicial
+df_raw_airbnb_norm,aire_acondicionado,bool,cuantitativa,9596,0,0.0,0,0.0,False,True,,alta: utilizable para análisis inicial
+df_raw_airbnb_norm,calefaccion,bool,cuantitativa,9596,0,0.0,0,0.0,False,True,,alta: utilizable para análisis inicial
+df_raw_airbnb_norm,losa_radiante,bool,cuantitativa,9596,0,0.0,0,0.0,False,True,,alta: utilizable para análisis inicial
+df_raw_airbnb_norm,internet,bool,cuantitativa,9596,0,0.0,0,0.0,False,True,,alta: utilizable para análisis inicial
+df_raw_airbnb_norm,vista,bool,cuantitativa,9596,0,0.0,0,0.0,False,True,,alta: utilizable para análisis inicial
+df_raw_airbnb_norm,zona_trabajo,bool,cuantitativa,9596,0,0.0,0,0.0,False,True,,alta: utilizable para análisis inicial
+df_raw_airbnb_norm,permite_mascotas,bool,cuantitativa,9596,0,0.0,0,0.0,False,True,,alta: utilizable para análisis inicial
+df_raw_airbnb_norm,amoblado,bool,cuantitativa,9596,0,0.0,0,0.0,True,True,,alta: utilizable para análisis inicial
+df_raw_airbnb_norm,localidad,str,categorica/texto/fecha,9596,0,0.0,0,0.0,,,1.0,alta: utilizable para análisis inicial
+df_raw_airbnb_norm,provincia,str,categorica/texto/fecha,9596,0,0.0,0,0.0,,,1.0,alta: utilizable para análisis inicial
+df_raw_airbnb_norm,pais,str,categorica/texto/fecha,9596,0,0.0,0,0.0,,,1.0,alta: utilizable para análisis inicial
+df_raw_airbnb_norm,_archivo_origen,str,categorica/texto/fecha,9596,0,0.0,0,0.0,,,1.0,alta: utilizable para análisis inicial
+df_raw_argenprop,descripcion,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,estado_publicacion,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,fecha_publicacion,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,inmobiliaria,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,seller_id,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,unidad,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,barrio,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,localidad,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,partido,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,provincia,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,pais,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,codigo_postal,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,latitud,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,longitud,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,toilettes,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,superficie_descubierta_m2,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,superficie_semicubierta_m2,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,superficie_terreno_m2,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,frente_m,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,fondo_m,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,antiguedad_anios,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,estado_inmueble,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,disposicion,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,orientacion,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,luminosidad,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,cantidad_plantas,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,cantidad_pisos_edificio,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,departamentos_por_piso,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,apto_credito,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,apto_profesional,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,permite_mascotas,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,accesibilidad,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,amoblado,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,balcon,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,terraza,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,patio,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,jardin,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,parrilla,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,pileta,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,sum,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,gimnasio,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,sauna,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,laundry,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,baulera,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,ascensor,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,seguridad_24h,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,vigilancia,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,aire_acondicionado,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,calefaccion,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,losa_radiante,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,gas_natural,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,agua_corriente,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,electricidad,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,cloaca,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,internet,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,vista_rio,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,vista_abierta,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,reciclado,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,a_refaccionar,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,video_url,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,tour_virtual_url,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,jsonld_raw,float64,cuantitativa,162,162,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,cocheras,float64,cuantitativa,162,159,98.15,0,0.0,1.0,2.0,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,superficie_cubierta_m2,float64,cuantitativa,162,155,95.68,0,0.0,31.47,200.0,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,expensas_moneda,str,categorica/texto/fecha,162,154,95.06,0,0.0,,,1.0,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,expensas,float64,cuantitativa,162,151,93.21,0,0.0,3.0,320000.0,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,expensas_texto,str,categorica/texto/fecha,162,151,93.21,0,0.0,,,10.0,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_argenprop,banios,float64,cuantitativa,162,90,55.56,0,0.0,1.0,90.0,,media-baja: requiere justificación antes de usar en KPIs
+df_raw_argenprop,piso,str,categorica/texto/fecha,162,69,42.59,0,0.0,,,27.0,media-baja: requiere justificación antes de usar en KPIs
+df_raw_argenprop,ambientes,float64,cuantitativa,162,54,33.33,0,0.0,1.0,5.0,,media: usable con controles y posible segmentación
+df_raw_argenprop,dormitorios,float64,cuantitativa,162,29,17.9,0,0.0,1.0,4.0,,media: usable con controles y posible segmentación
+df_raw_argenprop,precio_m2_calculado,float64,cuantitativa,162,13,8.02,0,0.0,13.48,33333.33,,alta: utilizable para análisis inicial
+df_raw_argenprop,superficie_total_m2,float64,cuantitativa,162,13,8.02,0,0.0,18.0,300.0,,alta: utilizable para análisis inicial
+df_raw_argenprop,altura,float64,cuantitativa,162,2,1.23,0,0.0,0.0,5600.0,,alta: utilizable para análisis inicial
+df_raw_argenprop,property_id,str,categorica/texto/fecha,162,0,0.0,0,0.0,,,162.0,alta: utilizable para análisis inicial
+df_raw_argenprop,fuente,str,categorica/texto/fecha,162,0,0.0,0,0.0,,,1.0,alta: utilizable para análisis inicial
+df_raw_argenprop,url,str,categorica/texto/fecha,162,0,0.0,0,0.0,,,162.0,alta: utilizable para análisis inicial
+df_raw_argenprop,scraped_at_utc,str,categorica/texto/fecha,162,0,0.0,0,0.0,,,162.0,alta: utilizable para análisis inicial
+df_raw_argenprop,search_url,str,categorica/texto/fecha,162,0,0.0,0,0.0,,,2.0,alta: utilizable para análisis inicial
+df_raw_argenprop,pagina_origen,int64,cuantitativa,162,0,0.0,0,0.0,1.0,4.0,,alta: utilizable para análisis inicial
+df_raw_argenprop,http_status,int64,cuantitativa,162,0,0.0,0,0.0,200.0,200.0,,alta: utilizable para análisis inicial
+df_raw_argenprop,parse_ok,int64,cuantitativa,162,0,0.0,0,0.0,1.0,1.0,,alta: utilizable para análisis inicial
+df_raw_argenprop,parse_warnings,str,categorica/texto/fecha,162,0,0.0,0,0.0,,,1.0,alta: utilizable para análisis inicial
+df_raw_argenprop,titulo,str,categorica/texto/fecha,162,0,0.0,0,0.0,,,154.0,alta: utilizable para análisis inicial
+df_raw_argenprop,tipo_operacion,str,categorica/texto/fecha,162,0,0.0,0,0.0,,,2.0,alta: utilizable para análisis inicial
+df_raw_argenprop,tipo_propiedad,str,categorica/texto/fecha,162,0,0.0,0,0.0,,,1.0,alta: utilizable para análisis inicial
+df_raw_argenprop,moneda,str,categorica/texto/fecha,162,0,0.0,0,0.0,,,2.0,alta: utilizable para análisis inicial
+df_raw_argenprop,precio,float64,cuantitativa,162,0,0.0,0,0.0,900.0,3500000.0,,alta: utilizable para análisis inicial
+df_raw_argenprop,precio_texto,str,categorica/texto/fecha,162,0,0.0,0,0.0,,,157.0,alta: utilizable para análisis inicial
+df_raw_argenprop,direccion_completa,str,categorica/texto/fecha,162,0,0.0,0,0.0,,,156.0,alta: utilizable para análisis inicial
+df_raw_argenprop,calle,str,categorica/texto/fecha,162,0,0.0,0,0.0,,,119.0,alta: utilizable para análisis inicial
+df_raw_argenprop,cantidad_imagenes,int64,cuantitativa,162,0,0.0,0,0.0,4.0,9.0,,alta: utilizable para análisis inicial
+df_raw_argenprop,imagen_principal,str,categorica/texto/fecha,162,0,0.0,0,0.0,,,162.0,alta: utilizable para análisis inicial
+df_raw_argenprop,cantidad_atributos_extra,int64,cuantitativa,162,0,0.0,0,0.0,1.0,1.0,,alta: utilizable para análisis inicial
+df_raw_argenprop,atributos_extra_json,str,categorica/texto/fecha,162,0,0.0,0,0.0,,,162.0,alta: utilizable para análisis inicial
+df_raw_argenprop,_archivo_origen,str,categorica/texto/fecha,162,0,0.0,0,0.0,,,1.0,alta: utilizable para análisis inicial
+df_raw_meli_alq,posesion,float64,cuantitativa,11479,11479,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_meli_alq,unidades_disponibles,float64,cuantitativa,11479,11479,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_meli_alq,parse_warnings,float64,cuantitativa,11479,11479,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_meli_alq,estado_entrega,object,categorica/texto/fecha,11479,11478,99.99,0,0.0,,,1.0,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_meli_alq,precio_anterior,float64,cuantitativa,11479,11458,99.82,0,0.0,350.0,800000.0,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_meli_alq,descuento_pct,float64,cuantitativa,11479,11458,99.82,0,0.0,-58984.19,0.0,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_meli_alq,dormitorios_min,float64,cuantitativa,11479,11436,99.63,0,0.0,1.0,2.0,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_meli_alq,dormitorios_max,float64,cuantitativa,11479,11436,99.63,0,0.0,1.0,2.0,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_meli_alq,inmobiliaria,str,categorica/texto/fecha,11479,10251,89.3,0,0.0,,,75.0,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_meli_alq,altura,float64,cuantitativa,11479,1643,14.31,0,0.0,0.0,13136.0,,alta: utilizable para análisis inicial
+df_raw_meli_alq,ambientes_min,float64,cuantitativa,11479,339,2.95,0,0.0,1.0,71.0,,alta: utilizable para análisis inicial
+df_raw_meli_alq,ambientes_max,float64,cuantitativa,11479,339,2.95,0,0.0,1.0,71.0,,alta: utilizable para análisis inicial
+df_raw_meli_alq,es_rango_ambientes,float64,cuantitativa,11479,339,2.95,0,0.0,0.0,0.0,,alta: utilizable para análisis inicial
+df_raw_meli_alq,comuna,float64,cuantitativa,11479,229,1.99,0,0.0,1.0,15.0,,alta: utilizable para análisis inicial
+df_raw_meli_alq,banios_min,float64,cuantitativa,11479,216,1.88,0,0.0,1.0,76.0,,alta: utilizable para análisis inicial
+df_raw_meli_alq,banios_max,float64,cuantitativa,11479,216,1.88,0,0.0,1.0,76.0,,alta: utilizable para análisis inicial
+df_raw_meli_alq,superficie_min_m2,float64,cuantitativa,11479,50,0.44,0,0.0,1.0,5116.0,,alta: utilizable para análisis inicial
+df_raw_meli_alq,superficie_max_m2,float64,cuantitativa,11479,50,0.44,0,0.0,1.0,5116.0,,alta: utilizable para análisis inicial
+df_raw_meli_alq,tipo_superficie,str,categorica/texto/fecha,11479,50,0.44,0,0.0,,,2.0,alta: utilizable para análisis inicial
+df_raw_meli_alq,precio_m2_min,float64,cuantitativa,11479,50,0.44,0,0.0,0.06,2923976.61,,alta: utilizable para análisis inicial
+df_raw_meli_alq,precio_m2_max,float64,cuantitativa,11479,50,0.44,0,0.0,0.06,2923976.61,,alta: utilizable para análisis inicial
+df_raw_meli_alq,amplitud_superficie_m2,float64,cuantitativa,11479,50,0.44,0,0.0,0.0,0.0,,alta: utilizable para análisis inicial
+df_raw_meli_alq,es_rango_superficie,float64,cuantitativa,11479,50,0.44,0,0.0,0.0,0.0,,alta: utilizable para análisis inicial
+df_raw_meli_alq,barrio,str,categorica/texto/fecha,11479,26,0.23,0,0.0,,,62.0,alta: utilizable para análisis inicial
+df_raw_meli_alq,atributos_texto,str,categorica/texto/fecha,11479,3,0.03,0,0.0,,,1285.0,media: alta cardinalidad; revisar si es identificador/texto libre
+df_raw_meli_alq,item_id,str,categorica/texto/fecha,11479,0,0.0,0,0.0,,,9877.0,media: alta cardinalidad; revisar si es identificador/texto libre
+df_raw_meli_alq,fuente,str,categorica/texto/fecha,11479,0,0.0,0,0.0,,,1.0,alta: utilizable para análisis inicial
+df_raw_meli_alq,url,str,categorica/texto/fecha,11479,0,0.0,0,0.0,,,9896.0,media: alta cardinalidad; revisar si es identificador/texto libre
+df_raw_meli_alq,search_url,str,categorica/texto/fecha,11479,0,0.0,0,0.0,,,49.0,alta: utilizable para análisis inicial
+df_raw_meli_alq,pagina_origen,int64,cuantitativa,11479,0,0.0,0,0.0,1.0,42.0,,alta: utilizable para análisis inicial
+df_raw_meli_alq,scraped_at_utc,str,categorica/texto/fecha,11479,0,0.0,0,0.0,,,11479.0,media: alta cardinalidad; revisar si es identificador/texto libre
+df_raw_meli_alq,titulo,str,categorica/texto/fecha,11479,0,0.0,0,0.0,,,8053.0,media: alta cardinalidad; revisar si es identificador/texto libre
+df_raw_meli_alq,tipo_propiedad,str,categorica/texto/fecha,11479,0,0.0,0,0.0,,,1.0,alta: utilizable para análisis inicial
+df_raw_meli_alq,tipo_operacion,str,categorica/texto/fecha,11479,0,0.0,0,0.0,,,1.0,alta: utilizable para análisis inicial
+df_raw_meli_alq,moneda,str,categorica/texto/fecha,11479,0,0.0,0,0.0,,,2.0,alta: utilizable para análisis inicial
+df_raw_meli_alq,precio,float64,cuantitativa,11479,0,0.0,0,0.0,10.0,111111111.0,,alta: utilizable para análisis inicial
+df_raw_meli_alq,precio_texto,str,categorica/texto/fecha,11479,0,0.0,0,0.0,,,530.0,media: alta cardinalidad; revisar si es identificador/texto libre
+df_raw_meli_alq,desde,int64,cuantitativa,11479,0,0.0,0,0.0,0.0,1.0,,alta: utilizable para análisis inicial
+df_raw_meli_alq,direccion,str,categorica/texto/fecha,11479,0,0.0,0,0.0,,,8252.0,media: alta cardinalidad; revisar si es identificador/texto libre
+df_raw_meli_alq,localidad,str,categorica/texto/fecha,11479,0,0.0,0,0.0,,,1.0,alta: utilizable para análisis inicial
+df_raw_meli_alq,provincia,str,categorica/texto/fecha,11479,0,0.0,0,0.0,,,1.0,alta: utilizable para análisis inicial
+df_raw_meli_alq,imagen_principal,str,categorica/texto/fecha,11479,0,0.0,0,0.0,,,9866.0,media: alta cardinalidad; revisar si es identificador/texto libre
+df_raw_meli_alq,destacado,int64,cuantitativa,11479,0,0.0,0,0.0,0.0,1.0,,alta: utilizable para análisis inicial
+df_raw_meli_alq,emprendimiento,int64,cuantitativa,11479,0,0.0,0,0.0,0.0,1.0,,alta: utilizable para análisis inicial
+df_raw_meli_alq,texto_tarjeta,str,categorica/texto/fecha,11479,0,0.0,0,0.0,,,9989.0,media: alta cardinalidad; revisar si es identificador/texto libre
+df_raw_meli_alq,posicion_pagina,int64,cuantitativa,11479,0,0.0,0,0.0,1.0,48.0,,alta: utilizable para análisis inicial
+df_raw_meli_alq,slug,str,categorica/texto/fecha,11479,0,0.0,0,0.0,,,9896.0,media: alta cardinalidad; revisar si es identificador/texto libre
+df_raw_meli_alq,calle,str,categorica/texto/fecha,11479,0,0.0,0,0.0,,,3934.0,media: alta cardinalidad; revisar si es identificador/texto libre
+df_raw_meli_alq,monoambiente,int64,cuantitativa,11479,0,0.0,0,0.0,0.0,1.0,,alta: utilizable para análisis inicial
+df_raw_meli_alq,apto_credito,int64,cuantitativa,11479,0,0.0,0,0.0,0.0,1.0,,alta: utilizable para análisis inicial
+df_raw_meli_alq,balcon,int64,cuantitativa,11479,0,0.0,0,0.0,0.0,1.0,,alta: utilizable para análisis inicial
+df_raw_meli_alq,terraza,int64,cuantitativa,11479,0,0.0,0,0.0,0.0,1.0,,alta: utilizable para análisis inicial
+df_raw_meli_alq,pileta,int64,cuantitativa,11479,0,0.0,0,0.0,0.0,1.0,,alta: utilizable para análisis inicial
+df_raw_meli_alq,parrilla,int64,cuantitativa,11479,0,0.0,0,0.0,0.0,1.0,,alta: utilizable para análisis inicial
+df_raw_meli_alq,cochera_mencionada,int64,cuantitativa,11479,0,0.0,0,0.0,0.0,1.0,,alta: utilizable para análisis inicial
+df_raw_meli_alq,amenities_mencionadas,int64,cuantitativa,11479,0,0.0,0,0.0,0.0,1.0,,alta: utilizable para análisis inicial
+df_raw_meli_alq,cantidad_atributos,int64,cuantitativa,11479,0,0.0,0,0.0,0.0,3.0,,alta: utilizable para análisis inicial
+df_raw_meli_alq,completitud_pct,float64,cuantitativa,11479,0,0.0,0,0.0,42.9,100.0,,alta: utilizable para análisis inicial
+df_raw_meli_alq,imagen_id,str,categorica/texto/fecha,11479,0,0.0,0,0.0,,,9866.0,media: alta cardinalidad; revisar si es identificador/texto libre
+df_raw_meli_alq,imagen_extension,str,categorica/texto/fecha,11479,0,0.0,0,0.0,,,1.0,alta: utilizable para análisis inicial
+df_raw_meli_alq,_archivo_origen,str,categorica/texto/fecha,11479,0,0.0,0,0.0,,,2.0,alta: utilizable para análisis inicial
+df_raw_meli_alq_temp,parse_warnings,float64,cuantitativa,6190,6190,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_meli_alq_temp,precio_anterior,float64,cuantitativa,6190,6187,99.95,0,0.0,1354.0,699000.0,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_meli_alq_temp,descuento_pct,float64,cuantitativa,6190,6187,99.95,0,0.0,-58984.19,0.0,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_meli_alq_temp,posesion,object,categorica/texto/fecha,6190,6180,99.84,0,0.0,,,3.0,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_meli_alq_temp,unidades_disponibles,float64,cuantitativa,6190,6180,99.84,0,0.0,1.0,25.0,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_meli_alq_temp,dormitorios_min,float64,cuantitativa,6190,6179,99.82,0,0.0,1.0,2.0,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_meli_alq_temp,dormitorios_max,float64,cuantitativa,6190,6179,99.82,0,0.0,1.0,2.0,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_meli_alq_temp,estado_entrega,object,categorica/texto/fecha,6190,6179,99.82,0,0.0,,,2.0,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_meli_alq_temp,inmobiliaria,str,categorica/texto/fecha,6190,5558,89.79,0,0.0,,,39.0,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_meli_alq_temp,altura,float64,cuantitativa,6190,1406,22.71,0,0.0,0.0,118500.0,,media: usable con controles y posible segmentación
+df_raw_meli_alq_temp,comuna,float64,cuantitativa,6190,274,4.43,0,0.0,1.0,15.0,,alta: utilizable para análisis inicial
+df_raw_meli_alq_temp,ambientes_min,float64,cuantitativa,6190,242,3.91,0,0.0,1.0,10.0,,alta: utilizable para análisis inicial
+df_raw_meli_alq_temp,ambientes_max,float64,cuantitativa,6190,242,3.91,0,0.0,1.0,10.0,,alta: utilizable para análisis inicial
+df_raw_meli_alq_temp,es_rango_ambientes,float64,cuantitativa,6190,242,3.91,0,0.0,0.0,1.0,,alta: utilizable para análisis inicial
+df_raw_meli_alq_temp,banios_min,float64,cuantitativa,6190,116,1.87,0,0.0,1.0,76.0,,alta: utilizable para análisis inicial
+df_raw_meli_alq_temp,banios_max,float64,cuantitativa,6190,116,1.87,0,0.0,1.0,76.0,,alta: utilizable para análisis inicial
+df_raw_meli_alq_temp,barrio,str,categorica/texto/fecha,6190,26,0.42,0,0.0,,,71.0,alta: utilizable para análisis inicial
+df_raw_meli_alq_temp,superficie_min_m2,float64,cuantitativa,6190,25,0.4,0,0.0,1.0,400.0,,alta: utilizable para análisis inicial
+df_raw_meli_alq_temp,superficie_max_m2,float64,cuantitativa,6190,25,0.4,0,0.0,1.0,400.0,,alta: utilizable para análisis inicial
+df_raw_meli_alq_temp,tipo_superficie,str,categorica/texto/fecha,6190,25,0.4,0,0.0,,,2.0,alta: utilizable para análisis inicial
+df_raw_meli_alq_temp,precio_m2_min,float64,cuantitativa,6190,25,0.4,0,0.0,0.22,860000.0,,alta: utilizable para análisis inicial
+df_raw_meli_alq_temp,precio_m2_max,float64,cuantitativa,6190,25,0.4,0,0.0,0.22,860000.0,,alta: utilizable para análisis inicial
+df_raw_meli_alq_temp,amplitud_superficie_m2,float64,cuantitativa,6190,25,0.4,0,0.0,0.0,92.0,,alta: utilizable para análisis inicial
+df_raw_meli_alq_temp,es_rango_superficie,float64,cuantitativa,6190,25,0.4,0,0.0,0.0,1.0,,alta: utilizable para análisis inicial
+df_raw_meli_alq_temp,provincia,str,categorica/texto/fecha,6190,13,0.21,0,0.0,,,1.0,alta: utilizable para análisis inicial
+df_raw_meli_alq_temp,atributos_texto,str,categorica/texto/fecha,6190,3,0.05,0,0.0,,,706.0,media: alta cardinalidad; revisar si es identificador/texto libre
+df_raw_meli_alq_temp,item_id,str,categorica/texto/fecha,6190,0,0.0,0,0.0,,,4494.0,media: alta cardinalidad; revisar si es identificador/texto libre
+df_raw_meli_alq_temp,fuente,str,categorica/texto/fecha,6190,0,0.0,0,0.0,,,1.0,alta: utilizable para análisis inicial
+df_raw_meli_alq_temp,url,str,categorica/texto/fecha,6190,0,0.0,0,0.0,,,4500.0,media: alta cardinalidad; revisar si es identificador/texto libre
+df_raw_meli_alq_temp,search_url,str,categorica/texto/fecha,6190,0,0.0,0,0.0,,,43.0,alta: utilizable para análisis inicial
+df_raw_meli_alq_temp,pagina_origen,int64,cuantitativa,6190,0,0.0,0,0.0,1.0,42.0,,alta: utilizable para análisis inicial
+df_raw_meli_alq_temp,scraped_at_utc,str,categorica/texto/fecha,6190,0,0.0,0,0.0,,,6190.0,media: alta cardinalidad; revisar si es identificador/texto libre
+df_raw_meli_alq_temp,titulo,str,categorica/texto/fecha,6190,0,0.0,0,0.0,,,3585.0,media: alta cardinalidad; revisar si es identificador/texto libre
+df_raw_meli_alq_temp,tipo_propiedad,str,categorica/texto/fecha,6190,0,0.0,0,0.0,,,1.0,alta: utilizable para análisis inicial
+df_raw_meli_alq_temp,tipo_operacion,str,categorica/texto/fecha,6190,0,0.0,0,0.0,,,1.0,alta: utilizable para análisis inicial
+df_raw_meli_alq_temp,moneda,str,categorica/texto/fecha,6190,0,0.0,0,0.0,,,2.0,alta: utilizable para análisis inicial
+df_raw_meli_alq_temp,precio,float64,cuantitativa,6190,0,0.0,0,0.0,10.0,3999000.0,,alta: utilizable para análisis inicial
+df_raw_meli_alq_temp,precio_texto,str,categorica/texto/fecha,6190,0,0.0,0,0.0,,,592.0,media: alta cardinalidad; revisar si es identificador/texto libre
+df_raw_meli_alq_temp,desde,int64,cuantitativa,6190,0,0.0,0,0.0,0.0,1.0,,alta: utilizable para análisis inicial
+df_raw_meli_alq_temp,direccion,str,categorica/texto/fecha,6190,0,0.0,0,0.0,,,3872.0,media: alta cardinalidad; revisar si es identificador/texto libre
+df_raw_meli_alq_temp,localidad,str,categorica/texto/fecha,6190,0,0.0,0,0.0,,,9.0,alta: utilizable para análisis inicial
+df_raw_meli_alq_temp,imagen_principal,str,categorica/texto/fecha,6190,0,0.0,0,0.0,,,4495.0,media: alta cardinalidad; revisar si es identificador/texto libre
+df_raw_meli_alq_temp,destacado,int64,cuantitativa,6190,0,0.0,0,0.0,0.0,1.0,,alta: utilizable para análisis inicial
+df_raw_meli_alq_temp,emprendimiento,int64,cuantitativa,6190,0,0.0,0,0.0,0.0,1.0,,alta: utilizable para análisis inicial
+df_raw_meli_alq_temp,texto_tarjeta,str,categorica/texto/fecha,6190,0,0.0,0,0.0,,,4561.0,media: alta cardinalidad; revisar si es identificador/texto libre
+df_raw_meli_alq_temp,posicion_pagina,int64,cuantitativa,6190,0,0.0,0,0.0,1.0,48.0,,alta: utilizable para análisis inicial
+df_raw_meli_alq_temp,slug,str,categorica/texto/fecha,6190,0,0.0,0,0.0,,,4500.0,media: alta cardinalidad; revisar si es identificador/texto libre
+df_raw_meli_alq_temp,calle,str,categorica/texto/fecha,6190,0,0.0,0,0.0,,,2281.0,media: alta cardinalidad; revisar si es identificador/texto libre
+df_raw_meli_alq_temp,monoambiente,int64,cuantitativa,6190,0,0.0,0,0.0,0.0,1.0,,alta: utilizable para análisis inicial
+df_raw_meli_alq_temp,apto_credito,int64,cuantitativa,6190,0,0.0,0,0.0,0.0,1.0,,alta: utilizable para análisis inicial
+df_raw_meli_alq_temp,balcon,int64,cuantitativa,6190,0,0.0,0,0.0,0.0,1.0,,alta: utilizable para análisis inicial
+df_raw_meli_alq_temp,terraza,int64,cuantitativa,6190,0,0.0,0,0.0,0.0,1.0,,alta: utilizable para análisis inicial
+df_raw_meli_alq_temp,pileta,int64,cuantitativa,6190,0,0.0,0,0.0,0.0,1.0,,alta: utilizable para análisis inicial
+df_raw_meli_alq_temp,parrilla,int64,cuantitativa,6190,0,0.0,0,0.0,0.0,1.0,,alta: utilizable para análisis inicial
+df_raw_meli_alq_temp,cochera_mencionada,int64,cuantitativa,6190,0,0.0,0,0.0,0.0,1.0,,alta: utilizable para análisis inicial
+df_raw_meli_alq_temp,amenities_mencionadas,int64,cuantitativa,6190,0,0.0,0,0.0,0.0,1.0,,alta: utilizable para análisis inicial
+df_raw_meli_alq_temp,cantidad_atributos,int64,cuantitativa,6190,0,0.0,0,0.0,0.0,3.0,,alta: utilizable para análisis inicial
+df_raw_meli_alq_temp,completitud_pct,float64,cuantitativa,6190,0,0.0,0,0.0,42.9,100.0,,alta: utilizable para análisis inicial
+df_raw_meli_alq_temp,imagen_id,str,categorica/texto/fecha,6190,0,0.0,0,0.0,,,4495.0,media: alta cardinalidad; revisar si es identificador/texto libre
+df_raw_meli_alq_temp,imagen_extension,str,categorica/texto/fecha,6190,0,0.0,0,0.0,,,1.0,alta: utilizable para análisis inicial
+df_raw_meli_alq_temp,_archivo_origen,str,categorica/texto/fecha,6190,0,0.0,0,0.0,,,2.0,alta: utilizable para análisis inicial
+df_raw_meli_vtas,parse_warnings,float64,cuantitativa,44013,44013,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_meli_vtas,precio_anterior,float64,cuantitativa,44013,43973,99.91,0,0.0,3.0,110000.0,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_meli_vtas,descuento_pct,float64,cuantitativa,44013,43973,99.91,0,0.0,-4166566.67,0.0,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_meli_vtas,dormitorios_min,float64,cuantitativa,44013,43810,99.54,0,0.0,1.0,31.0,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_meli_vtas,dormitorios_max,float64,cuantitativa,44013,43810,99.54,0,0.0,1.0,31.0,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_meli_vtas,posesion,str,categorica/texto/fecha,44013,42733,97.09,0,0.0,,,6.0,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_meli_vtas,unidades_disponibles,float64,cuantitativa,44013,42733,97.09,0,0.0,1.0,96.0,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_meli_vtas,estado_entrega,str,categorica/texto/fecha,44013,41243,93.71,0,0.0,,,4.0,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_meli_vtas,inmobiliaria,str,categorica/texto/fecha,44013,34891,79.27,0,0.0,,,97.0,media-baja: requiere justificación antes de usar en KPIs
+df_raw_meli_vtas,altura,float64,cuantitativa,44013,7381,16.77,0,0.0,0.0,14600.0,,media: usable con controles y posible segmentación
+df_raw_meli_vtas,banios_min,float64,cuantitativa,44013,957,2.17,0,0.0,1.0,43.0,,alta: utilizable para análisis inicial
+df_raw_meli_vtas,banios_max,float64,cuantitativa,44013,957,2.17,0,0.0,1.0,43.0,,alta: utilizable para análisis inicial
+df_raw_meli_vtas,comuna,float64,cuantitativa,44013,890,2.02,0,0.0,1.0,15.0,,alta: utilizable para análisis inicial
+df_raw_meli_vtas,ambientes_min,float64,cuantitativa,44013,556,1.26,0,0.0,1.0,44.0,,alta: utilizable para análisis inicial
+df_raw_meli_vtas,ambientes_max,float64,cuantitativa,44013,556,1.26,0,0.0,1.0,44.0,,alta: utilizable para análisis inicial
+df_raw_meli_vtas,es_rango_ambientes,float64,cuantitativa,44013,556,1.26,0,0.0,0.0,1.0,,alta: utilizable para análisis inicial
+df_raw_meli_vtas,barrio,str,categorica/texto/fecha,44013,157,0.36,0,0.0,,,68.0,alta: utilizable para análisis inicial
+df_raw_meli_vtas,superficie_min_m2,float64,cuantitativa,44013,42,0.1,0,0.0,1.0,580000.0,,alta: utilizable para análisis inicial
+df_raw_meli_vtas,superficie_max_m2,float64,cuantitativa,44013,42,0.1,0,0.0,1.0,580000.0,,alta: utilizable para análisis inicial
+df_raw_meli_vtas,tipo_superficie,str,categorica/texto/fecha,44013,42,0.1,0,0.0,,,2.0,alta: utilizable para análisis inicial
+df_raw_meli_vtas,precio_m2_min,float64,cuantitativa,44013,42,0.1,0,0.0,0.15,4619481.48,,alta: utilizable para análisis inicial
+df_raw_meli_vtas,precio_m2_max,float64,cuantitativa,44013,42,0.1,0,0.0,0.15,4619481.48,,alta: utilizable para análisis inicial
+df_raw_meli_vtas,amplitud_superficie_m2,float64,cuantitativa,44013,42,0.1,0,0.0,0.0,753.0,,alta: utilizable para análisis inicial
+df_raw_meli_vtas,es_rango_superficie,float64,cuantitativa,44013,42,0.1,0,0.0,0.0,1.0,,alta: utilizable para análisis inicial
+df_raw_meli_vtas,provincia,str,categorica/texto/fecha,44013,4,0.01,0,0.0,,,1.0,alta: utilizable para análisis inicial
+df_raw_meli_vtas,atributos_texto,str,categorica/texto/fecha,44013,4,0.01,0,0.0,,,3756.0,media: alta cardinalidad; revisar si es identificador/texto libre
+df_raw_meli_vtas,imagen_id,str,categorica/texto/fecha,44013,6,0.01,0,0.0,,,42827.0,media: alta cardinalidad; revisar si es identificador/texto libre
+df_raw_meli_vtas,item_id,str,categorica/texto/fecha,44013,0,0.0,0,0.0,,,42778.0,media: alta cardinalidad; revisar si es identificador/texto libre
+df_raw_meli_vtas,fuente,str,categorica/texto/fecha,44013,0,0.0,0,0.0,,,1.0,alta: utilizable para análisis inicial
+df_raw_meli_vtas,url,str,categorica/texto/fecha,44013,0,0.0,0,0.0,,,42825.0,media: alta cardinalidad; revisar si es identificador/texto libre
+df_raw_meli_vtas,search_url,str,categorica/texto/fecha,44013,0,0.0,0,0.0,,,49.0,alta: utilizable para análisis inicial
+df_raw_meli_vtas,pagina_origen,int64,cuantitativa,44013,0,0.0,0,0.0,1.0,42.0,,alta: utilizable para análisis inicial
+df_raw_meli_vtas,scraped_at_utc,str,categorica/texto/fecha,44013,0,0.0,0,0.0,,,14144.0,media: alta cardinalidad; revisar si es identificador/texto libre
+df_raw_meli_vtas,titulo,str,categorica/texto/fecha,44013,0,0.0,0,0.0,,,30194.0,media: alta cardinalidad; revisar si es identificador/texto libre
+df_raw_meli_vtas,tipo_propiedad,str,categorica/texto/fecha,44013,0,0.0,0,0.0,,,1.0,alta: utilizable para análisis inicial
+df_raw_meli_vtas,tipo_operacion,str,categorica/texto/fecha,44013,0,0.0,0,0.0,,,1.0,alta: utilizable para análisis inicial
+df_raw_meli_vtas,moneda,str,categorica/texto/fecha,44013,0,0.0,0,0.0,,,2.0,alta: utilizable para análisis inicial
+df_raw_meli_vtas,precio,float64,cuantitativa,44013,0,0.0,0,0.0,1100.0,174988000.0,,alta: utilizable para análisis inicial
+df_raw_meli_vtas,precio_texto,str,categorica/texto/fecha,44013,0,0.0,0,0.0,,,6652.0,media: alta cardinalidad; revisar si es identificador/texto libre
+df_raw_meli_vtas,desde,int64,cuantitativa,44013,0,0.0,0,0.0,0.0,1.0,,alta: utilizable para análisis inicial
+df_raw_meli_vtas,direccion,str,categorica/texto/fecha,44013,0,0.0,0,0.0,,,25964.0,media: alta cardinalidad; revisar si es identificador/texto libre
+df_raw_meli_vtas,localidad,str,categorica/texto/fecha,44013,0,0.0,0,0.0,,,5.0,alta: utilizable para análisis inicial
+df_raw_meli_vtas,imagen_principal,str,categorica/texto/fecha,44013,0,0.0,0,0.0,,,42829.0,media: alta cardinalidad; revisar si es identificador/texto libre
+df_raw_meli_vtas,destacado,int64,cuantitativa,44013,0,0.0,0,0.0,0.0,1.0,,alta: utilizable para análisis inicial
+df_raw_meli_vtas,emprendimiento,int64,cuantitativa,44013,0,0.0,0,0.0,0.0,1.0,,alta: utilizable para análisis inicial
+df_raw_meli_vtas,texto_tarjeta,str,categorica/texto/fecha,44013,0,0.0,0,0.0,,,42183.0,media: alta cardinalidad; revisar si es identificador/texto libre
+df_raw_meli_vtas,posicion_pagina,int64,cuantitativa,44013,0,0.0,0,0.0,1.0,50.0,,alta: utilizable para análisis inicial
+df_raw_meli_vtas,slug,str,categorica/texto/fecha,44013,0,0.0,0,0.0,,,42825.0,media: alta cardinalidad; revisar si es identificador/texto libre
+df_raw_meli_vtas,calle,str,categorica/texto/fecha,44013,0,0.0,0,0.0,,,10335.0,media: alta cardinalidad; revisar si es identificador/texto libre
+df_raw_meli_vtas,monoambiente,int64,cuantitativa,44013,0,0.0,0,0.0,0.0,1.0,,alta: utilizable para análisis inicial
+df_raw_meli_vtas,apto_credito,int64,cuantitativa,44013,0,0.0,0,0.0,0.0,1.0,,alta: utilizable para análisis inicial
+df_raw_meli_vtas,balcon,int64,cuantitativa,44013,0,0.0,0,0.0,0.0,1.0,,alta: utilizable para análisis inicial
+df_raw_meli_vtas,terraza,int64,cuantitativa,44013,0,0.0,0,0.0,0.0,1.0,,alta: utilizable para análisis inicial
+df_raw_meli_vtas,pileta,int64,cuantitativa,44013,0,0.0,0,0.0,0.0,1.0,,alta: utilizable para análisis inicial
+df_raw_meli_vtas,parrilla,int64,cuantitativa,44013,0,0.0,0,0.0,0.0,1.0,,alta: utilizable para análisis inicial
+df_raw_meli_vtas,cochera_mencionada,int64,cuantitativa,44013,0,0.0,0,0.0,0.0,1.0,,alta: utilizable para análisis inicial
+df_raw_meli_vtas,amenities_mencionadas,int64,cuantitativa,44013,0,0.0,0,0.0,0.0,1.0,,alta: utilizable para análisis inicial
+df_raw_meli_vtas,cantidad_atributos,int64,cuantitativa,44013,0,0.0,0,0.0,0.0,3.0,,alta: utilizable para análisis inicial
+df_raw_meli_vtas,completitud_pct,float64,cuantitativa,44013,0,0.0,0,0.0,42.9,100.0,,alta: utilizable para análisis inicial
+df_raw_meli_vtas,imagen_extension,str,categorica/texto/fecha,44013,0,0.0,0,0.0,,,2.0,alta: utilizable para análisis inicial
+df_raw_meli_vtas,_archivo_origen,str,categorica/texto/fecha,44013,0,0.0,0,0.0,,,2.0,alta: utilizable para análisis inicial
+df_raw_zonaprop,descripcion,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,tipo_propiedad,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,estado_publicacion,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,fecha_publicacion,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,seller_id,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,altura,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,unidad,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,barrio,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,localidad,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,partido,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,provincia,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,pais,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,codigo_postal,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,latitud,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,longitud,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,toilettes,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,superficie_descubierta_m2,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,superficie_semicubierta_m2,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,superficie_terreno_m2,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,frente_m,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,fondo_m,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,antiguedad_anios,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,estado_inmueble,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,disposicion,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,orientacion,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,luminosidad,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,cantidad_plantas,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,cantidad_pisos_edificio,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,departamentos_por_piso,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,apto_credito,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,apto_profesional,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,permite_mascotas,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,accesibilidad,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,amoblado,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,balcon,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,terraza,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,patio,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,jardin,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,parrilla,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,pileta,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,sum,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,gimnasio,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,sauna,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,laundry,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,baulera,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,ascensor,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,seguridad_24h,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,vigilancia,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,aire_acondicionado,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,calefaccion,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,losa_radiante,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,gas_natural,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,agua_corriente,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,electricidad,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,cloaca,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,internet,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,vista_rio,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,vista_abierta,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,reciclado,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,a_refaccionar,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,video_url,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,tour_virtual_url,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,jsonld_raw,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,expensas_moneda,str,categorica/texto/fecha,980,978,99.8,0,0.0,,,1.0,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,superficie_cubierta_m2,float64,cuantitativa,980,931,95.0,0,0.0,3.0,335.0,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,cocheras,float64,cuantitativa,980,916,93.47,0,0.0,1.0,200.0,,baja: faltantes muy altos; usar solo como referencia secundaria
+df_raw_zonaprop,piso,str,categorica/texto/fecha,980,613,62.55,0,0.0,,,5.0,media-baja: requiere justificación antes de usar en KPIs
+df_raw_zonaprop,expensas,float64,cuantitativa,980,326,33.27,0,0.0,3.0,672.0,,media: usable con controles y posible segmentación
+df_raw_zonaprop,expensas_texto,str,categorica/texto/fecha,980,326,33.27,0,0.0,,,182.0,media: usable con controles y posible segmentación
+df_raw_zonaprop,dormitorios,float64,cuantitativa,980,214,21.84,0,0.0,1.0,21.0,,media: usable con controles y posible segmentación
+df_raw_zonaprop,banios,float64,cuantitativa,980,55,5.61,0,0.0,1.0,6.0,,alta: utilizable para análisis inicial
+df_raw_zonaprop,precio_m2_calculado,float64,cuantitativa,980,13,1.33,0,0.0,7.5,35714.29,,alta: utilizable para análisis inicial
+df_raw_zonaprop,moneda,str,categorica/texto/fecha,980,8,0.82,0,0.0,,,2.0,alta: utilizable para análisis inicial
+df_raw_zonaprop,precio,float64,cuantitativa,980,8,0.82,0,0.0,380.0,4900000.0,,alta: utilizable para análisis inicial
+df_raw_zonaprop,ambientes,float64,cuantitativa,980,5,0.51,0,0.0,1.0,10.0,,alta: utilizable para análisis inicial
+df_raw_zonaprop,superficie_total_m2,float64,cuantitativa,980,5,0.51,0,0.0,19.0,1119.0,,alta: utilizable para análisis inicial
+df_raw_zonaprop,property_id,str,categorica/texto/fecha,980,0,0.0,0,0.0,,,980.0,media: alta cardinalidad; revisar si es identificador/texto libre
+df_raw_zonaprop,fuente,str,categorica/texto/fecha,980,0,0.0,0,0.0,,,1.0,alta: utilizable para análisis inicial
+df_raw_zonaprop,url,str,categorica/texto/fecha,980,0,0.0,0,0.0,,,980.0,media: alta cardinalidad; revisar si es identificador/texto libre
+df_raw_zonaprop,scraped_at_utc,str,categorica/texto/fecha,980,0,0.0,0,0.0,,,980.0,media: alta cardinalidad; revisar si es identificador/texto libre
+df_raw_zonaprop,search_url,str,categorica/texto/fecha,980,0,0.0,0,0.0,,,3.0,alta: utilizable para análisis inicial
+df_raw_zonaprop,pagina_origen,int64,cuantitativa,980,0,0.0,0,0.0,1.0,9.0,,alta: utilizable para análisis inicial
+df_raw_zonaprop,http_status,int64,cuantitativa,980,0,0.0,0,0.0,200.0,200.0,,alta: utilizable para análisis inicial
+df_raw_zonaprop,parse_ok,int64,cuantitativa,980,0,0.0,0,0.0,1.0,1.0,,alta: utilizable para análisis inicial
+df_raw_zonaprop,parse_warnings,str,categorica/texto/fecha,980,0,0.0,0,0.0,,,1.0,alta: utilizable para análisis inicial
+df_raw_zonaprop,titulo,str,categorica/texto/fecha,980,0,0.0,0,0.0,,,974.0,media: alta cardinalidad; revisar si es identificador/texto libre
+df_raw_zonaprop,tipo_operacion,str,categorica/texto/fecha,980,0,0.0,0,0.0,,,2.0,alta: utilizable para análisis inicial
+df_raw_zonaprop,inmobiliaria,str,categorica/texto/fecha,980,0,0.0,0,0.0,,,868.0,media: alta cardinalidad; revisar si es identificador/texto libre
+df_raw_zonaprop,precio_texto,str,categorica/texto/fecha,980,0,0.0,0,0.0,,,467.0,media: alta cardinalidad; revisar si es identificador/texto libre
+df_raw_zonaprop,direccion_completa,str,categorica/texto/fecha,980,0,0.0,0,0.0,,,62.0,alta: utilizable para análisis inicial
+df_raw_zonaprop,calle,str,categorica/texto/fecha,980,0,0.0,0,0.0,,,61.0,alta: utilizable para análisis inicial
+df_raw_zonaprop,cantidad_imagenes,int64,cuantitativa,980,0,0.0,0,0.0,1.0,3.0,,alta: utilizable para análisis inicial
+df_raw_zonaprop,imagen_principal,str,categorica/texto/fecha,980,0,0.0,0,0.0,,,980.0,media: alta cardinalidad; revisar si es identificador/texto libre
+df_raw_zonaprop,cantidad_atributos_extra,int64,cuantitativa,980,0,0.0,0,0.0,1.0,1.0,,alta: utilizable para análisis inicial
+df_raw_zonaprop,atributos_extra_json,str,categorica/texto/fecha,980,0,0.0,0,0.0,,,978.0,media: alta cardinalidad; revisar si es identificador/texto libre
+df_raw_zonaprop,_archivo_origen,str,categorica/texto/fecha,980,0,0.0,0,0.0,,,1.0,alta: utilizable para análisis inicial

@@ -1,0 +1,71 @@
+dataset,variable_categorica,label,n_registros,variable_faltante,pct_faltante
+df_preprocesado_airbnb_temp,barrio_norm,palermo,3220,rating_is_null,12.48
+df_preprocesado_airbnb_temp,barrio_norm,palermo,3220,reviews_is_null,12.48
+df_preprocesado_airbnb_temp,barrio_norm,recoleta,1321,rating_is_null,14.76
+df_preprocesado_airbnb_temp,barrio_norm,recoleta,1321,reviews_is_null,14.76
+df_preprocesado_airbnb_temp,barrio_norm,san_nicolas,570,rating_is_null,16.49
+df_preprocesado_airbnb_temp,barrio_norm,san_nicolas,570,reviews_is_null,16.49
+df_preprocesado_airbnb_temp,barrio_norm,belgrano,492,rating_is_null,14.23
+df_preprocesado_airbnb_temp,barrio_norm,belgrano,492,reviews_is_null,14.23
+df_preprocesado_airbnb_temp,barrio_norm,retiro,470,rating_is_null,18.51
+df_preprocesado_airbnb_temp,barrio_norm,retiro,470,reviews_is_null,18.51
+df_preprocesado_airbnb_temp,barrio_norm,monserrat,408,rating_is_null,14.22
+df_preprocesado_airbnb_temp,barrio_norm,monserrat,408,reviews_is_null,14.22
+df_preprocesado_airbnb_temp,barrio_norm,almagro,373,rating_is_null,14.21
+df_preprocesado_airbnb_temp,barrio_norm,almagro,373,reviews_is_null,14.21
+df_preprocesado_airbnb_temp,barrio_norm,balvanera,355,rating_is_null,23.38
+df_preprocesado_airbnb_temp,barrio_norm,balvanera,355,reviews_is_null,23.38
+df_preprocesado_airbnb_temp,barrio_norm,villa_crespo,292,rating_is_null,17.12
+df_preprocesado_airbnb_temp,barrio_norm,villa_crespo,292,reviews_is_null,17.12
+df_preprocesado_airbnb_temp,barrio_norm,san_telmo,256,rating_is_null,12.5
+df_preprocesado_airbnb_temp,barrio_norm,san_telmo,256,reviews_is_null,12.5
+df_preprocesado_airbnb_temp,barrio_norm,colegiales,243,rating_is_null,16.87
+df_preprocesado_airbnb_temp,barrio_norm,colegiales,243,reviews_is_null,16.87
+df_preprocesado_airbnb_temp,barrio_norm,nunez,218,rating_is_null,16.51
+df_preprocesado_airbnb_temp,barrio_norm,nunez,218,reviews_is_null,16.51
+df_preprocesado_airbnb_temp,barrio_norm,puerto_madero,185,rating_is_null,34.59
+df_preprocesado_airbnb_temp,barrio_norm,puerto_madero,185,reviews_is_null,34.59
+df_preprocesado_airbnb_temp,barrio_norm,chacarita,164,rating_is_null,10.37
+df_preprocesado_airbnb_temp,barrio_norm,chacarita,164,reviews_is_null,10.37
+df_preprocesado_airbnb_temp,barrio_norm,caballito,140,rating_is_null,23.57
+df_preprocesado_airbnb_temp,barrio_norm,caballito,140,reviews_is_null,23.57
+df_preprocesado_airbnb_temp,barrio_norm,villa_urquiza,100,rating_is_null,25.0
+df_preprocesado_airbnb_temp,barrio_norm,villa_urquiza,100,reviews_is_null,25.0
+df_preprocesado_airbnb_temp,barrio_norm,constitucion,100,rating_is_null,31.0
+df_preprocesado_airbnb_temp,barrio_norm,constitucion,100,reviews_is_null,31.0
+df_preprocesado_airbnb_temp,barrio_norm,SIN_DATO,77,rating_is_null,35.06
+df_preprocesado_airbnb_temp,barrio_norm,SIN_DATO,77,reviews_is_null,35.06
+df_preprocesado_airbnb_temp,barrio_norm,barracas,66,rating_is_null,13.64
+df_preprocesado_airbnb_temp,barrio_norm,barracas,66,reviews_is_null,13.64
+df_preprocesado_airbnb_temp,barrio_norm,saavedra,59,rating_is_null,15.25
+df_preprocesado_airbnb_temp,barrio_norm,saavedra,59,reviews_is_null,15.25
+df_preprocesado_airbnb_temp,barrio_norm,villa_del_parque,51,rating_is_null,7.84
+df_preprocesado_airbnb_temp,barrio_norm,villa_del_parque,51,reviews_is_null,7.84
+df_preprocesado_airbnb_temp,barrio_norm,san_cristobal,50,rating_is_null,18.0
+df_preprocesado_airbnb_temp,barrio_norm,san_cristobal,50,reviews_is_null,18.0
+df_preprocesado_airbnb_temp,barrio_norm,villa_devoto,49,rating_is_null,28.57
+df_preprocesado_airbnb_temp,barrio_norm,villa_devoto,49,reviews_is_null,28.57
+df_preprocesado_airbnb_temp,barrio_norm,la_boca,47,rating_is_null,36.17
+df_preprocesado_airbnb_temp,barrio_norm,la_boca,47,reviews_is_null,36.17
+df_preprocesado_airbnb_temp,barrio_norm,flores,44,rating_is_null,27.27
+df_preprocesado_airbnb_temp,barrio_norm,flores,44,reviews_is_null,27.27
+df_preprocesado_airbnb_temp,tipo_propiedad,Vivienda alquilada entero,7887,rating_is_null,17.07
+df_preprocesado_airbnb_temp,tipo_propiedad,Vivienda alquilada entero,7887,reviews_is_null,17.07
+df_preprocesado_airbnb_temp,tipo_propiedad,Departamento en complejo residencial entero,907,rating_is_null,6.17
+df_preprocesado_airbnb_temp,tipo_propiedad,Departamento en complejo residencial entero,907,reviews_is_null,6.17
+df_preprocesado_airbnb_temp,tipo_propiedad,Departamento con servicios incluidos entero,356,rating_is_null,13.2
+df_preprocesado_airbnb_temp,tipo_propiedad,Departamento con servicios incluidos entero,356,reviews_is_null,13.2
+df_preprocesado_airbnb_temp,tipo_propiedad,Loft entero,193,rating_is_null,4.66
+df_preprocesado_airbnb_temp,tipo_propiedad,Loft entero,193,reviews_is_null,4.66
+df_preprocesado_airbnb_temp,tipo_propiedad,Alojamiento entero,169,rating_is_null,28.99
+df_preprocesado_airbnb_temp,tipo_propiedad,Alojamiento entero,169,reviews_is_null,28.99
+df_preprocesado_airbnb_temp,tipo_propiedad,Alojamiento para vacaciones entero,48,rating_is_null,6.25
+df_preprocesado_airbnb_temp,tipo_propiedad,Alojamiento para vacaciones entero,48,reviews_is_null,6.25
+df_preprocesado_airbnb_temp,seller_superhost,False,5996,rating_is_null,22.77
+df_preprocesado_airbnb_temp,seller_superhost,False,5996,reviews_is_null,22.77
+df_preprocesado_airbnb_temp,seller_superhost,True,3600,rating_is_null,4.36
+df_preprocesado_airbnb_temp,seller_superhost,True,3600,reviews_is_null,4.36
+df_preprocesado_airbnb_temp,precio_sospechoso,False,9516,rating_is_null,15.65
+df_preprocesado_airbnb_temp,precio_sospechoso,False,9516,reviews_is_null,15.65
+df_preprocesado_airbnb_temp,precio_sospechoso,True,80,rating_is_null,41.25
+df_preprocesado_airbnb_temp,precio_sospechoso,True,80,reviews_is_null,41.25

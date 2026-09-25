@@ -1,0 +1,127 @@
+columna,tipo_dato,significado,unidad,fuente,transformacion_aplicada,ejemplo
+id_publicacion,string,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,MLA2052442697
+fuente_norm,str,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,mercado_libre
+fuente,str,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,Mercado Libre
+tipo_operacion_norm,str,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,alquiler
+tipo_operacion,str,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,alquiler
+url,str,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,https://departamento.mercadolibre.com.ar/MLA-2052442697-departamento-en-alquiler-de-4-ambientes-con-dependencia-y-cocher
+fecha_extraccion,"datetime64[us, UTC]",Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,2026-09-03 16:45:14.494669+00:00
+scraped_at_utc,"datetime64[us, UTC]",Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,2026-09-03 16:45:14.494669+00:00
+_archivo_origen,str,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,data\raw\mercadolibre_inmuebles_alquiler\meli_alq_1.csv
+titulo,str,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,Departamento En Alquiler De 4 Ambientes Con Dependencia Y Cochera En Palermo Chico Con Amenities
+tipo_propiedad,object,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,departamento
+moneda_norm,str,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,USD
+moneda,str,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,USD
+precio,float64,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,5000.0
+precio_texto,str,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,US$ 5.000
+precio_m2_ref,float64,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,23.81
+barrio,object,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,Palermo Chico
+barrio_norm,str,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,palermo
+comuna,float64,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,14.0
+localidad,object,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,Capital Federal
+provincia,object,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,Capital Federal
+direccion,str,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,"Segui Al 3600, Palermo Chico, Capital Federal"
+calle,str,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,Segui Al
+altura,float64,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,3600.0
+superficie_ref_m2,float64,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,210.0
+superficie_min_m2,float64,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,210.0
+superficie_max_m2,float64,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,210.0
+ambientes_ref,float64,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,4.0
+ambientes_min,float64,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,4.0
+ambientes_max,float64,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,4.0
+dormitorios_ref,float64,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,1.0
+dormitorios_min,float64,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,1.0
+dormitorios_max,float64,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,1.0
+banios_ref,float64,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,3.0
+banios_min,float64,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,3.0
+banios_max,float64,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,3.0
+inmobiliaria,object,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,Khabbaz Propiedades
+apto_credito,float64,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,0.0
+balcon,float64,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,0.0
+terraza,object,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,0
+parrilla,object,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,0
+pileta,object,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,0
+cochera_mencionada,float64,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,1.0
+amenities_mencionadas,float64,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,1.0
+parse_warnings,object,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,modo_listado_sin_ficha_detallada
+imagen_principal,str,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,https://http2.mlstatic.com/D_NQ_NP_2X_926918-MLA116997522333_082026-E.webp
+dataset_preprocesado,str,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,df_preprocesado_meli_alq
+descripcion,object,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,"Cómodo y céntrico departamento en el corazón de Palermo, en la misma cuadra de La Rural.<br />Dos ambientes funcionales "
+pais,object,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,Argentina
+direccion_completa,str,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,Jerónimo Salguero 2700
+latitud,float64,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,-34.5794
+longitud,float64,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,-58.4236
+superficie_total_m2,float64,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,300.0
+superficie_cubierta_m2,float64,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,91.0
+ambientes,float64,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,2.0
+dormitorios,float64,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,3.0
+banios,float64,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,1.0
+seller_id,float64,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,549766754.0
+parse_ok,float64,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,1.0
+cantidad_imagenes,float64,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,9.0
+precio_noche_estimado,float64,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,30.0
+precio_mensual_estimado,float64,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,900.0
+seller_nombre,str,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,Rosi
+seller_superhost,object,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,False
+rating,float64,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,4.8
+reviews,float64,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,5.0
+balcon_o_patio,object,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,False
+cochera,object,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,False
+precio_sospechoso,object,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,False
+titulo_is_null,int8,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,0
+tipo_propiedad_is_null,int8,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,0
+moneda_norm_is_null,int8,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,0
+moneda_is_null,int8,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,0
+precio_is_null,int8,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,0
+precio_m2_ref_is_null,int8,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,0
+barrio_is_null,int8,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,0
+barrio_norm_is_null,int8,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,0
+comuna_is_null,int8,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,0
+localidad_is_null,int8,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,0
+provincia_is_null,int8,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,0
+direccion_is_null,int8,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,0
+calle_is_null,int8,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,0
+altura_is_null,int8,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,0
+superficie_ref_m2_is_null,int8,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,0
+superficie_min_m2_is_null,int8,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,0
+superficie_max_m2_is_null,int8,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,0
+ambientes_ref_is_null,int8,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,0
+ambientes_min_is_null,int8,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,0
+ambientes_max_is_null,int8,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,0
+dormitorios_ref_is_null,int8,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,1
+dormitorios_min_is_null,int8,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,1
+dormitorios_max_is_null,int8,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,1
+banios_ref_is_null,int8,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,0
+banios_min_is_null,int8,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,0
+banios_max_is_null,int8,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,0
+inmobiliaria_is_null,int8,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,0
+apto_credito_is_null,int8,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,0
+balcon_is_null,int8,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,0
+terraza_is_null,int8,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,0
+parrilla_is_null,int8,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,0
+pileta_is_null,int8,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,0
+cochera_mencionada_is_null,int8,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,0
+amenities_mencionadas_is_null,int8,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,0
+parse_warnings_is_null,int8,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,1
+descripcion_is_null,int8,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,1
+pais_is_null,int8,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,1
+direccion_completa_is_null,int8,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,1
+latitud_is_null,int8,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,1
+longitud_is_null,int8,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,1
+superficie_total_m2_is_null,int8,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,1
+superficie_cubierta_m2_is_null,int8,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,1
+ambientes_is_null,int8,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,1
+dormitorios_is_null,int8,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,1
+banios_is_null,int8,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,1
+seller_id_is_null,int8,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,1
+parse_ok_is_null,int8,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,1
+cantidad_imagenes_is_null,int8,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,1
+precio_noche_estimado_is_null,int8,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,1
+precio_mensual_estimado_is_null,int8,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,1
+seller_nombre_is_null,int8,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,1
+seller_superhost_is_null,int8,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,1
+rating_is_null,int8,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,1
+reviews_is_null,int8,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,1
+balcon_o_patio_is_null,int8,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,1
+cochera_is_null,int8,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,1
+precio_sospechoso_is_null,int8,Completar definición final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_limpieza_y_consolidacion.,1

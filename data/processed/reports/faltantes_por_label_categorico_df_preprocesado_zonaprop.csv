@@ -1,0 +1,118 @@
+dataset,variable_categorica,label,n_registros,variable_faltante,pct_faltante
+df_preprocesado_zonaprop,tipo_operacion_norm,alquiler,495,superficie_cubierta_m2_is_null,95.35
+df_preprocesado_zonaprop,tipo_operacion_norm,alquiler,495,cocheras_is_null,93.33
+df_preprocesado_zonaprop,tipo_operacion_norm,alquiler,495,piso_is_null,56.36
+df_preprocesado_zonaprop,tipo_operacion_norm,alquiler,495,expensas_texto_is_null,25.05
+df_preprocesado_zonaprop,tipo_operacion_norm,alquiler,495,expensas_is_null,25.05
+df_preprocesado_zonaprop,tipo_operacion_norm,alquiler,495,dormitorios_ref_is_null,21.82
+df_preprocesado_zonaprop,tipo_operacion_norm,alquiler,495,dormitorios_is_null,21.82
+df_preprocesado_zonaprop,tipo_operacion_norm,alquiler,495,banios_is_null,1.21
+df_preprocesado_zonaprop,tipo_operacion_norm,alquiler,495,banios_ref_is_null,1.21
+df_preprocesado_zonaprop,tipo_operacion_norm,venta,485,superficie_cubierta_m2_is_null,94.64
+df_preprocesado_zonaprop,tipo_operacion_norm,venta,485,cocheras_is_null,93.61
+df_preprocesado_zonaprop,tipo_operacion_norm,venta,485,piso_is_null,68.87
+df_preprocesado_zonaprop,tipo_operacion_norm,venta,485,expensas_texto_is_null,41.65
+df_preprocesado_zonaprop,tipo_operacion_norm,venta,485,expensas_is_null,41.65
+df_preprocesado_zonaprop,tipo_operacion_norm,venta,485,dormitorios_ref_is_null,21.86
+df_preprocesado_zonaprop,tipo_operacion_norm,venta,485,dormitorios_is_null,21.86
+df_preprocesado_zonaprop,tipo_operacion_norm,venta,485,banios_is_null,10.1
+df_preprocesado_zonaprop,tipo_operacion_norm,venta,485,banios_ref_is_null,10.1
+df_preprocesado_zonaprop,moneda_norm,USD,819,superficie_cubierta_m2_is_null,94.75
+df_preprocesado_zonaprop,moneda_norm,USD,819,cocheras_is_null,92.43
+df_preprocesado_zonaprop,moneda_norm,USD,819,piso_is_null,60.44
+df_preprocesado_zonaprop,moneda_norm,USD,819,expensas_texto_is_null,37.48
+df_preprocesado_zonaprop,moneda_norm,USD,819,expensas_is_null,37.48
+df_preprocesado_zonaprop,moneda_norm,USD,819,dormitorios_ref_is_null,18.8
+df_preprocesado_zonaprop,moneda_norm,USD,819,dormitorios_is_null,18.8
+df_preprocesado_zonaprop,moneda_norm,USD,819,banios_is_null,6.23
+df_preprocesado_zonaprop,moneda_norm,USD,819,banios_ref_is_null,6.23
+df_preprocesado_zonaprop,moneda_norm,ARS,153,superficie_cubierta_m2_is_null,96.08
+df_preprocesado_zonaprop,moneda_norm,ARS,153,cocheras_is_null,100.0
+df_preprocesado_zonaprop,moneda_norm,ARS,153,piso_is_null,74.51
+df_preprocesado_zonaprop,moneda_norm,ARS,153,expensas_texto_is_null,7.19
+df_preprocesado_zonaprop,moneda_norm,ARS,153,expensas_is_null,7.19
+df_preprocesado_zonaprop,moneda_norm,ARS,153,dormitorios_ref_is_null,36.6
+df_preprocesado_zonaprop,moneda_norm,ARS,153,dormitorios_is_null,36.6
+df_preprocesado_zonaprop,moneda_norm,ARS,153,banios_is_null,0.65
+df_preprocesado_zonaprop,moneda_norm,ARS,153,banios_ref_is_null,0.65
+df_preprocesado_zonaprop,barrio_norm,palermo,207,superficie_cubierta_m2_is_null,95.17
+df_preprocesado_zonaprop,barrio_norm,palermo,207,cocheras_is_null,96.14
+df_preprocesado_zonaprop,barrio_norm,palermo,207,piso_is_null,0.0
+df_preprocesado_zonaprop,barrio_norm,palermo,207,expensas_texto_is_null,36.71
+df_preprocesado_zonaprop,barrio_norm,palermo,207,expensas_is_null,36.71
+df_preprocesado_zonaprop,barrio_norm,palermo,207,dormitorios_ref_is_null,19.81
+df_preprocesado_zonaprop,barrio_norm,palermo,207,dormitorios_is_null,19.81
+df_preprocesado_zonaprop,barrio_norm,palermo,207,banios_is_null,5.31
+df_preprocesado_zonaprop,barrio_norm,palermo,207,banios_ref_is_null,5.31
+df_preprocesado_zonaprop,barrio_norm,recoleta,121,superficie_cubierta_m2_is_null,94.21
+df_preprocesado_zonaprop,barrio_norm,recoleta,121,cocheras_is_null,100.0
+df_preprocesado_zonaprop,barrio_norm,recoleta,121,piso_is_null,100.0
+df_preprocesado_zonaprop,barrio_norm,recoleta,121,expensas_texto_is_null,22.31
+df_preprocesado_zonaprop,barrio_norm,recoleta,121,expensas_is_null,22.31
+df_preprocesado_zonaprop,barrio_norm,recoleta,121,dormitorios_ref_is_null,13.22
+df_preprocesado_zonaprop,barrio_norm,recoleta,121,dormitorios_is_null,13.22
+df_preprocesado_zonaprop,barrio_norm,recoleta,121,banios_is_null,1.65
+df_preprocesado_zonaprop,barrio_norm,recoleta,121,banios_ref_is_null,1.65
+df_preprocesado_zonaprop,barrio_norm,puerto madero,91,superficie_cubierta_m2_is_null,92.31
+df_preprocesado_zonaprop,barrio_norm,puerto madero,91,cocheras_is_null,73.63
+df_preprocesado_zonaprop,barrio_norm,puerto madero,91,piso_is_null,0.0
+df_preprocesado_zonaprop,barrio_norm,puerto madero,91,expensas_texto_is_null,35.16
+df_preprocesado_zonaprop,barrio_norm,puerto madero,91,expensas_is_null,35.16
+df_preprocesado_zonaprop,barrio_norm,puerto madero,91,dormitorios_ref_is_null,16.48
+df_preprocesado_zonaprop,barrio_norm,puerto madero,91,dormitorios_is_null,16.48
+df_preprocesado_zonaprop,barrio_norm,puerto madero,91,banios_is_null,3.3
+df_preprocesado_zonaprop,barrio_norm,puerto madero,91,banios_ref_is_null,3.3
+df_preprocesado_zonaprop,barrio_norm,belgrano,91,superficie_cubierta_m2_is_null,97.8
+df_preprocesado_zonaprop,barrio_norm,belgrano,91,cocheras_is_null,85.71
+df_preprocesado_zonaprop,barrio_norm,belgrano,91,piso_is_null,100.0
+df_preprocesado_zonaprop,barrio_norm,belgrano,91,expensas_texto_is_null,29.67
+df_preprocesado_zonaprop,barrio_norm,belgrano,91,expensas_is_null,29.67
+df_preprocesado_zonaprop,barrio_norm,belgrano,91,dormitorios_ref_is_null,23.08
+df_preprocesado_zonaprop,barrio_norm,belgrano,91,dormitorios_is_null,23.08
+df_preprocesado_zonaprop,barrio_norm,belgrano,91,banios_is_null,3.3
+df_preprocesado_zonaprop,barrio_norm,belgrano,91,banios_ref_is_null,3.3
+df_preprocesado_zonaprop,barrio_norm,caballito,40,superficie_cubierta_m2_is_null,92.5
+df_preprocesado_zonaprop,barrio_norm,caballito,40,cocheras_is_null,92.5
+df_preprocesado_zonaprop,barrio_norm,caballito,40,piso_is_null,100.0
+df_preprocesado_zonaprop,barrio_norm,caballito,40,expensas_texto_is_null,30.0
+df_preprocesado_zonaprop,barrio_norm,caballito,40,expensas_is_null,30.0
+df_preprocesado_zonaprop,barrio_norm,caballito,40,dormitorios_ref_is_null,20.0
+df_preprocesado_zonaprop,barrio_norm,caballito,40,dormitorios_is_null,20.0
+df_preprocesado_zonaprop,barrio_norm,caballito,40,banios_is_null,10.0
+df_preprocesado_zonaprop,barrio_norm,caballito,40,banios_ref_is_null,10.0
+df_preprocesado_zonaprop,barrio_norm,nunez,40,superficie_cubierta_m2_is_null,97.5
+df_preprocesado_zonaprop,barrio_norm,nunez,40,cocheras_is_null,92.5
+df_preprocesado_zonaprop,barrio_norm,nunez,40,piso_is_null,100.0
+df_preprocesado_zonaprop,barrio_norm,nunez,40,expensas_texto_is_null,52.5
+df_preprocesado_zonaprop,barrio_norm,nunez,40,expensas_is_null,52.5
+df_preprocesado_zonaprop,barrio_norm,nunez,40,dormitorios_ref_is_null,12.5
+df_preprocesado_zonaprop,barrio_norm,nunez,40,dormitorios_is_null,12.5
+df_preprocesado_zonaprop,barrio_norm,nunez,40,banios_is_null,5.0
+df_preprocesado_zonaprop,barrio_norm,nunez,40,banios_ref_is_null,5.0
+df_preprocesado_zonaprop,barrio_norm,almagro,36,superficie_cubierta_m2_is_null,97.22
+df_preprocesado_zonaprop,barrio_norm,almagro,36,cocheras_is_null,97.22
+df_preprocesado_zonaprop,barrio_norm,almagro,36,piso_is_null,100.0
+df_preprocesado_zonaprop,barrio_norm,almagro,36,expensas_texto_is_null,16.67
+df_preprocesado_zonaprop,barrio_norm,almagro,36,expensas_is_null,16.67
+df_preprocesado_zonaprop,barrio_norm,almagro,36,dormitorios_ref_is_null,25.0
+df_preprocesado_zonaprop,barrio_norm,almagro,36,dormitorios_is_null,25.0
+df_preprocesado_zonaprop,barrio_norm,almagro,36,banios_is_null,2.78
+df_preprocesado_zonaprop,barrio_norm,almagro,36,banios_ref_is_null,2.78
+df_preprocesado_zonaprop,barrio_norm,las canitas,31,superficie_cubierta_m2_is_null,93.55
+df_preprocesado_zonaprop,barrio_norm,las canitas,31,cocheras_is_null,90.32
+df_preprocesado_zonaprop,barrio_norm,las canitas,31,piso_is_null,0.0
+df_preprocesado_zonaprop,barrio_norm,las canitas,31,expensas_texto_is_null,35.48
+df_preprocesado_zonaprop,barrio_norm,las canitas,31,expensas_is_null,35.48
+df_preprocesado_zonaprop,barrio_norm,las canitas,31,dormitorios_ref_is_null,16.13
+df_preprocesado_zonaprop,barrio_norm,las canitas,31,dormitorios_is_null,16.13
+df_preprocesado_zonaprop,barrio_norm,las canitas,31,banios_is_null,3.23
+df_preprocesado_zonaprop,barrio_norm,las canitas,31,banios_ref_is_null,3.23
+df_preprocesado_zonaprop,barrio_norm,retiro,30,superficie_cubierta_m2_is_null,93.33
+df_preprocesado_zonaprop,barrio_norm,retiro,30,cocheras_is_null,96.67
+df_preprocesado_zonaprop,barrio_norm,retiro,30,piso_is_null,100.0
+df_preprocesado_zonaprop,barrio_norm,retiro,30,expensas_texto_is_null,20.0
+df_preprocesado_zonaprop,barrio_norm,retiro,30,expensas_is_null,20.0
+df_preprocesado_zonaprop,barrio_norm,retiro,30,dormitorios_ref_is_null,13.33
+df_preprocesado_zonaprop,barrio_norm,retiro,30,dormitorios_is_null,13.33
+df_preprocesado_zonaprop,barrio_norm,retiro,30,banios_is_null,0.0
+df_preprocesado_zonaprop,barrio_norm,retiro,30,banios_ref_is_null,0.0

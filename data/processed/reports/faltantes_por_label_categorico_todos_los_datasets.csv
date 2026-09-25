@@ -1,0 +1,929 @@
+dataset,variable_categorica,label,n_registros,variable_faltante,pct_faltante
+df_preprocesado_meli_alq,moneda_norm,ARS,8232,inmobiliaria_is_null,90.67
+df_preprocesado_meli_alq,moneda_norm,ARS,8232,altura_is_null,13.79
+df_preprocesado_meli_alq,moneda_norm,ARS,8232,ambientes_max_is_null,3.34
+df_preprocesado_meli_alq,moneda_norm,ARS,8232,es_rango_ambientes_is_null,3.34
+df_preprocesado_meli_alq,moneda_norm,ARS,8232,ambientes_ref_is_null,3.34
+df_preprocesado_meli_alq,moneda_norm,ARS,8232,ambientes_min_is_null,3.34
+df_preprocesado_meli_alq,moneda_norm,USD,3247,inmobiliaria_is_null,85.83
+df_preprocesado_meli_alq,moneda_norm,USD,3247,altura_is_null,15.65
+df_preprocesado_meli_alq,moneda_norm,USD,3247,ambientes_max_is_null,1.97
+df_preprocesado_meli_alq,moneda_norm,USD,3247,es_rango_ambientes_is_null,1.97
+df_preprocesado_meli_alq,moneda_norm,USD,3247,ambientes_ref_is_null,1.97
+df_preprocesado_meli_alq,moneda_norm,USD,3247,ambientes_min_is_null,1.97
+df_preprocesado_meli_alq,barrio_norm,palermo,1482,inmobiliaria_is_null,86.77
+df_preprocesado_meli_alq,barrio_norm,palermo,1482,altura_is_null,10.59
+df_preprocesado_meli_alq,barrio_norm,palermo,1482,ambientes_max_is_null,2.83
+df_preprocesado_meli_alq,barrio_norm,palermo,1482,es_rango_ambientes_is_null,2.83
+df_preprocesado_meli_alq,barrio_norm,palermo,1482,ambientes_ref_is_null,2.83
+df_preprocesado_meli_alq,barrio_norm,palermo,1482,ambientes_min_is_null,2.83
+df_preprocesado_meli_alq,barrio_norm,recoleta,1173,inmobiliaria_is_null,85.08
+df_preprocesado_meli_alq,barrio_norm,recoleta,1173,altura_is_null,13.3
+df_preprocesado_meli_alq,barrio_norm,recoleta,1173,ambientes_max_is_null,1.96
+df_preprocesado_meli_alq,barrio_norm,recoleta,1173,es_rango_ambientes_is_null,1.96
+df_preprocesado_meli_alq,barrio_norm,recoleta,1173,ambientes_ref_is_null,1.96
+df_preprocesado_meli_alq,barrio_norm,recoleta,1173,ambientes_min_is_null,1.96
+df_preprocesado_meli_alq,barrio_norm,belgrano,960,inmobiliaria_is_null,85.0
+df_preprocesado_meli_alq,barrio_norm,belgrano,960,altura_is_null,16.46
+df_preprocesado_meli_alq,barrio_norm,belgrano,960,ambientes_max_is_null,2.81
+df_preprocesado_meli_alq,barrio_norm,belgrano,960,es_rango_ambientes_is_null,2.81
+df_preprocesado_meli_alq,barrio_norm,belgrano,960,ambientes_ref_is_null,2.81
+df_preprocesado_meli_alq,barrio_norm,belgrano,960,ambientes_min_is_null,2.81
+df_preprocesado_meli_alq,barrio_norm,puerto madero,833,inmobiliaria_is_null,87.39
+df_preprocesado_meli_alq,barrio_norm,puerto madero,833,altura_is_null,24.97
+df_preprocesado_meli_alq,barrio_norm,puerto madero,833,ambientes_max_is_null,0.84
+df_preprocesado_meli_alq,barrio_norm,puerto madero,833,es_rango_ambientes_is_null,0.84
+df_preprocesado_meli_alq,barrio_norm,puerto madero,833,ambientes_ref_is_null,0.84
+df_preprocesado_meli_alq,barrio_norm,puerto madero,833,ambientes_min_is_null,0.84
+df_preprocesado_meli_alq,barrio_norm,caballito,802,inmobiliaria_is_null,90.9
+df_preprocesado_meli_alq,barrio_norm,caballito,802,altura_is_null,13.72
+df_preprocesado_meli_alq,barrio_norm,caballito,802,ambientes_max_is_null,1.75
+df_preprocesado_meli_alq,barrio_norm,caballito,802,es_rango_ambientes_is_null,1.75
+df_preprocesado_meli_alq,barrio_norm,caballito,802,ambientes_ref_is_null,1.75
+df_preprocesado_meli_alq,barrio_norm,caballito,802,ambientes_min_is_null,1.75
+df_preprocesado_meli_alq,barrio_norm,villa urquiza,515,inmobiliaria_is_null,92.23
+df_preprocesado_meli_alq,barrio_norm,villa urquiza,515,altura_is_null,11.26
+df_preprocesado_meli_alq,barrio_norm,villa urquiza,515,ambientes_max_is_null,6.41
+df_preprocesado_meli_alq,barrio_norm,villa urquiza,515,es_rango_ambientes_is_null,6.41
+df_preprocesado_meli_alq,barrio_norm,villa urquiza,515,ambientes_ref_is_null,6.41
+df_preprocesado_meli_alq,barrio_norm,villa urquiza,515,ambientes_min_is_null,6.41
+df_preprocesado_meli_alq,barrio_norm,nunez,486,inmobiliaria_is_null,84.36
+df_preprocesado_meli_alq,barrio_norm,nunez,486,altura_is_null,9.47
+df_preprocesado_meli_alq,barrio_norm,nunez,486,ambientes_max_is_null,3.5
+df_preprocesado_meli_alq,barrio_norm,nunez,486,es_rango_ambientes_is_null,3.5
+df_preprocesado_meli_alq,barrio_norm,nunez,486,ambientes_ref_is_null,3.5
+df_preprocesado_meli_alq,barrio_norm,nunez,486,ambientes_min_is_null,3.5
+df_preprocesado_meli_alq,barrio_norm,almagro,439,inmobiliaria_is_null,91.12
+df_preprocesado_meli_alq,barrio_norm,almagro,439,altura_is_null,9.11
+df_preprocesado_meli_alq,barrio_norm,almagro,439,ambientes_max_is_null,4.78
+df_preprocesado_meli_alq,barrio_norm,almagro,439,es_rango_ambientes_is_null,4.78
+df_preprocesado_meli_alq,barrio_norm,almagro,439,ambientes_ref_is_null,4.78
+df_preprocesado_meli_alq,barrio_norm,almagro,439,ambientes_min_is_null,4.78
+df_preprocesado_meli_alq,barrio_norm,flores,379,inmobiliaria_is_null,95.51
+df_preprocesado_meli_alq,barrio_norm,flores,379,altura_is_null,10.03
+df_preprocesado_meli_alq,barrio_norm,flores,379,ambientes_max_is_null,2.64
+df_preprocesado_meli_alq,barrio_norm,flores,379,es_rango_ambientes_is_null,2.64
+df_preprocesado_meli_alq,barrio_norm,flores,379,ambientes_ref_is_null,2.64
+df_preprocesado_meli_alq,barrio_norm,flores,379,ambientes_min_is_null,2.64
+df_preprocesado_meli_alq,barrio_norm,villa crespo,334,inmobiliaria_is_null,88.92
+df_preprocesado_meli_alq,barrio_norm,villa crespo,334,altura_is_null,14.07
+df_preprocesado_meli_alq,barrio_norm,villa crespo,334,ambientes_max_is_null,4.49
+df_preprocesado_meli_alq,barrio_norm,villa crespo,334,es_rango_ambientes_is_null,4.49
+df_preprocesado_meli_alq,barrio_norm,villa crespo,334,ambientes_ref_is_null,4.49
+df_preprocesado_meli_alq,barrio_norm,villa crespo,334,ambientes_min_is_null,4.49
+df_preprocesado_meli_alq,barrio_norm,balvanera,325,inmobiliaria_is_null,88.92
+df_preprocesado_meli_alq,barrio_norm,balvanera,325,altura_is_null,9.85
+df_preprocesado_meli_alq,barrio_norm,balvanera,325,ambientes_max_is_null,3.69
+df_preprocesado_meli_alq,barrio_norm,balvanera,325,es_rango_ambientes_is_null,3.69
+df_preprocesado_meli_alq,barrio_norm,balvanera,325,ambientes_ref_is_null,3.69
+df_preprocesado_meli_alq,barrio_norm,balvanera,325,ambientes_min_is_null,3.69
+df_preprocesado_meli_alq,barrio_norm,retiro,308,inmobiliaria_is_null,85.71
+df_preprocesado_meli_alq,barrio_norm,retiro,308,altura_is_null,7.14
+df_preprocesado_meli_alq,barrio_norm,retiro,308,ambientes_max_is_null,1.95
+df_preprocesado_meli_alq,barrio_norm,retiro,308,es_rango_ambientes_is_null,1.95
+df_preprocesado_meli_alq,barrio_norm,retiro,308,ambientes_ref_is_null,1.95
+df_preprocesado_meli_alq,barrio_norm,retiro,308,ambientes_min_is_null,1.95
+df_preprocesado_meli_alq,barrio_norm,san nicolas,266,inmobiliaria_is_null,85.34
+df_preprocesado_meli_alq,barrio_norm,san nicolas,266,altura_is_null,9.77
+df_preprocesado_meli_alq,barrio_norm,san nicolas,266,ambientes_max_is_null,3.01
+df_preprocesado_meli_alq,barrio_norm,san nicolas,266,es_rango_ambientes_is_null,3.01
+df_preprocesado_meli_alq,barrio_norm,san nicolas,266,ambientes_ref_is_null,3.01
+df_preprocesado_meli_alq,barrio_norm,san nicolas,266,ambientes_min_is_null,3.01
+df_preprocesado_meli_alq,barrio_norm,monserrat,252,inmobiliaria_is_null,90.48
+df_preprocesado_meli_alq,barrio_norm,monserrat,252,altura_is_null,24.21
+df_preprocesado_meli_alq,barrio_norm,monserrat,252,ambientes_max_is_null,3.57
+df_preprocesado_meli_alq,barrio_norm,monserrat,252,es_rango_ambientes_is_null,3.57
+df_preprocesado_meli_alq,barrio_norm,monserrat,252,ambientes_ref_is_null,3.57
+df_preprocesado_meli_alq,barrio_norm,monserrat,252,ambientes_min_is_null,3.57
+df_preprocesado_meli_alq,barrio_norm,san telmo,244,inmobiliaria_is_null,90.57
+df_preprocesado_meli_alq,barrio_norm,san telmo,244,altura_is_null,16.8
+df_preprocesado_meli_alq,barrio_norm,san telmo,244,ambientes_max_is_null,5.33
+df_preprocesado_meli_alq,barrio_norm,san telmo,244,es_rango_ambientes_is_null,5.33
+df_preprocesado_meli_alq,barrio_norm,san telmo,244,ambientes_ref_is_null,5.33
+df_preprocesado_meli_alq,barrio_norm,san telmo,244,ambientes_min_is_null,5.33
+df_preprocesado_meli_alq,barrio_norm,villa devoto,233,inmobiliaria_is_null,93.13
+df_preprocesado_meli_alq,barrio_norm,villa devoto,233,altura_is_null,22.32
+df_preprocesado_meli_alq,barrio_norm,villa devoto,233,ambientes_max_is_null,3.43
+df_preprocesado_meli_alq,barrio_norm,villa devoto,233,es_rango_ambientes_is_null,3.43
+df_preprocesado_meli_alq,barrio_norm,villa devoto,233,ambientes_ref_is_null,3.43
+df_preprocesado_meli_alq,barrio_norm,villa devoto,233,ambientes_min_is_null,3.43
+df_preprocesado_meli_alq,barrio_norm,colegiales,207,inmobiliaria_is_null,88.89
+df_preprocesado_meli_alq,barrio_norm,colegiales,207,altura_is_null,9.66
+df_preprocesado_meli_alq,barrio_norm,colegiales,207,ambientes_max_is_null,3.38
+df_preprocesado_meli_alq,barrio_norm,colegiales,207,es_rango_ambientes_is_null,3.38
+df_preprocesado_meli_alq,barrio_norm,colegiales,207,ambientes_ref_is_null,3.38
+df_preprocesado_meli_alq,barrio_norm,colegiales,207,ambientes_min_is_null,3.38
+df_preprocesado_meli_alq,barrio_norm,villa del parque,186,inmobiliaria_is_null,93.55
+df_preprocesado_meli_alq,barrio_norm,villa del parque,186,altura_is_null,13.98
+df_preprocesado_meli_alq,barrio_norm,villa del parque,186,ambientes_max_is_null,2.69
+df_preprocesado_meli_alq,barrio_norm,villa del parque,186,es_rango_ambientes_is_null,2.69
+df_preprocesado_meli_alq,barrio_norm,villa del parque,186,ambientes_ref_is_null,2.69
+df_preprocesado_meli_alq,barrio_norm,villa del parque,186,ambientes_min_is_null,2.69
+df_preprocesado_meli_alq,barrio_norm,san cristobal,163,inmobiliaria_is_null,91.41
+df_preprocesado_meli_alq,barrio_norm,san cristobal,163,altura_is_null,10.43
+df_preprocesado_meli_alq,barrio_norm,san cristobal,163,ambientes_max_is_null,6.13
+df_preprocesado_meli_alq,barrio_norm,san cristobal,163,es_rango_ambientes_is_null,6.13
+df_preprocesado_meli_alq,barrio_norm,san cristobal,163,ambientes_ref_is_null,6.13
+df_preprocesado_meli_alq,barrio_norm,san cristobal,163,ambientes_min_is_null,6.13
+df_preprocesado_meli_alq,barrio_norm,saavedra,157,inmobiliaria_is_null,93.63
+df_preprocesado_meli_alq,barrio_norm,saavedra,157,altura_is_null,18.47
+df_preprocesado_meli_alq,barrio_norm,saavedra,157,ambientes_max_is_null,1.27
+df_preprocesado_meli_alq,barrio_norm,saavedra,157,es_rango_ambientes_is_null,1.27
+df_preprocesado_meli_alq,barrio_norm,saavedra,157,ambientes_ref_is_null,1.27
+df_preprocesado_meli_alq,barrio_norm,saavedra,157,ambientes_min_is_null,1.27
+df_preprocesado_meli_alq,barrio_norm,barracas,115,inmobiliaria_is_null,93.04
+df_preprocesado_meli_alq,barrio_norm,barracas,115,altura_is_null,24.35
+df_preprocesado_meli_alq,barrio_norm,barracas,115,ambientes_max_is_null,1.74
+df_preprocesado_meli_alq,barrio_norm,barracas,115,es_rango_ambientes_is_null,1.74
+df_preprocesado_meli_alq,barrio_norm,barracas,115,ambientes_ref_is_null,1.74
+df_preprocesado_meli_alq,barrio_norm,barracas,115,ambientes_min_is_null,1.74
+df_preprocesado_meli_alq,barrio_norm,floresta,111,inmobiliaria_is_null,93.69
+df_preprocesado_meli_alq,barrio_norm,floresta,111,altura_is_null,15.32
+df_preprocesado_meli_alq,barrio_norm,floresta,111,ambientes_max_is_null,0.9
+df_preprocesado_meli_alq,barrio_norm,floresta,111,es_rango_ambientes_is_null,0.9
+df_preprocesado_meli_alq,barrio_norm,floresta,111,ambientes_ref_is_null,0.9
+df_preprocesado_meli_alq,barrio_norm,floresta,111,ambientes_min_is_null,0.9
+df_preprocesado_meli_alq,barrio_norm,villa luro,109,inmobiliaria_is_null,99.08
+df_preprocesado_meli_alq,barrio_norm,villa luro,109,altura_is_null,10.09
+df_preprocesado_meli_alq,barrio_norm,villa luro,109,ambientes_max_is_null,1.83
+df_preprocesado_meli_alq,barrio_norm,villa luro,109,es_rango_ambientes_is_null,1.83
+df_preprocesado_meli_alq,barrio_norm,villa luro,109,ambientes_ref_is_null,1.83
+df_preprocesado_meli_alq,barrio_norm,villa luro,109,ambientes_min_is_null,1.83
+df_preprocesado_meli_alq,barrio_norm,liniers,105,inmobiliaria_is_null,97.14
+df_preprocesado_meli_alq,barrio_norm,liniers,105,altura_is_null,23.81
+df_preprocesado_meli_alq,barrio_norm,liniers,105,ambientes_max_is_null,2.86
+df_preprocesado_meli_alq,barrio_norm,liniers,105,es_rango_ambientes_is_null,2.86
+df_preprocesado_meli_alq,barrio_norm,liniers,105,ambientes_ref_is_null,2.86
+df_preprocesado_meli_alq,barrio_norm,liniers,105,ambientes_min_is_null,2.86
+df_preprocesado_meli_alq,barrio_norm,villa pueyrredon,105,inmobiliaria_is_null,100.0
+df_preprocesado_meli_alq,barrio_norm,villa pueyrredon,105,altura_is_null,27.62
+df_preprocesado_meli_alq,barrio_norm,villa pueyrredon,105,ambientes_max_is_null,0.95
+df_preprocesado_meli_alq,barrio_norm,villa pueyrredon,105,es_rango_ambientes_is_null,0.95
+df_preprocesado_meli_alq,barrio_norm,villa pueyrredon,105,ambientes_ref_is_null,0.95
+df_preprocesado_meli_alq,barrio_norm,villa pueyrredon,105,ambientes_min_is_null,0.95
+df_preprocesado_meli_alq,inmobiliaria,SIN_DATO,10251,inmobiliaria_is_null,100.0
+df_preprocesado_meli_alq,inmobiliaria,SIN_DATO,10251,altura_is_null,13.45
+df_preprocesado_meli_alq,inmobiliaria,SIN_DATO,10251,ambientes_max_is_null,3.14
+df_preprocesado_meli_alq,inmobiliaria,SIN_DATO,10251,es_rango_ambientes_is_null,3.14
+df_preprocesado_meli_alq,inmobiliaria,SIN_DATO,10251,ambientes_ref_is_null,3.14
+df_preprocesado_meli_alq,inmobiliaria,SIN_DATO,10251,ambientes_min_is_null,3.14
+df_preprocesado_meli_alq,inmobiliaria,Remax Premium,158,inmobiliaria_is_null,0.0
+df_preprocesado_meli_alq,inmobiliaria,Remax Premium,158,altura_is_null,0.0
+df_preprocesado_meli_alq,inmobiliaria,Remax Premium,158,ambientes_max_is_null,0.0
+df_preprocesado_meli_alq,inmobiliaria,Remax Premium,158,es_rango_ambientes_is_null,0.0
+df_preprocesado_meli_alq,inmobiliaria,Remax Premium,158,ambientes_ref_is_null,0.0
+df_preprocesado_meli_alq,inmobiliaria,Remax Premium,158,ambientes_min_is_null,0.0
+df_preprocesado_meli_alq,inmobiliaria,Lepore,125,inmobiliaria_is_null,0.0
+df_preprocesado_meli_alq,inmobiliaria,Lepore,125,altura_is_null,96.0
+df_preprocesado_meli_alq,inmobiliaria,Lepore,125,ambientes_max_is_null,0.0
+df_preprocesado_meli_alq,inmobiliaria,Lepore,125,es_rango_ambientes_is_null,0.0
+df_preprocesado_meli_alq,inmobiliaria,Lepore,125,ambientes_ref_is_null,0.0
+df_preprocesado_meli_alq,inmobiliaria,Lepore,125,ambientes_min_is_null,0.0
+df_preprocesado_meli_alq,inmobiliaria,Sistema Coldwell Banker,82,inmobiliaria_is_null,0.0
+df_preprocesado_meli_alq,inmobiliaria,Sistema Coldwell Banker,82,altura_is_null,2.44
+df_preprocesado_meli_alq,inmobiliaria,Sistema Coldwell Banker,82,ambientes_max_is_null,1.22
+df_preprocesado_meli_alq,inmobiliaria,Sistema Coldwell Banker,82,es_rango_ambientes_is_null,1.22
+df_preprocesado_meli_alq,inmobiliaria,Sistema Coldwell Banker,82,ambientes_ref_is_null,1.22
+df_preprocesado_meli_alq,inmobiliaria,Sistema Coldwell Banker,82,ambientes_min_is_null,1.22
+df_preprocesado_meli_alq,inmobiliaria,Situar,80,inmobiliaria_is_null,0.0
+df_preprocesado_meli_alq,inmobiliaria,Situar,80,altura_is_null,20.0
+df_preprocesado_meli_alq,inmobiliaria,Situar,80,ambientes_max_is_null,1.25
+df_preprocesado_meli_alq,inmobiliaria,Situar,80,es_rango_ambientes_is_null,1.25
+df_preprocesado_meli_alq,inmobiliaria,Situar,80,ambientes_ref_is_null,1.25
+df_preprocesado_meli_alq,inmobiliaria,Situar,80,ambientes_min_is_null,1.25
+df_preprocesado_meli_alq,inmobiliaria,Goldstein Propiedades,54,inmobiliaria_is_null,0.0
+df_preprocesado_meli_alq,inmobiliaria,Goldstein Propiedades,54,altura_is_null,11.11
+df_preprocesado_meli_alq,inmobiliaria,Goldstein Propiedades,54,ambientes_max_is_null,0.0
+df_preprocesado_meli_alq,inmobiliaria,Goldstein Propiedades,54,es_rango_ambientes_is_null,0.0
+df_preprocesado_meli_alq,inmobiliaria,Goldstein Propiedades,54,ambientes_ref_is_null,0.0
+df_preprocesado_meli_alq,inmobiliaria,Goldstein Propiedades,54,ambientes_min_is_null,0.0
+df_preprocesado_meli_alq,inmobiliaria,Mel Propiedades,53,inmobiliaria_is_null,0.0
+df_preprocesado_meli_alq,inmobiliaria,Mel Propiedades,53,altura_is_null,0.0
+df_preprocesado_meli_alq,inmobiliaria,Mel Propiedades,53,ambientes_max_is_null,20.75
+df_preprocesado_meli_alq,inmobiliaria,Mel Propiedades,53,es_rango_ambientes_is_null,20.75
+df_preprocesado_meli_alq,inmobiliaria,Mel Propiedades,53,ambientes_ref_is_null,20.75
+df_preprocesado_meli_alq,inmobiliaria,Mel Propiedades,53,ambientes_min_is_null,20.75
+df_preprocesado_meli_alq,inmobiliaria,Toribio Achaval,49,inmobiliaria_is_null,0.0
+df_preprocesado_meli_alq,inmobiliaria,Toribio Achaval,49,altura_is_null,0.0
+df_preprocesado_meli_alq,inmobiliaria,Toribio Achaval,49,ambientes_max_is_null,0.0
+df_preprocesado_meli_alq,inmobiliaria,Toribio Achaval,49,es_rango_ambientes_is_null,0.0
+df_preprocesado_meli_alq,inmobiliaria,Toribio Achaval,49,ambientes_ref_is_null,0.0
+df_preprocesado_meli_alq,inmobiliaria,Toribio Achaval,49,ambientes_min_is_null,0.0
+df_preprocesado_meli_alq,inmobiliaria,Interwin,41,inmobiliaria_is_null,0.0
+df_preprocesado_meli_alq,inmobiliaria,Interwin,41,altura_is_null,0.0
+df_preprocesado_meli_alq,inmobiliaria,Interwin,41,ambientes_max_is_null,0.0
+df_preprocesado_meli_alq,inmobiliaria,Interwin,41,es_rango_ambientes_is_null,0.0
+df_preprocesado_meli_alq,inmobiliaria,Interwin,41,ambientes_ref_is_null,0.0
+df_preprocesado_meli_alq,inmobiliaria,Interwin,41,ambientes_min_is_null,0.0
+df_preprocesado_meli_alq,inmobiliaria,Oppel Inmobiliaria,34,inmobiliaria_is_null,0.0
+df_preprocesado_meli_alq,inmobiliaria,Oppel Inmobiliaria,34,altura_is_null,100.0
+df_preprocesado_meli_alq,inmobiliaria,Oppel Inmobiliaria,34,ambientes_max_is_null,0.0
+df_preprocesado_meli_alq,inmobiliaria,Oppel Inmobiliaria,34,es_rango_ambientes_is_null,0.0
+df_preprocesado_meli_alq,inmobiliaria,Oppel Inmobiliaria,34,ambientes_ref_is_null,0.0
+df_preprocesado_meli_alq,inmobiliaria,Oppel Inmobiliaria,34,ambientes_min_is_null,0.0
+df_preprocesado_meli_alq,inmobiliaria,Reynolds Propiedades,33,inmobiliaria_is_null,0.0
+df_preprocesado_meli_alq,inmobiliaria,Reynolds Propiedades,33,altura_is_null,0.0
+df_preprocesado_meli_alq,inmobiliaria,Reynolds Propiedades,33,ambientes_max_is_null,0.0
+df_preprocesado_meli_alq,inmobiliaria,Reynolds Propiedades,33,es_rango_ambientes_is_null,0.0
+df_preprocesado_meli_alq,inmobiliaria,Reynolds Propiedades,33,ambientes_ref_is_null,0.0
+df_preprocesado_meli_alq,inmobiliaria,Reynolds Propiedades,33,ambientes_min_is_null,0.0
+df_preprocesado_meli_alq,inmobiliaria,LA Propiedades,30,inmobiliaria_is_null,0.0
+df_preprocesado_meli_alq,inmobiliaria,LA Propiedades,30,altura_is_null,3.33
+df_preprocesado_meli_alq,inmobiliaria,LA Propiedades,30,ambientes_max_is_null,0.0
+df_preprocesado_meli_alq,inmobiliaria,LA Propiedades,30,es_rango_ambientes_is_null,0.0
+df_preprocesado_meli_alq,inmobiliaria,LA Propiedades,30,ambientes_ref_is_null,0.0
+df_preprocesado_meli_alq,inmobiliaria,LA Propiedades,30,ambientes_min_is_null,0.0
+df_preprocesado_meli_alq_temp,moneda_norm,USD,4382,inmobiliaria_is_null,87.4
+df_preprocesado_meli_alq_temp,moneda_norm,USD,4382,altura_is_null,25.01
+df_preprocesado_meli_alq_temp,moneda_norm,USD,4382,comuna_is_null,4.31
+df_preprocesado_meli_alq_temp,moneda_norm,USD,4382,ambientes_ref_is_null,2.99
+df_preprocesado_meli_alq_temp,moneda_norm,USD,4382,es_rango_ambientes_is_null,2.99
+df_preprocesado_meli_alq_temp,moneda_norm,USD,4382,ambientes_max_is_null,2.99
+df_preprocesado_meli_alq_temp,moneda_norm,USD,4382,ambientes_min_is_null,2.99
+df_preprocesado_meli_alq_temp,moneda_norm,ARS,1808,inmobiliaria_is_null,95.58
+df_preprocesado_meli_alq_temp,moneda_norm,ARS,1808,altura_is_null,17.15
+df_preprocesado_meli_alq_temp,moneda_norm,ARS,1808,comuna_is_null,4.7
+df_preprocesado_meli_alq_temp,moneda_norm,ARS,1808,ambientes_ref_is_null,6.14
+df_preprocesado_meli_alq_temp,moneda_norm,ARS,1808,es_rango_ambientes_is_null,6.14
+df_preprocesado_meli_alq_temp,moneda_norm,ARS,1808,ambientes_max_is_null,6.14
+df_preprocesado_meli_alq_temp,moneda_norm,ARS,1808,ambientes_min_is_null,6.14
+df_preprocesado_meli_alq_temp,barrio_norm,palermo,1456,inmobiliaria_is_null,89.35
+df_preprocesado_meli_alq_temp,barrio_norm,palermo,1456,altura_is_null,23.9
+df_preprocesado_meli_alq_temp,barrio_norm,palermo,1456,comuna_is_null,0.0
+df_preprocesado_meli_alq_temp,barrio_norm,palermo,1456,ambientes_ref_is_null,4.19
+df_preprocesado_meli_alq_temp,barrio_norm,palermo,1456,es_rango_ambientes_is_null,4.19
+df_preprocesado_meli_alq_temp,barrio_norm,palermo,1456,ambientes_max_is_null,4.19
+df_preprocesado_meli_alq_temp,barrio_norm,palermo,1456,ambientes_min_is_null,4.19
+df_preprocesado_meli_alq_temp,barrio_norm,recoleta,710,inmobiliaria_is_null,87.75
+df_preprocesado_meli_alq_temp,barrio_norm,recoleta,710,altura_is_null,22.54
+df_preprocesado_meli_alq_temp,barrio_norm,recoleta,710,comuna_is_null,5.49
+df_preprocesado_meli_alq_temp,barrio_norm,recoleta,710,ambientes_ref_is_null,2.54
+df_preprocesado_meli_alq_temp,barrio_norm,recoleta,710,es_rango_ambientes_is_null,2.54
+df_preprocesado_meli_alq_temp,barrio_norm,recoleta,710,ambientes_max_is_null,2.54
+df_preprocesado_meli_alq_temp,barrio_norm,recoleta,710,ambientes_min_is_null,2.54
+df_preprocesado_meli_alq_temp,barrio_norm,almagro,342,inmobiliaria_is_null,95.32
+df_preprocesado_meli_alq_temp,barrio_norm,almagro,342,altura_is_null,16.08
+df_preprocesado_meli_alq_temp,barrio_norm,almagro,342,comuna_is_null,0.0
+df_preprocesado_meli_alq_temp,barrio_norm,almagro,342,ambientes_ref_is_null,16.37
+df_preprocesado_meli_alq_temp,barrio_norm,almagro,342,es_rango_ambientes_is_null,16.37
+df_preprocesado_meli_alq_temp,barrio_norm,almagro,342,ambientes_max_is_null,16.37
+df_preprocesado_meli_alq_temp,barrio_norm,almagro,342,ambientes_min_is_null,16.37
+df_preprocesado_meli_alq_temp,barrio_norm,puerto madero,333,inmobiliaria_is_null,84.68
+df_preprocesado_meli_alq_temp,barrio_norm,puerto madero,333,altura_is_null,32.43
+df_preprocesado_meli_alq_temp,barrio_norm,puerto madero,333,comuna_is_null,0.0
+df_preprocesado_meli_alq_temp,barrio_norm,puerto madero,333,ambientes_ref_is_null,1.8
+df_preprocesado_meli_alq_temp,barrio_norm,puerto madero,333,es_rango_ambientes_is_null,1.8
+df_preprocesado_meli_alq_temp,barrio_norm,puerto madero,333,ambientes_max_is_null,1.8
+df_preprocesado_meli_alq_temp,barrio_norm,puerto madero,333,ambientes_min_is_null,1.8
+df_preprocesado_meli_alq_temp,barrio_norm,belgrano,315,inmobiliaria_is_null,89.84
+df_preprocesado_meli_alq_temp,barrio_norm,belgrano,315,altura_is_null,22.86
+df_preprocesado_meli_alq_temp,barrio_norm,belgrano,315,comuna_is_null,0.0
+df_preprocesado_meli_alq_temp,barrio_norm,belgrano,315,ambientes_ref_is_null,2.54
+df_preprocesado_meli_alq_temp,barrio_norm,belgrano,315,es_rango_ambientes_is_null,2.54
+df_preprocesado_meli_alq_temp,barrio_norm,belgrano,315,ambientes_max_is_null,2.54
+df_preprocesado_meli_alq_temp,barrio_norm,belgrano,315,ambientes_min_is_null,2.54
+df_preprocesado_meli_alq_temp,barrio_norm,san nicolas,251,inmobiliaria_is_null,88.45
+df_preprocesado_meli_alq_temp,barrio_norm,san nicolas,251,altura_is_null,23.9
+df_preprocesado_meli_alq_temp,barrio_norm,san nicolas,251,comuna_is_null,0.0
+df_preprocesado_meli_alq_temp,barrio_norm,san nicolas,251,ambientes_ref_is_null,5.58
+df_preprocesado_meli_alq_temp,barrio_norm,san nicolas,251,es_rango_ambientes_is_null,5.58
+df_preprocesado_meli_alq_temp,barrio_norm,san nicolas,251,ambientes_max_is_null,5.58
+df_preprocesado_meli_alq_temp,barrio_norm,san nicolas,251,ambientes_min_is_null,5.58
+df_preprocesado_meli_alq_temp,barrio_norm,san telmo,236,inmobiliaria_is_null,95.76
+df_preprocesado_meli_alq_temp,barrio_norm,san telmo,236,altura_is_null,25.42
+df_preprocesado_meli_alq_temp,barrio_norm,san telmo,236,comuna_is_null,0.0
+df_preprocesado_meli_alq_temp,barrio_norm,san telmo,236,ambientes_ref_is_null,2.12
+df_preprocesado_meli_alq_temp,barrio_norm,san telmo,236,es_rango_ambientes_is_null,2.12
+df_preprocesado_meli_alq_temp,barrio_norm,san telmo,236,ambientes_max_is_null,2.12
+df_preprocesado_meli_alq_temp,barrio_norm,san telmo,236,ambientes_min_is_null,2.12
+df_preprocesado_meli_alq_temp,barrio_norm,nunez,214,inmobiliaria_is_null,88.79
+df_preprocesado_meli_alq_temp,barrio_norm,nunez,214,altura_is_null,28.97
+df_preprocesado_meli_alq_temp,barrio_norm,nunez,214,comuna_is_null,0.0
+df_preprocesado_meli_alq_temp,barrio_norm,nunez,214,ambientes_ref_is_null,1.4
+df_preprocesado_meli_alq_temp,barrio_norm,nunez,214,es_rango_ambientes_is_null,1.4
+df_preprocesado_meli_alq_temp,barrio_norm,nunez,214,ambientes_max_is_null,1.4
+df_preprocesado_meli_alq_temp,barrio_norm,nunez,214,ambientes_min_is_null,1.4
+df_preprocesado_meli_alq_temp,barrio_norm,caballito,186,inmobiliaria_is_null,88.17
+df_preprocesado_meli_alq_temp,barrio_norm,caballito,186,altura_is_null,23.66
+df_preprocesado_meli_alq_temp,barrio_norm,caballito,186,comuna_is_null,0.0
+df_preprocesado_meli_alq_temp,barrio_norm,caballito,186,ambientes_ref_is_null,2.15
+df_preprocesado_meli_alq_temp,barrio_norm,caballito,186,es_rango_ambientes_is_null,2.15
+df_preprocesado_meli_alq_temp,barrio_norm,caballito,186,ambientes_max_is_null,2.15
+df_preprocesado_meli_alq_temp,barrio_norm,caballito,186,ambientes_min_is_null,2.15
+df_preprocesado_meli_alq_temp,barrio_norm,monserrat,176,inmobiliaria_is_null,92.61
+df_preprocesado_meli_alq_temp,barrio_norm,monserrat,176,altura_is_null,26.7
+df_preprocesado_meli_alq_temp,barrio_norm,monserrat,176,comuna_is_null,0.0
+df_preprocesado_meli_alq_temp,barrio_norm,monserrat,176,ambientes_ref_is_null,5.68
+df_preprocesado_meli_alq_temp,barrio_norm,monserrat,176,es_rango_ambientes_is_null,5.68
+df_preprocesado_meli_alq_temp,barrio_norm,monserrat,176,ambientes_max_is_null,5.68
+df_preprocesado_meli_alq_temp,barrio_norm,monserrat,176,ambientes_min_is_null,5.68
+df_preprocesado_meli_alq_temp,barrio_norm,retiro,175,inmobiliaria_is_null,84.0
+df_preprocesado_meli_alq_temp,barrio_norm,retiro,175,altura_is_null,28.0
+df_preprocesado_meli_alq_temp,barrio_norm,retiro,175,comuna_is_null,0.0
+df_preprocesado_meli_alq_temp,barrio_norm,retiro,175,ambientes_ref_is_null,0.57
+df_preprocesado_meli_alq_temp,barrio_norm,retiro,175,es_rango_ambientes_is_null,0.57
+df_preprocesado_meli_alq_temp,barrio_norm,retiro,175,ambientes_max_is_null,0.57
+df_preprocesado_meli_alq_temp,barrio_norm,retiro,175,ambientes_min_is_null,0.57
+df_preprocesado_meli_alq_temp,barrio_norm,villa crespo,175,inmobiliaria_is_null,87.43
+df_preprocesado_meli_alq_temp,barrio_norm,villa crespo,175,altura_is_null,22.29
+df_preprocesado_meli_alq_temp,barrio_norm,villa crespo,175,comuna_is_null,0.0
+df_preprocesado_meli_alq_temp,barrio_norm,villa crespo,175,ambientes_ref_is_null,5.14
+df_preprocesado_meli_alq_temp,barrio_norm,villa crespo,175,es_rango_ambientes_is_null,5.14
+df_preprocesado_meli_alq_temp,barrio_norm,villa crespo,175,ambientes_max_is_null,5.14
+df_preprocesado_meli_alq_temp,barrio_norm,villa crespo,175,ambientes_min_is_null,5.14
+df_preprocesado_meli_alq_temp,barrio_norm,balvanera,152,inmobiliaria_is_null,83.55
+df_preprocesado_meli_alq_temp,barrio_norm,balvanera,152,altura_is_null,22.37
+df_preprocesado_meli_alq_temp,barrio_norm,balvanera,152,comuna_is_null,0.0
+df_preprocesado_meli_alq_temp,barrio_norm,balvanera,152,ambientes_ref_is_null,3.29
+df_preprocesado_meli_alq_temp,barrio_norm,balvanera,152,es_rango_ambientes_is_null,3.29
+df_preprocesado_meli_alq_temp,barrio_norm,balvanera,152,ambientes_max_is_null,3.29
+df_preprocesado_meli_alq_temp,barrio_norm,balvanera,152,ambientes_min_is_null,3.29
+df_preprocesado_meli_alq_temp,barrio_norm,colegiales,131,inmobiliaria_is_null,86.26
+df_preprocesado_meli_alq_temp,barrio_norm,colegiales,131,altura_is_null,25.95
+df_preprocesado_meli_alq_temp,barrio_norm,colegiales,131,comuna_is_null,0.0
+df_preprocesado_meli_alq_temp,barrio_norm,colegiales,131,ambientes_ref_is_null,4.58
+df_preprocesado_meli_alq_temp,barrio_norm,colegiales,131,es_rango_ambientes_is_null,4.58
+df_preprocesado_meli_alq_temp,barrio_norm,colegiales,131,ambientes_max_is_null,4.58
+df_preprocesado_meli_alq_temp,barrio_norm,colegiales,131,ambientes_min_is_null,4.58
+df_preprocesado_meli_alq_temp,barrio_norm,villa urquiza,96,inmobiliaria_is_null,92.71
+df_preprocesado_meli_alq_temp,barrio_norm,villa urquiza,96,altura_is_null,15.62
+df_preprocesado_meli_alq_temp,barrio_norm,villa urquiza,96,comuna_is_null,0.0
+df_preprocesado_meli_alq_temp,barrio_norm,villa urquiza,96,ambientes_ref_is_null,5.21
+df_preprocesado_meli_alq_temp,barrio_norm,villa urquiza,96,es_rango_ambientes_is_null,5.21
+df_preprocesado_meli_alq_temp,barrio_norm,villa urquiza,96,ambientes_max_is_null,5.21
+df_preprocesado_meli_alq_temp,barrio_norm,villa urquiza,96,ambientes_min_is_null,5.21
+df_preprocesado_meli_alq_temp,barrio_norm,san cristobal,89,inmobiliaria_is_null,85.39
+df_preprocesado_meli_alq_temp,barrio_norm,san cristobal,89,altura_is_null,13.48
+df_preprocesado_meli_alq_temp,barrio_norm,san cristobal,89,comuna_is_null,0.0
+df_preprocesado_meli_alq_temp,barrio_norm,san cristobal,89,ambientes_ref_is_null,7.87
+df_preprocesado_meli_alq_temp,barrio_norm,san cristobal,89,es_rango_ambientes_is_null,7.87
+df_preprocesado_meli_alq_temp,barrio_norm,san cristobal,89,ambientes_max_is_null,7.87
+df_preprocesado_meli_alq_temp,barrio_norm,san cristobal,89,ambientes_min_is_null,7.87
+df_preprocesado_meli_alq_temp,barrio_norm,las canitas,80,inmobiliaria_is_null,86.25
+df_preprocesado_meli_alq_temp,barrio_norm,las canitas,80,altura_is_null,10.0
+df_preprocesado_meli_alq_temp,barrio_norm,las canitas,80,comuna_is_null,100.0
+df_preprocesado_meli_alq_temp,barrio_norm,las canitas,80,ambientes_ref_is_null,2.5
+df_preprocesado_meli_alq_temp,barrio_norm,las canitas,80,es_rango_ambientes_is_null,2.5
+df_preprocesado_meli_alq_temp,barrio_norm,las canitas,80,ambientes_max_is_null,2.5
+df_preprocesado_meli_alq_temp,barrio_norm,las canitas,80,ambientes_min_is_null,2.5
+df_preprocesado_meli_alq_temp,barrio_norm,chacarita,68,inmobiliaria_is_null,89.71
+df_preprocesado_meli_alq_temp,barrio_norm,chacarita,68,altura_is_null,20.59
+df_preprocesado_meli_alq_temp,barrio_norm,chacarita,68,comuna_is_null,0.0
+df_preprocesado_meli_alq_temp,barrio_norm,chacarita,68,ambientes_ref_is_null,7.35
+df_preprocesado_meli_alq_temp,barrio_norm,chacarita,68,es_rango_ambientes_is_null,7.35
+df_preprocesado_meli_alq_temp,barrio_norm,chacarita,68,ambientes_max_is_null,7.35
+df_preprocesado_meli_alq_temp,barrio_norm,chacarita,68,ambientes_min_is_null,7.35
+df_preprocesado_meli_alq_temp,barrio_norm,villa devoto,55,inmobiliaria_is_null,96.36
+df_preprocesado_meli_alq_temp,barrio_norm,villa devoto,55,altura_is_null,21.82
+df_preprocesado_meli_alq_temp,barrio_norm,villa devoto,55,comuna_is_null,0.0
+df_preprocesado_meli_alq_temp,barrio_norm,villa devoto,55,ambientes_ref_is_null,1.82
+df_preprocesado_meli_alq_temp,barrio_norm,villa devoto,55,es_rango_ambientes_is_null,1.82
+df_preprocesado_meli_alq_temp,barrio_norm,villa devoto,55,ambientes_max_is_null,1.82
+df_preprocesado_meli_alq_temp,barrio_norm,villa devoto,55,ambientes_min_is_null,1.82
+df_preprocesado_meli_alq_temp,barrio_norm,coghlan,51,inmobiliaria_is_null,84.31
+df_preprocesado_meli_alq_temp,barrio_norm,coghlan,51,altura_is_null,17.65
+df_preprocesado_meli_alq_temp,barrio_norm,coghlan,51,comuna_is_null,0.0
+df_preprocesado_meli_alq_temp,barrio_norm,coghlan,51,ambientes_ref_is_null,3.92
+df_preprocesado_meli_alq_temp,barrio_norm,coghlan,51,es_rango_ambientes_is_null,3.92
+df_preprocesado_meli_alq_temp,barrio_norm,coghlan,51,ambientes_max_is_null,3.92
+df_preprocesado_meli_alq_temp,barrio_norm,coghlan,51,ambientes_min_is_null,3.92
+df_preprocesado_meli_alq_temp,barrio_norm,parque chacabuco,51,inmobiliaria_is_null,88.24
+df_preprocesado_meli_alq_temp,barrio_norm,parque chacabuco,51,altura_is_null,15.69
+df_preprocesado_meli_alq_temp,barrio_norm,parque chacabuco,51,comuna_is_null,0.0
+df_preprocesado_meli_alq_temp,barrio_norm,parque chacabuco,51,ambientes_ref_is_null,1.96
+df_preprocesado_meli_alq_temp,barrio_norm,parque chacabuco,51,es_rango_ambientes_is_null,1.96
+df_preprocesado_meli_alq_temp,barrio_norm,parque chacabuco,51,ambientes_max_is_null,1.96
+df_preprocesado_meli_alq_temp,barrio_norm,parque chacabuco,51,ambientes_min_is_null,1.96
+df_preprocesado_meli_alq_temp,barrio_norm,barracas,47,inmobiliaria_is_null,97.87
+df_preprocesado_meli_alq_temp,barrio_norm,barracas,47,altura_is_null,17.02
+df_preprocesado_meli_alq_temp,barrio_norm,barracas,47,comuna_is_null,0.0
+df_preprocesado_meli_alq_temp,barrio_norm,barracas,47,ambientes_ref_is_null,2.13
+df_preprocesado_meli_alq_temp,barrio_norm,barracas,47,es_rango_ambientes_is_null,2.13
+df_preprocesado_meli_alq_temp,barrio_norm,barracas,47,ambientes_max_is_null,2.13
+df_preprocesado_meli_alq_temp,barrio_norm,barracas,47,ambientes_min_is_null,2.13
+df_preprocesado_meli_alq_temp,barrio_norm,monte castro,44,inmobiliaria_is_null,95.45
+df_preprocesado_meli_alq_temp,barrio_norm,monte castro,44,altura_is_null,9.09
+df_preprocesado_meli_alq_temp,barrio_norm,monte castro,44,comuna_is_null,0.0
+df_preprocesado_meli_alq_temp,barrio_norm,monte castro,44,ambientes_ref_is_null,4.55
+df_preprocesado_meli_alq_temp,barrio_norm,monte castro,44,es_rango_ambientes_is_null,4.55
+df_preprocesado_meli_alq_temp,barrio_norm,monte castro,44,ambientes_max_is_null,4.55
+df_preprocesado_meli_alq_temp,barrio_norm,monte castro,44,ambientes_min_is_null,4.55
+df_preprocesado_meli_alq_temp,barrio_norm,flores,43,inmobiliaria_is_null,95.35
+df_preprocesado_meli_alq_temp,barrio_norm,flores,43,altura_is_null,9.3
+df_preprocesado_meli_alq_temp,barrio_norm,flores,43,comuna_is_null,0.0
+df_preprocesado_meli_alq_temp,barrio_norm,flores,43,ambientes_ref_is_null,2.33
+df_preprocesado_meli_alq_temp,barrio_norm,flores,43,es_rango_ambientes_is_null,2.33
+df_preprocesado_meli_alq_temp,barrio_norm,flores,43,ambientes_max_is_null,2.33
+df_preprocesado_meli_alq_temp,barrio_norm,flores,43,ambientes_min_is_null,2.33
+df_preprocesado_meli_alq_temp,barrio_norm,villa ortuzar,41,inmobiliaria_is_null,100.0
+df_preprocesado_meli_alq_temp,barrio_norm,villa ortuzar,41,altura_is_null,7.32
+df_preprocesado_meli_alq_temp,barrio_norm,villa ortuzar,41,comuna_is_null,0.0
+df_preprocesado_meli_alq_temp,barrio_norm,villa ortuzar,41,ambientes_ref_is_null,0.0
+df_preprocesado_meli_alq_temp,barrio_norm,villa ortuzar,41,es_rango_ambientes_is_null,0.0
+df_preprocesado_meli_alq_temp,barrio_norm,villa ortuzar,41,ambientes_max_is_null,0.0
+df_preprocesado_meli_alq_temp,barrio_norm,villa ortuzar,41,ambientes_min_is_null,0.0
+df_preprocesado_meli_alq_temp,localidad,Capital Federal,6177,inmobiliaria_is_null,89.82
+df_preprocesado_meli_alq_temp,localidad,Capital Federal,6177,altura_is_null,22.71
+df_preprocesado_meli_alq_temp,localidad,Capital Federal,6177,comuna_is_null,4.23
+df_preprocesado_meli_alq_temp,localidad,Capital Federal,6177,ambientes_ref_is_null,3.92
+df_preprocesado_meli_alq_temp,localidad,Capital Federal,6177,es_rango_ambientes_is_null,3.92
+df_preprocesado_meli_alq_temp,localidad,Capital Federal,6177,ambientes_max_is_null,3.92
+df_preprocesado_meli_alq_temp,localidad,Capital Federal,6177,ambientes_min_is_null,3.92
+df_preprocesado_meli_alq_temp,inmobiliaria,SIN_DATO,5558,inmobiliaria_is_null,100.0
+df_preprocesado_meli_alq_temp,inmobiliaria,SIN_DATO,5558,altura_is_null,19.56
+df_preprocesado_meli_alq_temp,inmobiliaria,SIN_DATO,5558,comuna_is_null,4.34
+df_preprocesado_meli_alq_temp,inmobiliaria,SIN_DATO,5558,ambientes_ref_is_null,4.28
+df_preprocesado_meli_alq_temp,inmobiliaria,SIN_DATO,5558,es_rango_ambientes_is_null,4.28
+df_preprocesado_meli_alq_temp,inmobiliaria,SIN_DATO,5558,ambientes_max_is_null,4.28
+df_preprocesado_meli_alq_temp,inmobiliaria,SIN_DATO,5558,ambientes_min_is_null,4.28
+df_preprocesado_meli_alq_temp,inmobiliaria,Alternativa Propiedades,316,inmobiliaria_is_null,0.0
+df_preprocesado_meli_alq_temp,inmobiliaria,Alternativa Propiedades,316,altura_is_null,87.66
+df_preprocesado_meli_alq_temp,inmobiliaria,Alternativa Propiedades,316,comuna_is_null,4.43
+df_preprocesado_meli_alq_temp,inmobiliaria,Alternativa Propiedades,316,ambientes_ref_is_null,0.0
+df_preprocesado_meli_alq_temp,inmobiliaria,Alternativa Propiedades,316,es_rango_ambientes_is_null,0.0
+df_preprocesado_meli_alq_temp,inmobiliaria,Alternativa Propiedades,316,ambientes_max_is_null,0.0
+df_preprocesado_meli_alq_temp,inmobiliaria,Alternativa Propiedades,316,ambientes_min_is_null,0.0
+df_preprocesado_meli_alq_temp,inmobiliaria,Situar,103,inmobiliaria_is_null,0.0
+df_preprocesado_meli_alq_temp,inmobiliaria,Situar,103,altura_is_null,7.77
+df_preprocesado_meli_alq_temp,inmobiliaria,Situar,103,comuna_is_null,8.74
+df_preprocesado_meli_alq_temp,inmobiliaria,Situar,103,ambientes_ref_is_null,2.91
+df_preprocesado_meli_alq_temp,inmobiliaria,Situar,103,es_rango_ambientes_is_null,2.91
+df_preprocesado_meli_alq_temp,inmobiliaria,Situar,103,ambientes_max_is_null,2.91
+df_preprocesado_meli_alq_temp,inmobiliaria,Situar,103,ambientes_min_is_null,2.91
+df_preprocesado_meli_alq_temp,inmobiliaria,Remax Premium,50,inmobiliaria_is_null,0.0
+df_preprocesado_meli_alq_temp,inmobiliaria,Remax Premium,50,altura_is_null,0.0
+df_preprocesado_meli_alq_temp,inmobiliaria,Remax Premium,50,comuna_is_null,2.0
+df_preprocesado_meli_alq_temp,inmobiliaria,Remax Premium,50,ambientes_ref_is_null,0.0
+df_preprocesado_meli_alq_temp,inmobiliaria,Remax Premium,50,es_rango_ambientes_is_null,0.0
+df_preprocesado_meli_alq_temp,inmobiliaria,Remax Premium,50,ambientes_max_is_null,0.0
+df_preprocesado_meli_alq_temp,inmobiliaria,Remax Premium,50,ambientes_min_is_null,0.0
+df_preprocesado_meli_vtas,moneda_norm,USD,44010,unidades_disponibles_is_null,97.09
+df_preprocesado_meli_vtas,moneda_norm,USD,44010,posesion_is_null,97.09
+df_preprocesado_meli_vtas,moneda_norm,USD,44010,estado_entrega_is_null,93.71
+df_preprocesado_meli_vtas,moneda_norm,USD,44010,inmobiliaria_is_null,79.27
+df_preprocesado_meli_vtas,moneda_norm,USD,44010,altura_is_null,16.77
+df_preprocesado_meli_vtas,moneda_norm,USD,44010,banios_min_is_null,2.17
+df_preprocesado_meli_vtas,moneda_norm,USD,44010,banios_ref_is_null,2.17
+df_preprocesado_meli_vtas,moneda_norm,USD,44010,banios_max_is_null,2.17
+df_preprocesado_meli_vtas,moneda_norm,USD,44010,comuna_is_null,2.02
+df_preprocesado_meli_vtas,barrio_norm,palermo,2509,unidades_disponibles_is_null,91.83
+df_preprocesado_meli_vtas,barrio_norm,palermo,2509,posesion_is_null,91.83
+df_preprocesado_meli_vtas,barrio_norm,palermo,2509,estado_entrega_is_null,89.12
+df_preprocesado_meli_vtas,barrio_norm,palermo,2509,inmobiliaria_is_null,69.11
+df_preprocesado_meli_vtas,barrio_norm,palermo,2509,altura_is_null,14.43
+df_preprocesado_meli_vtas,barrio_norm,palermo,2509,banios_min_is_null,1.51
+df_preprocesado_meli_vtas,barrio_norm,palermo,2509,banios_ref_is_null,1.51
+df_preprocesado_meli_vtas,barrio_norm,palermo,2509,banios_max_is_null,1.51
+df_preprocesado_meli_vtas,barrio_norm,palermo,2509,comuna_is_null,0.0
+df_preprocesado_meli_vtas,barrio_norm,belgrano,2264,unidades_disponibles_is_null,93.86
+df_preprocesado_meli_vtas,barrio_norm,belgrano,2264,posesion_is_null,93.86
+df_preprocesado_meli_vtas,barrio_norm,belgrano,2264,estado_entrega_is_null,88.74
+df_preprocesado_meli_vtas,barrio_norm,belgrano,2264,inmobiliaria_is_null,61.88
+df_preprocesado_meli_vtas,barrio_norm,belgrano,2264,altura_is_null,14.31
+df_preprocesado_meli_vtas,barrio_norm,belgrano,2264,banios_min_is_null,0.93
+df_preprocesado_meli_vtas,barrio_norm,belgrano,2264,banios_ref_is_null,0.93
+df_preprocesado_meli_vtas,barrio_norm,belgrano,2264,banios_max_is_null,0.93
+df_preprocesado_meli_vtas,barrio_norm,belgrano,2264,comuna_is_null,0.0
+df_preprocesado_meli_vtas,barrio_norm,recoleta,2196,unidades_disponibles_is_null,96.13
+df_preprocesado_meli_vtas,barrio_norm,recoleta,2196,posesion_is_null,96.13
+df_preprocesado_meli_vtas,barrio_norm,recoleta,2196,estado_entrega_is_null,94.31
+df_preprocesado_meli_vtas,barrio_norm,recoleta,2196,inmobiliaria_is_null,69.95
+df_preprocesado_meli_vtas,barrio_norm,recoleta,2196,altura_is_null,15.66
+df_preprocesado_meli_vtas,barrio_norm,recoleta,2196,banios_min_is_null,2.41
+df_preprocesado_meli_vtas,barrio_norm,recoleta,2196,banios_ref_is_null,2.41
+df_preprocesado_meli_vtas,barrio_norm,recoleta,2196,banios_max_is_null,2.41
+df_preprocesado_meli_vtas,barrio_norm,recoleta,2196,comuna_is_null,1.96
+df_preprocesado_meli_vtas,barrio_norm,caballito,2177,unidades_disponibles_is_null,93.16
+df_preprocesado_meli_vtas,barrio_norm,caballito,2177,posesion_is_null,93.16
+df_preprocesado_meli_vtas,barrio_norm,caballito,2177,estado_entrega_is_null,90.9
+df_preprocesado_meli_vtas,barrio_norm,caballito,2177,inmobiliaria_is_null,75.52
+df_preprocesado_meli_vtas,barrio_norm,caballito,2177,altura_is_null,18.79
+df_preprocesado_meli_vtas,barrio_norm,caballito,2177,banios_min_is_null,2.07
+df_preprocesado_meli_vtas,barrio_norm,caballito,2177,banios_ref_is_null,2.07
+df_preprocesado_meli_vtas,barrio_norm,caballito,2177,banios_max_is_null,2.07
+df_preprocesado_meli_vtas,barrio_norm,caballito,2177,comuna_is_null,0.0
+df_preprocesado_meli_vtas,barrio_norm,nunez,2123,unidades_disponibles_is_null,95.05
+df_preprocesado_meli_vtas,barrio_norm,nunez,2123,posesion_is_null,95.05
+df_preprocesado_meli_vtas,barrio_norm,nunez,2123,estado_entrega_is_null,90.3
+df_preprocesado_meli_vtas,barrio_norm,nunez,2123,inmobiliaria_is_null,66.09
+df_preprocesado_meli_vtas,barrio_norm,nunez,2123,altura_is_null,17.8
+df_preprocesado_meli_vtas,barrio_norm,nunez,2123,banios_min_is_null,2.26
+df_preprocesado_meli_vtas,barrio_norm,nunez,2123,banios_ref_is_null,2.26
+df_preprocesado_meli_vtas,barrio_norm,nunez,2123,banios_max_is_null,2.26
+df_preprocesado_meli_vtas,barrio_norm,nunez,2123,comuna_is_null,0.0
+df_preprocesado_meli_vtas,barrio_norm,villa urquiza,2113,unidades_disponibles_is_null,97.4
+df_preprocesado_meli_vtas,barrio_norm,villa urquiza,2113,posesion_is_null,97.4
+df_preprocesado_meli_vtas,barrio_norm,villa urquiza,2113,estado_entrega_is_null,89.92
+df_preprocesado_meli_vtas,barrio_norm,villa urquiza,2113,inmobiliaria_is_null,84.71
+df_preprocesado_meli_vtas,barrio_norm,villa urquiza,2113,altura_is_null,14.25
+df_preprocesado_meli_vtas,barrio_norm,villa urquiza,2113,banios_min_is_null,1.66
+df_preprocesado_meli_vtas,barrio_norm,villa urquiza,2113,banios_ref_is_null,1.66
+df_preprocesado_meli_vtas,barrio_norm,villa urquiza,2113,banios_max_is_null,1.66
+df_preprocesado_meli_vtas,barrio_norm,villa urquiza,2113,comuna_is_null,0.0
+df_preprocesado_meli_vtas,barrio_norm,villa crespo,2090,unidades_disponibles_is_null,96.56
+df_preprocesado_meli_vtas,barrio_norm,villa crespo,2090,posesion_is_null,96.56
+df_preprocesado_meli_vtas,barrio_norm,villa crespo,2090,estado_entrega_is_null,90.86
+df_preprocesado_meli_vtas,barrio_norm,villa crespo,2090,inmobiliaria_is_null,76.22
+df_preprocesado_meli_vtas,barrio_norm,villa crespo,2090,altura_is_null,19.62
+df_preprocesado_meli_vtas,barrio_norm,villa crespo,2090,banios_min_is_null,1.29
+df_preprocesado_meli_vtas,barrio_norm,villa crespo,2090,banios_ref_is_null,1.29
+df_preprocesado_meli_vtas,barrio_norm,villa crespo,2090,banios_max_is_null,1.29
+df_preprocesado_meli_vtas,barrio_norm,villa crespo,2090,comuna_is_null,0.0
+df_preprocesado_meli_vtas,barrio_norm,almagro,2085,unidades_disponibles_is_null,96.59
+df_preprocesado_meli_vtas,barrio_norm,almagro,2085,posesion_is_null,96.59
+df_preprocesado_meli_vtas,barrio_norm,almagro,2085,estado_entrega_is_null,94.05
+df_preprocesado_meli_vtas,barrio_norm,almagro,2085,inmobiliaria_is_null,76.5
+df_preprocesado_meli_vtas,barrio_norm,almagro,2085,altura_is_null,15.4
+df_preprocesado_meli_vtas,barrio_norm,almagro,2085,banios_min_is_null,1.2
+df_preprocesado_meli_vtas,barrio_norm,almagro,2085,banios_ref_is_null,1.2
+df_preprocesado_meli_vtas,barrio_norm,almagro,2085,banios_max_is_null,1.2
+df_preprocesado_meli_vtas,barrio_norm,almagro,2085,comuna_is_null,0.0
+df_preprocesado_meli_vtas,barrio_norm,balvanera,2066,unidades_disponibles_is_null,99.03
+df_preprocesado_meli_vtas,barrio_norm,balvanera,2066,posesion_is_null,99.03
+df_preprocesado_meli_vtas,barrio_norm,balvanera,2066,estado_entrega_is_null,98.84
+df_preprocesado_meli_vtas,barrio_norm,balvanera,2066,inmobiliaria_is_null,83.69
+df_preprocesado_meli_vtas,barrio_norm,balvanera,2066,altura_is_null,16.02
+df_preprocesado_meli_vtas,barrio_norm,balvanera,2066,banios_min_is_null,1.79
+df_preprocesado_meli_vtas,barrio_norm,balvanera,2066,banios_ref_is_null,1.79
+df_preprocesado_meli_vtas,barrio_norm,balvanera,2066,banios_max_is_null,1.79
+df_preprocesado_meli_vtas,barrio_norm,balvanera,2066,comuna_is_null,0.0
+df_preprocesado_meli_vtas,barrio_norm,flores,1920,unidades_disponibles_is_null,99.43
+df_preprocesado_meli_vtas,barrio_norm,flores,1920,posesion_is_null,99.43
+df_preprocesado_meli_vtas,barrio_norm,flores,1920,estado_entrega_is_null,96.41
+df_preprocesado_meli_vtas,barrio_norm,flores,1920,inmobiliaria_is_null,90.42
+df_preprocesado_meli_vtas,barrio_norm,flores,1920,altura_is_null,12.24
+df_preprocesado_meli_vtas,barrio_norm,flores,1920,banios_min_is_null,1.56
+df_preprocesado_meli_vtas,barrio_norm,flores,1920,banios_ref_is_null,1.56
+df_preprocesado_meli_vtas,barrio_norm,flores,1920,banios_max_is_null,1.56
+df_preprocesado_meli_vtas,barrio_norm,flores,1920,comuna_is_null,0.0
+df_preprocesado_meli_vtas,barrio_norm,villa devoto,1567,unidades_disponibles_is_null,99.11
+df_preprocesado_meli_vtas,barrio_norm,villa devoto,1567,posesion_is_null,99.11
+df_preprocesado_meli_vtas,barrio_norm,villa devoto,1567,estado_entrega_is_null,94.89
+df_preprocesado_meli_vtas,barrio_norm,villa devoto,1567,inmobiliaria_is_null,87.94
+df_preprocesado_meli_vtas,barrio_norm,villa devoto,1567,altura_is_null,17.68
+df_preprocesado_meli_vtas,barrio_norm,villa devoto,1567,banios_min_is_null,2.87
+df_preprocesado_meli_vtas,barrio_norm,villa devoto,1567,banios_ref_is_null,2.87
+df_preprocesado_meli_vtas,barrio_norm,villa devoto,1567,banios_max_is_null,2.87
+df_preprocesado_meli_vtas,barrio_norm,villa devoto,1567,comuna_is_null,0.0
+df_preprocesado_meli_vtas,barrio_norm,puerto madero,1486,unidades_disponibles_is_null,98.38
+df_preprocesado_meli_vtas,barrio_norm,puerto madero,1486,posesion_is_null,98.38
+df_preprocesado_meli_vtas,barrio_norm,puerto madero,1486,estado_entrega_is_null,96.97
+df_preprocesado_meli_vtas,barrio_norm,puerto madero,1486,inmobiliaria_is_null,81.36
+df_preprocesado_meli_vtas,barrio_norm,puerto madero,1486,altura_is_null,21.6
+df_preprocesado_meli_vtas,barrio_norm,puerto madero,1486,banios_min_is_null,2.76
+df_preprocesado_meli_vtas,barrio_norm,puerto madero,1486,banios_ref_is_null,2.76
+df_preprocesado_meli_vtas,barrio_norm,puerto madero,1486,banios_max_is_null,2.76
+df_preprocesado_meli_vtas,barrio_norm,puerto madero,1486,comuna_is_null,0.0
+df_preprocesado_meli_vtas,barrio_norm,colegiales,1379,unidades_disponibles_is_null,96.74
+df_preprocesado_meli_vtas,barrio_norm,colegiales,1379,posesion_is_null,96.74
+df_preprocesado_meli_vtas,barrio_norm,colegiales,1379,estado_entrega_is_null,88.69
+df_preprocesado_meli_vtas,barrio_norm,colegiales,1379,inmobiliaria_is_null,71.07
+df_preprocesado_meli_vtas,barrio_norm,colegiales,1379,altura_is_null,16.39
+df_preprocesado_meli_vtas,barrio_norm,colegiales,1379,banios_min_is_null,1.52
+df_preprocesado_meli_vtas,barrio_norm,colegiales,1379,banios_ref_is_null,1.52
+df_preprocesado_meli_vtas,barrio_norm,colegiales,1379,banios_max_is_null,1.52
+df_preprocesado_meli_vtas,barrio_norm,colegiales,1379,comuna_is_null,0.0
+df_preprocesado_meli_vtas,barrio_norm,saavedra,1293,unidades_disponibles_is_null,96.75
+df_preprocesado_meli_vtas,barrio_norm,saavedra,1293,posesion_is_null,96.75
+df_preprocesado_meli_vtas,barrio_norm,saavedra,1293,estado_entrega_is_null,88.09
+df_preprocesado_meli_vtas,barrio_norm,saavedra,1293,inmobiliaria_is_null,73.24
+df_preprocesado_meli_vtas,barrio_norm,saavedra,1293,altura_is_null,13.77
+df_preprocesado_meli_vtas,barrio_norm,saavedra,1293,banios_min_is_null,1.08
+df_preprocesado_meli_vtas,barrio_norm,saavedra,1293,banios_ref_is_null,1.08
+df_preprocesado_meli_vtas,barrio_norm,saavedra,1293,banios_max_is_null,1.08
+df_preprocesado_meli_vtas,barrio_norm,saavedra,1293,comuna_is_null,0.0
+df_preprocesado_meli_vtas,barrio_norm,villa del parque,1150,unidades_disponibles_is_null,98.96
+df_preprocesado_meli_vtas,barrio_norm,villa del parque,1150,posesion_is_null,98.96
+df_preprocesado_meli_vtas,barrio_norm,villa del parque,1150,estado_entrega_is_null,94.52
+df_preprocesado_meli_vtas,barrio_norm,villa del parque,1150,inmobiliaria_is_null,81.83
+df_preprocesado_meli_vtas,barrio_norm,villa del parque,1150,altura_is_null,15.57
+df_preprocesado_meli_vtas,barrio_norm,villa del parque,1150,banios_min_is_null,3.48
+df_preprocesado_meli_vtas,barrio_norm,villa del parque,1150,banios_ref_is_null,3.48
+df_preprocesado_meli_vtas,barrio_norm,villa del parque,1150,banios_max_is_null,3.48
+df_preprocesado_meli_vtas,barrio_norm,villa del parque,1150,comuna_is_null,0.0
+df_preprocesado_meli_vtas,barrio_norm,monserrat,1127,unidades_disponibles_is_null,98.67
+df_preprocesado_meli_vtas,barrio_norm,monserrat,1127,posesion_is_null,98.67
+df_preprocesado_meli_vtas,barrio_norm,monserrat,1127,estado_entrega_is_null,97.25
+df_preprocesado_meli_vtas,barrio_norm,monserrat,1127,inmobiliaria_is_null,85.63
+df_preprocesado_meli_vtas,barrio_norm,monserrat,1127,altura_is_null,15.17
+df_preprocesado_meli_vtas,barrio_norm,monserrat,1127,banios_min_is_null,2.13
+df_preprocesado_meli_vtas,barrio_norm,monserrat,1127,banios_ref_is_null,2.13
+df_preprocesado_meli_vtas,barrio_norm,monserrat,1127,banios_max_is_null,2.13
+df_preprocesado_meli_vtas,barrio_norm,monserrat,1127,comuna_is_null,0.0
+df_preprocesado_meli_vtas,barrio_norm,san cristobal,1071,unidades_disponibles_is_null,97.48
+df_preprocesado_meli_vtas,barrio_norm,san cristobal,1071,posesion_is_null,97.48
+df_preprocesado_meli_vtas,barrio_norm,san cristobal,1071,estado_entrega_is_null,97.11
+df_preprocesado_meli_vtas,barrio_norm,san cristobal,1071,inmobiliaria_is_null,69.19
+df_preprocesado_meli_vtas,barrio_norm,san cristobal,1071,altura_is_null,24.74
+df_preprocesado_meli_vtas,barrio_norm,san cristobal,1071,banios_min_is_null,2.15
+df_preprocesado_meli_vtas,barrio_norm,san cristobal,1071,banios_ref_is_null,2.15
+df_preprocesado_meli_vtas,barrio_norm,san cristobal,1071,banios_max_is_null,2.15
+df_preprocesado_meli_vtas,barrio_norm,san cristobal,1071,comuna_is_null,0.0
+df_preprocesado_meli_vtas,barrio_norm,san telmo,1016,unidades_disponibles_is_null,99.31
+df_preprocesado_meli_vtas,barrio_norm,san telmo,1016,posesion_is_null,99.31
+df_preprocesado_meli_vtas,barrio_norm,san telmo,1016,estado_entrega_is_null,98.82
+df_preprocesado_meli_vtas,barrio_norm,san telmo,1016,inmobiliaria_is_null,84.74
+df_preprocesado_meli_vtas,barrio_norm,san telmo,1016,altura_is_null,14.27
+df_preprocesado_meli_vtas,barrio_norm,san telmo,1016,banios_min_is_null,3.25
+df_preprocesado_meli_vtas,barrio_norm,san telmo,1016,banios_ref_is_null,3.25
+df_preprocesado_meli_vtas,barrio_norm,san telmo,1016,banios_max_is_null,3.25
+df_preprocesado_meli_vtas,barrio_norm,san telmo,1016,comuna_is_null,0.0
+df_preprocesado_meli_vtas,barrio_norm,villa luro,953,unidades_disponibles_is_null,99.06
+df_preprocesado_meli_vtas,barrio_norm,villa luro,953,posesion_is_null,99.06
+df_preprocesado_meli_vtas,barrio_norm,villa luro,953,estado_entrega_is_null,94.86
+df_preprocesado_meli_vtas,barrio_norm,villa luro,953,inmobiliaria_is_null,89.61
+df_preprocesado_meli_vtas,barrio_norm,villa luro,953,altura_is_null,26.02
+df_preprocesado_meli_vtas,barrio_norm,villa luro,953,banios_min_is_null,7.35
+df_preprocesado_meli_vtas,barrio_norm,villa luro,953,banios_ref_is_null,7.35
+df_preprocesado_meli_vtas,barrio_norm,villa luro,953,banios_max_is_null,7.35
+df_preprocesado_meli_vtas,barrio_norm,villa luro,953,comuna_is_null,0.0
+df_preprocesado_meli_vtas,barrio_norm,san nicolas,921,unidades_disponibles_is_null,100.0
+df_preprocesado_meli_vtas,barrio_norm,san nicolas,921,posesion_is_null,100.0
+df_preprocesado_meli_vtas,barrio_norm,san nicolas,921,estado_entrega_is_null,99.78
+df_preprocesado_meli_vtas,barrio_norm,san nicolas,921,inmobiliaria_is_null,89.14
+df_preprocesado_meli_vtas,barrio_norm,san nicolas,921,altura_is_null,9.66
+df_preprocesado_meli_vtas,barrio_norm,san nicolas,921,banios_min_is_null,1.85
+df_preprocesado_meli_vtas,barrio_norm,san nicolas,921,banios_ref_is_null,1.85
+df_preprocesado_meli_vtas,barrio_norm,san nicolas,921,banios_max_is_null,1.85
+df_preprocesado_meli_vtas,barrio_norm,san nicolas,921,comuna_is_null,0.0
+df_preprocesado_meli_vtas,barrio_norm,retiro,883,unidades_disponibles_is_null,100.0
+df_preprocesado_meli_vtas,barrio_norm,retiro,883,posesion_is_null,100.0
+df_preprocesado_meli_vtas,barrio_norm,retiro,883,estado_entrega_is_null,100.0
+df_preprocesado_meli_vtas,barrio_norm,retiro,883,inmobiliaria_is_null,86.07
+df_preprocesado_meli_vtas,barrio_norm,retiro,883,altura_is_null,12.34
+df_preprocesado_meli_vtas,barrio_norm,retiro,883,banios_min_is_null,3.62
+df_preprocesado_meli_vtas,barrio_norm,retiro,883,banios_ref_is_null,3.62
+df_preprocesado_meli_vtas,barrio_norm,retiro,883,banios_max_is_null,3.62
+df_preprocesado_meli_vtas,barrio_norm,retiro,883,comuna_is_null,0.0
+df_preprocesado_meli_vtas,barrio_norm,barracas,871,unidades_disponibles_is_null,98.74
+df_preprocesado_meli_vtas,barrio_norm,barracas,871,posesion_is_null,98.74
+df_preprocesado_meli_vtas,barrio_norm,barracas,871,estado_entrega_is_null,96.1
+df_preprocesado_meli_vtas,barrio_norm,barracas,871,inmobiliaria_is_null,87.6
+df_preprocesado_meli_vtas,barrio_norm,barracas,871,altura_is_null,19.17
+df_preprocesado_meli_vtas,barrio_norm,barracas,871,banios_min_is_null,2.76
+df_preprocesado_meli_vtas,barrio_norm,barracas,871,banios_ref_is_null,2.76
+df_preprocesado_meli_vtas,barrio_norm,barracas,871,banios_max_is_null,2.76
+df_preprocesado_meli_vtas,barrio_norm,barracas,871,comuna_is_null,0.0
+df_preprocesado_meli_vtas,barrio_norm,boedo,768,unidades_disponibles_is_null,97.92
+df_preprocesado_meli_vtas,barrio_norm,boedo,768,posesion_is_null,97.92
+df_preprocesado_meli_vtas,barrio_norm,boedo,768,estado_entrega_is_null,97.27
+df_preprocesado_meli_vtas,barrio_norm,boedo,768,inmobiliaria_is_null,76.82
+df_preprocesado_meli_vtas,barrio_norm,boedo,768,altura_is_null,18.49
+df_preprocesado_meli_vtas,barrio_norm,boedo,768,banios_min_is_null,4.04
+df_preprocesado_meli_vtas,barrio_norm,boedo,768,banios_ref_is_null,4.04
+df_preprocesado_meli_vtas,barrio_norm,boedo,768,banios_max_is_null,4.04
+df_preprocesado_meli_vtas,barrio_norm,boedo,768,comuna_is_null,0.0
+df_preprocesado_meli_vtas,barrio_norm,liniers,745,unidades_disponibles_is_null,99.06
+df_preprocesado_meli_vtas,barrio_norm,liniers,745,posesion_is_null,99.06
+df_preprocesado_meli_vtas,barrio_norm,liniers,745,estado_entrega_is_null,96.11
+df_preprocesado_meli_vtas,barrio_norm,liniers,745,inmobiliaria_is_null,94.36
+df_preprocesado_meli_vtas,barrio_norm,liniers,745,altura_is_null,27.38
+df_preprocesado_meli_vtas,barrio_norm,liniers,745,banios_min_is_null,3.76
+df_preprocesado_meli_vtas,barrio_norm,liniers,745,banios_ref_is_null,3.76
+df_preprocesado_meli_vtas,barrio_norm,liniers,745,banios_max_is_null,3.76
+df_preprocesado_meli_vtas,barrio_norm,liniers,745,comuna_is_null,0.0
+df_preprocesado_meli_vtas,barrio_norm,mataderos,598,unidades_disponibles_is_null,99.16
+df_preprocesado_meli_vtas,barrio_norm,mataderos,598,posesion_is_null,99.16
+df_preprocesado_meli_vtas,barrio_norm,mataderos,598,estado_entrega_is_null,95.15
+df_preprocesado_meli_vtas,barrio_norm,mataderos,598,inmobiliaria_is_null,93.48
+df_preprocesado_meli_vtas,barrio_norm,mataderos,598,altura_is_null,34.28
+df_preprocesado_meli_vtas,barrio_norm,mataderos,598,banios_min_is_null,3.68
+df_preprocesado_meli_vtas,barrio_norm,mataderos,598,banios_ref_is_null,3.68
+df_preprocesado_meli_vtas,barrio_norm,mataderos,598,banios_max_is_null,3.68
+df_preprocesado_meli_vtas,barrio_norm,mataderos,598,comuna_is_null,0.0
+df_preprocesado_meli_vtas,localidad,Capital Federal,44008,unidades_disponibles_is_null,97.1
+df_preprocesado_meli_vtas,localidad,Capital Federal,44008,posesion_is_null,97.1
+df_preprocesado_meli_vtas,localidad,Capital Federal,44008,estado_entrega_is_null,93.71
+df_preprocesado_meli_vtas,localidad,Capital Federal,44008,inmobiliaria_is_null,79.28
+df_preprocesado_meli_vtas,localidad,Capital Federal,44008,altura_is_null,16.77
+df_preprocesado_meli_vtas,localidad,Capital Federal,44008,banios_min_is_null,2.17
+df_preprocesado_meli_vtas,localidad,Capital Federal,44008,banios_ref_is_null,2.17
+df_preprocesado_meli_vtas,localidad,Capital Federal,44008,banios_max_is_null,2.17
+df_preprocesado_meli_vtas,localidad,Capital Federal,44008,comuna_is_null,2.01
+df_preprocesado_argenprop,tipo_operacion_norm,venta,82,superficie_cubierta_m2_is_null,92.68
+df_preprocesado_argenprop,tipo_operacion_norm,venta,82,expensas_moneda_is_null,93.9
+df_preprocesado_argenprop,tipo_operacion_norm,venta,82,expensas_is_null,92.68
+df_preprocesado_argenprop,tipo_operacion_norm,venta,82,expensas_texto_is_null,92.68
+df_preprocesado_argenprop,tipo_operacion_norm,venta,82,banios_ref_is_null,58.54
+df_preprocesado_argenprop,tipo_operacion_norm,venta,82,banios_is_null,58.54
+df_preprocesado_argenprop,tipo_operacion_norm,venta,82,piso_is_null,41.46
+df_preprocesado_argenprop,tipo_operacion_norm,venta,82,ambientes_ref_is_null,24.39
+df_preprocesado_argenprop,tipo_operacion_norm,venta,82,ambientes_is_null,24.39
+df_preprocesado_argenprop,tipo_operacion_norm,venta,82,dormitorios_is_null,18.29
+df_preprocesado_argenprop,tipo_operacion_norm,alquiler,80,superficie_cubierta_m2_is_null,98.75
+df_preprocesado_argenprop,tipo_operacion_norm,alquiler,80,expensas_moneda_is_null,96.25
+df_preprocesado_argenprop,tipo_operacion_norm,alquiler,80,expensas_is_null,93.75
+df_preprocesado_argenprop,tipo_operacion_norm,alquiler,80,expensas_texto_is_null,93.75
+df_preprocesado_argenprop,tipo_operacion_norm,alquiler,80,banios_ref_is_null,52.5
+df_preprocesado_argenprop,tipo_operacion_norm,alquiler,80,banios_is_null,52.5
+df_preprocesado_argenprop,tipo_operacion_norm,alquiler,80,piso_is_null,43.75
+df_preprocesado_argenprop,tipo_operacion_norm,alquiler,80,ambientes_ref_is_null,42.5
+df_preprocesado_argenprop,tipo_operacion_norm,alquiler,80,ambientes_is_null,42.5
+df_preprocesado_argenprop,tipo_operacion_norm,alquiler,80,dormitorios_is_null,17.5
+df_preprocesado_argenprop,moneda_norm,USD,96,superficie_cubierta_m2_is_null,93.75
+df_preprocesado_argenprop,moneda_norm,USD,96,expensas_moneda_is_null,94.79
+df_preprocesado_argenprop,moneda_norm,USD,96,expensas_is_null,92.71
+df_preprocesado_argenprop,moneda_norm,USD,96,expensas_texto_is_null,92.71
+df_preprocesado_argenprop,moneda_norm,USD,96,banios_ref_is_null,59.38
+df_preprocesado_argenprop,moneda_norm,USD,96,banios_is_null,59.38
+df_preprocesado_argenprop,moneda_norm,USD,96,piso_is_null,43.75
+df_preprocesado_argenprop,moneda_norm,USD,96,ambientes_ref_is_null,27.08
+df_preprocesado_argenprop,moneda_norm,USD,96,ambientes_is_null,27.08
+df_preprocesado_argenprop,moneda_norm,USD,96,dormitorios_is_null,15.62
+df_preprocesado_argenprop,moneda_norm,ARS,66,superficie_cubierta_m2_is_null,98.48
+df_preprocesado_argenprop,moneda_norm,ARS,66,expensas_moneda_is_null,95.45
+df_preprocesado_argenprop,moneda_norm,ARS,66,expensas_is_null,93.94
+df_preprocesado_argenprop,moneda_norm,ARS,66,expensas_texto_is_null,93.94
+df_preprocesado_argenprop,moneda_norm,ARS,66,banios_ref_is_null,50.0
+df_preprocesado_argenprop,moneda_norm,ARS,66,banios_is_null,50.0
+df_preprocesado_argenprop,moneda_norm,ARS,66,piso_is_null,40.91
+df_preprocesado_argenprop,moneda_norm,ARS,66,ambientes_ref_is_null,42.42
+df_preprocesado_argenprop,moneda_norm,ARS,66,ambientes_is_null,42.42
+df_preprocesado_argenprop,moneda_norm,ARS,66,dormitorios_is_null,21.21
+df_preprocesado_zonaprop,tipo_operacion_norm,alquiler,495,superficie_cubierta_m2_is_null,95.35
+df_preprocesado_zonaprop,tipo_operacion_norm,alquiler,495,cocheras_is_null,93.33
+df_preprocesado_zonaprop,tipo_operacion_norm,alquiler,495,piso_is_null,56.36
+df_preprocesado_zonaprop,tipo_operacion_norm,alquiler,495,expensas_texto_is_null,25.05
+df_preprocesado_zonaprop,tipo_operacion_norm,alquiler,495,expensas_is_null,25.05
+df_preprocesado_zonaprop,tipo_operacion_norm,alquiler,495,dormitorios_ref_is_null,21.82
+df_preprocesado_zonaprop,tipo_operacion_norm,alquiler,495,dormitorios_is_null,21.82
+df_preprocesado_zonaprop,tipo_operacion_norm,alquiler,495,banios_is_null,1.21
+df_preprocesado_zonaprop,tipo_operacion_norm,alquiler,495,banios_ref_is_null,1.21
+df_preprocesado_zonaprop,tipo_operacion_norm,venta,485,superficie_cubierta_m2_is_null,94.64
+df_preprocesado_zonaprop,tipo_operacion_norm,venta,485,cocheras_is_null,93.61
+df_preprocesado_zonaprop,tipo_operacion_norm,venta,485,piso_is_null,68.87
+df_preprocesado_zonaprop,tipo_operacion_norm,venta,485,expensas_texto_is_null,41.65
+df_preprocesado_zonaprop,tipo_operacion_norm,venta,485,expensas_is_null,41.65
+df_preprocesado_zonaprop,tipo_operacion_norm,venta,485,dormitorios_ref_is_null,21.86
+df_preprocesado_zonaprop,tipo_operacion_norm,venta,485,dormitorios_is_null,21.86
+df_preprocesado_zonaprop,tipo_operacion_norm,venta,485,banios_is_null,10.1
+df_preprocesado_zonaprop,tipo_operacion_norm,venta,485,banios_ref_is_null,10.1
+df_preprocesado_zonaprop,moneda_norm,USD,819,superficie_cubierta_m2_is_null,94.75
+df_preprocesado_zonaprop,moneda_norm,USD,819,cocheras_is_null,92.43
+df_preprocesado_zonaprop,moneda_norm,USD,819,piso_is_null,60.44
+df_preprocesado_zonaprop,moneda_norm,USD,819,expensas_texto_is_null,37.48
+df_preprocesado_zonaprop,moneda_norm,USD,819,expensas_is_null,37.48
+df_preprocesado_zonaprop,moneda_norm,USD,819,dormitorios_ref_is_null,18.8
+df_preprocesado_zonaprop,moneda_norm,USD,819,dormitorios_is_null,18.8
+df_preprocesado_zonaprop,moneda_norm,USD,819,banios_is_null,6.23
+df_preprocesado_zonaprop,moneda_norm,USD,819,banios_ref_is_null,6.23
+df_preprocesado_zonaprop,moneda_norm,ARS,153,superficie_cubierta_m2_is_null,96.08
+df_preprocesado_zonaprop,moneda_norm,ARS,153,cocheras_is_null,100.0
+df_preprocesado_zonaprop,moneda_norm,ARS,153,piso_is_null,74.51
+df_preprocesado_zonaprop,moneda_norm,ARS,153,expensas_texto_is_null,7.19
+df_preprocesado_zonaprop,moneda_norm,ARS,153,expensas_is_null,7.19
+df_preprocesado_zonaprop,moneda_norm,ARS,153,dormitorios_ref_is_null,36.6
+df_preprocesado_zonaprop,moneda_norm,ARS,153,dormitorios_is_null,36.6
+df_preprocesado_zonaprop,moneda_norm,ARS,153,banios_is_null,0.65
+df_preprocesado_zonaprop,moneda_norm,ARS,153,banios_ref_is_null,0.65
+df_preprocesado_zonaprop,barrio_norm,palermo,207,superficie_cubierta_m2_is_null,95.17
+df_preprocesado_zonaprop,barrio_norm,palermo,207,cocheras_is_null,96.14
+df_preprocesado_zonaprop,barrio_norm,palermo,207,piso_is_null,0.0
+df_preprocesado_zonaprop,barrio_norm,palermo,207,expensas_texto_is_null,36.71
+df_preprocesado_zonaprop,barrio_norm,palermo,207,expensas_is_null,36.71
+df_preprocesado_zonaprop,barrio_norm,palermo,207,dormitorios_ref_is_null,19.81
+df_preprocesado_zonaprop,barrio_norm,palermo,207,dormitorios_is_null,19.81
+df_preprocesado_zonaprop,barrio_norm,palermo,207,banios_is_null,5.31
+df_preprocesado_zonaprop,barrio_norm,palermo,207,banios_ref_is_null,5.31
+df_preprocesado_zonaprop,barrio_norm,recoleta,121,superficie_cubierta_m2_is_null,94.21
+df_preprocesado_zonaprop,barrio_norm,recoleta,121,cocheras_is_null,100.0
+df_preprocesado_zonaprop,barrio_norm,recoleta,121,piso_is_null,100.0
+df_preprocesado_zonaprop,barrio_norm,recoleta,121,expensas_texto_is_null,22.31
+df_preprocesado_zonaprop,barrio_norm,recoleta,121,expensas_is_null,22.31
+df_preprocesado_zonaprop,barrio_norm,recoleta,121,dormitorios_ref_is_null,13.22
+df_preprocesado_zonaprop,barrio_norm,recoleta,121,dormitorios_is_null,13.22
+df_preprocesado_zonaprop,barrio_norm,recoleta,121,banios_is_null,1.65
+df_preprocesado_zonaprop,barrio_norm,recoleta,121,banios_ref_is_null,1.65
+df_preprocesado_zonaprop,barrio_norm,puerto madero,91,superficie_cubierta_m2_is_null,92.31
+df_preprocesado_zonaprop,barrio_norm,puerto madero,91,cocheras_is_null,73.63
+df_preprocesado_zonaprop,barrio_norm,puerto madero,91,piso_is_null,0.0
+df_preprocesado_zonaprop,barrio_norm,puerto madero,91,expensas_texto_is_null,35.16
+df_preprocesado_zonaprop,barrio_norm,puerto madero,91,expensas_is_null,35.16
+df_preprocesado_zonaprop,barrio_norm,puerto madero,91,dormitorios_ref_is_null,16.48
+df_preprocesado_zonaprop,barrio_norm,puerto madero,91,dormitorios_is_null,16.48
+df_preprocesado_zonaprop,barrio_norm,puerto madero,91,banios_is_null,3.3
+df_preprocesado_zonaprop,barrio_norm,puerto madero,91,banios_ref_is_null,3.3
+df_preprocesado_zonaprop,barrio_norm,belgrano,91,superficie_cubierta_m2_is_null,97.8
+df_preprocesado_zonaprop,barrio_norm,belgrano,91,cocheras_is_null,85.71
+df_preprocesado_zonaprop,barrio_norm,belgrano,91,piso_is_null,100.0
+df_preprocesado_zonaprop,barrio_norm,belgrano,91,expensas_texto_is_null,29.67
+df_preprocesado_zonaprop,barrio_norm,belgrano,91,expensas_is_null,29.67
+df_preprocesado_zonaprop,barrio_norm,belgrano,91,dormitorios_ref_is_null,23.08
+df_preprocesado_zonaprop,barrio_norm,belgrano,91,dormitorios_is_null,23.08
+df_preprocesado_zonaprop,barrio_norm,belgrano,91,banios_is_null,3.3
+df_preprocesado_zonaprop,barrio_norm,belgrano,91,banios_ref_is_null,3.3
+df_preprocesado_zonaprop,barrio_norm,caballito,40,superficie_cubierta_m2_is_null,92.5
+df_preprocesado_zonaprop,barrio_norm,caballito,40,cocheras_is_null,92.5
+df_preprocesado_zonaprop,barrio_norm,caballito,40,piso_is_null,100.0
+df_preprocesado_zonaprop,barrio_norm,caballito,40,expensas_texto_is_null,30.0
+df_preprocesado_zonaprop,barrio_norm,caballito,40,expensas_is_null,30.0
+df_preprocesado_zonaprop,barrio_norm,caballito,40,dormitorios_ref_is_null,20.0
+df_preprocesado_zonaprop,barrio_norm,caballito,40,dormitorios_is_null,20.0
+df_preprocesado_zonaprop,barrio_norm,caballito,40,banios_is_null,10.0
+df_preprocesado_zonaprop,barrio_norm,caballito,40,banios_ref_is_null,10.0
+df_preprocesado_zonaprop,barrio_norm,nunez,40,superficie_cubierta_m2_is_null,97.5
+df_preprocesado_zonaprop,barrio_norm,nunez,40,cocheras_is_null,92.5
+df_preprocesado_zonaprop,barrio_norm,nunez,40,piso_is_null,100.0
+df_preprocesado_zonaprop,barrio_norm,nunez,40,expensas_texto_is_null,52.5
+df_preprocesado_zonaprop,barrio_norm,nunez,40,expensas_is_null,52.5
+df_preprocesado_zonaprop,barrio_norm,nunez,40,dormitorios_ref_is_null,12.5
+df_preprocesado_zonaprop,barrio_norm,nunez,40,dormitorios_is_null,12.5
+df_preprocesado_zonaprop,barrio_norm,nunez,40,banios_is_null,5.0
+df_preprocesado_zonaprop,barrio_norm,nunez,40,banios_ref_is_null,5.0
+df_preprocesado_zonaprop,barrio_norm,almagro,36,superficie_cubierta_m2_is_null,97.22
+df_preprocesado_zonaprop,barrio_norm,almagro,36,cocheras_is_null,97.22
+df_preprocesado_zonaprop,barrio_norm,almagro,36,piso_is_null,100.0
+df_preprocesado_zonaprop,barrio_norm,almagro,36,expensas_texto_is_null,16.67
+df_preprocesado_zonaprop,barrio_norm,almagro,36,expensas_is_null,16.67
+df_preprocesado_zonaprop,barrio_norm,almagro,36,dormitorios_ref_is_null,25.0
+df_preprocesado_zonaprop,barrio_norm,almagro,36,dormitorios_is_null,25.0
+df_preprocesado_zonaprop,barrio_norm,almagro,36,banios_is_null,2.78
+df_preprocesado_zonaprop,barrio_norm,almagro,36,banios_ref_is_null,2.78
+df_preprocesado_zonaprop,barrio_norm,las canitas,31,superficie_cubierta_m2_is_null,93.55
+df_preprocesado_zonaprop,barrio_norm,las canitas,31,cocheras_is_null,90.32
+df_preprocesado_zonaprop,barrio_norm,las canitas,31,piso_is_null,0.0
+df_preprocesado_zonaprop,barrio_norm,las canitas,31,expensas_texto_is_null,35.48
+df_preprocesado_zonaprop,barrio_norm,las canitas,31,expensas_is_null,35.48
+df_preprocesado_zonaprop,barrio_norm,las canitas,31,dormitorios_ref_is_null,16.13
+df_preprocesado_zonaprop,barrio_norm,las canitas,31,dormitorios_is_null,16.13
+df_preprocesado_zonaprop,barrio_norm,las canitas,31,banios_is_null,3.23
+df_preprocesado_zonaprop,barrio_norm,las canitas,31,banios_ref_is_null,3.23
+df_preprocesado_zonaprop,barrio_norm,retiro,30,superficie_cubierta_m2_is_null,93.33
+df_preprocesado_zonaprop,barrio_norm,retiro,30,cocheras_is_null,96.67
+df_preprocesado_zonaprop,barrio_norm,retiro,30,piso_is_null,100.0
+df_preprocesado_zonaprop,barrio_norm,retiro,30,expensas_texto_is_null,20.0
+df_preprocesado_zonaprop,barrio_norm,retiro,30,expensas_is_null,20.0
+df_preprocesado_zonaprop,barrio_norm,retiro,30,dormitorios_ref_is_null,13.33
+df_preprocesado_zonaprop,barrio_norm,retiro,30,dormitorios_is_null,13.33
+df_preprocesado_zonaprop,barrio_norm,retiro,30,banios_is_null,0.0
+df_preprocesado_zonaprop,barrio_norm,retiro,30,banios_ref_is_null,0.0
+df_preprocesado_airbnb_temp,barrio_norm,palermo,3220,rating_is_null,12.48
+df_preprocesado_airbnb_temp,barrio_norm,palermo,3220,reviews_is_null,12.48
+df_preprocesado_airbnb_temp,barrio_norm,recoleta,1321,rating_is_null,14.76
+df_preprocesado_airbnb_temp,barrio_norm,recoleta,1321,reviews_is_null,14.76
+df_preprocesado_airbnb_temp,barrio_norm,san_nicolas,570,rating_is_null,16.49
+df_preprocesado_airbnb_temp,barrio_norm,san_nicolas,570,reviews_is_null,16.49
+df_preprocesado_airbnb_temp,barrio_norm,belgrano,492,rating_is_null,14.23
+df_preprocesado_airbnb_temp,barrio_norm,belgrano,492,reviews_is_null,14.23
+df_preprocesado_airbnb_temp,barrio_norm,retiro,470,rating_is_null,18.51
+df_preprocesado_airbnb_temp,barrio_norm,retiro,470,reviews_is_null,18.51
+df_preprocesado_airbnb_temp,barrio_norm,monserrat,408,rating_is_null,14.22
+df_preprocesado_airbnb_temp,barrio_norm,monserrat,408,reviews_is_null,14.22
+df_preprocesado_airbnb_temp,barrio_norm,almagro,373,rating_is_null,14.21
+df_preprocesado_airbnb_temp,barrio_norm,almagro,373,reviews_is_null,14.21
+df_preprocesado_airbnb_temp,barrio_norm,balvanera,355,rating_is_null,23.38
+df_preprocesado_airbnb_temp,barrio_norm,balvanera,355,reviews_is_null,23.38
+df_preprocesado_airbnb_temp,barrio_norm,villa_crespo,292,rating_is_null,17.12
+df_preprocesado_airbnb_temp,barrio_norm,villa_crespo,292,reviews_is_null,17.12
+df_preprocesado_airbnb_temp,barrio_norm,san_telmo,256,rating_is_null,12.5
+df_preprocesado_airbnb_temp,barrio_norm,san_telmo,256,reviews_is_null,12.5
+df_preprocesado_airbnb_temp,barrio_norm,colegiales,243,rating_is_null,16.87
+df_preprocesado_airbnb_temp,barrio_norm,colegiales,243,reviews_is_null,16.87
+df_preprocesado_airbnb_temp,barrio_norm,nunez,218,rating_is_null,16.51
+df_preprocesado_airbnb_temp,barrio_norm,nunez,218,reviews_is_null,16.51
+df_preprocesado_airbnb_temp,barrio_norm,puerto_madero,185,rating_is_null,34.59
+df_preprocesado_airbnb_temp,barrio_norm,puerto_madero,185,reviews_is_null,34.59
+df_preprocesado_airbnb_temp,barrio_norm,chacarita,164,rating_is_null,10.37
+df_preprocesado_airbnb_temp,barrio_norm,chacarita,164,reviews_is_null,10.37
+df_preprocesado_airbnb_temp,barrio_norm,caballito,140,rating_is_null,23.57
+df_preprocesado_airbnb_temp,barrio_norm,caballito,140,reviews_is_null,23.57
+df_preprocesado_airbnb_temp,barrio_norm,villa_urquiza,100,rating_is_null,25.0
+df_preprocesado_airbnb_temp,barrio_norm,villa_urquiza,100,reviews_is_null,25.0
+df_preprocesado_airbnb_temp,barrio_norm,constitucion,100,rating_is_null,31.0
+df_preprocesado_airbnb_temp,barrio_norm,constitucion,100,reviews_is_null,31.0
+df_preprocesado_airbnb_temp,barrio_norm,SIN_DATO,77,rating_is_null,35.06
+df_preprocesado_airbnb_temp,barrio_norm,SIN_DATO,77,reviews_is_null,35.06
+df_preprocesado_airbnb_temp,barrio_norm,barracas,66,rating_is_null,13.64
+df_preprocesado_airbnb_temp,barrio_norm,barracas,66,reviews_is_null,13.64
+df_preprocesado_airbnb_temp,barrio_norm,saavedra,59,rating_is_null,15.25
+df_preprocesado_airbnb_temp,barrio_norm,saavedra,59,reviews_is_null,15.25
+df_preprocesado_airbnb_temp,barrio_norm,villa_del_parque,51,rating_is_null,7.84
+df_preprocesado_airbnb_temp,barrio_norm,villa_del_parque,51,reviews_is_null,7.84
+df_preprocesado_airbnb_temp,barrio_norm,san_cristobal,50,rating_is_null,18.0
+df_preprocesado_airbnb_temp,barrio_norm,san_cristobal,50,reviews_is_null,18.0
+df_preprocesado_airbnb_temp,barrio_norm,villa_devoto,49,rating_is_null,28.57
+df_preprocesado_airbnb_temp,barrio_norm,villa_devoto,49,reviews_is_null,28.57
+df_preprocesado_airbnb_temp,barrio_norm,la_boca,47,rating_is_null,36.17
+df_preprocesado_airbnb_temp,barrio_norm,la_boca,47,reviews_is_null,36.17
+df_preprocesado_airbnb_temp,barrio_norm,flores,44,rating_is_null,27.27
+df_preprocesado_airbnb_temp,barrio_norm,flores,44,reviews_is_null,27.27
+df_preprocesado_airbnb_temp,tipo_propiedad,Vivienda alquilada entero,7887,rating_is_null,17.07
+df_preprocesado_airbnb_temp,tipo_propiedad,Vivienda alquilada entero,7887,reviews_is_null,17.07
+df_preprocesado_airbnb_temp,tipo_propiedad,Departamento en complejo residencial entero,907,rating_is_null,6.17
+df_preprocesado_airbnb_temp,tipo_propiedad,Departamento en complejo residencial entero,907,reviews_is_null,6.17
+df_preprocesado_airbnb_temp,tipo_propiedad,Departamento con servicios incluidos entero,356,rating_is_null,13.2
+df_preprocesado_airbnb_temp,tipo_propiedad,Departamento con servicios incluidos entero,356,reviews_is_null,13.2
+df_preprocesado_airbnb_temp,tipo_propiedad,Loft entero,193,rating_is_null,4.66
+df_preprocesado_airbnb_temp,tipo_propiedad,Loft entero,193,reviews_is_null,4.66
+df_preprocesado_airbnb_temp,tipo_propiedad,Alojamiento entero,169,rating_is_null,28.99
+df_preprocesado_airbnb_temp,tipo_propiedad,Alojamiento entero,169,reviews_is_null,28.99
+df_preprocesado_airbnb_temp,tipo_propiedad,Alojamiento para vacaciones entero,48,rating_is_null,6.25
+df_preprocesado_airbnb_temp,tipo_propiedad,Alojamiento para vacaciones entero,48,reviews_is_null,6.25
+df_preprocesado_airbnb_temp,seller_superhost,False,5996,rating_is_null,22.77
+df_preprocesado_airbnb_temp,seller_superhost,False,5996,reviews_is_null,22.77
+df_preprocesado_airbnb_temp,seller_superhost,True,3600,rating_is_null,4.36
+df_preprocesado_airbnb_temp,seller_superhost,True,3600,reviews_is_null,4.36
+df_preprocesado_airbnb_temp,precio_sospechoso,False,9516,rating_is_null,15.65
+df_preprocesado_airbnb_temp,precio_sospechoso,False,9516,reviews_is_null,15.65
+df_preprocesado_airbnb_temp,precio_sospechoso,True,80,rating_is_null,41.25
+df_preprocesado_airbnb_temp,precio_sospechoso,True,80,reviews_is_null,41.25

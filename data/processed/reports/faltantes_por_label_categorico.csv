@@ -1,0 +1,365 @@
+variable_categorica,label,n_registros,variable_faltante,pct_faltante
+fuente_norm,mercado_libre,61682,precio_m2_ref_is_null,0.19
+fuente_norm,mercado_libre,61682,superficie_ref_m2_is_null,0.19
+fuente_norm,mercado_libre,61682,barrio_norm_is_null,0.34
+fuente_norm,mercado_libre,61682,altura_is_null,16.91
+fuente_norm,mercado_libre,61682,latitud_is_null,100.0
+fuente_norm,mercado_libre,61682,longitud_is_null,100.0
+fuente_norm,mercado_libre,61682,inmobiliaria_is_null,82.2
+fuente_norm,airbnb,9596,precio_m2_ref_is_null,100.0
+fuente_norm,airbnb,9596,superficie_ref_m2_is_null,100.0
+fuente_norm,airbnb,9596,barrio_norm_is_null,0.8
+fuente_norm,airbnb,9596,altura_is_null,100.0
+fuente_norm,airbnb,9596,latitud_is_null,0.0
+fuente_norm,airbnb,9596,longitud_is_null,0.0
+fuente_norm,airbnb,9596,inmobiliaria_is_null,100.0
+fuente_norm,zonaprop,980,precio_m2_ref_is_null,1.33
+fuente_norm,zonaprop,980,superficie_ref_m2_is_null,0.51
+fuente_norm,zonaprop,980,barrio_norm_is_null,0.0
+fuente_norm,zonaprop,980,altura_is_null,100.0
+fuente_norm,zonaprop,980,latitud_is_null,100.0
+fuente_norm,zonaprop,980,longitud_is_null,100.0
+fuente_norm,zonaprop,980,inmobiliaria_is_null,0.0
+fuente_norm,argenprop,162,precio_m2_ref_is_null,8.02
+fuente_norm,argenprop,162,superficie_ref_m2_is_null,8.02
+fuente_norm,argenprop,162,barrio_norm_is_null,0.0
+fuente_norm,argenprop,162,altura_is_null,1.23
+fuente_norm,argenprop,162,latitud_is_null,100.0
+fuente_norm,argenprop,162,longitud_is_null,100.0
+fuente_norm,argenprop,162,inmobiliaria_is_null,100.0
+tipo_operacion_norm,venta,44580,precio_m2_ref_is_null,0.12
+tipo_operacion_norm,venta,44580,superficie_ref_m2_is_null,0.11
+tipo_operacion_norm,venta,44580,barrio_norm_is_null,0.35
+tipo_operacion_norm,venta,44580,altura_is_null,17.64
+tipo_operacion_norm,venta,44580,latitud_is_null,100.0
+tipo_operacion_norm,venta,44580,longitud_is_null,100.0
+tipo_operacion_norm,venta,44580,inmobiliaria_is_null,78.45
+tipo_operacion_norm,alquiler_temporal,15786,precio_m2_ref_is_null,60.95
+tipo_operacion_norm,alquiler_temporal,15786,superficie_ref_m2_is_null,60.95
+tipo_operacion_norm,alquiler_temporal,15786,barrio_norm_is_null,0.65
+tipo_operacion_norm,alquiler_temporal,15786,altura_is_null,69.69
+tipo_operacion_norm,alquiler_temporal,15786,latitud_is_null,39.21
+tipo_operacion_norm,alquiler_temporal,15786,longitud_is_null,39.21
+tipo_operacion_norm,alquiler_temporal,15786,inmobiliaria_is_null,96.0
+tipo_operacion_norm,alquiler,12054,precio_m2_ref_is_null,0.52
+tipo_operacion_norm,alquiler,12054,superficie_ref_m2_is_null,0.52
+tipo_operacion_norm,alquiler,12054,barrio_norm_is_null,0.22
+tipo_operacion_norm,alquiler,12054,altura_is_null,17.75
+tipo_operacion_norm,alquiler,12054,latitud_is_null,100.0
+tipo_operacion_norm,alquiler,12054,longitud_is_null,100.0
+tipo_operacion_norm,alquiler,12054,inmobiliaria_is_null,85.71
+moneda_norm,USD,62150,precio_m2_ref_is_null,15.58
+moneda_norm,USD,62150,superficie_ref_m2_is_null,15.58
+moneda_norm,USD,62150,barrio_norm_is_null,0.42
+moneda_norm,USD,62150,altura_is_null,31.22
+moneda_norm,USD,62150,latitud_is_null,84.56
+moneda_norm,USD,62150,longitud_is_null,84.56
+moneda_norm,USD,62150,inmobiliaria_is_null,82.38
+moneda_norm,ARS,10262,precio_m2_ref_is_null,0.5
+moneda_norm,ARS,10262,superficie_ref_m2_is_null,0.5
+moneda_norm,ARS,10262,barrio_norm_is_null,0.25
+moneda_norm,ARS,10262,altura_is_null,15.58
+moneda_norm,ARS,10262,latitud_is_null,100.0
+moneda_norm,ARS,10262,longitud_is_null,100.0
+moneda_norm,ARS,10262,inmobiliaria_is_null,90.25
+barrio_norm,palermo,8874,precio_m2_ref_is_null,36.57
+barrio_norm,palermo,8874,superficie_ref_m2_is_null,36.53
+barrio_norm,palermo,8874,barrio_norm_is_null,0.0
+barrio_norm,palermo,8874,altura_is_null,48.39
+barrio_norm,palermo,8874,latitud_is_null,63.71
+barrio_norm,palermo,8874,longitud_is_null,63.71
+barrio_norm,palermo,8874,inmobiliaria_is_null,84.98
+barrio_norm,recoleta,5521,precio_m2_ref_is_null,24.02
+barrio_norm,recoleta,5521,superficie_ref_m2_is_null,24.02
+barrio_norm,recoleta,5521,barrio_norm_is_null,0.0
+barrio_norm,recoleta,5521,altura_is_null,38.07
+barrio_norm,recoleta,5521,latitud_is_null,76.07
+barrio_norm,recoleta,5521,longitud_is_null,76.07
+barrio_norm,recoleta,5521,inmobiliaria_is_null,81.11
+barrio_norm,belgrano,4122,precio_m2_ref_is_null,12.03
+barrio_norm,belgrano,4122,superficie_ref_m2_is_null,11.98
+barrio_norm,belgrano,4122,barrio_norm_is_null,0.0
+barrio_norm,belgrano,4122,altura_is_null,27.58
+barrio_norm,belgrano,4122,latitud_is_null,88.06
+barrio_norm,belgrano,4122,longitud_is_null,88.06
+barrio_norm,belgrano,4122,inmobiliaria_is_null,72.59
+barrio_norm,caballito,3345,precio_m2_ref_is_null,4.36
+barrio_norm,caballito,3345,superficie_ref_m2_is_null,4.36
+barrio_norm,caballito,3345,barrio_norm_is_null,0.0
+barrio_norm,caballito,3345,altura_is_null,22.21
+barrio_norm,caballito,3345,latitud_is_null,95.81
+barrio_norm,caballito,3345,longitud_is_null,95.81
+barrio_norm,caballito,3345,inmobiliaria_is_null,80.03
+barrio_norm,almagro,3275,precio_m2_ref_is_null,11.45
+barrio_norm,almagro,3275,superficie_ref_m2_is_null,11.45
+barrio_norm,almagro,3275,barrio_norm_is_null,0.0
+barrio_norm,almagro,3275,altura_is_null,25.19
+barrio_norm,almagro,3275,latitud_is_null,88.61
+barrio_norm,almagro,3275,longitud_is_null,88.61
+barrio_norm,almagro,3275,inmobiliaria_is_null,82.26
+barrio_norm,nunez,3081,precio_m2_ref_is_null,7.17
+barrio_norm,nunez,3081,superficie_ref_m2_is_null,7.14
+barrio_norm,nunez,3081,barrio_norm_is_null,0.0
+barrio_norm,nunez,3081,altura_is_null,24.15
+barrio_norm,nunez,3081,latitud_is_null,92.92
+barrio_norm,nunez,3081,longitud_is_null,92.92
+barrio_norm,nunez,3081,inmobiliaria_is_null,72.09
+barrio_norm,balvanera,2912,precio_m2_ref_is_null,12.47
+barrio_norm,balvanera,2912,superficie_ref_m2_is_null,12.43
+barrio_norm,balvanera,2912,barrio_norm_is_null,0.0
+barrio_norm,balvanera,2912,altura_is_null,26.3
+barrio_norm,balvanera,2912,latitud_is_null,87.81
+barrio_norm,balvanera,2912,longitud_is_null,87.81
+barrio_norm,balvanera,2912,inmobiliaria_is_null,85.85
+barrio_norm,villa urquiza,2751,precio_m2_ref_is_null,0.04
+barrio_norm,villa urquiza,2751,superficie_ref_m2_is_null,0.04
+barrio_norm,villa urquiza,2751,barrio_norm_is_null,0.0
+barrio_norm,villa urquiza,2751,altura_is_null,14.58
+barrio_norm,villa urquiza,2751,latitud_is_null,100.0
+barrio_norm,villa urquiza,2751,longitud_is_null,100.0
+barrio_norm,villa urquiza,2751,inmobiliaria_is_null,85.57
+barrio_norm,puerto madero,2743,precio_m2_ref_is_null,0.29
+barrio_norm,puerto madero,2743,superficie_ref_m2_is_null,0.29
+barrio_norm,puerto madero,2743,barrio_norm_is_null,0.0
+barrio_norm,puerto madero,2743,altura_is_null,26.54
+barrio_norm,puerto madero,2743,latitud_is_null,100.0
+barrio_norm,puerto madero,2743,longitud_is_null,100.0
+barrio_norm,puerto madero,2743,inmobiliaria_is_null,80.9
+barrio_norm,villa crespo,2628,precio_m2_ref_is_null,0.11
+barrio_norm,villa crespo,2628,superficie_ref_m2_is_null,0.11
+barrio_norm,villa crespo,2628,barrio_norm_is_null,0.0
+barrio_norm,villa crespo,2628,altura_is_null,19.98
+barrio_norm,villa crespo,2628,latitud_is_null,100.0
+barrio_norm,villa crespo,2628,longitud_is_null,100.0
+barrio_norm,villa crespo,2628,inmobiliaria_is_null,77.74
+barrio_norm,flores,2395,precio_m2_ref_is_null,2.0
+barrio_norm,flores,2395,superficie_ref_m2_is_null,2.0
+barrio_norm,flores,2395,barrio_norm_is_null,0.0
+barrio_norm,flores,2395,altura_is_null,13.78
+barrio_norm,flores,2395,latitud_is_null,98.16
+barrio_norm,flores,2395,longitud_is_null,98.16
+barrio_norm,flores,2395,inmobiliaria_is_null,91.15
+barrio_norm,monserrat,1976,precio_m2_ref_is_null,20.85
+barrio_norm,monserrat,1976,superficie_ref_m2_is_null,20.85
+barrio_norm,monserrat,1976,barrio_norm_is_null,0.0
+barrio_norm,monserrat,1976,altura_is_null,35.43
+barrio_norm,monserrat,1976,latitud_is_null,79.35
+barrio_norm,monserrat,1976,longitud_is_null,79.35
+barrio_norm,monserrat,1976,inmobiliaria_is_null,89.27
+barrio_norm,colegiales,1975,precio_m2_ref_is_null,12.3
+barrio_norm,colegiales,1975,superficie_ref_m2_is_null,12.3
+barrio_norm,colegiales,1975,barrio_norm_is_null,0.0
+barrio_norm,colegiales,1975,altura_is_null,27.24
+barrio_norm,colegiales,1975,latitud_is_null,87.7
+barrio_norm,colegiales,1975,longitud_is_null,87.7
+barrio_norm,colegiales,1975,inmobiliaria_is_null,76.96
+barrio_norm,villa devoto,1869,precio_m2_ref_is_null,0.27
+barrio_norm,villa devoto,1869,superficie_ref_m2_is_null,0.27
+barrio_norm,villa devoto,1869,barrio_norm_is_null,0.0
+barrio_norm,villa devoto,1869,altura_is_null,18.99
+barrio_norm,villa devoto,1869,latitud_is_null,100.0
+barrio_norm,villa devoto,1869,longitud_is_null,100.0
+barrio_norm,villa devoto,1869,inmobiliaria_is_null,88.18
+barrio_norm,retiro,1866,precio_m2_ref_is_null,25.35
+barrio_norm,retiro,1866,superficie_ref_m2_is_null,25.35
+barrio_norm,retiro,1866,barrio_norm_is_null,0.0
+barrio_norm,retiro,1866,altura_is_null,36.44
+barrio_norm,retiro,1866,latitud_is_null,74.81
+barrio_norm,retiro,1866,longitud_is_null,74.81
+barrio_norm,retiro,1866,inmobiliaria_is_null,87.94
+barrio_norm,saavedra,1563,precio_m2_ref_is_null,3.84
+barrio_norm,saavedra,1563,superficie_ref_m2_is_null,3.84
+barrio_norm,saavedra,1563,barrio_norm_is_null,0.0
+barrio_norm,saavedra,1563,altura_is_null,18.75
+barrio_norm,saavedra,1563,latitud_is_null,96.23
+barrio_norm,saavedra,1563,longitud_is_null,96.23
+barrio_norm,saavedra,1563,inmobiliaria_is_null,76.14
+barrio_norm,san telmo,1505,precio_m2_ref_is_null,0.27
+barrio_norm,san telmo,1505,superficie_ref_m2_is_null,0.27
+barrio_norm,san telmo,1505,barrio_norm_is_null,0.0
+barrio_norm,san telmo,1505,altura_is_null,16.94
+barrio_norm,san telmo,1505,latitud_is_null,100.0
+barrio_norm,san telmo,1505,longitud_is_null,100.0
+barrio_norm,san telmo,1505,inmobiliaria_is_null,86.91
+barrio_norm,san nicolas,1448,precio_m2_ref_is_null,0.28
+barrio_norm,san nicolas,1448,superficie_ref_m2_is_null,0.28
+barrio_norm,san nicolas,1448,barrio_norm_is_null,0.0
+barrio_norm,san nicolas,1448,altura_is_null,12.78
+barrio_norm,san nicolas,1448,latitud_is_null,100.0
+barrio_norm,san nicolas,1448,longitud_is_null,100.0
+barrio_norm,san nicolas,1448,inmobiliaria_is_null,87.71
+barrio_norm,villa del parque,1371,precio_m2_ref_is_null,0.07
+barrio_norm,villa del parque,1371,superficie_ref_m2_is_null,0.07
+barrio_norm,villa del parque,1371,barrio_norm_is_null,0.0
+barrio_norm,villa del parque,1371,altura_is_null,15.68
+barrio_norm,villa del parque,1371,latitud_is_null,100.0
+barrio_norm,villa del parque,1371,longitud_is_null,100.0
+barrio_norm,villa del parque,1371,inmobiliaria_is_null,83.22
+barrio_norm,san cristobal,1335,precio_m2_ref_is_null,0.07
+barrio_norm,san cristobal,1335,superficie_ref_m2_is_null,0.07
+barrio_norm,san cristobal,1335,barrio_norm_is_null,0.0
+barrio_norm,san cristobal,1335,altura_is_null,22.92
+barrio_norm,san cristobal,1335,latitud_is_null,100.0
+barrio_norm,san cristobal,1335,longitud_is_null,100.0
+barrio_norm,san cristobal,1335,inmobiliaria_is_null,72.36
+barrio_norm,barracas,1102,precio_m2_ref_is_null,6.26
+barrio_norm,barracas,1102,superficie_ref_m2_is_null,6.26
+barrio_norm,barracas,1102,barrio_norm_is_null,0.0
+barrio_norm,barracas,1102,altura_is_null,24.68
+barrio_norm,barracas,1102,latitud_is_null,94.01
+barrio_norm,barracas,1102,longitud_is_null,94.01
+barrio_norm,barracas,1102,inmobiliaria_is_null,89.11
+barrio_norm,villa luro,1090,precio_m2_ref_is_null,0.18
+barrio_norm,villa luro,1090,superficie_ref_m2_is_null,0.18
+barrio_norm,villa luro,1090,barrio_norm_is_null,0.0
+barrio_norm,villa luro,1090,altura_is_null,24.5
+barrio_norm,villa luro,1090,latitud_is_null,100.0
+barrio_norm,villa luro,1090,longitud_is_null,100.0
+barrio_norm,villa luro,1090,inmobiliaria_is_null,90.55
+barrio_norm,boedo,930,precio_m2_ref_is_null,3.44
+barrio_norm,boedo,930,superficie_ref_m2_is_null,3.44
+barrio_norm,boedo,930,barrio_norm_is_null,0.0
+barrio_norm,boedo,930,altura_is_null,20.97
+barrio_norm,boedo,930,latitud_is_null,96.99
+barrio_norm,boedo,930,longitud_is_null,96.99
+barrio_norm,boedo,930,inmobiliaria_is_null,79.57
+barrio_norm,liniers,892,precio_m2_ref_is_null,1.01
+barrio_norm,liniers,892,superficie_ref_m2_is_null,1.01
+barrio_norm,liniers,892,barrio_norm_is_null,0.0
+barrio_norm,liniers,892,altura_is_null,27.24
+barrio_norm,liniers,892,latitud_is_null,99.55
+barrio_norm,liniers,892,longitud_is_null,99.55
+barrio_norm,liniers,892,inmobiliaria_is_null,94.39
+barrio_norm,chacarita,891,precio_m2_ref_is_null,18.41
+barrio_norm,chacarita,891,superficie_ref_m2_is_null,18.41
+barrio_norm,chacarita,891,barrio_norm_is_null,0.0
+barrio_norm,chacarita,891,altura_is_null,34.79
+barrio_norm,chacarita,891,latitud_is_null,81.59
+barrio_norm,chacarita,891,longitud_is_null,81.59
+barrio_norm,chacarita,891,inmobiliaria_is_null,79.24
+barrio_norm,mataderos,678,precio_m2_ref_is_null,0.59
+barrio_norm,mataderos,678,superficie_ref_m2_is_null,0.59
+barrio_norm,mataderos,678,barrio_norm_is_null,0.0
+barrio_norm,mataderos,678,altura_is_null,34.07
+barrio_norm,mataderos,678,latitud_is_null,99.56
+barrio_norm,mataderos,678,longitud_is_null,99.56
+barrio_norm,mataderos,678,inmobiliaria_is_null,93.66
+barrio_norm,villa lugano,669,precio_m2_ref_is_null,0.45
+barrio_norm,villa lugano,669,superficie_ref_m2_is_null,0.45
+barrio_norm,villa lugano,669,barrio_norm_is_null,0.0
+barrio_norm,villa lugano,669,altura_is_null,11.06
+barrio_norm,villa lugano,669,latitud_is_null,100.0
+barrio_norm,villa lugano,669,longitud_is_null,100.0
+barrio_norm,villa lugano,669,inmobiliaria_is_null,95.37
+barrio_norm,coghlan,661,precio_m2_ref_is_null,4.99
+barrio_norm,coghlan,661,superficie_ref_m2_is_null,4.99
+barrio_norm,coghlan,661,barrio_norm_is_null,0.0
+barrio_norm,coghlan,661,altura_is_null,15.28
+barrio_norm,coghlan,661,latitud_is_null,95.16
+barrio_norm,coghlan,661,longitud_is_null,95.16
+barrio_norm,coghlan,661,inmobiliaria_is_null,83.51
+barrio_norm,parque chacabuco,646,precio_m2_ref_is_null,0.0
+barrio_norm,parque chacabuco,646,superficie_ref_m2_is_null,0.0
+barrio_norm,parque chacabuco,646,barrio_norm_is_null,0.0
+barrio_norm,parque chacabuco,646,altura_is_null,20.59
+barrio_norm,parque chacabuco,646,latitud_is_null,100.0
+barrio_norm,parque chacabuco,646,longitud_is_null,100.0
+barrio_norm,parque chacabuco,646,inmobiliaria_is_null,87.62
+barrio_norm,floresta,626,precio_m2_ref_is_null,2.56
+barrio_norm,floresta,626,superficie_ref_m2_is_null,2.56
+barrio_norm,floresta,626,barrio_norm_is_null,0.0
+barrio_norm,floresta,626,altura_is_null,17.09
+barrio_norm,floresta,626,latitud_is_null,98.24
+barrio_norm,floresta,626,longitud_is_null,98.24
+barrio_norm,floresta,626,inmobiliaria_is_null,90.73
+barrio_norm,villa ortuzar,595,precio_m2_ref_is_null,0.0
+barrio_norm,villa ortuzar,595,superficie_ref_m2_is_null,0.0
+barrio_norm,villa ortuzar,595,barrio_norm_is_null,0.0
+barrio_norm,villa ortuzar,595,altura_is_null,14.12
+barrio_norm,villa ortuzar,595,latitud_is_null,100.0
+barrio_norm,villa ortuzar,595,longitud_is_null,100.0
+barrio_norm,villa ortuzar,595,inmobiliaria_is_null,93.61
+barrio_norm,san_nicolas,570,precio_m2_ref_is_null,100.0
+barrio_norm,san_nicolas,570,superficie_ref_m2_is_null,100.0
+barrio_norm,san_nicolas,570,barrio_norm_is_null,0.0
+barrio_norm,san_nicolas,570,altura_is_null,100.0
+barrio_norm,san_nicolas,570,latitud_is_null,0.0
+barrio_norm,san_nicolas,570,longitud_is_null,0.0
+barrio_norm,san_nicolas,570,inmobiliaria_is_null,100.0
+barrio_norm,constitucion,550,precio_m2_ref_is_null,18.18
+barrio_norm,constitucion,550,superficie_ref_m2_is_null,18.18
+barrio_norm,constitucion,550,barrio_norm_is_null,0.0
+barrio_norm,constitucion,550,altura_is_null,30.0
+barrio_norm,constitucion,550,latitud_is_null,81.82
+barrio_norm,constitucion,550,longitud_is_null,81.82
+barrio_norm,constitucion,550,inmobiliaria_is_null,92.36
+barrio_norm,villa pueyrredon,537,precio_m2_ref_is_null,0.19
+barrio_norm,villa pueyrredon,537,superficie_ref_m2_is_null,0.19
+barrio_norm,villa pueyrredon,537,barrio_norm_is_null,0.0
+barrio_norm,villa pueyrredon,537,altura_is_null,22.91
+barrio_norm,villa pueyrredon,537,latitud_is_null,100.0
+barrio_norm,villa pueyrredon,537,longitud_is_null,100.0
+barrio_norm,villa pueyrredon,537,inmobiliaria_is_null,93.48
+barrio_norm,monte castro,472,precio_m2_ref_is_null,0.21
+barrio_norm,monte castro,472,superficie_ref_m2_is_null,0.21
+barrio_norm,monte castro,472,barrio_norm_is_null,0.0
+barrio_norm,monte castro,472,altura_is_null,5.72
+barrio_norm,monte castro,472,latitud_is_null,100.0
+barrio_norm,monte castro,472,longitud_is_null,100.0
+barrio_norm,monte castro,472,inmobiliaria_is_null,88.77
+tipo_propiedad,departamento,61844,precio_m2_ref_is_null,0.21
+tipo_propiedad,departamento,61844,superficie_ref_m2_is_null,0.21
+tipo_propiedad,departamento,61844,barrio_norm_is_null,0.34
+tipo_propiedad,departamento,61844,altura_is_null,16.87
+tipo_propiedad,departamento,61844,latitud_is_null,100.0
+tipo_propiedad,departamento,61844,longitud_is_null,100.0
+tipo_propiedad,departamento,61844,inmobiliaria_is_null,82.24
+tipo_propiedad,Vivienda alquilada entero,7887,precio_m2_ref_is_null,100.0
+tipo_propiedad,Vivienda alquilada entero,7887,superficie_ref_m2_is_null,100.0
+tipo_propiedad,Vivienda alquilada entero,7887,barrio_norm_is_null,0.61
+tipo_propiedad,Vivienda alquilada entero,7887,altura_is_null,100.0
+tipo_propiedad,Vivienda alquilada entero,7887,latitud_is_null,0.0
+tipo_propiedad,Vivienda alquilada entero,7887,longitud_is_null,0.0
+tipo_propiedad,Vivienda alquilada entero,7887,inmobiliaria_is_null,100.0
+tipo_propiedad,SIN_DATO,980,precio_m2_ref_is_null,1.33
+tipo_propiedad,SIN_DATO,980,superficie_ref_m2_is_null,0.51
+tipo_propiedad,SIN_DATO,980,barrio_norm_is_null,0.0
+tipo_propiedad,SIN_DATO,980,altura_is_null,100.0
+tipo_propiedad,SIN_DATO,980,latitud_is_null,100.0
+tipo_propiedad,SIN_DATO,980,longitud_is_null,100.0
+tipo_propiedad,SIN_DATO,980,inmobiliaria_is_null,0.0
+tipo_propiedad,Departamento en complejo residencial entero,907,precio_m2_ref_is_null,100.0
+tipo_propiedad,Departamento en complejo residencial entero,907,superficie_ref_m2_is_null,100.0
+tipo_propiedad,Departamento en complejo residencial entero,907,barrio_norm_is_null,0.99
+tipo_propiedad,Departamento en complejo residencial entero,907,altura_is_null,100.0
+tipo_propiedad,Departamento en complejo residencial entero,907,latitud_is_null,0.0
+tipo_propiedad,Departamento en complejo residencial entero,907,longitud_is_null,0.0
+tipo_propiedad,Departamento en complejo residencial entero,907,inmobiliaria_is_null,100.0
+tipo_propiedad,Departamento con servicios incluidos entero,356,precio_m2_ref_is_null,100.0
+tipo_propiedad,Departamento con servicios incluidos entero,356,superficie_ref_m2_is_null,100.0
+tipo_propiedad,Departamento con servicios incluidos entero,356,barrio_norm_is_null,1.12
+tipo_propiedad,Departamento con servicios incluidos entero,356,altura_is_null,100.0
+tipo_propiedad,Departamento con servicios incluidos entero,356,latitud_is_null,0.0
+tipo_propiedad,Departamento con servicios incluidos entero,356,longitud_is_null,0.0
+tipo_propiedad,Departamento con servicios incluidos entero,356,inmobiliaria_is_null,100.0
+tipo_propiedad,Loft entero,193,precio_m2_ref_is_null,100.0
+tipo_propiedad,Loft entero,193,superficie_ref_m2_is_null,100.0
+tipo_propiedad,Loft entero,193,barrio_norm_is_null,0.0
+tipo_propiedad,Loft entero,193,altura_is_null,100.0
+tipo_propiedad,Loft entero,193,latitud_is_null,0.0
+tipo_propiedad,Loft entero,193,longitud_is_null,0.0
+tipo_propiedad,Loft entero,193,inmobiliaria_is_null,100.0
+tipo_propiedad,Alojamiento entero,169,precio_m2_ref_is_null,100.0
+tipo_propiedad,Alojamiento entero,169,superficie_ref_m2_is_null,100.0
+tipo_propiedad,Alojamiento entero,169,barrio_norm_is_null,8.88
+tipo_propiedad,Alojamiento entero,169,altura_is_null,100.0
+tipo_propiedad,Alojamiento entero,169,latitud_is_null,0.0
+tipo_propiedad,Alojamiento entero,169,longitud_is_null,0.0
+tipo_propiedad,Alojamiento entero,169,inmobiliaria_is_null,100.0
+tipo_propiedad,Alojamiento para vacaciones entero,48,precio_m2_ref_is_null,100.0
+tipo_propiedad,Alojamiento para vacaciones entero,48,superficie_ref_m2_is_null,100.0
+tipo_propiedad,Alojamiento para vacaciones entero,48,barrio_norm_is_null,0.0
+tipo_propiedad,Alojamiento para vacaciones entero,48,altura_is_null,100.0
+tipo_propiedad,Alojamiento para vacaciones entero,48,latitud_is_null,0.0
+tipo_propiedad,Alojamiento para vacaciones entero,48,longitud_is_null,0.0
+tipo_propiedad,Alojamiento para vacaciones entero,48,inmobiliaria_is_null,100.0
