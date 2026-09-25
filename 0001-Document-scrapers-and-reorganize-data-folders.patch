@@ -1,0 +1,730 @@
+From c266544cf0a63e71619b258ab09b054dcd3b64a3 Mon Sep 17 00:00:00 2001
+From: Codex <codex@openai.com>
+Date: Fri, 25 Sep 2026 09:55:22 -0500
+Subject: [PATCH] Document scrapers and reorganize data folders
+
+---
+ .gitignore                                    |   4 +
+ README.md                                     |  55 +++++++
+ data/processed/README.md                      |  18 +++
+ data/raw/README.md                            |  21 +++
+ {data_raw => data/raw}/airbnb/.gitattributes  |   0
+ .../raw}/airbnb/airbnb_caba_amenities.csv     |   0
+ .../airbnb/airbnb_caba_amenities_mensual.csv  |   0
+ .../raw}/airbnb/airbnb_caba_listings.csv      |   0
+ .../airbnb/airbnb_caba_listings_mensual.csv   |   0
+ .../raw}/airbnb/airbnb_caba_normalizado.csv   |   0
+ .../airbnb_caba_normalizado_mensual.csv       |   0
+ .../raw}/airbnb/checkpoint_state.json         |   0
+ .../raw}/airbnb/propiedades_airbnb.csv        |   0
+ .../airbnb/propiedades_airbnb_journal.jsonl   |   0
+ .../raw}/argenprop/checkpoint_state.json      |   0
+ .../http_202_20260816T000020Z_ece65c3ab8.html |   0
+ .../http_202_20260816T000547Z_ece65c3ab8.html |   0
+ .../http_202_20260816T002638Z_648d6bbd75.html |   0
+ .../http_202_20260816T010254Z_648d6bbd75.html |   0
+ .../http_202_20260816T015221Z_648d6bbd75.html |   0
+ .../http_202_20260816T015604Z_ece65c3ab8.html |   0
+ .../http_202_20260816T140658Z_648d6bbd75.html |   0
+ .../http_202_20260816T145510Z_648d6bbd75.html |   0
+ .../http_202_20260816T153926Z_648d6bbd75.html |   0
+ .../http_202_20260816T191536Z_648d6bbd75.html |   0
+ .../http_202_20260903T150953Z_9bb2bb17d1.html |   0
+ .../http_202_20260903T151032Z_41938802af.html |   0
+ .../raw}/argenprop/propiedades_argenprop.csv  |   0
+ .../raw}/argenprop/propiedades_journal.jsonl  |   0
+ .../checkpoint_state.json                     |   0
+ .../meli_alq_temp_1.csv                       |   0
+ .../meli_alq_temp_2.csv                       |   0
+ .../propiedades_mercadolibre.jsonl            |   0
+ .../checkpoint_state.json                     |   0
+ .../meli_alq_1.csv                            |   0
+ .../meli_alq_2.csv                            |   0
+ .../propiedades_mercadolibre.jsonl            |   0
+ .../checkpoint_state.json                     |   0
+ .../meli_vtas_1.csv                           |   0
+ .../meli_vtas_2.csv                           |   0
+ .../propiedades_mercadolibre.jsonl            |   0
+ .../raw}/resumen_extraccion.json              |   0
+ .../raw}/zonaprop/checkpoint_state.json       |   0
+ .../raw}/zonaprop/propiedades_journal.jsonl   |   0
+ .../raw}/zonaprop/propiedades_zonaprop.csv    |   0
+ docs/scraper_airbnb.md                        |   4 +-
+ docs/scraper_airbnb_resumen.txt               |   2 +-
+ docs/scrapers.md                              | 141 ++++++++++++++++++
+ notebooks/README.md                           |  10 ++
+ scrappers/airbnb_caba/export_csv.py           |   2 +-
+ scrappers/readme.txt                          |  10 +-
+ scrappers/scraper_airbnb.py                   |   2 +-
+ scrappers/scraper_argenprop_inmuebles.py      |   2 +-
+ scrappers/scraper_meli_alquileres_ampliado.py |   2 +-
+ ...raper_mercadolibre_inmuebles_modificado.py |   2 +-
+ scrappers/scraper_mercadolibre_ventas.py      |   2 +-
+ scrappers/scraper_zonaprop_inmuebles.py       |   2 +-
+ src/README.md                                 |  13 ++
+ 58 files changed, 281 insertions(+), 11 deletions(-)
+ create mode 100644 .gitignore
+ create mode 100644 data/processed/README.md
+ create mode 100644 data/raw/README.md
+ rename {data_raw => data/raw}/airbnb/.gitattributes (100%)
+ rename {data_raw => data/raw}/airbnb/airbnb_caba_amenities.csv (100%)
+ rename {data_raw => data/raw}/airbnb/airbnb_caba_amenities_mensual.csv (100%)
+ rename {data_raw => data/raw}/airbnb/airbnb_caba_listings.csv (100%)
+ rename {data_raw => data/raw}/airbnb/airbnb_caba_listings_mensual.csv (100%)
+ rename {data_raw => data/raw}/airbnb/airbnb_caba_normalizado.csv (100%)
+ rename {data_raw => data/raw}/airbnb/airbnb_caba_normalizado_mensual.csv (100%)
+ rename {data_raw => data/raw}/airbnb/checkpoint_state.json (100%)
+ rename {data_raw => data/raw}/airbnb/propiedades_airbnb.csv (100%)
+ rename {data_raw => data/raw}/airbnb/propiedades_airbnb_journal.jsonl (100%)
+ rename {data_raw => data/raw}/argenprop/checkpoint_state.json (100%)
+ rename {data_raw => data/raw}/argenprop/diagnosticos/http_202_20260816T000020Z_ece65c3ab8.html (100%)
+ rename {data_raw => data/raw}/argenprop/diagnosticos/http_202_20260816T000547Z_ece65c3ab8.html (100%)
+ rename {data_raw => data/raw}/argenprop/diagnosticos/http_202_20260816T002638Z_648d6bbd75.html (100%)
+ rename {data_raw => data/raw}/argenprop/diagnosticos/http_202_20260816T010254Z_648d6bbd75.html (100%)
+ rename {data_raw => data/raw}/argenprop/diagnosticos/http_202_20260816T015221Z_648d6bbd75.html (100%)
+ rename {data_raw => data/raw}/argenprop/diagnosticos/http_202_20260816T015604Z_ece65c3ab8.html (100%)
+ rename {data_raw => data/raw}/argenprop/diagnosticos/http_202_20260816T140658Z_648d6bbd75.html (100%)
+ rename {data_raw => data/raw}/argenprop/diagnosticos/http_202_20260816T145510Z_648d6bbd75.html (100%)
+ rename {data_raw => data/raw}/argenprop/diagnosticos/http_202_20260816T153926Z_648d6bbd75.html (100%)
+ rename {data_raw => data/raw}/argenprop/diagnosticos/http_202_20260816T191536Z_648d6bbd75.html (100%)
+ rename {data_raw => data/raw}/argenprop/diagnosticos/http_202_20260903T150953Z_9bb2bb17d1.html (100%)
+ rename {data_raw => data/raw}/argenprop/diagnosticos/http_202_20260903T151032Z_41938802af.html (100%)
+ rename {data_raw => data/raw}/argenprop/propiedades_argenprop.csv (100%)
+ rename {data_raw => data/raw}/argenprop/propiedades_journal.jsonl (100%)
+ rename {data_raw => data/raw}/mercadolibre_inmuebles_alquiler temporario/checkpoint_state.json (100%)
+ rename {data_raw => data/raw}/mercadolibre_inmuebles_alquiler temporario/meli_alq_temp_1.csv (100%)
+ rename {data_raw => data/raw}/mercadolibre_inmuebles_alquiler temporario/meli_alq_temp_2.csv (100%)
+ rename {data_raw => data/raw}/mercadolibre_inmuebles_alquiler temporario/propiedades_mercadolibre.jsonl (100%)
+ rename {data_raw => data/raw}/mercadolibre_inmuebles_alquiler/checkpoint_state.json (100%)
+ rename {data_raw => data/raw}/mercadolibre_inmuebles_alquiler/meli_alq_1.csv (100%)
+ rename {data_raw => data/raw}/mercadolibre_inmuebles_alquiler/meli_alq_2.csv (100%)
+ rename {data_raw => data/raw}/mercadolibre_inmuebles_alquiler/propiedades_mercadolibre.jsonl (100%)
+ rename {data_raw => data/raw}/mercadolibre_inmuebles_ventas/checkpoint_state.json (100%)
+ rename {data_raw => data/raw}/mercadolibre_inmuebles_ventas/meli_vtas_1.csv (100%)
+ rename {data_raw => data/raw}/mercadolibre_inmuebles_ventas/meli_vtas_2.csv (100%)
+ rename {data_raw => data/raw}/mercadolibre_inmuebles_ventas/propiedades_mercadolibre.jsonl (100%)
+ rename {data_raw => data/raw}/resumen_extraccion.json (100%)
+ rename {data_raw => data/raw}/zonaprop/checkpoint_state.json (100%)
+ rename {data_raw => data/raw}/zonaprop/propiedades_journal.jsonl (100%)
+ rename {data_raw => data/raw}/zonaprop/propiedades_zonaprop.csv (100%)
+ create mode 100644 docs/scrapers.md
+ create mode 100644 notebooks/README.md
+ create mode 100644 src/README.md
+
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+index 0000000..5154d14
+--- /dev/null
++++ b/.gitignore
+@@ -0,0 +1,4 @@
++__pycache__/
++*.py[cod]
++.ipynb_checkpoints/
++.venv/
+diff --git a/README.md b/README.md
+index 16840e4..1d3a47d 100644
+--- a/README.md
++++ b/README.md
+@@ -10,6 +10,61 @@ Analítica Descriptiva
+ 
+ 2Q 2026
+ 
++# 0 Organización del repositorio
++
++El repositorio sigue una estructura orientada a trazabilidad del proceso KDD: los datos crudos se conservan sin modificaciones, las transformaciones se documentan por separado y los datasets procesados se guardan como salidas reproducibles.
++
++```text
++.
++├── data/
++│   ├── raw/                 # datos crudos obtenidos por scraping o descarga
++│   └── processed/           # datasets limpios o consolidados para analisis
++├── docs/                    # documentacion tecnica y metodologica
++├── Fuentes_de_enriquecimiento/
++│   └── datasets_contextuales_caba.py
++├── notebooks/               # notebooks de calidad, limpieza y EDA
++├── scrappers/               # scripts de extraccion por fuente
++├── src/                     # funciones reutilizables para notebooks
++├── requirements.txt
++└── README.md
++```
++
++Los archivos en `data/raw` no deben editarse manualmente. Cualquier limpieza, union, imputacion, filtrado o normalizacion debe generar una nueva salida en `data/processed`, manteniendo documentada la decision aplicada.
++
++La documentacion general de los scrapers se encuentra en `docs/scrapers.md`. La extraccion de Airbnb, por su complejidad tecnica, cuenta ademas con una documentacion especifica en `docs/scraper_airbnb.md`.
++
++## 0.1 Reproduccion del entorno
++
++Para preparar el entorno de trabajo:
++
++```bash
++python -m venv .venv
++source .venv/bin/activate
++pip install -r requirements.txt
++```
++
++En Windows, la activacion del entorno puede realizarse con:
++
++```bash
++.venv\Scripts\activate
++```
++
++Los scripts principales aceptan `--help` para revisar parametros, rutas de salida y limites de ejecucion:
++
++```bash
++python scrappers/scraper_mercadolibre_ventas.py --help
++python scrappers/scraper_meli_alquileres_ampliado.py --help
++python scrappers/scraper_argenprop_inmuebles.py --help
++python scrappers/scraper_zonaprop_inmuebles.py --help
++```
++
++## 0.2 Estado actual de avance
++
++- Repositorio inicial organizado con datos crudos, scripts de extraccion y documentacion tecnica.
++- Fuentes principales relevadas: Mercado Libre, Airbnb, ZonaProp y ArgenProp.
++- Fuentes de enriquecimiento identificadas: transporte, salud, educacion, cultura, espacios verdes, gastronomia turistica, censo y geometrias oficiales.
++- Pendiente para la PreEntrega 2: construccion de notebooks de calidad y limpieza, dataset procesado, diccionario de datos, EDA inicial e interpretacion de hallazgos.
++
+ # 1 Caso de negocio
+ 
+ ## 1.1 Introducción
+diff --git a/data/processed/README.md b/data/processed/README.md
+new file mode 100644
+index 0000000..c41f4b2
+--- /dev/null
++++ b/data/processed/README.md
+@@ -0,0 +1,18 @@
++# Datos procesados
++
++Esta carpeta debe contener las salidas limpias, consolidadas o enriquecidas que se usen en notebooks y analisis posteriores.
++
++## Criterio esperado
++
++Cada dataset procesado debe poder rastrearse hasta sus fuentes crudas e indicar:
++
++- archivos crudos utilizados;
++- fecha o version de procesamiento;
++- filtros aplicados;
++- columnas creadas o transformadas;
++- registros eliminados, corregidos o imputados;
++- limitaciones conocidas.
++
++## Estado actual
++
++La carpeta queda preparada para la PreEntrega 2. El dataset procesado final se generara luego del notebook de calidad, limpieza y consolidacion inicial.
+diff --git a/data/raw/README.md b/data/raw/README.md
+new file mode 100644
+index 0000000..644d88a
+--- /dev/null
++++ b/data/raw/README.md
+@@ -0,0 +1,21 @@
++# Datos crudos
++
++Esta carpeta contiene los archivos obtenidos por scraping o descarga directa. Deben conservarse sin modificaciones manuales para mantener trazabilidad entre fuente, extraccion, limpieza y analisis.
++
++## Contenido
++
++| Carpeta | Fuente | Descripcion |
++|---|---|---|
++| `airbnb/` | Airbnb | Bases de alquiler temporario en CABA, con series corta y mensual, archivos normalizados, listings completos y amenities en formato largo. |
++| `mercadolibre_inmuebles_ventas/` | Mercado Libre | Publicaciones de inmuebles en venta en CABA. |
++| `mercadolibre_inmuebles_alquiler/` | Mercado Libre | Publicaciones de alquiler permanente en CABA. |
++| `mercadolibre_inmuebles_alquiler temporario/` | Mercado Libre | Publicaciones de alquiler temporario en CABA. |
++| `argenprop/` | ArgenProp | Publicaciones relevadas de ArgenProp y archivos de diagnostico. |
++| `zonaprop/` | ZonaProp | Publicaciones relevadas de ZonaProp. |
++
++## Reglas de uso
++
++- No editar estos archivos manualmente.
++- No imputar, filtrar ni normalizar sobre los CSV crudos.
++- Guardar cualquier salida limpia, consolidada o enriquecida en `data/processed`.
++- Documentar en notebooks o en `docs/` toda decision de limpieza que afecte registros, columnas, tipos, unidades o categorias.
+diff --git a/data_raw/airbnb/.gitattributes b/data/raw/airbnb/.gitattributes
+similarity index 100%
+rename from data_raw/airbnb/.gitattributes
+rename to data/raw/airbnb/.gitattributes
+diff --git a/data_raw/airbnb/airbnb_caba_amenities.csv b/data/raw/airbnb/airbnb_caba_amenities.csv
+similarity index 100%
+rename from data_raw/airbnb/airbnb_caba_amenities.csv
+rename to data/raw/airbnb/airbnb_caba_amenities.csv
+diff --git a/data_raw/airbnb/airbnb_caba_amenities_mensual.csv b/data/raw/airbnb/airbnb_caba_amenities_mensual.csv
+similarity index 100%
+rename from data_raw/airbnb/airbnb_caba_amenities_mensual.csv
+rename to data/raw/airbnb/airbnb_caba_amenities_mensual.csv
+diff --git a/data_raw/airbnb/airbnb_caba_listings.csv b/data/raw/airbnb/airbnb_caba_listings.csv
+similarity index 100%
+rename from data_raw/airbnb/airbnb_caba_listings.csv
+rename to data/raw/airbnb/airbnb_caba_listings.csv
+diff --git a/data_raw/airbnb/airbnb_caba_listings_mensual.csv b/data/raw/airbnb/airbnb_caba_listings_mensual.csv
+similarity index 100%
+rename from data_raw/airbnb/airbnb_caba_listings_mensual.csv
+rename to data/raw/airbnb/airbnb_caba_listings_mensual.csv
+diff --git a/data_raw/airbnb/airbnb_caba_normalizado.csv b/data/raw/airbnb/airbnb_caba_normalizado.csv
+similarity index 100%
+rename from data_raw/airbnb/airbnb_caba_normalizado.csv
+rename to data/raw/airbnb/airbnb_caba_normalizado.csv
+diff --git a/data_raw/airbnb/airbnb_caba_normalizado_mensual.csv b/data/raw/airbnb/airbnb_caba_normalizado_mensual.csv
+similarity index 100%
+rename from data_raw/airbnb/airbnb_caba_normalizado_mensual.csv
+rename to data/raw/airbnb/airbnb_caba_normalizado_mensual.csv
+diff --git a/data_raw/airbnb/checkpoint_state.json b/data/raw/airbnb/checkpoint_state.json
+similarity index 100%
+rename from data_raw/airbnb/checkpoint_state.json
+rename to data/raw/airbnb/checkpoint_state.json
+diff --git a/data_raw/airbnb/propiedades_airbnb.csv b/data/raw/airbnb/propiedades_airbnb.csv
+similarity index 100%
+rename from data_raw/airbnb/propiedades_airbnb.csv
+rename to data/raw/airbnb/propiedades_airbnb.csv
+diff --git a/data_raw/airbnb/propiedades_airbnb_journal.jsonl b/data/raw/airbnb/propiedades_airbnb_journal.jsonl
+similarity index 100%
+rename from data_raw/airbnb/propiedades_airbnb_journal.jsonl
+rename to data/raw/airbnb/propiedades_airbnb_journal.jsonl
+diff --git a/data_raw/argenprop/checkpoint_state.json b/data/raw/argenprop/checkpoint_state.json
+similarity index 100%
+rename from data_raw/argenprop/checkpoint_state.json
+rename to data/raw/argenprop/checkpoint_state.json
+diff --git a/data_raw/argenprop/diagnosticos/http_202_20260816T000020Z_ece65c3ab8.html b/data/raw/argenprop/diagnosticos/http_202_20260816T000020Z_ece65c3ab8.html
+similarity index 100%
+rename from data_raw/argenprop/diagnosticos/http_202_20260816T000020Z_ece65c3ab8.html
+rename to data/raw/argenprop/diagnosticos/http_202_20260816T000020Z_ece65c3ab8.html
+diff --git a/data_raw/argenprop/diagnosticos/http_202_20260816T000547Z_ece65c3ab8.html b/data/raw/argenprop/diagnosticos/http_202_20260816T000547Z_ece65c3ab8.html
+similarity index 100%
+rename from data_raw/argenprop/diagnosticos/http_202_20260816T000547Z_ece65c3ab8.html
+rename to data/raw/argenprop/diagnosticos/http_202_20260816T000547Z_ece65c3ab8.html
+diff --git a/data_raw/argenprop/diagnosticos/http_202_20260816T002638Z_648d6bbd75.html b/data/raw/argenprop/diagnosticos/http_202_20260816T002638Z_648d6bbd75.html
+similarity index 100%
+rename from data_raw/argenprop/diagnosticos/http_202_20260816T002638Z_648d6bbd75.html
+rename to data/raw/argenprop/diagnosticos/http_202_20260816T002638Z_648d6bbd75.html
+diff --git a/data_raw/argenprop/diagnosticos/http_202_20260816T010254Z_648d6bbd75.html b/data/raw/argenprop/diagnosticos/http_202_20260816T010254Z_648d6bbd75.html
+similarity index 100%
+rename from data_raw/argenprop/diagnosticos/http_202_20260816T010254Z_648d6bbd75.html
+rename to data/raw/argenprop/diagnosticos/http_202_20260816T010254Z_648d6bbd75.html
+diff --git a/data_raw/argenprop/diagnosticos/http_202_20260816T015221Z_648d6bbd75.html b/data/raw/argenprop/diagnosticos/http_202_20260816T015221Z_648d6bbd75.html
+similarity index 100%
+rename from data_raw/argenprop/diagnosticos/http_202_20260816T015221Z_648d6bbd75.html
+rename to data/raw/argenprop/diagnosticos/http_202_20260816T015221Z_648d6bbd75.html
+diff --git a/data_raw/argenprop/diagnosticos/http_202_20260816T015604Z_ece65c3ab8.html b/data/raw/argenprop/diagnosticos/http_202_20260816T015604Z_ece65c3ab8.html
+similarity index 100%
+rename from data_raw/argenprop/diagnosticos/http_202_20260816T015604Z_ece65c3ab8.html
+rename to data/raw/argenprop/diagnosticos/http_202_20260816T015604Z_ece65c3ab8.html
+diff --git a/data_raw/argenprop/diagnosticos/http_202_20260816T140658Z_648d6bbd75.html b/data/raw/argenprop/diagnosticos/http_202_20260816T140658Z_648d6bbd75.html
+similarity index 100%
+rename from data_raw/argenprop/diagnosticos/http_202_20260816T140658Z_648d6bbd75.html
+rename to data/raw/argenprop/diagnosticos/http_202_20260816T140658Z_648d6bbd75.html
+diff --git a/data_raw/argenprop/diagnosticos/http_202_20260816T145510Z_648d6bbd75.html b/data/raw/argenprop/diagnosticos/http_202_20260816T145510Z_648d6bbd75.html
+similarity index 100%
+rename from data_raw/argenprop/diagnosticos/http_202_20260816T145510Z_648d6bbd75.html
+rename to data/raw/argenprop/diagnosticos/http_202_20260816T145510Z_648d6bbd75.html
+diff --git a/data_raw/argenprop/diagnosticos/http_202_20260816T153926Z_648d6bbd75.html b/data/raw/argenprop/diagnosticos/http_202_20260816T153926Z_648d6bbd75.html
+similarity index 100%
+rename from data_raw/argenprop/diagnosticos/http_202_20260816T153926Z_648d6bbd75.html
+rename to data/raw/argenprop/diagnosticos/http_202_20260816T153926Z_648d6bbd75.html
+diff --git a/data_raw/argenprop/diagnosticos/http_202_20260816T191536Z_648d6bbd75.html b/data/raw/argenprop/diagnosticos/http_202_20260816T191536Z_648d6bbd75.html
+similarity index 100%
+rename from data_raw/argenprop/diagnosticos/http_202_20260816T191536Z_648d6bbd75.html
+rename to data/raw/argenprop/diagnosticos/http_202_20260816T191536Z_648d6bbd75.html
+diff --git a/data_raw/argenprop/diagnosticos/http_202_20260903T150953Z_9bb2bb17d1.html b/data/raw/argenprop/diagnosticos/http_202_20260903T150953Z_9bb2bb17d1.html
+similarity index 100%
+rename from data_raw/argenprop/diagnosticos/http_202_20260903T150953Z_9bb2bb17d1.html
+rename to data/raw/argenprop/diagnosticos/http_202_20260903T150953Z_9bb2bb17d1.html
+diff --git a/data_raw/argenprop/diagnosticos/http_202_20260903T151032Z_41938802af.html b/data/raw/argenprop/diagnosticos/http_202_20260903T151032Z_41938802af.html
+similarity index 100%
+rename from data_raw/argenprop/diagnosticos/http_202_20260903T151032Z_41938802af.html
+rename to data/raw/argenprop/diagnosticos/http_202_20260903T151032Z_41938802af.html
+diff --git a/data_raw/argenprop/propiedades_argenprop.csv b/data/raw/argenprop/propiedades_argenprop.csv
+similarity index 100%
+rename from data_raw/argenprop/propiedades_argenprop.csv
+rename to data/raw/argenprop/propiedades_argenprop.csv
+diff --git a/data_raw/argenprop/propiedades_journal.jsonl b/data/raw/argenprop/propiedades_journal.jsonl
+similarity index 100%
+rename from data_raw/argenprop/propiedades_journal.jsonl
+rename to data/raw/argenprop/propiedades_journal.jsonl
+diff --git a/data_raw/mercadolibre_inmuebles_alquiler temporario/checkpoint_state.json b/data/raw/mercadolibre_inmuebles_alquiler temporario/checkpoint_state.json
+similarity index 100%
+rename from data_raw/mercadolibre_inmuebles_alquiler temporario/checkpoint_state.json
+rename to data/raw/mercadolibre_inmuebles_alquiler temporario/checkpoint_state.json
+diff --git a/data_raw/mercadolibre_inmuebles_alquiler temporario/meli_alq_temp_1.csv b/data/raw/mercadolibre_inmuebles_alquiler temporario/meli_alq_temp_1.csv
+similarity index 100%
+rename from data_raw/mercadolibre_inmuebles_alquiler temporario/meli_alq_temp_1.csv
+rename to data/raw/mercadolibre_inmuebles_alquiler temporario/meli_alq_temp_1.csv
+diff --git a/data_raw/mercadolibre_inmuebles_alquiler temporario/meli_alq_temp_2.csv b/data/raw/mercadolibre_inmuebles_alquiler temporario/meli_alq_temp_2.csv
+similarity index 100%
+rename from data_raw/mercadolibre_inmuebles_alquiler temporario/meli_alq_temp_2.csv
+rename to data/raw/mercadolibre_inmuebles_alquiler temporario/meli_alq_temp_2.csv
+diff --git a/data_raw/mercadolibre_inmuebles_alquiler temporario/propiedades_mercadolibre.jsonl b/data/raw/mercadolibre_inmuebles_alquiler temporario/propiedades_mercadolibre.jsonl
+similarity index 100%
+rename from data_raw/mercadolibre_inmuebles_alquiler temporario/propiedades_mercadolibre.jsonl
+rename to data/raw/mercadolibre_inmuebles_alquiler temporario/propiedades_mercadolibre.jsonl
+diff --git a/data_raw/mercadolibre_inmuebles_alquiler/checkpoint_state.json b/data/raw/mercadolibre_inmuebles_alquiler/checkpoint_state.json
+similarity index 100%
+rename from data_raw/mercadolibre_inmuebles_alquiler/checkpoint_state.json
+rename to data/raw/mercadolibre_inmuebles_alquiler/checkpoint_state.json
+diff --git a/data_raw/mercadolibre_inmuebles_alquiler/meli_alq_1.csv b/data/raw/mercadolibre_inmuebles_alquiler/meli_alq_1.csv
+similarity index 100%
+rename from data_raw/mercadolibre_inmuebles_alquiler/meli_alq_1.csv
+rename to data/raw/mercadolibre_inmuebles_alquiler/meli_alq_1.csv
+diff --git a/data_raw/mercadolibre_inmuebles_alquiler/meli_alq_2.csv b/data/raw/mercadolibre_inmuebles_alquiler/meli_alq_2.csv
+similarity index 100%
+rename from data_raw/mercadolibre_inmuebles_alquiler/meli_alq_2.csv
+rename to data/raw/mercadolibre_inmuebles_alquiler/meli_alq_2.csv
+diff --git a/data_raw/mercadolibre_inmuebles_alquiler/propiedades_mercadolibre.jsonl b/data/raw/mercadolibre_inmuebles_alquiler/propiedades_mercadolibre.jsonl
+similarity index 100%
+rename from data_raw/mercadolibre_inmuebles_alquiler/propiedades_mercadolibre.jsonl
+rename to data/raw/mercadolibre_inmuebles_alquiler/propiedades_mercadolibre.jsonl
+diff --git a/data_raw/mercadolibre_inmuebles_ventas/checkpoint_state.json b/data/raw/mercadolibre_inmuebles_ventas/checkpoint_state.json
+similarity index 100%
+rename from data_raw/mercadolibre_inmuebles_ventas/checkpoint_state.json
+rename to data/raw/mercadolibre_inmuebles_ventas/checkpoint_state.json
+diff --git a/data_raw/mercadolibre_inmuebles_ventas/meli_vtas_1.csv b/data/raw/mercadolibre_inmuebles_ventas/meli_vtas_1.csv
+similarity index 100%
+rename from data_raw/mercadolibre_inmuebles_ventas/meli_vtas_1.csv
+rename to data/raw/mercadolibre_inmuebles_ventas/meli_vtas_1.csv
+diff --git a/data_raw/mercadolibre_inmuebles_ventas/meli_vtas_2.csv b/data/raw/mercadolibre_inmuebles_ventas/meli_vtas_2.csv
+similarity index 100%
+rename from data_raw/mercadolibre_inmuebles_ventas/meli_vtas_2.csv
+rename to data/raw/mercadolibre_inmuebles_ventas/meli_vtas_2.csv
+diff --git a/data_raw/mercadolibre_inmuebles_ventas/propiedades_mercadolibre.jsonl b/data/raw/mercadolibre_inmuebles_ventas/propiedades_mercadolibre.jsonl
+similarity index 100%
+rename from data_raw/mercadolibre_inmuebles_ventas/propiedades_mercadolibre.jsonl
+rename to data/raw/mercadolibre_inmuebles_ventas/propiedades_mercadolibre.jsonl
+diff --git a/data_raw/resumen_extraccion.json b/data/raw/resumen_extraccion.json
+similarity index 100%
+rename from data_raw/resumen_extraccion.json
+rename to data/raw/resumen_extraccion.json
+diff --git a/data_raw/zonaprop/checkpoint_state.json b/data/raw/zonaprop/checkpoint_state.json
+similarity index 100%
+rename from data_raw/zonaprop/checkpoint_state.json
+rename to data/raw/zonaprop/checkpoint_state.json
+diff --git a/data_raw/zonaprop/propiedades_journal.jsonl b/data/raw/zonaprop/propiedades_journal.jsonl
+similarity index 100%
+rename from data_raw/zonaprop/propiedades_journal.jsonl
+rename to data/raw/zonaprop/propiedades_journal.jsonl
+diff --git a/data_raw/zonaprop/propiedades_zonaprop.csv b/data/raw/zonaprop/propiedades_zonaprop.csv
+similarity index 100%
+rename from data_raw/zonaprop/propiedades_zonaprop.csv
+rename to data/raw/zonaprop/propiedades_zonaprop.csv
+diff --git a/docs/scraper_airbnb.md b/docs/scraper_airbnb.md
+index e215d6b..d84236b 100644
+--- a/docs/scraper_airbnb.md
++++ b/docs/scraper_airbnb.md
+@@ -1,7 +1,7 @@
+ # Scraper Airbnb CABA — documentación técnica
+ 
+ **Corte de datos: 5 y 6 de septiembre de 2026.**
+-Salida: 6 CSV en `data_raw/airbnb/`, 11.276 + 10.369 anuncios.
++Salida: 6 CSV en `data/raw/airbnb/`, 11.276 + 10.369 anuncios.
+ 
+ ---
+ 
+@@ -24,7 +24,7 @@ de `<script id="data-deferred-state-0">`, así que alcanza con un GET y
+ **2. Toda consulta se corta en ~270 resultados.** Máximo 15 páginas × 18
+ resultados, confirmado empíricamente: no existe una página 16. Un scraper que
+ pagina hasta el final obtiene unos cientos de anuncios y cree haber terminado.
+-El scraper que ya estaba en `data_raw/airbnb/propiedades_airbnb.csv` ilustra el
++El scraper que ya estaba en `data/raw/airbnb/propiedades_airbnb.csv` ilustra el
+ problema: su `checkpoint_state.json` registra `last_page: 55` y
+ `unique_properties: 29`, o sea 55 páginas recorridas para 29 anuncios únicos.
+ La solución acá es un **quadtree geográfico** (ver sección 3).
+diff --git a/docs/scraper_airbnb_resumen.txt b/docs/scraper_airbnb_resumen.txt
+index 4e033b1..ae02b24 100644
+--- a/docs/scraper_airbnb_resumen.txt
++++ b/docs/scraper_airbnb_resumen.txt
+@@ -1,7 +1,7 @@
+ SCRAPER AIRBNB CABA — DOCUMENTACIÓN TÉCNICA
+ 
+ Corte de datos: 5 y 6 de septiembre de 2026
+-Salida: 6 archivos CSV en data_raw/airbnb — 11.276 y 10.369 anuncios
++Salida: 6 archivos CSV en data/raw/airbnb — 11.276 y 10.369 anuncios
+ 
+ 
+ 1. PROBLEMA QUE RESUELVE
+diff --git a/docs/scrapers.md b/docs/scrapers.md
+new file mode 100644
+index 0000000..4eeec2c
+--- /dev/null
++++ b/docs/scrapers.md
+@@ -0,0 +1,141 @@
++# Documentacion de scrapers
++
++Este documento resume el rol de cada scraper, las fuentes relevadas, las salidas generadas y las limitaciones conocidas. Los archivos crudos se conservan en `data/raw` y no deben modificarse manualmente; cualquier limpieza o consolidacion posterior debe guardarse en `data/processed`.
++
++## Resumen de fuentes
++
++| Fuente | Script principal | Operacion relevada | Salida principal | Estado de cobertura |
++|---|---|---|---|---|
++| Mercado Libre | `scrappers/scraper_mercadolibre_ventas.py` | Venta | `data/raw/mercadolibre_inmuebles_ventas/` | Alta cobertura para venta en CABA. |
++| Mercado Libre | `scrappers/scraper_meli_alquileres_ampliado.py` | Alquiler permanente y temporario | `data/raw/mercadolibre_alquileres/` si se reejecuta; extracciones actuales separadas por operacion en `data/raw/mercadolibre_inmuebles_alquiler*` | Alta cobertura, con segmentacion por barrios para evitar topes de resultados. |
++| ArgenProp | `scrappers/scraper_argenprop_inmuebles.py` | Venta y alquiler segun URL de busqueda | `data/raw/argenprop/` | Cobertura baja por bloqueos y ejecucion `--listings-only`. |
++| ZonaProp | `scrappers/scraper_zonaprop_inmuebles.py` | Venta y alquiler segun URL de busqueda | `data/raw/zonaprop/` | Cobertura baja/media por bloqueos y ejecucion `--listings-only`. |
++| Airbnb | `scrappers/airbnb_caba/` | Alquiler temporario | `data/raw/airbnb/` | Alta cobertura para CABA mediante particion geografica. |
++| Airbnb base | `scrappers/scraper_airbnb.py` | Alquiler temporario | `data/raw/airbnb/propiedades_airbnb.csv` | Extraccion inicial limitada; se conserva como antecedente tecnico. |
++
++## Mercado Libre: venta
++
++El script `scrappers/scraper_mercadolibre_ventas.py` releva tarjetas publicas de Mercado Libre Inmuebles para departamentos en venta en CABA.
++
++Caracteristicas principales:
++
++- Recorre paginas de resultados a partir de una URL configurable.
++- Extrae atributos visibles de la tarjeta: precio, moneda, titulo, ubicacion declarada, ambientes, banios, dormitorios, superficie, imagen, inmobiliaria y texto de atributos.
++- Agrega variables derivadas utiles para el EDA, como comuna aproximada, precio por m2 minimo/maximo, flags de amenities mencionados, monoambiente, apto credito y completitud.
++- Guarda un journal JSONL y consolida CSVs con checkpoints, permitiendo reanudar ejecuciones.
++
++Uso sugerido:
++
++```bash
++python scrappers/scraper_mercadolibre_ventas.py --help
++```
++
++Limitaciones:
++
++- No ingresa a la ficha completa de cada publicacion.
++- La ubicacion depende del texto publicado por Mercado Libre y puede no incluir coordenadas exactas.
++- Las superficies y ambientes pueden venir como rangos en emprendimientos o publicaciones agregadas.
++
++## Mercado Libre: alquiler permanente y temporario
++
++El script `scrappers/scraper_meli_alquileres_ampliado.py` orquesta extracciones por barrio para alquiler permanente y alquiler temporario. Usa como parser base `scrappers/scraper_mercadolibre_inmuebles_modificado.py`.
++
++Caracteristicas principales:
++
++- Divide la consulta por barrios oficiales de CABA para reducir el limite practico de resultados por busqueda.
++- Permite ejecutar alquiler permanente, temporario o ambos.
++- Consolida segmentos y deduplica por `item_id`.
++- Conserva la fila con mayor `completitud_pct` cuando una publicacion aparece en mas de un segmento.
++
++Uso sugerido:
++
++```bash
++python scrappers/scraper_meli_alquileres_ampliado.py --help
++```
++
++Limitaciones:
++
++- El barrio surge del segmento de busqueda y/o del texto de la publicacion, por lo que debe validarse durante la limpieza.
++- Las publicaciones repetidas entre barrios o modalidades requieren controles de duplicacion adicionales en el EDA.
++
++## ArgenProp
++
++El script `scrappers/scraper_argenprop_inmuebles.py` toma una URL de busqueda de ArgenProp, recorre resultados y puede entrar a cada ficha para extraer informacion detallada. En la corrida actual se uso de forma limitada por bloqueos de IP.
++
++Caracteristicas principales:
++
++- URL de busqueda configurable.
++- Respeta robots.txt por defecto.
++- Usa reintentos, pausas y checkpoints.
++- Extrae campos visibles, JSON-LD y atributos adicionales cuando puede acceder a la ficha.
++- Guarda HTMLs de diagnostico ante respuestas bloqueadas o inesperadas.
++
++Uso sugerido:
++
++```bash
++python scrappers/scraper_argenprop_inmuebles.py --help
++```
++
++Limitaciones:
++
++- La extraccion actual quedo con pocos registros.
++- Al usar `--listings-only`, muchas variables de detalle quedan faltantes.
++- Se debe tratar como fuente complementaria y no como base principal para comparaciones finas por barrio.
++
++## ZonaProp
++
++El script `scrappers/scraper_zonaprop_inmuebles.py` sigue la misma logica general que el scraper de ArgenProp, adaptada a la estructura de ZonaProp.
++
++Caracteristicas principales:
++
++- URL de busqueda configurable.
++- Checkpoints y journal JSONL para reanudar.
++- Extraccion de datos de tarjeta y, cuando corresponde, ficha.
++- Registro de errores y diagnosticos.
++
++Uso sugerido:
++
++```bash
++python scrappers/scraper_zonaprop_inmuebles.py --help
++```
++
++Limitaciones:
++
++- La cobertura efectiva es menor que Mercado Libre y Airbnb.
++- Puede presentar faltantes en ubicacion precisa, amenities y atributos constructivos.
++- Se recomienda usarla como fuente de contraste o complemento.
++
++## Airbnb
++
++El pipeline principal de Airbnb esta documentado en detalle en `docs/scraper_airbnb.md` y en `scrappers/airbnb_caba/README.md`.
++
++Caracteristicas principales:
++
++- Releva CABA mediante particion geografica tipo quadtree para superar el tope de resultados por busqueda.
++- Extrae una primera etapa de busqueda y una segunda etapa de ficha completa.
++- Genera una version normalizada comparable con portales inmobiliarios.
++- Asigna barrio y comuna a partir de coordenadas y GeoJSON oficial de barrios.
++- Genera tablas separadas para amenities en formato largo.
++
++Archivos principales:
++
++| Archivo | Uso recomendado |
++|---|---|
++| `data/raw/airbnb/airbnb_caba_normalizado.csv` | Base principal para comparar alquiler temporario con otras fuentes. |
++| `data/raw/airbnb/airbnb_caba_normalizado_mensual.csv` | Serie mensual comparable dentro de su propia ventana de consulta. |
++| `data/raw/airbnb/airbnb_caba_listings.csv` | Base amplia, util para auditoria y revision de criterios. |
++| `data/raw/airbnb/airbnb_caba_amenities.csv` | Amenities en formato largo. |
++
++Limitaciones:
++
++- El precio depende de fecha, cantidad de noches y cantidad de huespedes.
++- Airbnb no informa superficie en m2, direccion exacta ni expensas.
++- No debe mezclarse la serie corta con la mensual sin explicitar el regimen de precio.
++
++## Criterios generales para la PreEntrega 2
++
++- Los archivos en `data/raw` son evidencia cruda y no deben modificarse.
++- Los datasets limpios y consolidados deben guardarse en `data/processed`.
++- Toda decision de limpieza debe quedar documentada en notebooks o en una bitacora de decisiones.
++- Las fuentes con baja cobertura no deben sostener conclusiones territoriales fuertes sin aclarar limitaciones.
++- Las comparaciones entre venta, alquiler permanente y alquiler temporario deben explicitar diferencias de unidad: precio total, precio mensual, precio por noche, precio por m2 o precio por dormitorio.
+diff --git a/notebooks/README.md b/notebooks/README.md
+new file mode 100644
+index 0000000..66dbde8
+--- /dev/null
++++ b/notebooks/README.md
+@@ -0,0 +1,10 @@
++# Notebooks
++
++Esta carpeta reunira los notebooks de la PreEntrega 2 y etapas posteriores.
++
++Orden sugerido:
++
++1. `01_calidad_y_limpieza.ipynb`: ingesta, auditoria de calidad, duplicados, nulos, outliers, consistencia y decisiones de limpieza.
++2. `02_eda_inicial.ipynb`: analisis exploratorio, visualizaciones interpretadas, evidencia preliminar por hipotesis y conclusiones.
++
++Los notebooks deben usar rutas relativas al repositorio y guardar datasets limpios o consolidados en `data/processed`.
+diff --git a/scrappers/airbnb_caba/export_csv.py b/scrappers/airbnb_caba/export_csv.py
+index 0ea1b42..e6dc09c 100644
+--- a/scrappers/airbnb_caba/export_csv.py
++++ b/scrappers/airbnb_caba/export_csv.py
+@@ -324,7 +324,7 @@ def escribir_normalizado(df, suf=""):
+     n = pd.DataFrame(cols)
+     # constantes: son iguales para todo el dataset, pero el esquema las pide
+     # Los valores siguen la convencion del resto del proyecto, verificada contra
+-    # los CSV de MercadoLibre y Argenprop en data_raw: "Airbnb" con mayuscula
++    # los CSV de MercadoLibre y Argenprop en data/raw: "Airbnb" con mayuscula
+     # como las otras fuentes, y "alquiler temporal" que es exactamente lo que
+     # usan meli temporario y el otro scraper de airbnb. Si no, un groupby por
+     # tipo_operacion nos deja en un bucket propio.
+diff --git a/scrappers/readme.txt b/scrappers/readme.txt
+index b00cb8d..536c2d7 100644
+--- a/scrappers/readme.txt
++++ b/scrappers/readme.txt
+@@ -1 +1,9 @@
+-En esta carpeta van los scrappers
++En esta carpeta van los scrapers de recoleccion.
++
++La documentacion general de fuentes, salidas, usos y limitaciones esta en:
++
++../docs/scrapers.md
++
++Las salidas crudas deben guardarse en ../data/raw y conservarse sin modificar.
++Los datasets limpios o consolidados para analisis deben guardarse en
++../data/processed.
+diff --git a/scrappers/scraper_airbnb.py b/scrappers/scraper_airbnb.py
+index d47d38b..03c4fe0 100644
+--- a/scrappers/scraper_airbnb.py
++++ b/scrappers/scraper_airbnb.py
+@@ -68,7 +68,7 @@ from playwright.sync_api import (
+ 
+ BASE_URL = "https://www.airbnb.com.ar"
+ DEFAULT_SEARCH_URL = f"{BASE_URL}/s/Buenos-Aires--Argentina/homes"
+-DEFAULT_OUTPUT_DIR = Path("data_raw/airbnb")
++DEFAULT_OUTPUT_DIR = Path("data/raw/airbnb")
+ PAGE_SIZE = 18
+ 
+ USER_AGENT = (
+diff --git a/scrappers/scraper_argenprop_inmuebles.py b/scrappers/scraper_argenprop_inmuebles.py
+index 7c2ea6e..17971f4 100644
+--- a/scrappers/scraper_argenprop_inmuebles.py
++++ b/scrappers/scraper_argenprop_inmuebles.py
+@@ -45,7 +45,7 @@ from urllib3.util.retry import Retry
+ 
+ BASE_URL = "https://www.argenprop.com"
+ DEFAULT_SEARCH_URL = f"{BASE_URL}/departamentos/venta/capital-federal"
+-DEFAULT_OUTPUT_DIR = Path("data_raw/argenprop")
++DEFAULT_OUTPUT_DIR = Path("data/raw/argenprop")
+ 
+ USER_AGENT = (
+     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+diff --git a/scrappers/scraper_meli_alquileres_ampliado.py b/scrappers/scraper_meli_alquileres_ampliado.py
+index dd5076f..5a891c1 100644
+--- a/scrappers/scraper_meli_alquileres_ampliado.py
++++ b/scrappers/scraper_meli_alquileres_ampliado.py
+@@ -195,7 +195,7 @@ def main() -> int:
+         "--operacion", choices=["normal", "temporal", "ambos"], default="ambos"
+     )
+     parser.add_argument(
+-        "--output-dir", type=Path, default=Path("data_raw/mercadolibre_alquileres")
++        "--output-dir", type=Path, default=Path("data/raw/mercadolibre_alquileres")
+     )
+     parser.add_argument(
+         "--barrios",
+diff --git a/scrappers/scraper_mercadolibre_inmuebles_modificado.py b/scrappers/scraper_mercadolibre_inmuebles_modificado.py
+index e349b52..fa56186 100644
+--- a/scrappers/scraper_mercadolibre_inmuebles_modificado.py
++++ b/scrappers/scraper_mercadolibre_inmuebles_modificado.py
+@@ -28,7 +28,7 @@ from lxml import html
+ # =============================================================================
+ 
+ DEFAULT_URL = "https://inmuebles.mercadolibre.com.ar/departamentos/venta/capital-federal/"  # venta por defecto
+-DEFAULT_OUTPUT = Path("data_raw/mercadolibre_inmuebles")
++DEFAULT_OUTPUT = Path("data/raw/mercadolibre_inmuebles")
+ PAGE_SIZE = 48
+ HEADERS = {
+     "User-Agent": (
+diff --git a/scrappers/scraper_mercadolibre_ventas.py b/scrappers/scraper_mercadolibre_ventas.py
+index 44941d8..6a5e44d 100644
+--- a/scrappers/scraper_mercadolibre_ventas.py
++++ b/scrappers/scraper_mercadolibre_ventas.py
+@@ -28,7 +28,7 @@ from lxml import html
+ # =============================================================================
+ 
+ DEFAULT_URL = "https://inmuebles.mercadolibre.com.ar/departamentos/venta/capital-federal/"
+-DEFAULT_OUTPUT = Path("data_raw/mercadolibre_inmuebles_ventas")
++DEFAULT_OUTPUT = Path("data/raw/mercadolibre_inmuebles_ventas")
+ PAGE_SIZE = 48
+ HEADERS = {
+     "User-Agent": (
+diff --git a/scrappers/scraper_zonaprop_inmuebles.py b/scrappers/scraper_zonaprop_inmuebles.py
+index a53560c..4fe9788 100644
+--- a/scrappers/scraper_zonaprop_inmuebles.py
++++ b/scrappers/scraper_zonaprop_inmuebles.py
+@@ -53,7 +53,7 @@ from urllib3.util.retry import Retry
+ 
+ BASE_URL = "https://www.zonaprop.com.ar"
+ DEFAULT_SEARCH_URL = f"{BASE_URL}/departamentos-venta-capital-federal.html"
+-DEFAULT_OUTPUT_DIR = Path("data_raw/zonaprop")
++DEFAULT_OUTPUT_DIR = Path("data/raw/zonaprop")
+ 
+ # A propósito NO se incluye ninguna etiqueta autoidentificatoria (tipo
+ # "TP-Analitica/1.0"): un string de navegador real y "limpio" reduce la
+diff --git a/src/README.md b/src/README.md
+new file mode 100644
+index 0000000..23701b0
+--- /dev/null
++++ b/src/README.md
+@@ -0,0 +1,13 @@
++# Codigo reutilizable
++
++Esta carpeta debe contener funciones o modulos auxiliares usados por los notebooks.
++
++Ejemplos esperados:
++
++- normalizacion de nombres de columnas y categorias;
++- validaciones de calidad;
++- carga centralizada de rutas;
++- funciones de graficos reutilizables;
++- calculo de KPIs o variables derivadas.
++
++La logica extensa o repetida debe moverse aca para que los notebooks queden legibles y reproducibles.
+-- 
+2.51.1
+
