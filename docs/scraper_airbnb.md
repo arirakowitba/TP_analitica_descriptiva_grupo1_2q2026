@@ -1,7 +1,7 @@
 # Scraper Airbnb CABA — documentación técnica
 
 **Corte de datos: 5 y 6 de septiembre de 2026.**
-Salida: 6 CSV en `data_raw/airbnb/`, 11.276 + 10.369 anuncios.
+Salida: 6 CSV en `data/raw/airbnb/`, 11.276 + 10.369 anuncios.
 
 ---
 
@@ -24,7 +24,7 @@ de `<script id="data-deferred-state-0">`, así que alcanza con un GET y
 **2. Toda consulta se corta en ~270 resultados.** Máximo 15 páginas × 18
 resultados, confirmado empíricamente: no existe una página 16. Un scraper que
 pagina hasta el final obtiene unos cientos de anuncios y cree haber terminado.
-El scraper que ya estaba en `data_raw/airbnb/propiedades_airbnb.csv` ilustra el
+El scraper que ya estaba en `data/raw/airbnb/propiedades_airbnb.csv` ilustra el
 problema: su `checkpoint_state.json` registra `last_page: 55` y
 `unique_properties: 29`, o sea 55 páginas recorridas para 29 anuncios únicos.
 La solución acá es un **quadtree geográfico** (ver sección 3).

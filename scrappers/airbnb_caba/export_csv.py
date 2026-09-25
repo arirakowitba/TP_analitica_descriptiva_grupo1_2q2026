@@ -324,7 +324,7 @@ def escribir_normalizado(df, suf=""):
     n = pd.DataFrame(cols)
     # constantes: son iguales para todo el dataset, pero el esquema las pide
     # Los valores siguen la convencion del resto del proyecto, verificada contra
-    # los CSV de MercadoLibre y Argenprop en data_raw: "Airbnb" con mayuscula
+    # los CSV de MercadoLibre y Argenprop en data/raw: "Airbnb" con mayuscula
     # como las otras fuentes, y "alquiler temporal" que es exactamente lo que
     # usan meli temporario y el otro scraper de airbnb. Si no, un groupby por
     # tipo_operacion nos deja en un bucket propio.

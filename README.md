@@ -10,6 +10,61 @@ Analítica Descriptiva
 
 2Q 2026
 
+# 0 Organización del repositorio
+
+El repositorio sigue una estructura orientada a trazabilidad del proceso KDD: los datos crudos se conservan sin modificaciones, las transformaciones se documentan por separado y los datasets procesados se guardan como salidas reproducibles.
+
+```text
+.
+├── data/
+│   ├── raw/                 # datos crudos obtenidos por scraping o descarga
+│   └── processed/           # datasets limpios o consolidados para analisis
+├── docs/                    # documentacion tecnica y metodologica
+├── Fuentes_de_enriquecimiento/
+│   └── datasets_contextuales_caba.py
+├── notebooks/               # notebooks de calidad, limpieza y EDA
+├── scrappers/               # scripts de extraccion por fuente
+├── src/                     # funciones reutilizables para notebooks
+├── requirements.txt
+└── README.md
+```
+
+Los archivos en `data/raw` no deben editarse manualmente. Cualquier limpieza, union, imputacion, filtrado o normalizacion debe generar una nueva salida en `data/processed`, manteniendo documentada la decision aplicada.
+
+La documentacion general de los scrapers se encuentra en `docs/scrapers.md`. La extraccion de Airbnb, por su complejidad tecnica, cuenta ademas con una documentacion especifica en `docs/scraper_airbnb.md`.
+
+## 0.1 Reproduccion del entorno
+
+Para preparar el entorno de trabajo:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+En Windows, la activacion del entorno puede realizarse con:
+
+```bash
+.venv\Scripts\activate
+```
+
+Los scripts principales aceptan `--help` para revisar parametros, rutas de salida y limites de ejecucion:
+
+```bash
+python scrappers/scraper_mercadolibre_ventas.py --help
+python scrappers/scraper_meli_alquileres_ampliado.py --help
+python scrappers/scraper_argenprop_inmuebles.py --help
+python scrappers/scraper_zonaprop_inmuebles.py --help
+```
+
+## 0.2 Estado actual de avance
+
+- Repositorio inicial organizado con datos crudos, scripts de extraccion y documentacion tecnica.
+- Fuentes principales relevadas: Mercado Libre, Airbnb, ZonaProp y ArgenProp.
+- Fuentes de enriquecimiento identificadas: transporte, salud, educacion, cultura, espacios verdes, gastronomia turistica, censo y geometrias oficiales.
+- Pendiente para la PreEntrega 2: construccion de notebooks de calidad y limpieza, dataset procesado, diccionario de datos, EDA inicial e interpretacion de hallazgos.
+
 # 1 Caso de negocio
 
 ## 1.1 Introducción

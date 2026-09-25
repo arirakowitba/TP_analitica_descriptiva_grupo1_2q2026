@@ -1,7 +1,7 @@
 SCRAPER AIRBNB CABA — DOCUMENTACIÓN TÉCNICA
 
 Corte de datos: 5 y 6 de septiembre de 2026
-Salida: 6 archivos CSV en data_raw/airbnb — 11.276 y 10.369 anuncios
+Salida: 6 archivos CSV en data/raw/airbnb — 11.276 y 10.369 anuncios
 
 
 1. PROBLEMA QUE RESUELVE
