@@ -1,0 +1,6 @@
+fuente,archivo_o_url,cobertura,granularidad,periodo,llave_union,aporte,limitacion
+Censo 2022 INDEC,Fuentes_de_enriquecimiento/c2022_caba_est_c2_1.xlsx,CABA,Comuna,2022,comuna,"Poblacion, superficie y densidad por comuna",No distingue barrios dentro de una misma comuna
+BA Data - estaciones de subte,URL en datasets_contextuales_caba.py,CABA,Punto/estacion,vigente segun fuente,geografica o barrio/comuna derivada,Accesibilidad por transporte,Requiere geocodificacion o distancia
+BA Data - hospitales,URL en datasets_contextuales_caba.py,CABA,Punto/institucion,vigente segun fuente,geografica o comuna derivada,Entorno de salud,Cantidad no mide calidad ni capacidad
+BA Data - establecimientos educativos,URL en datasets_contextuales_caba.py,CABA,Punto/institucion,vigente segun fuente,geografica o comuna derivada,Entorno educativo,Debe distinguir niveles y gestion
+BA Data - espacios verdes/culturales,URL en datasets_contextuales_caba.py,CABA,Punto/poligono segun dataset,vigente segun fuente,geografica o comuna derivada,Atributos de entorno urbano,Requiere distancia o agregacion territorial

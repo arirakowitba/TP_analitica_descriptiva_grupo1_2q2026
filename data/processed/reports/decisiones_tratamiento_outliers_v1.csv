@@ -1,0 +1,7 @@
+dataset,filas_antes,filas_con_valor_invalido,filas_con_outlier_p01_p99,nulificar_valores_invalidos,eliminar_outliers_p01_p99,filas_despues
+df_preprocesado_meli_alq,11479,0,740,False,False,11479
+df_preprocesado_meli_alq_temp,6190,0,382,False,False,6190
+df_preprocesado_meli_vtas,44013,0,2725,False,False,44013
+df_preprocesado_argenprop,162,0,21,False,False,162
+df_preprocesado_zonaprop,980,0,60,False,False,980
+df_preprocesado_airbnb_temp,9596,1650,767,False,False,9596

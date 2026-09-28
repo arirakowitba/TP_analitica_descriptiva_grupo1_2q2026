@@ -66,9 +66,9 @@ df_raw_argenprop,superficie_cubierta_m2,float64,cuantitativa,162,155,95.68,0,0.0
 df_raw_argenprop,expensas_moneda,str,categorica/texto/fecha,162,154,95.06,0,0.0,,,1.0,baja: faltantes muy altos; usar solo como referencia secundaria
 df_raw_argenprop,expensas,float64,cuantitativa,162,151,93.21,0,0.0,3.0,320000.0,,baja: faltantes muy altos; usar solo como referencia secundaria
 df_raw_argenprop,expensas_texto,str,categorica/texto/fecha,162,151,93.21,0,0.0,,,10.0,baja: faltantes muy altos; usar solo como referencia secundaria
-df_raw_argenprop,banios,float64,cuantitativa,162,90,55.56,0,0.0,1.0,90.0,,media-baja: requiere justificación antes de usar en KPIs
-df_raw_argenprop,piso,str,categorica/texto/fecha,162,69,42.59,0,0.0,,,27.0,media-baja: requiere justificación antes de usar en KPIs
-df_raw_argenprop,ambientes,float64,cuantitativa,162,54,33.33,0,0.0,1.0,5.0,,media: usable con controles y posible segmentación
+df_raw_argenprop,banios,float64,cuantitativa,162,90,55.56,0,0.0,1.0,90.0,,media-baja: requiere justificacion antes de usar en KPIs
+df_raw_argenprop,piso,str,categorica/texto/fecha,162,69,42.59,0,0.0,,,27.0,media-baja: requiere justificacion antes de usar en KPIs
+df_raw_argenprop,ambientes,float64,cuantitativa,162,54,33.33,0,0.0,1.0,5.0,,media: usable con controles y posible segmentacion
 df_raw_meli_alq,posesion,float64,cuantitativa,11479,11479,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
 df_raw_meli_alq,unidades_disponibles,float64,cuantitativa,11479,11479,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
 df_raw_meli_alq,parse_warnings,float64,cuantitativa,11479,11479,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
@@ -87,7 +87,7 @@ df_raw_meli_alq_temp,dormitorios_min,float64,cuantitativa,6190,6179,99.82,0,0.0,
 df_raw_meli_alq_temp,dormitorios_max,float64,cuantitativa,6190,6179,99.82,0,0.0,1.0,2.0,,baja: faltantes muy altos; usar solo como referencia secundaria
 df_raw_meli_alq_temp,estado_entrega,object,categorica/texto/fecha,6190,6179,99.82,0,0.0,,,2.0,baja: faltantes muy altos; usar solo como referencia secundaria
 df_raw_meli_alq_temp,inmobiliaria,str,categorica/texto/fecha,6190,5558,89.79,0,0.0,,,39.0,baja: faltantes muy altos; usar solo como referencia secundaria
-df_raw_meli_alq_temp,altura,float64,cuantitativa,6190,1406,22.71,0,0.0,0.0,118500.0,,media: usable con controles y posible segmentación
+df_raw_meli_alq_temp,altura,float64,cuantitativa,6190,1406,22.71,0,0.0,0.0,118500.0,,media: usable con controles y posible segmentacion
 df_raw_meli_vtas,parse_warnings,float64,cuantitativa,44013,44013,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
 df_raw_meli_vtas,precio_anterior,float64,cuantitativa,44013,43973,99.91,0,0.0,3.0,110000.0,,baja: faltantes muy altos; usar solo como referencia secundaria
 df_raw_meli_vtas,descuento_pct,float64,cuantitativa,44013,43973,99.91,0,0.0,-4166566.67,0.0,,baja: faltantes muy altos; usar solo como referencia secundaria
@@ -96,7 +96,7 @@ df_raw_meli_vtas,dormitorios_max,float64,cuantitativa,44013,43810,99.54,0,0.0,1.
 df_raw_meli_vtas,posesion,str,categorica/texto/fecha,44013,42733,97.09,0,0.0,,,6.0,baja: faltantes muy altos; usar solo como referencia secundaria
 df_raw_meli_vtas,unidades_disponibles,float64,cuantitativa,44013,42733,97.09,0,0.0,1.0,96.0,,baja: faltantes muy altos; usar solo como referencia secundaria
 df_raw_meli_vtas,estado_entrega,str,categorica/texto/fecha,44013,41243,93.71,0,0.0,,,4.0,baja: faltantes muy altos; usar solo como referencia secundaria
-df_raw_meli_vtas,inmobiliaria,str,categorica/texto/fecha,44013,34891,79.27,0,0.0,,,97.0,media-baja: requiere justificación antes de usar en KPIs
+df_raw_meli_vtas,inmobiliaria,str,categorica/texto/fecha,44013,34891,79.27,0,0.0,,,97.0,media-baja: requiere justificacion antes de usar en KPIs
 df_raw_zonaprop,descripcion,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
 df_raw_zonaprop,tipo_propiedad,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
 df_raw_zonaprop,estado_publicacion,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: faltantes muy altos; usar solo como referencia secundaria
@@ -163,7 +163,7 @@ df_raw_zonaprop,jsonld_raw,float64,cuantitativa,980,980,100.0,0,0.0,,,,baja: fal
 df_raw_zonaprop,expensas_moneda,str,categorica/texto/fecha,980,978,99.8,0,0.0,,,1.0,baja: faltantes muy altos; usar solo como referencia secundaria
 df_raw_zonaprop,superficie_cubierta_m2,float64,cuantitativa,980,931,95.0,0,0.0,3.0,335.0,,baja: faltantes muy altos; usar solo como referencia secundaria
 df_raw_zonaprop,cocheras,float64,cuantitativa,980,916,93.47,0,0.0,1.0,200.0,,baja: faltantes muy altos; usar solo como referencia secundaria
-df_raw_zonaprop,piso,str,categorica/texto/fecha,980,613,62.55,0,0.0,,,5.0,media-baja: requiere justificación antes de usar en KPIs
-df_raw_zonaprop,expensas,float64,cuantitativa,980,326,33.27,0,0.0,3.0,672.0,,media: usable con controles y posible segmentación
-df_raw_zonaprop,expensas_texto,str,categorica/texto/fecha,980,326,33.27,0,0.0,,,182.0,media: usable con controles y posible segmentación
-df_raw_zonaprop,dormitorios,float64,cuantitativa,980,214,21.84,0,0.0,1.0,21.0,,media: usable con controles y posible segmentación
+df_raw_zonaprop,piso,str,categorica/texto/fecha,980,613,62.55,0,0.0,,,5.0,media-baja: requiere justificacion antes de usar en KPIs
+df_raw_zonaprop,expensas,float64,cuantitativa,980,326,33.27,0,0.0,3.0,672.0,,media: usable con controles y posible segmentacion
+df_raw_zonaprop,expensas_texto,str,categorica/texto/fecha,980,326,33.27,0,0.0,,,182.0,media: usable con controles y posible segmentacion
+df_raw_zonaprop,dormitorios,float64,cuantitativa,980,214,21.84,0,0.0,1.0,21.0,,media: usable con controles y posible segmentacion
