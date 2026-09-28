@@ -161,12 +161,12 @@ df_preprocesado_meli_alq,barrio_norm,villa pueyrredon,105,ambientes_max_is_null,
 df_preprocesado_meli_alq,barrio_norm,villa pueyrredon,105,es_rango_ambientes_is_null,0.95
 df_preprocesado_meli_alq,barrio_norm,villa pueyrredon,105,ambientes_ref_is_null,0.95
 df_preprocesado_meli_alq,barrio_norm,villa pueyrredon,105,ambientes_min_is_null,0.95
-df_preprocesado_meli_alq,inmobiliaria,SIN_DATO,10251,inmobiliaria_is_null,100.0
-df_preprocesado_meli_alq,inmobiliaria,SIN_DATO,10251,altura_is_null,13.45
-df_preprocesado_meli_alq,inmobiliaria,SIN_DATO,10251,ambientes_max_is_null,3.14
-df_preprocesado_meli_alq,inmobiliaria,SIN_DATO,10251,es_rango_ambientes_is_null,3.14
-df_preprocesado_meli_alq,inmobiliaria,SIN_DATO,10251,ambientes_ref_is_null,3.14
-df_preprocesado_meli_alq,inmobiliaria,SIN_DATO,10251,ambientes_min_is_null,3.14
+df_preprocesado_meli_alq,inmobiliaria,VALORES_NULOS,10251,inmobiliaria_is_null,100.0
+df_preprocesado_meli_alq,inmobiliaria,VALORES_NULOS,10251,altura_is_null,13.45
+df_preprocesado_meli_alq,inmobiliaria,VALORES_NULOS,10251,ambientes_max_is_null,3.14
+df_preprocesado_meli_alq,inmobiliaria,VALORES_NULOS,10251,es_rango_ambientes_is_null,3.14
+df_preprocesado_meli_alq,inmobiliaria,VALORES_NULOS,10251,ambientes_ref_is_null,3.14
+df_preprocesado_meli_alq,inmobiliaria,VALORES_NULOS,10251,ambientes_min_is_null,3.14
 df_preprocesado_meli_alq,inmobiliaria,Remax Premium,158,inmobiliaria_is_null,0.0
 df_preprocesado_meli_alq,inmobiliaria,Remax Premium,158,altura_is_null,0.0
 df_preprocesado_meli_alq,inmobiliaria,Remax Premium,158,ambientes_max_is_null,0.0
@@ -429,13 +429,13 @@ df_preprocesado_meli_alq_temp,localidad,Capital Federal,6177,ambientes_ref_is_nu
 df_preprocesado_meli_alq_temp,localidad,Capital Federal,6177,es_rango_ambientes_is_null,3.92
 df_preprocesado_meli_alq_temp,localidad,Capital Federal,6177,ambientes_max_is_null,3.92
 df_preprocesado_meli_alq_temp,localidad,Capital Federal,6177,ambientes_min_is_null,3.92
-df_preprocesado_meli_alq_temp,inmobiliaria,SIN_DATO,5558,inmobiliaria_is_null,100.0
-df_preprocesado_meli_alq_temp,inmobiliaria,SIN_DATO,5558,altura_is_null,19.56
-df_preprocesado_meli_alq_temp,inmobiliaria,SIN_DATO,5558,comuna_is_null,4.34
-df_preprocesado_meli_alq_temp,inmobiliaria,SIN_DATO,5558,ambientes_ref_is_null,4.28
-df_preprocesado_meli_alq_temp,inmobiliaria,SIN_DATO,5558,es_rango_ambientes_is_null,4.28
-df_preprocesado_meli_alq_temp,inmobiliaria,SIN_DATO,5558,ambientes_max_is_null,4.28
-df_preprocesado_meli_alq_temp,inmobiliaria,SIN_DATO,5558,ambientes_min_is_null,4.28
+df_preprocesado_meli_alq_temp,inmobiliaria,VALORES_NULOS,5558,inmobiliaria_is_null,100.0
+df_preprocesado_meli_alq_temp,inmobiliaria,VALORES_NULOS,5558,altura_is_null,19.56
+df_preprocesado_meli_alq_temp,inmobiliaria,VALORES_NULOS,5558,comuna_is_null,4.34
+df_preprocesado_meli_alq_temp,inmobiliaria,VALORES_NULOS,5558,ambientes_ref_is_null,4.28
+df_preprocesado_meli_alq_temp,inmobiliaria,VALORES_NULOS,5558,es_rango_ambientes_is_null,4.28
+df_preprocesado_meli_alq_temp,inmobiliaria,VALORES_NULOS,5558,ambientes_max_is_null,4.28
+df_preprocesado_meli_alq_temp,inmobiliaria,VALORES_NULOS,5558,ambientes_min_is_null,4.28
 df_preprocesado_meli_alq_temp,inmobiliaria,Alternativa Propiedades,316,inmobiliaria_is_null,0.0
 df_preprocesado_meli_alq_temp,inmobiliaria,Alternativa Propiedades,316,altura_is_null,87.66
 df_preprocesado_meli_alq_temp,inmobiliaria,Alternativa Propiedades,316,comuna_is_null,4.43
@@ -891,8 +891,8 @@ df_preprocesado_airbnb_temp,barrio_norm,villa_urquiza,100,rating_is_null,25.0
 df_preprocesado_airbnb_temp,barrio_norm,villa_urquiza,100,reviews_is_null,25.0
 df_preprocesado_airbnb_temp,barrio_norm,constitucion,100,rating_is_null,31.0
 df_preprocesado_airbnb_temp,barrio_norm,constitucion,100,reviews_is_null,31.0
-df_preprocesado_airbnb_temp,barrio_norm,SIN_DATO,77,rating_is_null,35.06
-df_preprocesado_airbnb_temp,barrio_norm,SIN_DATO,77,reviews_is_null,35.06
+df_preprocesado_airbnb_temp,barrio_norm,VALORES_NULOS,77,rating_is_null,35.06
+df_preprocesado_airbnb_temp,barrio_norm,VALORES_NULOS,77,reviews_is_null,35.06
 df_preprocesado_airbnb_temp,barrio_norm,barracas,66,rating_is_null,13.64
 df_preprocesado_airbnb_temp,barrio_norm,barracas,66,reviews_is_null,13.64
 df_preprocesado_airbnb_temp,barrio_norm,saavedra,59,rating_is_null,15.25

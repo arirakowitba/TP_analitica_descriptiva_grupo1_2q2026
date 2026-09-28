@@ -33,8 +33,8 @@ df_preprocesado_airbnb_temp,barrio_norm,villa_urquiza,100,rating_is_null,25.0
 df_preprocesado_airbnb_temp,barrio_norm,villa_urquiza,100,reviews_is_null,25.0
 df_preprocesado_airbnb_temp,barrio_norm,constitucion,100,rating_is_null,31.0
 df_preprocesado_airbnb_temp,barrio_norm,constitucion,100,reviews_is_null,31.0
-df_preprocesado_airbnb_temp,barrio_norm,SIN_DATO,77,rating_is_null,35.06
-df_preprocesado_airbnb_temp,barrio_norm,SIN_DATO,77,reviews_is_null,35.06
+df_preprocesado_airbnb_temp,barrio_norm,VALORES_NULOS,77,rating_is_null,35.06
+df_preprocesado_airbnb_temp,barrio_norm,VALORES_NULOS,77,reviews_is_null,35.06
 df_preprocesado_airbnb_temp,barrio_norm,barracas,66,rating_is_null,13.64
 df_preprocesado_airbnb_temp,barrio_norm,barracas,66,reviews_is_null,13.64
 df_preprocesado_airbnb_temp,barrio_norm,saavedra,59,rating_is_null,15.25

@@ -161,12 +161,12 @@ df_preprocesado_meli_alq,barrio_norm,villa pueyrredon,105,ambientes_max_is_null,
 df_preprocesado_meli_alq,barrio_norm,villa pueyrredon,105,es_rango_ambientes_is_null,0.95
 df_preprocesado_meli_alq,barrio_norm,villa pueyrredon,105,ambientes_ref_is_null,0.95
 df_preprocesado_meli_alq,barrio_norm,villa pueyrredon,105,ambientes_min_is_null,0.95
-df_preprocesado_meli_alq,inmobiliaria,SIN_DATO,10251,inmobiliaria_is_null,100.0
-df_preprocesado_meli_alq,inmobiliaria,SIN_DATO,10251,altura_is_null,13.45
-df_preprocesado_meli_alq,inmobiliaria,SIN_DATO,10251,ambientes_max_is_null,3.14
-df_preprocesado_meli_alq,inmobiliaria,SIN_DATO,10251,es_rango_ambientes_is_null,3.14
-df_preprocesado_meli_alq,inmobiliaria,SIN_DATO,10251,ambientes_ref_is_null,3.14
-df_preprocesado_meli_alq,inmobiliaria,SIN_DATO,10251,ambientes_min_is_null,3.14
+df_preprocesado_meli_alq,inmobiliaria,VALORES_NULOS,10251,inmobiliaria_is_null,100.0
+df_preprocesado_meli_alq,inmobiliaria,VALORES_NULOS,10251,altura_is_null,13.45
+df_preprocesado_meli_alq,inmobiliaria,VALORES_NULOS,10251,ambientes_max_is_null,3.14
+df_preprocesado_meli_alq,inmobiliaria,VALORES_NULOS,10251,es_rango_ambientes_is_null,3.14
+df_preprocesado_meli_alq,inmobiliaria,VALORES_NULOS,10251,ambientes_ref_is_null,3.14
+df_preprocesado_meli_alq,inmobiliaria,VALORES_NULOS,10251,ambientes_min_is_null,3.14
 df_preprocesado_meli_alq,inmobiliaria,Remax Premium,158,inmobiliaria_is_null,0.0
 df_preprocesado_meli_alq,inmobiliaria,Remax Premium,158,altura_is_null,0.0
 df_preprocesado_meli_alq,inmobiliaria,Remax Premium,158,ambientes_max_is_null,0.0
