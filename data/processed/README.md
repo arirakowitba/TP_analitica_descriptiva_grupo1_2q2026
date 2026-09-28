@@ -15,4 +15,11 @@ Cada dataset procesado debe poder rastrearse hasta sus fuentes crudas e indicar:
 
 ## Estado actual
 
-La carpeta queda preparada para la PreEntrega 2. El dataset procesado final se generara luego del notebook de calidad, limpieza y consolidacion inicial.
+Esta carpeta contiene las salidas generadas por los notebooks:
+
+- datasets preprocesados por fuente y tipo de operacion;
+- bases consolidadas para EDA;
+- diccionarios de datos;
+- reportes tecnicos dentro de `reports/`.
+
+Los notebooks deben vivir en `notebooks/`. Esta carpeta queda reservada para datos procesados y anexos reproducibles.
