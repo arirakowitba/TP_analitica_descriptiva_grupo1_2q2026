@@ -1,0 +1,16 @@
+columna,hacer,motivo,estado
+precio,no imputar; excluir solo de KPIs de precio si falta,variable objetivo/central; inventarla distorsiona todo indicador monetario,propuesto
+moneda_norm,no imputar; reconstruir solo si precio_texto trae simbolo claro,sin moneda no se puede comparar precio ni convertir ARS/USD,propuesto
+barrio_norm,"reconstruir desde barrio/direccion/coordenadas; si no, excluir de analisis geografico",es clave para hipotesis territoriales y cruces con fuentes externas,propuesto
+comuna,recalcular desde barrio_norm cuando exista mapeo oficial,es una variable derivable; no conviene dejar faltantes artificiales como Las Cañitas,propuesto
+superficie_ref_m2,reconstruir desde superficies equivalentes o texto explicito; no imputar media,define precio_m2 y tipologia; una imputacion promedio altera el inmueble,propuesto
+precio_m2_ref,recalcular cuando haya precio y superficie_ref_m2 validos,"es derivada, no observada; debe seguir la calidad de sus componentes",propuesto
+ambientes_ref,reconstruir desde min/max o texto explicito,la cantidad de ambientes define comparabilidad; no inferir sin evidencia,propuesto
+dormitorios_ref,mantener nulo salvo mencion explicita; evaluar regla especial para monoambientes,muchos portales publican ambientes y no dormitorios; no son equivalentes directos,propuesto
+banios_ref,"reconstruir desde min/max, atributos o texto explicito",variable estructural relevante; no imputar moda,propuesto
+latitud/longitud,"no imputar coordenada real; si se usan centroides, crear columnas *_aprox",mezclar coordenadas reales y aproximadas rompe la interpretabilidad espacial,propuesto
+inmobiliaria/seller,usar no_informado solo para graficos; mantener flag para analisis,el faltante puede ser informativo del portal o tipo de publicacion,propuesto
+expensas,parsear desde texto si aparece; no reemplazar por 0,no informado no significa sin expensas,propuesto
+rating/reviews,mantener nulos y flag sin_reviews_o_rating; no imputar promedio,en Airbnb el faltante puede indicar ausencia de reseñas y no calidad media,propuesto
+estado_entrega/posesion,usar como variable secundaria; reconstruir desde texto si aparece,"muy incompleta, pero relevante en ventas/emprendimientos",propuesto
+Airbnb superficie/precio_m2,no forzar precio_m2; analizar Airbnb con precio mensual/noche,Airbnb no trae superficie comparable; imputarla seria artificial,propuesto

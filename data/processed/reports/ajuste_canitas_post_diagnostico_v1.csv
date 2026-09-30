@@ -1,0 +1,13 @@
+dataset,momento,filas_las_canitas_en_barrio_norm,comuna_nula_en_las_canitas
+df_preprocesado_meli_alq,antes,42,42.0
+df_preprocesado_meli_alq,despues,0,0.0
+df_preprocesado_meli_alq_temp,antes,80,80.0
+df_preprocesado_meli_alq_temp,despues,0,0.0
+df_preprocesado_meli_vtas,antes,139,139.0
+df_preprocesado_meli_vtas,despues,0,0.0
+df_preprocesado_argenprop,antes,0,
+df_preprocesado_argenprop,despues,0,
+df_preprocesado_zonaprop,antes,31,
+df_preprocesado_zonaprop,despues,0,
+df_preprocesado_airbnb_temp,antes,0,0.0
+df_preprocesado_airbnb_temp,despues,0,0.0
