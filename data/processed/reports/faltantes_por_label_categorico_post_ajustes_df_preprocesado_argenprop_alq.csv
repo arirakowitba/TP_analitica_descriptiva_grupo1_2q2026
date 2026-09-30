@@ -1,11 +1,11 @@
 dataset,variable_categorica,label,n_registros,variable_faltante,pct_faltante
 df_preprocesado_argenprop_alq,moneda_norm,ARS,66,expensas_moneda_is_null,95.45
-df_preprocesado_argenprop_alq,moneda_norm,ARS,66,expensas_is_null,93.94
 df_preprocesado_argenprop_alq,moneda_norm,ARS,66,expensas_texto_is_null,93.94
-df_preprocesado_argenprop_alq,moneda_norm,ARS,66,banios_ref_is_null,50.0
+df_preprocesado_argenprop_alq,moneda_norm,ARS,66,expensas_is_null,93.94
 df_preprocesado_argenprop_alq,moneda_norm,ARS,66,banios_is_null,50.0
+df_preprocesado_argenprop_alq,moneda_norm,ARS,66,banios_ref_is_null,50.0
 df_preprocesado_argenprop_alq,moneda_norm,ARS,66,piso_is_null,40.91
-df_preprocesado_argenprop_alq,moneda_norm,ARS,66,ambientes_ref_is_null,42.42
 df_preprocesado_argenprop_alq,moneda_norm,ARS,66,ambientes_is_null,42.42
-df_preprocesado_argenprop_alq,moneda_norm,ARS,66,dormitorios_is_null,21.21
+df_preprocesado_argenprop_alq,moneda_norm,ARS,66,ambientes_ref_is_null,42.42
 df_preprocesado_argenprop_alq,moneda_norm,ARS,66,dormitorios_ref_is_null,21.21
+df_preprocesado_argenprop_alq,moneda_norm,ARS,66,dormitorios_is_null,21.21
