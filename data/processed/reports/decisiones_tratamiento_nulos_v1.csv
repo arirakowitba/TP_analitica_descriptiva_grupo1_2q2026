@@ -1,7 +1,7 @@
 dataset,estrategia,campos_criticos_existentes,filas_antes,filas_con_nulo_critico,filas_despues,accion
-df_preprocesado_meli_alq,flaggear,"precio, moneda_norm, barrio_norm, tipo_operacion_norm",11479,26,11479,solo flags; no se eliminan registros
-df_preprocesado_meli_alq_temp,flaggear,"precio, moneda_norm, barrio_norm, tipo_operacion_norm",6190,26,6190,solo flags; no se eliminan registros
-df_preprocesado_meli_vtas,flaggear,"precio, moneda_norm, barrio_norm, tipo_operacion_norm",44013,157,44013,solo flags; no se eliminan registros
+df_preprocesado_meli_alq,flaggear,"precio, moneda_norm, barrio_norm, tipo_operacion_norm",9877,23,9877,solo flags; no se eliminan registros
+df_preprocesado_meli_alq_temp,flaggear,"precio, moneda_norm, barrio_norm, tipo_operacion_norm",4494,25,4494,solo flags; no se eliminan registros
+df_preprocesado_meli_vtas,flaggear,"precio, moneda_norm, barrio_norm, tipo_operacion_norm",42778,152,42778,solo flags; no se eliminan registros
 df_preprocesado_argenprop,flaggear,"precio, moneda_norm, barrio_norm, tipo_operacion_norm",162,0,162,solo flags; no se eliminan registros
 df_preprocesado_zonaprop,flaggear,"precio, moneda_norm, barrio_norm, tipo_operacion_norm",980,8,980,solo flags; no se eliminan registros
 df_preprocesado_airbnb_temp,flaggear,"precio, moneda_norm, barrio_norm, tipo_operacion_norm",9596,77,9596,solo flags; no se eliminan registros

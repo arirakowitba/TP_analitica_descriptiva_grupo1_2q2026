@@ -68,3 +68,5 @@ reviews,float64,Completar definicion final.,Completar si corresponde.,Base conso
 balcon_o_patio,object,Completar definicion final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_normalizacion_y_limpieza.,False
 cochera,object,Completar definicion final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_normalizacion_y_limpieza.,False
 precio_sospechoso,object,Completar definicion final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_normalizacion_y_limpieza.,False
+posible_duplicado_interfuente,bool,Completar definicion final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_normalizacion_y_limpieza.,False
+grupo_posible_duplicado_interfuente,object,Completar definicion final.,Completar si corresponde.,Base consolidada desde portales inmobiliarios/Airbnb.,Ver notebook 02_normalizacion_y_limpieza.,
