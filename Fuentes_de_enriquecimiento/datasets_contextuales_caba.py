@@ -6,7 +6,7 @@ Fuentes: Buenos Aires Data (GCBA), salvo el Censo 2022.
 from pathlib import Path
 import numpy as np
 import pandas as pd
-
+import re
 # =============================================================================
 # 1. LINKS A DATASETS DE BUENOS AIRES DATA (GCBA)
 # Todos verificados manualmente en data.buenosaires.gob.ar el 06/09/2026.
@@ -44,33 +44,71 @@ link_estaciones_ferrocarril = 'https://data.buenosaires.gob.ar/dataset/estacione
 
 
 def _leer_csv(nombre: str, url: str) -> pd.DataFrame | None:
-    """Descarga y lee un CSV, con manejo de errores para no frenar todo el
-    pipeline si un solo dataset falla. Reintenta con distintos encodings:
-    varios datasets de BA Data vienen en Latin-1/Windows-1252 en vez de
-    UTF-8 (típico en archivos generados desde Excel), y con distinto
-    separador (';' en vez de ',')."""
+    """Lee un CSV desde BA Data. Prueba variantes de descarga y evita aceptar
+    respuestas vacias como si fueran fuentes validas."""
+    import json
+    import urllib.request
+    from urllib.parse import quote
+
+    urls_a_probar = [url]
+
+    if not url.endswith("?download=1"):
+        urls_a_probar.append(url + "?download=1")
+
+    # Si la URL tiene /resource/<id>/download, intenta resolver el recurso por API CKAN.
+    resource_id = None
+    match = re.search(r"/resource/([^/]+)/download", url)
+    if match:
+        resource_id = match.group(1)
+        api_url = (
+            "https://data.buenosaires.gob.ar/api/3/action/resource_show?id="
+            + quote(resource_id)
+        )
+
+        try:
+            with urllib.request.urlopen(api_url, timeout=30) as response:
+                payload = json.loads(response.read().decode("utf-8"))
+            result = payload.get("result", {})
+            for key in ["url", "download_url"]:
+                recurso_url = result.get(key)
+                if recurso_url and recurso_url not in urls_a_probar:
+                    urls_a_probar.append(recurso_url)
+        except Exception:
+            pass
+
     intentos = [
         {"encoding": "utf-8"},
         {"encoding": "latin-1"},
         {"encoding": "cp1252"},
-        {"encoding": "latin-1", "sep": ";"},
         {"encoding": "utf-8", "sep": ";"},
+        {"encoding": "latin-1", "sep": ";"},
+        {"encoding": "cp1252", "sep": ";"},
     ]
+
     ultimo_error = None
-    for kwargs in intentos:
-        try:
-            df = pd.read_csv(url, **kwargs)
-            if df.shape[1] == 1 and "sep" not in kwargs:
-                # Probablemente el separador real es ';' y no ',' -> seguir probando.
+
+    for url_actual in urls_a_probar:
+        for kwargs in intentos:
+            try:
+                df = pd.read_csv(url_actual, **kwargs)
+
+                if df.shape[1] == 1 and "sep" not in kwargs:
+                    continue
+
+                if df.empty:
+                    ultimo_error = ValueError("CSV leido sin filas utiles")
+                    continue
+
+                print(
+                    f"OK  {nombre}: {len(df)} filas, {df.shape[1]} columnas. "
+                    f"({kwargs})"
+                )
+                return df
+
+            except Exception as exc:
+                ultimo_error = exc
                 continue
-            if df.empty:
-                ultimo_error = ValueError("CSV leido sin filas utiles")
-                continue
-            print(f"OK  {nombre}: {len(df)} filas, {df.shape[1]} columnas. ({kwargs})")
-            return df
-        except Exception as exc:
-            ultimo_error = exc
-            continue
+
     print(f"ERROR al leer '{nombre}' desde {url}\n  -> {ultimo_error}")
     return None
 

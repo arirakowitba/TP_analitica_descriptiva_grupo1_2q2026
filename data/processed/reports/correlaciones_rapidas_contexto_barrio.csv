@@ -1,0 +1,12 @@
+,precio_m2_mediana,densidad_estaciones_subte_km2,densidad_espacios_verdes_km2,densidad_educacion_km2,densidad_espacios_culturales_km2,indice_accesibilidad_transporte_barrio,indice_servicios_basicos_barrio,indice_entorno_verde_cultural_barrio,indice_atractividad_turistica_comercial_barrio,indice_contexto_urbano_barrio,publicaciones_por_km2_barrio
+precio_m2_mediana,1.0,,,,,,,,,,0.43086680761099366
+densidad_estaciones_subte_km2,,,,,,,,,,,
+densidad_espacios_verdes_km2,,,,,,,,,,,
+densidad_educacion_km2,,,,,,,,,,,
+densidad_espacios_culturales_km2,,,,,,,,,,,
+indice_accesibilidad_transporte_barrio,,,,,,,,,,,
+indice_servicios_basicos_barrio,,,,,,,,,,,
+indice_entorno_verde_cultural_barrio,,,,,,,,,,,
+indice_atractividad_turistica_comercial_barrio,,,,,,,,,,,
+indice_contexto_urbano_barrio,,,,,,,,,,,
+publicaciones_por_km2_barrio,0.43086680761099366,,,,,,,,,,1.0
