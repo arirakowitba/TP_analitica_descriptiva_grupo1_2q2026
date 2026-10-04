@@ -6,7 +6,6 @@ Fuentes: Buenos Aires Data (GCBA), salvo el Censo 2022.
 from pathlib import Path
 import numpy as np
 import pandas as pd
-import requests
 
 # =============================================================================
 # 1. LINKS A DATASETS DE BUENOS AIRES DATA (GCBA)
@@ -63,6 +62,9 @@ def _leer_csv(nombre: str, url: str) -> pd.DataFrame | None:
             df = pd.read_csv(url, **kwargs)
             if df.shape[1] == 1 and "sep" not in kwargs:
                 # Probablemente el separador real es ';' y no ',' -> seguir probando.
+                continue
+            if df.empty:
+                ultimo_error = ValueError("CSV leido sin filas utiles")
                 continue
             print(f"OK  {nombre}: {len(df)} filas, {df.shape[1]} columnas. ({kwargs})")
             return df
