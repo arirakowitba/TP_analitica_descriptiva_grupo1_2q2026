@@ -1,8 +1,8 @@
 dataset,filas_antes,filas_con_valor_invalido,filas_con_outlier_p01_p99,nulificar_valores_invalidos,eliminar_outliers_p01_p99,filas_despues
-df_preprocesado_meli_alq,11479,0,740,False,False,11479
-df_preprocesado_meli_alq_temp,6190,0,382,False,False,6190
-df_preprocesado_meli_vtas,44013,0,2725,False,False,44013
-df_preprocesado_argenprop_vtas,82,0,7,False,False,82
+df_preprocesado_meli_alq,9877,0,617,False,False,9877
+df_preprocesado_meli_alq_temp,4494,0,268,False,False,4494
+df_preprocesado_meli_vtas,42778,0,2635,False,False,42778
+df_preprocesado_argenprop_vtas,82,0,6,False,False,82
 df_preprocesado_argenprop_alq,80,0,14,False,False,80
 df_preprocesado_zonaprop_vtas,485,0,27,False,False,485
 df_preprocesado_zonaprop_alq,495,0,33,False,False,495
