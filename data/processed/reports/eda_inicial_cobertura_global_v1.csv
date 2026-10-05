@@ -1,0 +1,12 @@
+columna,pct_nulos,n_no_nulos,n_unicos
+latitud,85.86,9596,3932
+longitud,85.86,9596,4647
+dormitorios_ref,84.25,10693,20
+precio_m2_ref,14.33,58162,18773
+superficie_ref_m2,14.31,58170,448
+comuna,3.38,65594,15
+banios_ref,2.02,66517,25
+ambientes_ref,1.36,66962,29
+barrio_norm,0.41,67610,223
+moneda_norm,0.01,67879,2
+precio,0.01,67879,10196

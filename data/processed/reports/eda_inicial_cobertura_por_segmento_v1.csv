@@ -1,0 +1,9 @@
+fuente_plot,operacion_plot,precio,moneda_norm,precio_m2_ref,superficie_ref_m2,ambientes_ref,dormitorios_ref,banios_ref,barrio_norm,comuna,latitud,longitud
+airbnb,alquiler_temporal,0.0,0.0,100.0,100.0,0.0,0.0,0.1,0.8,0.8,0.0,0.0
+argenprop,alquiler,0.0,0.0,11.2,11.2,16.2,17.5,52.5,0.0,100.0,100.0,100.0
+argenprop,venta,0.0,0.0,4.9,4.9,8.5,18.3,58.5,0.0,100.0,100.0,100.0
+mercado_libre,alquiler,0.0,0.0,0.4,0.4,2.8,99.6,1.9,0.2,1.7,100.0,100.0
+mercado_libre,alquiler_temporal,0.0,0.0,0.4,0.4,3.7,99.8,2.0,0.6,3.9,100.0,100.0
+mercado_libre,venta,0.0,0.0,0.1,0.1,1.1,99.6,2.2,0.4,1.7,100.0,100.0
+zonaprop,alquiler,0.0,0.0,0.8,0.8,0.4,21.8,1.2,0.0,100.0,100.0,100.0
+zonaprop,venta,1.6,1.6,1.9,0.2,0.2,21.9,10.1,0.0,100.0,100.0,100.0
