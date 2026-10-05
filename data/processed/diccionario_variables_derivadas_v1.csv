@@ -1,0 +1,19 @@
+variable,formula,unidad,fuente,faltantes,validacion
+barrio_oficial,"Polígono oficial si hay coordenadas; si no, barrio declarado mapeado",categoría,GeoJSON GCBA; USIG; portales,Sin asignar si el texto es ambiguo o no reconocible,Pertenece a los 48 barrios oficiales
+comuna_oficial,Comuna del barrio oficial,número 1-15,GeoJSON GCBA,Hereda los faltantes de barrio_oficial,Rango 1-15
+"lat, lon",Airbnb: propias; resto: geocodificación USIG,grados WGS84,Airbnb; USIG,NaN si no se geocodificó o cae fuera de CABA,Punto dentro de un barrio oficial
+en_alcance,No es una localidad fuera de CABA,booleano,barrio declarado + coordenadas,No aplica,-
+id_en_multiples_operaciones_flag,El id aparece en más de una operación,booleano,base consolidada,No aplica,-
+tc_mep,MEP vendedor de la fecha de extracción (última cotización previa si no es hábil),ARS/USD,ArgentinaDatos,Sin faltantes,Entre 1.500 y 1.560 en el período
+precio_venta_usd,precio (USD) o precio / tc_mep (ARS),USD,portales; MEP,NaN si falta moneda o precio,Rango 15.000 - 10.000.000
+precio_mensual_usd,Igual que el anterior para alquileres; Airbnb: cotización de 30 noches,USD/mes,portales; Airbnb; MEP,NaN si falta moneda o precio,"Rango 100 - 15.000 (permanente), 100 - 20.000 (temporario)"
+precio_m2_usd,precio_venta_usd o precio_mensual_usd / superficie_ref_m2,USD/m2 o USD/m2/mes,portales,NaN sin superficie > 0; no aplica a temporario,"Rango 500 - 15.000 (venta), 2 - 60 (alquiler)"
+precio_por_ambiente_usd,precio de venta o mensual / ambientes_ref,USD o USD/mes por ambiente,portales; Airbnb (dormitorios + 1),NaN sin ambientes >= 1,Positivo
+*_fuera_rango_flag,Valor fuera del rango plausible de su operación,booleano,derivado,False si la variable es NaN,-
+"dist_subte_m, dist_tren_m, dist_metrobus_m, dist_hospitales_m",Distancia haversine al punto más cercano,metros,BA Data,NaN sin coordenadas,No negativa; < 5 km
+dist_transporte_masivo_m,"Mínimo de las distancias a subte, tren y MetroBus",metros,BA Data,NaN sin coordenadas,No negativa; < 5 km
+dist_espacio_verde_m,"Distancia al vértice más cercano de plazas, parques y jardines",metros,BA Data,NaN sin coordenadas,No negativa
+"n_culturales_500m, n_gastronomia_500m, n_educacion_500m",Puntos a menos de 500 m,cantidad,BA Data,NaN sin coordenadas,Entero no negativo
+densidad_*_km2,Puntos de la fuente en el barrio / área del barrio,puntos/km2,BA Data; GeoJSON,Sin faltantes (0 si no hay puntos),No negativa
+pct_superficie_verde,"Superficie de plazas, parques y jardines del barrio / área del barrio x 100",%,BA Data; GeoJSON,Sin faltantes,0 - 100
+*_comuna (Censo),Ver notebook 06,varias,INDEC Censo 2022,Hereda faltantes de comuna_oficial,Totales validados contra CABA
