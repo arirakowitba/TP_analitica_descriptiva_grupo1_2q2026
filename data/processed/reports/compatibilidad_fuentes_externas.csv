@@ -1,0 +1,14 @@
+fuente,nivel,pct_variacion_intra_comuna
+subte,barrio (densidad/km2),44.4
+tren,barrio (densidad/km2),69.4
+metrobus,barrio (densidad/km2),45.9
+hospitales,barrio (densidad/km2),64.4
+culturales,barrio (densidad/km2),47.9
+gastronomia,barrio (densidad/km2),57.7
+educacion,barrio (densidad/km2),64.5
+espacios_verdes,barrio (densidad/km2),44.5
+subte,publicación (distancia m),24.0
+tren,publicación (distancia m),64.5
+metrobus,publicación (distancia m),54.0
+hospitales,publicación (distancia m),70.1
+censo_2022,comuna,0.0

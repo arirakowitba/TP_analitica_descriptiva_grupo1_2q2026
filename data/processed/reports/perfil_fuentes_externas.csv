@@ -1,0 +1,9 @@
+fuente,puntos,formato_origen,pct_coords_validas,pct_dentro_de_caba,barrios_con_al_menos_uno
+subte,90,WKT grados,100.0,100.0,20
+tren,301,WKT grados,100.0,14.3,27
+metrobus,390,X/Y grados,100.0,100.0,33
+hospitales,36,WKT metros (Gauss-Krüger BA),100.0,100.0,19
+educacion,1627,WKT metros (Gauss-Krüger BA),100.0,100.0,48
+culturales,3053,lat/long grados,99.3,99.3,48
+gastronomia,2823,lat/long con coma decimal,100.0,100.0,47
+espacios_verdes,485,MULTIPOLYGON grados,100.0,100.0,48
