@@ -2,5 +2,6 @@ tema,decision,justificacion
 Faltantes estructurales,Analizar por dataset antes de consolidar,Cada fuente trae columnas distintas; unir todo desde el inicio genera nulos estructurales.
 Airbnb,Usar archivo normalizado mensual como base prioritaria,"Ya contiene barrio, comuna, amenities y variables comparables."
 Barrios,"Crear barrio_norm con limpieza de tildes, aliases y subzonas",Permite cruces territoriales sin perder el valor original.
+Comuna por barrio,Completar comuna faltante con barrio_norm cuando existe correspondencia oficial,Es una reconstrucción determinística barrio-comuna; mejora análisis territoriales sin introducir supuestos estadísticos.
 Moneda,Crear moneda_norm,"Evita mezclar USD, ARS y representaciones textuales."
 Outliers,No eliminar en esta etapa; se flaggean en notebook 04,En real estate pueden existir extremos validos.

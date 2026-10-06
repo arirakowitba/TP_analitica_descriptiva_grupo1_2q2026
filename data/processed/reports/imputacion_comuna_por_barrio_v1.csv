@@ -1,0 +1,7 @@
+dataframe,variable,barrio_norm_no_nulos,barrios_reconocidos,pct_barrios_reconocidos,n_nulos_antes,n_imputados,n_nulos_despues,criterio
+df_preprocesado_meli_alq,comuna,9854,9782,99.27,214,164,50,barrio_norm -> comuna oficial CABA
+df_preprocesado_meli_alq_temp,comuna,4469,4353,97.4,246,148,98,barrio_norm -> comuna oficial CABA
+df_preprocesado_meli_vtas,comuna,42626,42385,99.43,829,544,285,barrio_norm -> comuna oficial CABA
+df_preprocesado_argenprop,comuna,162,0,0.0,162,0,162,barrio_norm -> comuna oficial CABA
+df_preprocesado_zonaprop,comuna,980,918,93.67,980,918,62,barrio_norm -> comuna oficial CABA
+df_preprocesado_airbnb_temp,comuna,9519,9504,99.84,77,0,77,barrio_norm -> comuna oficial CABA
