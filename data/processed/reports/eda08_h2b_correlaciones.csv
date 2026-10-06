@@ -1,0 +1,13 @@
+,,variable,rho,lo,hi,p,n
+alquiler,0,Espacios culturales por km²,0.686,0.225,0.942,0.005,15
+alquiler,1,Gastronomía turística por km²,0.664,0.22,0.909,0.007,15
+alquiler,2,Espacios verdes por km²,0.411,-0.283,0.758,0.128,15
+alquiler,3,Subte por km²,0.544,-0.011,0.868,0.036,15
+alquiler,4,Escuelas por km²,0.111,-0.539,0.695,0.694,15
+alquiler,5,Hospitales por km²,-0.164,-0.748,0.505,0.558,15
+venta,0,Espacios culturales por km²,0.307,-0.259,0.768,0.265,15
+venta,1,Gastronomía turística por km²,0.1,-0.481,0.655,0.723,15
+venta,2,Espacios verdes por km²,-0.189,-0.758,0.459,0.499,15
+venta,3,Subte por km²,0.236,-0.289,0.688,0.397,15
+venta,4,Escuelas por km²,0.121,-0.593,0.708,0.666,15
+venta,5,Hospitales por km²,-0.282,-0.881,0.411,0.308,15

@@ -1,0 +1,14 @@
+,,variable,rho,lo,hi,p,n
+barrio,0,Espacios culturales por km²,0.8548,0.7286,0.9212,0.0,48
+barrio,1,Gastronomía turística por km²,0.6464,0.4053,0.8131,0.0,48
+barrio,2,Espacios verdes por km²,0.3438,0.0288,0.6029,0.0167,48
+barrio,3,Subte por km²,0.5547,0.3212,0.7254,0.0,48
+barrio,4,Escuelas por km²,0.2367,-0.0555,0.5079,0.1053,48
+barrio,5,Hospitales por km²,0.0718,-0.195,0.33,0.6277,48
+barrio,6,% de superficie verde,0.1256,-0.152,0.382,0.3949,48
+comuna,0,Espacios culturales por km²,0.8607,0.5751,0.9743,0.0,15
+comuna,1,Gastronomía turística por km²,0.7607,0.4056,0.9086,0.001,15
+comuna,2,Espacios verdes por km²,0.4214,-0.2449,0.7533,0.1177,15
+comuna,3,Subte por km²,0.6505,0.176,0.8963,0.0086,15
+comuna,4,Escuelas por km²,0.0286,-0.5662,0.6052,0.9195,15
+comuna,5,Hospitales por km²,-0.0679,-0.6558,0.5777,0.8101,15

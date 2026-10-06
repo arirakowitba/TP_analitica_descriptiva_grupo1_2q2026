@@ -12,5 +12,6 @@ requests
 scikit-learn
 scipy
 seaborn
+statsmodels
 truststore
 urllib3

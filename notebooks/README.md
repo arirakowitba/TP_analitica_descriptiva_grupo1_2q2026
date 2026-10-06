@@ -11,7 +11,7 @@ Orden de ejecucion:
 5. `05_feature_engineering_y_eda_inicial.ipynb`: EDA inicial sobre la base consolidada, sin fuentes externas.
 6. `06_fuentes_externas.ipynb`: snapshot e inventario de fuentes externas, Censo 2022 por comuna, geocodificacion USIG, barrio y comuna oficiales, contexto urbano por barrio y compatibilidad con la unidad de analisis.
 7. `07_feature_engineering.ipynb`: alcance, normalizacion monetaria (dolar MEP), precios comparables, entorno urbano por publicacion, KPIs por barrio y por comuna, diccionario de variables derivadas.
-8. `08_eda_con_fuentes_externas.ipynb`: primeros cruces exploratorios con fuentes externas.
+8. `08_eda_con_fuentes_externas.ipynb`: EDA con la base enriquecida: distribución territorial de las operaciones, precios y tipologías, servicios y demografía, evidencia preliminar para H1, H2a, H2b, H3 y H4, y síntesis de hallazgos, limitaciones y próximos pasos.
 
 Los notebooks usan rutas relativas al repositorio y guardan datasets limpios, consolidados o reportes tecnicos en `data/processed`. La logica reutilizable de los notebooks 06 y 07 esta en `src/`.
 
