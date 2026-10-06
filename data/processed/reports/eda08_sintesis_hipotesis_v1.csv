@@ -1,0 +1,6 @@
+hipotesis,tema,unidad,evidencia,lectura,limitaciones
+H1,Atractivo turístico y alquiler temporario,barrio (48) y comuna (15),Cultura rho = 0.85 (barrio) y 0.86 (comuna); gastronomía rho = 0.65 (barrio),Evidencia a favor,Confundida con la centralidad (el subte también se asocia); no causal
+H2a,Tamaño del hogar y tipología,comuna (15),"rho entre -0,50 y 0,01 según operación; IC incluyen el cero",Sin evidencia,Poco poder (15 comunas); aproximación débil al hogar unipersonal; solo departamentos
+H2b,Servicios y oferta,comuna (15),"Alquiler por 1.000 viviendas: cultura 0,69, gastronomía 0,66, subte 0,54; escuelas, hospitales y verdes sin relación; venta sin relación",Evidencia parcial,Sin corrección por comparaciones múltiples; los servicios asociados son los de centralidad
+H3,Transporte y precio,publicación (~45.000),"Efecto por 100 m más lejos: venta +0.8% (IC 0.0 a 1.6), alquiler +1.0% (IC 0.4 a 1.5)","Sin apoyo (signo contrario, efecto pequeño)",Distancia en línea recta; geocodificación del 86% de los avisos de MeLi; confusión con avenidas y calidad de la unidad
+H4,"Temporario, disponibilidad y precio",comuna (15),Airbnb vs. precio del alquiler rho = 0.91; vs. alquileres por 1.000 viviendas rho = 0.83 (positivo),No evaluable,Los precios acompañan pero por centralidad; la disponibilidad no disminuye; corte transversal con 15 unidades

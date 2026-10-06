@@ -1,0 +1,4 @@
+variable,rho,lo,hi,p,n
+Alquileres permanentes por 1.000 viviendas,0.832,0.486,0.971,0.0,15
+Precio mediano del alquiler (USD por m² por mes),0.907,0.615,0.989,0.0,15
+% de hogares inquilinos (Censo),0.829,0.538,0.946,0.0,15
