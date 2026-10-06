@@ -1,0 +1,5 @@
+fuente_norm,barrio_oficial,comuna_oficial,lat,lon,precio_venta_usd,precio_mensual_usd,precio_m2_usd,precio_por_ambiente_usd,dist_subte_m,dist_tren_m,dist_metrobus_m,dist_espacio_verde_m,n_culturales_500m,n_gastronomia_500m,n_educacion_500m
+airbnb,99.2,99.2,99.2,99.2,0.0,100.0,0.0,100.0,99.2,99.2,99.2,99.2,99.2,99.2,99.2
+argenprop,95.1,95.1,95.1,95.1,50.6,49.4,92.0,87.7,95.1,95.1,95.1,95.1,95.1,95.1,95.1
+mercado_libre,99.8,99.8,86.2,86.2,74.9,25.1,92.0,98.4,86.2,86.2,86.2,86.2,86.2,86.2,86.2
+zonaprop,99.1,99.1,0.0,0.0,48.7,50.5,98.7,98.9,0.0,0.0,0.0,0.0,0.0,0.0,0.0

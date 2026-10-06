@@ -1,0 +1,16 @@
+columna,pct_no_nulo,n_no_nulo,n_unicos
+precio_mensual_usd,36.15,24542,4216
+precio_venta_usd,63.84,43337,6403
+precio_m2_usd,79.08,53687,18822
+lon,86.86,58964,19794
+lat,86.86,58964,19061
+dist_metrobus_m,86.86,58964,23421
+dist_tren_m,86.86,58964,23421
+dist_subte_m,86.86,58964,23421
+n_culturales_500m,86.86,58964,195
+n_gastronomia_500m,86.86,58964,243
+n_educacion_500m,86.86,58964,26
+dist_espacio_verde_m,86.86,58964,23421
+precio_por_ambiente_usd,98.63,66954,12399
+barrio_oficial,99.71,67692,48
+comuna_oficial,99.71,67692,15
