@@ -60,10 +60,12 @@ python scrappers/scraper_zonaprop_inmuebles.py --help
 
 ## 0.2 Estado actual de avance
 
-- Repositorio inicial organizado con datos crudos, scripts de extraccion y documentacion tecnica.
-- Fuentes principales relevadas: Mercado Libre, Airbnb, ZonaProp y ArgenProp.
-- Fuentes de enriquecimiento identificadas: transporte, salud, educacion, cultura, espacios verdes, gastronomia turistica, censo y geometrias oficiales.
-- Pendiente para la PreEntrega 2: construccion de notebooks de calidad y limpieza, dataset procesado, diccionario de datos, EDA inicial e interpretacion de hallazgos.
+- Repositorio organizado con datos crudos, scripts de extraccion, notebooks secuenciados, modulos reutilizables en `src/` y documentacion tecnica.
+- Fuentes principales integradas: Mercado Libre, Airbnb, ZonaProp y ArgenProp, con normalizacion de operaciones, monedas, barrios, fechas y columnas canonicas.
+- Datos curados disponibles en `data/processed`: bases preprocesadas por fuente, base consolidada, base con flags de nulos, base con flags de outliers y base enriquecida con fuentes externas.
+- Fuentes externas integradas: Censo 2022 por comuna, GeoJSON oficial de barrios, USIG para geocodificacion, transporte, salud, educacion, cultura, espacios verdes y gastronomia turistica.
+- El pipeline actual cubre perfilado, limpieza, nulos, outliers, EDA inicial, fuentes externas, feature engineering, KPIs territoriales y contraste preliminar de hipotesis.
+- Pendiente para el cierre final: consolidar la narrativa ejecutiva, seleccionar los hallazgos prioritarios, documentar limitaciones y convertir los resultados principales en recomendaciones accionables.
 
 # 1 Caso de negocio
 

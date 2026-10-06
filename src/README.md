@@ -9,5 +9,6 @@ Funciones y modulos auxiliares usados por los notebooks. Se importan desde los n
 | `geo.py` | Conversion de coordenadas planas de CABA a WGS84, parseo de WKT, asignacion de puntos a barrios, distancias y conteos en radio. |
 | `usig.py` | Limpieza de direcciones y geocodificacion con USIG, con cache local. Ejecutable: `python -m src.usig`. |
 | `features.py` | Barrio oficial, tipo de cambio MEP, precios comparables, flags de rango, variables de entorno y contexto por barrio. |
+| `eda.py` | Funciones reutilizables para el EDA con fuentes externas: estilo grafico, estadisticos descriptivos, correlaciones con bootstrap, modelos con errores agrupados y visualizaciones territoriales. |
 
 La logica extensa o repetida debe moverse aca para que los notebooks queden legibles y reproducibles.
