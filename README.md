@@ -267,7 +267,7 @@ A continuación se listan las potenciales fuentes de enriquecimiento de los dato
 | [<u>Listado de estaciones de Subte</u>](https://data.buenosaires.gob.ar/dataset/subte-estaciones)                                            | GCBA       | Ubicación de las 90 estaciones                                         |
 | [<u>Listado de corredores de MetroBus</u>](https://data.buenosaires.gob.ar/dataset/metrobus/resource/Juqdkmgo-1431222-resource)              | GCBA       | Corredores y estaciones del sistema de carriles para colectivos        |
 | [<u>Listado de estaciones de ferrocarril</u>](https://data.buenosaires.gob.ar/dataset/estaciones-ferrocarril)                                | GCBA       | Estaciones de Trenes Argentinos.                                       |
-| [<u>Censo poblacional 2022</u>](https://censo.gob.ar/index.php/datos_definitivos_caba/?utm_source=chatgpt.com)                               | INDEC      | Permite contar la cantidad de hogares por comuna.                      |
+| [<u>Censo poblacional 2022</u>](https://censo.gob.ar/index.php/datos_definitivos_caba/)                               | INDEC      | Permite contar la cantidad de hogares por comuna.                      |
 | [<u>USIG - Normalizador de Direcciones (API)</u>](https://servicios.usig.buenosaires.gob.ar/normalizar/)                                     | USIG       | Permite encontrar la latitud y longitud de una dirección.              |
 | [<u>GeoJson de Barrios</u>](https://cdn.buenosaires.gob.ar/datosabiertos/datasets/innovacion-transformacion-digital/barrios/barrios.geojson) | GCBA       | Permite conocer el barrio correspondiente a una latitud y longitud.    |
 
@@ -285,7 +285,7 @@ Se definen indicadores como puntapié inicial para el estudio tanto de mercados 
 
 - **Precio por m² en el barrio b** = Promedio, para las publicaciones del barrio b, de (precio de la publicación i / superficie en m² de la publicación i). Se calculará para venta y alquiler permanente.[^1]
 
-- **Precio por dormitorio en el barrio b** = Promedio, para las publicaciones del barrio b con al menos un dormitorio, de (precio de la publicación i / cantidad de dormitorios de la publicación i). Se utilizará principalmente para comparar alquileres temporales y permanentes, debido a la ausencia de información de superficie en Airbnb.[^2]
+- **Precio por ambiente en el barrio b** = Promedio, para las publicaciones comparables del barrio b, de (precio mensual o de venta de la publicación i / cantidad de ambientes de la publicación i). Se utiliza para comparar alquiler temporal y permanente porque Airbnb no informa superficie y Mercado Libre informa dormitorios con muy baja cobertura.[^2]
 
 - **Medidas de tendencia central y dispersión del precio por m²** = Se calcularán medidas como mediana, promedio, percentiles y dispersión de los precios por m², diferenciando entre venta y alquiler permanente.
 
@@ -297,13 +297,13 @@ Se definen indicadores como puntapié inicial para el estudio tanto de mercados 
 
 - **Prima asociada a un amenity a** = (Precio promedio de las publicaciones que mencionan el amenity a / Precio promedio de las publicaciones que no lo mencionan) − 1. El resultado se expresará como porcentaje y permitirá estimar la diferencia relativa de precio asociada a la presencia del atributo.[^4]
 
-- **Brecha entre alquiler temporal y permanente en el barrio b** = (Precio promedio por dormitorio del alquiler temporal en el barrio b / Precio promedio por dormitorio del alquiler permanente en el barrio b) − 1. El resultado permitirá observar la diferencia relativa entre ambas modalidades.[^5]
+- **Brecha entre alquiler temporal y permanente en el barrio b** = (Precio mediano mensual por ambiente del alquiler temporal en el barrio b / precio mediano mensual por ambiente del alquiler permanente en el barrio b) − 1. El resultado permite observar la diferencia relativa entre ambas modalidades, separando Airbnb y Mercado Libre temporario cuando sus precios no son comparables.[^5]
 
 - **Oferta de ambientes n en el barrio b** = Cantidad de publicaciones de n ambientes en el barrio b / total de publicaciones en el barrio b.
 
 - **Brecha norte-sur del indicador i** = (Valor del indicador i en los barrios del norte − valor del indicador i en los barrios del sur) / valor del indicador i en los barrios del sur.
 
-Estos indicadores y otros convenientes serán implementados en la etapa de ingeniería de atributos, de acuerdo con las necesidades de análisis y posibilidades técnicas de formato, calidad, etc.
+Estos indicadores se implementan y refinan en los notebooks 07 y 08, de acuerdo con la cobertura real de cada fuente, la unidad geográfica disponible y las necesidades de cada hipótesis.
 
 ## 4.2 Hipótesis a contrastar
 
@@ -314,7 +314,7 @@ Las hipótesis se formulan como relaciones contrastables entre variables observa
 | **H1 — Concentración turística** | Los barrios con mayor atractivo turístico y cultural presentan una mayor densidad de alojamientos temporarios completos. | Densidad de espacios culturales, gastronómicos, turísticos y verdes. | Alojamientos temporarios completos por 1.000 viviendas y participación del alquiler temporario en la oferta publicada. | Control por centralidad, población, stock habitacional, superficie del barrio y accesibilidad al transporte. |
 | **H2a — Adecuación demográfica** | Los barrios o comunas con mayor proporción de hogares unipersonales presentan una mayor participación de monoambientes y unidades de uno o dos ambientes en la oferta publicada. | Proporción de hogares unipersonales. | Participación de unidades pequeñas dentro de la oferta residencial. | Separación por modalidad y fuente; control por centralidad, densidad poblacional y composición del stock habitacional cuando esté disponible. |
 | **H2b — Servicios y concentración de oferta** | Las zonas con mayor disponibilidad de servicios urbanos presentan una mayor intensidad de oferta inmobiliaria publicada. | Densidad o proximidad de establecimientos educativos, sanitarios, culturales y espacios verdes. | Publicaciones por 1.000 habitantes, hogares o viviendas. | Análisis separado por tipo de servicio y modalidad; control por población, stock habitacional, superficie y centralidad. |
-| **H3 — Transporte y precio** | Entre propiedades comparables, una menor distancia al transporte público masivo se asocia con un mayor precio publicado. | Distancia a estaciones de subte, tren y MetroBus, diferenciadas por medio. | Precio por m² para venta y alquiler permanente; precio por dormitorio para comparaciones que incluyan Airbnb. | Comparación dentro de zonas y tipologías semejantes; control por barrio, superficie, ambientes, tipo de propiedad, fuente y amenities disponibles. |
+| **H3 — Transporte y precio** | Entre propiedades comparables, una menor distancia al transporte público masivo se asocia con un mayor precio publicado. | Distancia a estaciones de subte, tren y MetroBus, diferenciadas por medio. | Precio por m² para venta y alquiler permanente; precio por ambiente cuando se requiere una métrica transversal. | Comparación dentro de zonas y tipologías semejantes; control por barrio, superficie, ambientes, tipo de propiedad, fuente y amenities disponibles. |
 | **H4 — Presión potencial del alquiler temporario** | Los barrios con mayor densidad de alojamientos temporarios completos presentan una menor disponibilidad relativa de alquiler permanente y mayores precios residenciales publicados. | Alojamientos temporarios completos por 1.000 viviendas. | Alquileres permanentes publicados por 1.000 viviendas y nivel de precios residenciales. | Control por centralidad, atractivo turístico, población, stock habitacional, tipología y accesibilidad. No se interpretará la asociación como evidencia de desplazamiento o sustitución causal. |
 
 ### Criterios de contrastación
@@ -460,20 +460,17 @@ Próximos pasos:
 
 \(1\) [<u>https://www.estadisticaciudad.gob.ar/eyc/wp-content/uploads/2026/08/Indicadores-26_08_26.pdf</u>](https://www.estadisticaciudad.gob.ar/eyc/wp-content/uploads/2026/08/Indicadores-26_08_26.pdf)
 
-\(2\)
-[<u>https://www.argentina.gob.ar/sites/default/files/ley_alquileres_informe_1410.pdf](https://www.argentina.gob.ar/sites/default/files/ley_alquileres_informe_1410.pdf)
+\(2\) [<u>https://www.argentina.gob.ar/sites/default/files/ley_alquileres_informe_1410.pdf</u>](https://www.argentina.gob.ar/sites/default/files/ley_alquileres_informe_1410.pdf)
 
-\(3\)
-
-[<u>https://www.infobae.com/economia/2024/04/19/deficit-habitacional-porteno-por-que-hay-mas-de-200000-viviendas-vacias-y-en-que-barrios-estan</u>](https://www.infobae.com/economia/2024/04/19/deficit-habitacional-porteno-por-que-hay-mas-de-200000-viviendas-vacias-y-en-que-barrios-estan/?utm_source=chatgpt.com)
+\(3\) [<u>https://www.infobae.com/economia/2024/04/19/deficit-habitacional-porteno-por-que-hay-mas-de-200000-viviendas-vacias-y-en-que-barrios-estan</u>](https://www.infobae.com/economia/2024/04/19/deficit-habitacional-porteno-por-que-hay-mas-de-200000-viviendas-vacias-y-en-que-barrios-estan/)
 
 
 [^1]: Debido a la falta de datos de superficie en Airbnb, el precio por m² no se calculará para alquiler temporal. La comparación mediante esta métrica se limitará a venta y alquiler permanente, siempre considerando que sus precios corresponden a modalidades y periodicidades diferentes.
 
-[^2]: El precio por dormitorio se utilizará para comparar alquiler temporal y alquiler permanente debido a la falta de información de superficie en Airbnb. Para evitar divisiones por cero, se excluirán de esta métrica las publicaciones sin dormitorios, aunque podrán analizarse por separado como monoambientes.
+[^2]: En la primera formulación se consideró precio por dormitorio, pero durante la curaduría se descartó como métrica principal: Mercado Libre casi no informa dormitorios y Airbnb no informa superficie. Por eso el pipeline usa `precio_por_ambiente_usd`, con la limitación de que en Airbnb los ambientes se derivan como dormitorios + 1.
 
 [^3]: Este indicador utiliza publicaciones inmobiliarias como aproximación a la oferta publicada. Una publicación no necesariamente representa una vivienda única ni implica que la operación se concrete.
 
 [^4]: La prima mide una asociación descriptiva entre la presencia del atributo y el precio publicado; no implica que el amenity sea la causa de la diferencia observada.
 
-[^5]: Los precios de alquiler temporal y permanente deberán normalizarse a una escala temporal comparable antes de calcular esta brecha. En particular, deberá definirse previamente si el precio se expresará por noche, mes u otra unidad temporal.
+[^5]: Para calcular esta brecha, los precios se normalizan a una escala mensual comparable. En Airbnb se usa la serie de 30 noches; en Mercado Libre temporario y alquiler permanente se trabaja con precio mensual publicado o normalizado. La brecha se interpreta como comparación de oferta publicada, no como costo final de contrato.
