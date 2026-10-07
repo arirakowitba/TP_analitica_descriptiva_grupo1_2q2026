@@ -1,0 +1,252 @@
+diff --git a/README.md b/README.md
+index efdcb5c..40cdf5e 100644
+--- a/README.md
++++ b/README.md
+@@ -75,6 +75,7 @@ python scrappers/scraper_zonaprop_inmuebles.py --help
+ - Se completó el perfilado inicial, limpieza, normalización de categorías, tratamiento de duplicados, diagnóstico de nulos, imputaciones determinísticas, flags de faltantes, análisis de outliers, consolidación, EDA inicial, integración de fuentes externas, feature engineering territorial y un primer notebook de contraste de hipótesis.
+ - La base enriquecida final disponible en `data/processed/df_publicaciones_enriquecidas_v1.csv` tiene **67.887 filas y 90 columnas**, con precios comparables en USD, barrio/comuna oficial, distancias a transporte y servicios, indicadores censales y variables contextuales por barrio.
+ - Los reportes intermedios se guardan en `data/processed/reports`, para que las decisiones metodológicas no dependan solamente de la lectura visual de los notebooks.
++- A partir de la limpieza se separan explícitamente variables observadas, variables reconstruidas desde información disponible, imputaciones determinísticas, flags de calidad y variables derivadas. Esta separación evita que una cadena de transformaciones quede mezclada con el dato originalmente observado.
+ 
+ ## 0.3 Flujo de notebooks
+ 
+@@ -346,7 +347,7 @@ La cobertura territorial final es alta: `barrio_oficial` y `comuna_oficial` est
+ 
+ ## 5.2 Limpieza, normalización y duplicados
+ 
+-Se mantuvo una lógica conservadora: no se reemplazaron valores centrales cuando no había evidencia suficiente, y se priorizó reconstruir variables derivables antes que imputarlas estadísticamente.
++Se mantuvo una lógica conservadora: no se reemplazaron valores centrales cuando no había evidencia suficiente, y se priorizó reconstruir variables derivables antes que imputarlas estadísticamente. Cuando una columna fue completada, se documenta si el valor surge de una regla determinística, una reconstrucción desde texto/rangos o un cálculo derivado. Esto es importante para que las variables no acumulen transformaciones heurísticas sin control.
+ 
+ Decisiones principales:
+ 
+@@ -425,7 +426,7 @@ Estos resultados son descriptivos y sirven para orientar el análisis posterior,
+ 
+ ## 5.7 Primera contrastación de hipótesis
+ 
+-El notebook 08 evalúa las hipótesis formuladas en este README con variables observables. En algunos casos se usan proxies porque la fuente ideal no está disponible al nivel geográfico necesario.
++El notebook 08 evalúa las hipótesis formuladas en este README con variables observables. En algunos casos se usan proxies porque la fuente ideal no está disponible al nivel geográfico necesario. La lectura prioriza tamaño de efecto, dirección, consistencia entre unidades geográficas y limitaciones, no solo significancia estadística.
+ 
+ | Hipótesis | Evidencia actual | Lectura preliminar | Limitación principal |
+ |---|---|---|---|
+@@ -439,13 +440,21 @@ El notebook 08 evalúa las hipótesis formuladas en este README con variables ob
+ 
+ El proyecto ya cuenta con una base sólida para avanzar hacia la entrega final: el pipeline distingue datos observados, variables reconstruidas, variables derivadas, flags de calidad y fuentes externas. Esto reduce el riesgo de construir KPIs sobre transformaciones opacas.
+ 
++| Tipo de variable | Uso recomendado | Ejemplos |
++|---|---|---|
++| Observada | Puede usarse como evidencia directa, revisando cobertura y outliers. | `precio`, `moneda_norm`, `tipo_operacion_norm`, `fuente_norm`. |
++| Reconstruida | Puede usarse en KPIs descriptivos si se conserva la limitación metodológica. | `barrio_oficial`, `comuna_oficial`, `lat`, `lon`, `metodo_geo`. |
++| Imputada con regla simple | Usar con flags o análisis de sensibilidad cuando afecte una conclusión. | `cocheras`, `expensas_moneda`, rangos completados desde referencias. |
++| Derivada | Recalcular siempre desde componentes válidos y documentar fórmula. | `precio_m2_usd`, `precio_por_ambiente_usd`, densidades y distancias. |
++| Solo descriptiva o de control de calidad | No usar como variable objetivo ni causal sin revisión adicional. | flags de nulos, flags de outliers, variables con alta reconstrucción o baja cobertura. |
++
+ Próximos pasos:
+ 
+-/- Refinar las visualizaciones y narrativa del notebook 08, separando evidencia, interpretación y limitaciones.
+-/- Incorporar controles de centralidad en H1, H2b y H4, por ejemplo con distancia al microcentro o efectos territoriales.
+-/- Explorar segmentación de barrios/comunas a partir de KPIs inmobiliarios, censales y de entorno urbano.
+-/- Definir variables modelables y variables solo descriptivas, especialmente aquellas afectadas por imputaciones o reconstrucción.
+-/- Preparar un pipeline más determinístico para las transformaciones ya validadas durante la exploración.
++- Refinar las visualizaciones y narrativa del notebook 08, separando evidencia, interpretación y limitaciones.
++- Incorporar controles de centralidad en H1, H2b y H4, por ejemplo con distancia al microcentro o efectos territoriales.
++- Explorar segmentación de barrios/comunas a partir de KPIs inmobiliarios, censales y de entorno urbano.
++- Definir variables modelables y variables solo descriptivas, especialmente aquellas afectadas por imputaciones o reconstrucción.
++- Preparar un pipeline más determinístico para las transformaciones ya validadas durante la exploración.
+ 
+ # 6 Fuentes bibliográficas
+ 
+diff --git a/notebooks/02_normalizacion_y_limpieza.ipynb b/notebooks/02_normalizacion_y_limpieza.ipynb
+index d7a1e17..7b7aacc 100644
+--- a/notebooks/02_normalizacion_y_limpieza.ipynb
++++ b/notebooks/02_normalizacion_y_limpieza.ipynb
+@@ -11,6 +11,15 @@
+     "La limpieza se realiza por dataset para no mezclar problemas específicos de una fuente con faltantes estructurales de otra."
+    ]
+   },
++  {
++   "cell_type": "markdown",
++   "metadata": {},
++   "source": [
++    "## Criterio metodológico de esta etapa\n",
++    "\n",
++    "Este notebook es una etapa de limpieza y estandarización, no de validación de hipótesis. Las transformaciones se aplican con reglas simples y auditables: normalizar nombres y categorías, convertir marcadores inválidos a nulos, deduplicar publicaciones y construir columnas canónicas. Cuando un valor se completa por una regla determinística, la decisión queda documentada para no confundirlo con un dato originalmente observado. Las imputaciones más sensibles y la discusión de faltantes se dejan para el notebook 03.\n"
++   ]
++  },
+   {
+    "cell_type": "code",
+    "execution_count": 60,
+diff --git a/notebooks/03_analisis_de_nulos_con_tests_hipotesis.ipynb b/notebooks/03_analisis_de_nulos_con_tests_hipotesis.ipynb
+index dcecbc2..5806424 100644
+--- a/notebooks/03_analisis_de_nulos_con_tests_hipotesis.ipynb
++++ b/notebooks/03_analisis_de_nulos_con_tests_hipotesis.ipynb
+@@ -124,6 +124,17 @@
+     "Se trabaja en forma progresiva: primero se observan los faltantes, después se aplican ajustes puntuales, luego se vuelve a mirar el efecto de esos ajustes y recién al final se tratan columnas y valores faltantes.\n"
+    ]
+   },
++  {
++   "cell_type": "markdown",
++   "metadata": {},
++   "source": [
++    "### Criterio de lectura\n",
++    "\n",
++    "El objetivo no es rellenar todos los nulos, sino entender su mecanismo de aparición. Por eso se comparan faltantes contra faltantes, faltantes contra variables cuantitativas y faltantes contra labels categóricas. Las pruebas estadísticas se usan como apoyo para decidir si una ausencia parece estructural, aleatoria o informativa, pero la decisión final también considera el significado de negocio y la posibilidad real de reconstrucción.\n",
++    "\n",
++    "Para evitar cascadas de imputación, se separan tres situaciones: variables que se borran por falta de información útil, variables que se imputan con reglas simples y variables que se conservan como candidatas a reconstrucción desde texto, rangos u otras columnas.\n"
++   ]
++  },
+   {
+    "cell_type": "markdown",
+    "id": "69e81d9d",
+@@ -4108,4 +4119,4 @@
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+-}
+\ No newline at end of file
++}
+diff --git a/notebooks/04_outliers.ipynb b/notebooks/04_outliers.ipynb
+index 9f52f7c..d40f05e 100644
+--- a/notebooks/04_outliers.ipynb
++++ b/notebooks/04_outliers.ipynb
+@@ -11,6 +11,15 @@
+     "En real estate, un valor extremo puede ser válido. Por eso se distinguen valores imposibles de extremos plausibles."
+    ]
+   },
++  {
++   "cell_type": "markdown",
++   "metadata": {},
++   "source": [
++    "## Criterio metodológico de outliers\n",
++    "\n",
++    "Los valores extremos no se eliminan automáticamente. En mercado inmobiliario pueden representar errores de carga, pero también propiedades premium, superficies atípicas o submercados reales. Por eso esta etapa prioriza marcar outliers, visualizar distribuciones y dejar flags reutilizables. La exclusión, winsorización o transformación logarítmica se decide luego según el KPI o modelo puntual.\n"
++   ]
++  },
+   {
+    "cell_type": "code",
+    "execution_count": 1,
+diff --git a/notebooks/05_feature_engineering_y_eda_inicial.ipynb b/notebooks/05_feature_engineering_y_eda_inicial.ipynb
+index 359590d..586ab0a 100644
+--- a/notebooks/05_feature_engineering_y_eda_inicial.ipynb
++++ b/notebooks/05_feature_engineering_y_eda_inicial.ipynb
+@@ -22,6 +22,15 @@
+     "**Qué no se hace acá.** No se calculan distancias, no se usa Censo, no se corrigen barrios con fuentes oficiales y no se contrastan hipótesis de forma definitiva."
+    ]
+   },
++  {
++   "cell_type": "markdown",
++   "metadata": {},
++   "source": [
++    "## Alcance del EDA inicial\n",
++    "\n",
++    "Este notebook resume la base interna antes del enriquecimiento territorial. Sirve para revisar cobertura, composición, precios, superficies y señales de calidad remanente. Las lecturas son deliberadamente preliminares: ayudan a orientar hipótesis y detectar limitaciones, pero las contrastaciones centrales se realizan después de integrar fuentes externas y variables territoriales.\n"
++   ]
++  },
+   {
+    "cell_type": "markdown",
+    "id": "a1RehlIBAQd6",
+@@ -4484,7 +4493,7 @@
+    "source": [
+     "## 11. Precio por m2 según barrio\n",
+     "\n",
+-    "Se usa la mediana ya que el precio cuenta con outliers. Utilizamos barrios con mínimo 1000 publicaciones. Cuando implementemos las variables externas, se verá de forma más clara el por qué de estos precios."
++    "Se usa la mediana porque el precio tiene outliers y se restringe el gráfico a barrios con al menos 1.000 publicaciones para evitar comparaciones inestables. Esta lectura es descriptiva: la explicación territorial de las diferencias de precio se contrasta en los notebooks 06 a 08 con variables externas, distancias y KPIs por barrio."
+    ]
+   },
+   {
+diff --git a/notebooks/06_fuentes_externas.ipynb b/notebooks/06_fuentes_externas.ipynb
+index 93549e9..772ffc6 100644
+--- a/notebooks/06_fuentes_externas.ipynb
++++ b/notebooks/06_fuentes_externas.ipynb
+@@ -20,6 +20,15 @@
+     "**Cambios respecto de la versión anterior de este notebook.** La versión previa cargaba las fuentes de BA Data con `pd.read_csv(url)`. El portal rechaza esos pedidos (\"Request Rejected\") y el código seguía adelante sin avisar, por lo que las 9 fuentes quedaban con 0 filas y todas las variables de contexto por barrio salían vacías. Ahora las fuentes se descargan una vez a `data/raw/externas/` (con fecha y checksum) y se leen desde ese snapshot. Además, cinco recursos traen la ubicación como geometría WKT, tres de ellos en metros, y no como columnas `lat`/`lon`; se agregaron cargadores específicos por fuente."
+    ]
+   },
++  {
++   "cell_type": "markdown",
++   "metadata": {},
++   "source": [
++    "## Criterio de integración de fuentes externas\n",
++    "\n",
++    "Las fuentes externas se incorporan como contexto territorial, no como prueba causal por sí mismas. En esta etapa se documenta origen, fecha, unidad geográfica, método de asignación y cobertura. Cuando una fuente no tiene granularidad compatible con la publicación, se agrega por barrio o comuna para evitar falsas precisiones.\n"
++   ]
++  },
+   {
+    "cell_type": "code",
+    "execution_count": 1,
+diff --git a/notebooks/07_feature_engineering.ipynb b/notebooks/07_feature_engineering.ipynb
+index 46027b3..a223d2d 100644
+--- a/notebooks/07_feature_engineering.ipynb
++++ b/notebooks/07_feature_engineering.ipynb
+@@ -21,6 +21,15 @@
+     "Para cada variable se documenta fórmula, unidad, fuente de sus componentes, tratamiento de faltantes y validación de rangos (sección 9). No se construyen índices compuestos."
+    ]
+   },
++  {
++   "cell_type": "markdown",
++   "metadata": {},
++   "source": [
++    "## Criterio de ingeniería de variables\n",
++    "\n",
++    "Este notebook transforma datos ya curados en variables analíticas. Para mantener trazabilidad, se distingue entre variables observadas, reconstruidas, imputadas con reglas simples y derivadas. Las variables derivadas se recalculan desde componentes válidos, y las variables con menor cobertura o mayor intervención quedan documentadas como descriptivas o sujetas a sensibilidad antes de usarse en modelos.\n"
++   ]
++  },
+   {
+    "cell_type": "code",
+    "execution_count": 1,
+@@ -2614,6 +2623,23 @@
+     "diccionario_derivadas.to_csv(config.PROCESSED_DIR / 'diccionario_variables_derivadas_v1.csv', index=False)"
+    ]
+   },
++  {
++   "cell_type": "markdown",
++   "metadata": {},
++   "source": [
++    "## 9.1 Uso analítico de variables enriquecidas\n",
++    "\n",
++    "| Grupo | Ejemplos | Uso recomendado | Precaución |\n",
++    "|---|---|---|---|\n",
++    "| Observadas por portal | `precio`, `moneda_norm`, `tipo_operacion_norm`, `fuente_norm` | Base descriptiva y filtros principales. | Pueden tener sesgos de cobertura por portal. |\n",
++    "| Reconstruidas territorialmente | `barrio_oficial`, `comuna_oficial`, `lat`, `lon`, `metodo_geo` | KPIs territoriales y controles geográficos. | Usar `metodo_geo` para distinguir coordenada observada, geocodificada o asignada por barrio. |\n",
++    "| Imputadas con regla simple | `cocheras`, rangos completados desde referencias, `expensas_moneda` | Análisis descriptivo con flag o sensibilidad. | No tratarlas como observaciones puras si la conclusión depende de ellas. |\n",
++    "| Derivadas | `precio_m2_usd`, `precio_por_ambiente_usd`, distancias, densidades | Contraste de hipótesis y KPIs. | Requieren componentes válidos y unidad comparable. |\n",
++    "| Calidad y auditoría | flags de nulos, outliers, fuera de rango, método de geocodificación | Diagnóstico, filtros y sensibilidad. | No son variables explicativas sustantivas salvo que se analice calidad/cobertura. |\n",
++    "\n",
++    "Esta clasificación deja preparado el paso siguiente: separar variables modelables de variables únicamente descriptivas o de auditoría.\n"
++   ]
++  },
+   {
+    "cell_type": "markdown",
+    "id": "2b672bb8",
+diff --git a/notebooks/08_eda_con_fuentes_externas.ipynb b/notebooks/08_eda_con_fuentes_externas.ipynb
+index 2807596..2070daa 100644
+--- a/notebooks/08_eda_con_fuentes_externas.ipynb
++++ b/notebooks/08_eda_con_fuentes_externas.ipynb
+@@ -25,6 +25,15 @@
+     "**Cómo leer la evidencia.** Las correlaciones son de Spearman (no suponen linealidad ni normalidad y toleran extremos), con intervalo de confianza del 95% por bootstrap. Un punto relleno en los gráficos indica que el intervalo no incluye al cero; uno hueco, que sí lo incluye. Con 15 comunas el poder estadístico es bajo: un intervalo ancho es información, no un defecto del gráfico."
+    ]
+   },
++  {
++   "cell_type": "markdown",
++   "metadata": {},
++   "source": [
++    "## Criterio de contraste\n",
++    "\n",
++    "Este notebook contrasta las hipótesis del README con KPIs territoriales y variables enriquecidas. Cada hipótesis se lee separando evidencia, tamaño de efecto, visualización, prueba estadística y limitación. Como el diseño es transversal y observacional, las asociaciones no se interpretan como causalidad; cuando aparece una relación fuerte, se explicita qué parte puede ser centralidad, composición territorial o cobertura de fuente.\n"
++   ]
++  },
+   {
+    "cell_type": "markdown",
+    "id": "1efdfdc3",
+@@ -4141,6 +4150,12 @@
+     "### Decisiones de limpieza adoptadas\n",
+     "Se asignó el barrio por polígono cuando hay coordenadas y por texto cuando no; los precios se convirtieron a USD con el dólar MEP del día de extracción; se marcaron (sin eliminar) los valores fuera de rango plausible y se excluyeron de los estadísticos; las medianas por barrio exigen al menos 30 avisos; se conservaron los avisos presentes en dos operaciones, marcados con un indicador.\n",
+     "\n",
++    "\n",
++    "### Variables modelables y variables de auditoría\n",
++    "- **Modelables con mayor confianza:** operación, fuente, barrio/comuna oficial, superficie, ambientes, precio en USD, precio por m², precio por ambiente, distancias y densidades territoriales cuando la publicación tiene coordenadas o asignación territorial clara.\n",
++    "- **Usables con sensibilidad:** variables reconstruidas por geocodificación, KPIs por barrio/comuna y variables con cobertura desigual entre fuentes. Deben acompañarse con `metodo_geo`, cantidad mínima de avisos y advertencias de cobertura.\n",
++    "- **Solo descriptivas o de control:** flags de nulos, flags de outliers, método de asignación territorial y variables con imputaciones simples. Sirven para auditar calidad o filtrar, pero no deberían sostener solas una conclusión sustantiva.\n",
++    "\n",
+     "### Hipótesis con evidencia preliminar y hipótesis que aún no pueden evaluarse\n",
+     "- **Con evidencia preliminar:** H1 (a favor) y H2b (parcial, solo para el alquiler y para servicios de centralidad).\n",
+     "- **Sin apoyo en estos datos:** H3.\n",

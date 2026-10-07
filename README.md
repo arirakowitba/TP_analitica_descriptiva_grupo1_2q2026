@@ -75,6 +75,7 @@ python scrappers/scraper_zonaprop_inmuebles.py --help
 - Se completó el perfilado inicial, limpieza, normalización de categorías, tratamiento de duplicados, diagnóstico de nulos, imputaciones determinísticas, flags de faltantes, análisis de outliers, consolidación, EDA inicial, integración de fuentes externas, feature engineering territorial y un primer notebook de contraste de hipótesis.
 - La base enriquecida final disponible en `data/processed/df_publicaciones_enriquecidas_v1.csv` tiene **67.887 filas y 90 columnas**, con precios comparables en USD, barrio/comuna oficial, distancias a transporte y servicios, indicadores censales y variables contextuales por barrio.
 - Los reportes intermedios se guardan en `data/processed/reports`, para que las decisiones metodológicas no dependan solamente de la lectura visual de los notebooks.
+- A partir de la limpieza se separan explícitamente variables observadas, variables reconstruidas desde información disponible, imputaciones determinísticas, flags de calidad y variables derivadas. Esta separación evita que una cadena de transformaciones quede mezclada con el dato originalmente observado.
 
 ## 0.3 Flujo de notebooks
 
@@ -346,7 +347,7 @@ La cobertura territorial final es alta: `barrio_oficial` y `comuna_oficial` est�
 
 ## 5.2 Limpieza, normalización y duplicados
 
-Se mantuvo una lógica conservadora: no se reemplazaron valores centrales cuando no había evidencia suficiente, y se priorizó reconstruir variables derivables antes que imputarlas estadísticamente.
+Se mantuvo una lógica conservadora: no se reemplazaron valores centrales cuando no había evidencia suficiente, y se priorizó reconstruir variables derivables antes que imputarlas estadísticamente. Cuando una columna fue completada, se documenta si el valor surge de una regla determinística, una reconstrucción desde texto/rangos o un cálculo derivado. Esto es importante para que las variables no acumulen transformaciones heurísticas sin control.
 
 Decisiones principales:
 
@@ -425,7 +426,7 @@ Estos resultados son descriptivos y sirven para orientar el análisis posterior,
 
 ## 5.7 Primera contrastación de hipótesis
 
-El notebook 08 evalúa las hipótesis formuladas en este README con variables observables. En algunos casos se usan proxies porque la fuente ideal no está disponible al nivel geográfico necesario.
+El notebook 08 evalúa las hipótesis formuladas en este README con variables observables. En algunos casos se usan proxies porque la fuente ideal no está disponible al nivel geográfico necesario. La lectura prioriza tamaño de efecto, dirección, consistencia entre unidades geográficas y limitaciones, no solo significancia estadística.
 
 | Hipótesis | Evidencia actual | Lectura preliminar | Limitación principal |
 |---|---|---|---|
@@ -439,13 +440,21 @@ El notebook 08 evalúa las hipótesis formuladas en este README con variables ob
 
 El proyecto ya cuenta con una base sólida para avanzar hacia la entrega final: el pipeline distingue datos observados, variables reconstruidas, variables derivadas, flags de calidad y fuentes externas. Esto reduce el riesgo de construir KPIs sobre transformaciones opacas.
 
+| Tipo de variable | Uso recomendado | Ejemplos |
+|---|---|---|
+| Observada | Puede usarse como evidencia directa, revisando cobertura y outliers. | `precio`, `moneda_norm`, `tipo_operacion_norm`, `fuente_norm`. |
+| Reconstruida | Puede usarse en KPIs descriptivos si se conserva la limitación metodológica. | `barrio_oficial`, `comuna_oficial`, `lat`, `lon`, `metodo_geo`. |
+| Imputada con regla simple | Usar con flags o análisis de sensibilidad cuando afecte una conclusión. | `cocheras`, `expensas_moneda`, rangos completados desde referencias. |
+| Derivada | Recalcular siempre desde componentes válidos y documentar fórmula. | `precio_m2_usd`, `precio_por_ambiente_usd`, densidades y distancias. |
+| Solo descriptiva o de control de calidad | No usar como variable objetivo ni causal sin revisión adicional. | flags de nulos, flags de outliers, variables con alta reconstrucción o baja cobertura. |
+
 Próximos pasos:
 
-/- Refinar las visualizaciones y narrativa del notebook 08, separando evidencia, interpretación y limitaciones.
-/- Incorporar controles de centralidad en H1, H2b y H4, por ejemplo con distancia al microcentro o efectos territoriales.
-/- Explorar segmentación de barrios/comunas a partir de KPIs inmobiliarios, censales y de entorno urbano.
-/- Definir variables modelables y variables solo descriptivas, especialmente aquellas afectadas por imputaciones o reconstrucción.
-/- Preparar un pipeline más determinístico para las transformaciones ya validadas durante la exploración.
+- Refinar las visualizaciones y narrativa del notebook 08, separando evidencia, interpretación y limitaciones.
+- Incorporar controles de centralidad en H1, H2b y H4, por ejemplo con distancia al microcentro o efectos territoriales.
+- Explorar segmentación de barrios/comunas a partir de KPIs inmobiliarios, censales y de entorno urbano.
+- Definir variables modelables y variables solo descriptivas, especialmente aquellas afectadas por imputaciones o reconstrucción.
+- Preparar un pipeline más determinístico para las transformaciones ya validadas durante la exploración.
 
 # 6 Fuentes bibliográficas
 
