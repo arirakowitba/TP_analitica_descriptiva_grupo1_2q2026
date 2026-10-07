@@ -386,7 +386,7 @@ En expensas se decidió no reemplazar nulos por 0, porque "no informado" no sign
 
 Los outliers se marcaron, pero no se eliminaron automáticamente. En real estate, los extremos pueden ser propiedades reales: unidades premium, superficies muy grandes, amenities de lujo, publicaciones temporarias con estadías particulares o errores de carga. Por eso se usaron flags antes que filtros destructivos.
 
-El análisis detectó outliers por percentiles p01-p99 en todos los segmentos: 617 en MeLi alquiler, 268 en MeLi temporario, 2.635 en MeLi venta, 6 en ArgenProp venta, 14 en ArgenProp alquiler, 27 en ZonaProp venta, 33 en ZonaProp alquiler y 767 en Airbnb. Además, Airbnb mostró 1.650 valores inválidos en variables cuantitativas revisadas. Estos registros no se borraron; quedan identificados para decidir su uso según el KPI o análisis.
+El análisis detectó outliers por percentiles p01-p99 en todos los segmentos: 617 en MeLi alquiler, 268 en MeLi temporario, 2.635 en MeLi venta, 6 en ArgenProp venta, 14 en ArgenProp alquiler, 27 en ZonaProp venta, 33 en ZonaProp alquiler y 767 en Airbnb. Además, Airbnb mostró 1.650 valores inválidos en variables cuantitativas revisadas. Luego se detectaron outliers por método IQR y Mahalanobis robusto. Según estos tres criterios, se clasificaron los outliers en sin alerta, revisar, prioridad baja y prioridad alta. Estos registros no se borraron; quedan identificados con flags para decidir su uso según el KPI o análisis.
 
 ## 5.5 Fuentes externas e ingeniería de variables
 
