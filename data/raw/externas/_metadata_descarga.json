@@ -1,0 +1,128 @@
+{
+  "subte_estaciones": {
+    "url": "https://data.buenosaires.gob.ar/dataset/subte-estaciones/resource/juqdkmgo-1994-resource/download",
+    "archivo": "data/raw/externas/subte_estaciones.csv",
+    "fecha_descarga_utc": "2026-10-04T23:03:34+00:00",
+    "bytes": 5990,
+    "md5": "089409313f1b3a2be497220fc4b3f16c"
+  },
+  "estaciones_ferrocarril": {
+    "url": "https://data.buenosaires.gob.ar/dataset/estaciones-ferrocarril/resource/juqdkmgo-1021-resource/download",
+    "archivo": "data/raw/externas/estaciones_ferrocarril.csv",
+    "fecha_descarga_utc": "2026-10-04T23:03:35+00:00",
+    "bytes": 35537,
+    "md5": "d77942fa07a5cd88bb3d0fb31b11a767"
+  },
+  "metrobus": {
+    "url": "https://data.buenosaires.gob.ar/dataset/metrobus/resource/Juqdkmgo-1431222-resource/download",
+    "archivo": "data/raw/externas/metrobus.csv",
+    "fecha_descarga_utc": "2026-10-04T23:03:35+00:00",
+    "bytes": 58273,
+    "md5": "5c1338778771ad207509f65af950d139"
+  },
+  "hospitales": {
+    "url": "https://data.buenosaires.gob.ar/dataset/hospitales/resource/955d9dad-e05c-4093-ae27-b8427f82e4bb/download",
+    "archivo": "data/raw/externas/hospitales.csv",
+    "fecha_descarga_utc": "2026-10-04T23:03:36+00:00",
+    "bytes": 15608,
+    "md5": "9575ce31aef1e1ebd65fd270752e1dce"
+  },
+  "educacion": {
+    "url": "https://data.buenosaires.gob.ar/dataset/establecimientos-educativos/resource/ea2bd89f-c680-4b7d-b5fe-1b5b0ecc6a8a/download",
+    "archivo": "data/raw/externas/educacion.csv",
+    "fecha_descarga_utc": "2026-10-04T23:03:37+00:00",
+    "bytes": 1141705,
+    "md5": "abffbf00e23d720aeb0fc1dd3980c3ec"
+  },
+  "espacios_culturales": {
+    "url": "https://data.buenosaires.gob.ar/dataset/espacios-culturales/resource/juqdkmgo-711-resource/download",
+    "archivo": "data/raw/externas/espacios_culturales.csv",
+    "fecha_descarga_utc": "2026-10-04T23:03:39+00:00",
+    "bytes": 724491,
+    "md5": "605040910441fe0950c9b32e4a636d5c"
+  },
+  "gastronomia": {
+    "url": "https://data.buenosaires.gob.ar/dataset/oferta-establecimientos-gastronomicos/resource/e66613ef-aaf4-44aa-b89c-638c431fef0e/download",
+    "archivo": "data/raw/externas/gastronomia.csv",
+    "fecha_descarga_utc": "2026-10-04T23:03:40+00:00",
+    "bytes": 438717,
+    "md5": "da968553615c74da18f5cd674111ac26"
+  },
+  "espacios_verdes": {
+    "url": "https://data.buenosaires.gob.ar/dataset/espacios-verdes/resource/df878bd5-5759-4af3-badc-2a4c1ae0ebf8/download",
+    "archivo": "data/raw/externas/espacios_verdes.csv",
+    "fecha_descarga_utc": "2026-10-04T23:03:54+00:00",
+    "bytes": 15170492,
+    "md5": "e567a3e5e355af239adbf5204d9eac01"
+  },
+  "bibliotecas": {
+    "url": "https://data.buenosaires.gob.ar/dataset/bibliotecas/resource/f0868e8c-c015-48be-bea4-fb1df64c1549/download",
+    "archivo": "data/raw/externas/bibliotecas.csv",
+    "fecha_descarga_utc": "2026-10-04T23:03:55+00:00",
+    "bytes": 21846,
+    "md5": "6317a5f9e0bd56a10a73330844951f56"
+  },
+  "subte_pasajeros": {
+    "url": "https://data.buenosaires.gob.ar/dataset/subte-estaciones/resource/4c3ae32b-4639-4e83-8224-eaf32040068e/download",
+    "archivo": "data/raw/externas/subte_pasajeros.csv",
+    "fecha_descarga_utc": "2026-10-04T23:03:56+00:00",
+    "bytes": 831,
+    "md5": "acac31f074ec4a70b135897974c4bab6"
+  },
+  "barrios_geojson": {
+    "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/innovacion-transformacion-digital/barrios/barrios.geojson",
+    "archivo": "data/raw/externas/barrios.geojson",
+    "fecha_descarga_utc": "2026-10-04T23:03:59+00:00",
+    "bytes": 763670,
+    "md5": "7055f8781eec2b173c8aaaae949ecdde"
+  },
+  "censo_est_c2_1": {
+    "url": "https://censo.gob.ar/wp-content/uploads/2023/11/c2022_caba_est_c2_1.xlsx",
+    "archivo": "data/raw/externas/censo_2022/c2022_caba_est_c2_1.xlsx",
+    "fecha_descarga_utc": "2026-10-04T23:04:02+00:00",
+    "bytes": 15229,
+    "md5": "b0b51557f639c0faac202f942e73294f"
+  },
+  "censo_est_c3_1": {
+    "url": "https://censo.gob.ar/wp-content/uploads/2023/11/c2022_caba_est_c3_1.xlsx",
+    "archivo": "data/raw/externas/censo_2022/c2022_caba_est_c3_1.xlsx",
+    "fecha_descarga_utc": "2026-10-04T23:04:02+00:00",
+    "bytes": 46036,
+    "md5": "e8c9600d41f249c268c87e487492493e"
+  },
+  "censo_vivienda_c1_1": {
+    "url": "https://censo.gob.ar/wp-content/uploads/2023/11/c2022_caba_vivienda_c1_1.xlsx",
+    "archivo": "data/raw/externas/censo_2022/c2022_caba_vivienda_c1_1.xlsx",
+    "fecha_descarga_utc": "2026-10-04T23:04:03+00:00",
+    "bytes": 12585,
+    "md5": "05dd326c11e1421ad173e3861c221a63"
+  },
+  "censo_vivienda_c2_1": {
+    "url": "https://censo.gob.ar/wp-content/uploads/2023/11/c2022_caba_vivienda_c2_1.xlsx",
+    "archivo": "data/raw/externas/censo_2022/c2022_caba_vivienda_c2_1.xlsx",
+    "fecha_descarga_utc": "2026-10-04T23:04:03+00:00",
+    "bytes": 12722,
+    "md5": "cc8895ff6c49c486b74dec8583f48310"
+  },
+  "censo_vivienda_c3_1": {
+    "url": "https://censo.gob.ar/wp-content/uploads/2023/11/c2022_caba_vivienda_c3_1.xlsx",
+    "archivo": "data/raw/externas/censo_2022/c2022_caba_vivienda_c3_1.xlsx",
+    "fecha_descarga_utc": "2026-10-04T23:04:03+00:00",
+    "bytes": 13603,
+    "md5": "94913bec7a8e7c99087f055c80d5cf93"
+  },
+  "censo_hogares_c6_1": {
+    "url": "https://censo.gob.ar/wp-content/uploads/2023/11/c2022_caba_hogares_c6_1.xlsx",
+    "archivo": "data/raw/externas/censo_2022/c2022_caba_hogares_c6_1.xlsx",
+    "fecha_descarga_utc": "2026-10-04T23:04:04+00:00",
+    "bytes": 13080,
+    "md5": "5f97b8aadccd525394265e30a2cfcc11"
+  },
+  "dolar_mep": {
+    "url": "https://api.argentinadatos.com/v1/cotizaciones/dolares/bolsa",
+    "archivo": "data/raw/externas/dolar_mep_diario.json",
+    "fecha_descarga_utc": "2026-10-04T23:04:04+00:00",
+    "bytes": 285003,
+    "md5": "c24c42e5e8829423680f81e8bb23be3a"
+  }
+}

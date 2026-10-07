@@ -1,0 +1,6 @@
+operacion_plot,moneda_plot,n,spearman_precio_superficie,spearman_pm2_superficie
+alquiler,ARS,7169.0,0.736,-0.366
+alquiler,USD,2891.0,0.845,-0.019
+alquiler_temporal,ARS,1430.0,0.526,-0.349
+alquiler_temporal,USD,2885.0,0.599,-0.202
+venta,USD,41966.0,0.745,0.03

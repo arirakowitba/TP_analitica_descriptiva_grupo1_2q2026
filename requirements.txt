@@ -1,8 +1,17 @@
 beautifulsoup4
+ipykernel
+jupyter
 lxml
+matplotlib
+nbconvert
 numpy
 openpyxl
 pandas
 playwright
 requests
+scikit-learn
+scipy
+seaborn
+statsmodels
+truststore
 urllib3

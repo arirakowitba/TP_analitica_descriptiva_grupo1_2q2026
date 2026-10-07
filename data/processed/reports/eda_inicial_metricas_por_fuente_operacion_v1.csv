@@ -1,0 +1,17 @@
+,,,precio_m2_ref,precio_m2_ref,precio_m2_ref,superficie_ref_m2,superficie_ref_m2,superficie_ref_m2,ambientes_ref,ambientes_ref,ambientes_ref,dormitorios_ref,dormitorios_ref,dormitorios_ref,banios_ref,banios_ref,banios_ref
+,,,count,median,mean,count,median,mean,count,median,mean,count,median,mean,count,median,mean
+fuente_plot,operacion_plot,moneda_plot,,,,,,,,,,,,,,,
+airbnb,alquiler_temporal,USD,0,,,0,,,9594,2.0,2.05,9594,1.0,1.05,9590,1.0,1.12
+argenprop,alquiler,ARS,58,19687.5,20895.48,58,40.5,48.9,53,2.0,2.45,52,1.0,1.46,33,1.0,3.79
+argenprop,alquiler,USD,13,20.0,21.24,13,100.0,105.85,14,3.0,3.36,14,2.0,2.21,5,2.0,2.4
+argenprop,venta,USD,78,2852.4,2972.6,78,57.5,72.59,75,3.0,2.84,67,2.0,1.99,34,1.0,4.03
+mercado_libre,alquiler,ARS,7201,19444.44,21376.29,7201,40.0,46.48,7002,2.0,2.01,26,1.0,1.27,7104,1.0,1.13
+mercado_libre,alquiler,USD,2634,21.05,80.6,2634,62.0,87.36,2601,2.0,2.6,12,1.0,1.17,2585,1.0,1.65
+mercado_libre,alquiler_temporal,ARS,1484,18169.86,18497.25,1484,40.0,43.93,1419,2.0,1.96,1,1.0,1.0,1463,1.0,1.13
+mercado_libre,alquiler_temporal,USD,2991,21.43,144.54,2991,45.0,54.61,2910,2.0,2.06,6,2.0,1.67,2940,1.0,1.22
+mercado_libre,venta,ARS,3,4069488.37,2904135.78,3,43.0,44.67,3,2.0,2.0,0,,,3,1.0,1.33
+mercado_libre,venta,USD,42733,2691.67,3024.42,42733,52.0,81.48,42314,2.0,2.54,155,2.0,2.59,41835,1.0,1.4
+zonaprop,alquiler,ARS,153,19047.62,19002.05,153,42.0,51.56,151,2.0,1.88,97,1.0,1.45,152,1.0,1.12
+zonaprop,alquiler,USD,338,18.71,20.28,338,67.0,95.49,342,2.0,2.58,290,2.0,1.78,337,1.0,1.59
+zonaprop,venta,USD,476,2614.87,2944.64,476,76.0,113.36,476,3.0,2.98,375,2.0,2.18,431,1.0,1.69
+zonaprop,venta,sin_moneda,0,,,8,181.0,219.0,8,4.0,3.38,4,3.0,2.5,5,2.0,2.2
