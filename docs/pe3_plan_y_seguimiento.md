@@ -20,7 +20,7 @@
 | 11 | K-means y Ward, silueta, estabilidad por submuestras y perfilado | asignación exploratoria de barrios y perfiles |
 | 12 | Modelos log-lineales separados para venta/alquiler, comparación con y sin efecto fijo de fuente, errores agrupados por barrio | tabla de coeficientes e intervalos |
 
-El notebook 08 recibió una aclaración textual para definir el tamaño medio del hogar como proxy indirecto, no como medida de hogares unipersonales. Los README ahora explicitan la limitación de precios nominales en USD/ARS y la falta de snapshots para estudiar inflación, dolarización y tipo de cambio.
+09 exporta el perfil de servicios y transporte que consume 10. 10 exporta las coordenadas que consume 11. 12 incorpora las etiquetas de 11 en una especificación explicativa separada, sin incluirlas en un modelo con efectos fijos por barrio. El PCA y el clustering no usan precios, para evitar circularidad en la lectura posterior. El notebook 08 recibió una aclaración textual para definir el tamaño medio del hogar como proxy indirecto, no como medida de hogares unipersonales. Los README ahora explicitan la limitación de precios nominales en USD/ARS y la falta de snapshots para estudiar inflación, dolarización y tipo de cambio.
 
 ## Decisiones provisionales que debemos revisar notebook por notebook
 

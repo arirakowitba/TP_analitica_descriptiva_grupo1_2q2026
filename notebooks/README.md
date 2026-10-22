@@ -23,7 +23,7 @@ El notebook 06 lee las fuentes externas desde `data/raw/externas/` y la geocodif
 La secuencia propuesta parte de la base enriquecida y de los KPIs generados por 07 y 08. Cada notebook lee las salidas versionadas del anterior o los mismos insumos estables de la etapa previa; no vuelve a ejecutar limpieza ni enriquecimiento.
 
 9. `09_cierre_eda_y_priorizacion_kpis.ipynb`: recupera los resultados de 08, jerarquiza KPIs por decisión y construye una señal exploratoria y transparente para localizar comunas que ameritan un diagnóstico adicional.
-10. `10_reduccion_dimensionalidad_perfiles.ipynb`: estandariza variables territoriales seleccionadas, aplica PCA y MCA como representaciones exploratorias y exporta coordenadas y cargas.
+10. `10_reduccion_dimensionalidad_perfiles.ipynb`: estandariza servicios y transporte por barrio exportados por 09; aplica PCA y MCA como representaciones exploratorias y exporta coordenadas y cargas.
 11. `11_segmentacion_y_validacion.ipynb`: compara clustering jerárquico y K-means sobre los componentes de PCA; revisa silueta, estabilidad por submuestras e interpretación de perfiles. Los grupos no se interpretan como tipologías definitivas.
 12. `12_modelos_explicativos_precios.ipynb`: estima modelos log-lineales separados para venta y alquiler, compara especificaciones con y sin controles por fuente y reporta asociaciones con incertidumbre agrupada por barrio. No se usa como modelo causal ni como pronóstico.
 
