@@ -16,3 +16,15 @@ Orden de ejecucion:
 Los notebooks usan rutas relativas al repositorio y guardan datasets limpios, consolidados o reportes tecnicos en `data/processed`. La logica reutilizable de los notebooks 06 y 07 esta en `src/`.
 
 El notebook 06 lee las fuentes externas desde `data/raw/externas/` y la geocodificacion desde `data/processed/geocodificacion_usig_cache.csv`; con ambos presentes no hace llamadas de red. Para regenerar la cache desde cero: `python -m src.usig` (aprox. 25 minutos).
+
+
+## Continuación: PreEntrega 3
+
+La secuencia propuesta parte de la base enriquecida y de los KPIs generados por 07 y 08. Cada notebook lee las salidas versionadas del anterior o los mismos insumos estables de la etapa previa; no vuelve a ejecutar limpieza ni enriquecimiento.
+
+9. `09_cierre_eda_y_priorizacion_kpis.ipynb`: recupera los resultados de 08, jerarquiza KPIs por decisión y construye una señal exploratoria y transparente para localizar comunas que ameritan un diagnóstico adicional.
+10. `10_reduccion_dimensionalidad_perfiles.ipynb`: estandariza variables territoriales seleccionadas, aplica PCA y MCA como representaciones exploratorias y exporta coordenadas y cargas.
+11. `11_segmentacion_y_validacion.ipynb`: compara clustering jerárquico y K-means sobre los componentes de PCA; revisa silueta, estabilidad por submuestras e interpretación de perfiles. Los grupos no se interpretan como tipologías definitivas.
+12. `12_modelos_explicativos_precios.ipynb`: estima modelos log-lineales separados para venta y alquiler, compara especificaciones con y sin controles por fuente y reporta asociaciones con incertidumbre agrupada por barrio. No se usa como modelo causal ni como pronóstico.
+
+**Orden:** ejecutar 01–08 y luego 09–12. Los notebooks 09–12 son un primer desarrollo de PE3: sus decisiones de variables, transformaciones, número de componentes y segmentación deben revisarse con el equipo antes de cerrar la entrega. El dashboard queda fuera de esta secuencia. Las ejecuciones finales deben conservar outputs visibles y producir las salidas en `data/processed/` o `data/processed/reports/`.

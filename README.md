@@ -474,3 +474,17 @@ Próximos pasos:
 [^4]: La prima mide una asociación descriptiva entre la presencia del atributo y el precio publicado; no implica que el amenity sea la causa de la diferencia observada.
 
 [^5]: Para calcular esta brecha, los precios se normalizan a una escala mensual comparable. En Airbnb se usa la serie de 30 noches; en Mercado Libre temporario y alquiler permanente se trabaja con precio mensual publicado o normalizado. La brecha se interpreta como comparación de oferta publicada, no como costo final de contrato.
+
+
+## 7. Incorporación de la devolución de PE2 y enfoque de PE3
+
+La PE2 obtuvo una nota final de **8,8**. La devolución valoró la curaduría, la ingeniería de variables, la profundidad del EDA y la coherencia con el caso de negocio. Para la etapa siguiente se incorporan estas prioridades:
+
+- **Contexto económico y comparabilidad:** los precios se convierten a USD con el dólar MEP de la fecha del aviso cuando la publicación está en ARS. Esta conversión facilita comparar monedas dentro del corte relevado, pero no transforma precios nominales en precios reales ni permite medir tendencias. Las publicaciones de agosto y septiembre de 2026 son un corte transversal; para evaluar la evolución de precios frente a inflación, dolarización y tipo de cambio se necesitarían snapshots comparables y series macroeconómicas del mismo período. Los avisos publicados en USD también pueden responder a cambios en el poder adquisitivo del dólar.
+- **Alcance de los proxies:** el tamaño medio del hogar del Censo 2022 se usa como proxy indirecto de la composición de los hogares para H2a; no equivale a la proporción de hogares unipersonales. Los indicadores de publicaciones miden oferta publicada capturada, no el stock total ni la demanda habitacional.
+- **Jerarquía de KPIs:** los indicadores se priorizan según su vínculo con las tres decisiones del Instituto, cobertura, denominador y estabilidad. Se mantienen separadas las dimensiones habitacional, urbana y de mercado hasta contar con evidencia para combinarlas.
+- **Reglas de priorización:** los cortes de distribución que se exploran en PE3 sirven para seleccionar comunas que requieren diagnóstico adicional. No constituyen umbrales normativos ni recomendaciones automáticas de intervención.
+- **Ejecución y outputs:** la devolución señaló específicamente que el notebook 08 no conservaba imágenes embebidas. Para la entrega siguiente se deben volver a ejecutar los notebooks en orden y guardar outputs visibles, con títulos autosuficientes, cantidad de casos e incertidumbre cuando haya comparaciones territoriales.
+- **Limitación temporal:** el proyecto todavía no cuenta con una serie de snapshots del mercado. Las diferencias entre modalidades y zonas se interpretan como asociaciones de un corte transversal, sin atribuir causalidad ni afirmar desplazamiento o sustitución entre alquiler temporal y permanente.
+
+La secuencia de PE3 agrega el cierre del EDA, una exploración factorial y de segmentación territorial, y un modelo explicativo de precios. El dashboard se desarrollará por separado. Las salidas nuevas se guardarán en `data/processed/` y `data/processed/reports/`; los notebooks analíticos no modifican los datos crudos.
