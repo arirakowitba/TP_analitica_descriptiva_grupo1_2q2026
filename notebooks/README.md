@@ -17,7 +17,6 @@ Los notebooks usan rutas relativas al repositorio y guardan datasets limpios, co
 
 El notebook 06 lee las fuentes externas desde `data/raw/externas/` y la geocodificacion desde `data/processed/geocodificacion_usig_cache.csv`; con ambos presentes no hace llamadas de red. Para regenerar la cache desde cero: `python -m src.usig` (aprox. 25 minutos).
 
-
 ## Continuación: PreEntrega 3
 
 La secuencia propuesta parte de la base enriquecida y de los KPIs generados por 07 y 08. Cada notebook lee las salidas versionadas del anterior o los mismos insumos estables de la etapa previa; no vuelve a ejecutar limpieza ni enriquecimiento.
@@ -26,5 +25,6 @@ La secuencia propuesta parte de la base enriquecida y de los KPIs generados por 
 10. `10_reduccion_dimensionalidad_perfiles.ipynb`: estandariza servicios y transporte por barrio exportados por 09; aplica PCA y MCA como representaciones exploratorias y exporta coordenadas y cargas.
 11. `11_segmentacion_y_validacion.ipynb`: compara clustering jerárquico y K-means sobre los componentes de PCA; revisa silueta, estabilidad por submuestras e interpretación de perfiles. Los grupos no se interpretan como tipologías definitivas.
 12. `12_modelos_explicativos_precios.ipynb`: estima modelos log-lineales separados para venta y alquiler, compara especificaciones con y sin controles por fuente y reporta asociaciones con incertidumbre agrupada por barrio. No se usa como modelo causal ni como pronóstico.
+13. `13_correspondencia_operacion_perfiles_propiedades.ipynb`: valida si las etiquetas preexistentes (venta, alquiler permanente y temporal) se asocian con clusters no supervisados de atributos comparables de propiedad y entorno. Fija k=3 por la pregunta externa, excluye operación/fuente/precio del espacio, contrasta AMI mediante permutaciones dentro de fuente × barrio (con sensibilidad condicionada solo por fuente) y perfila precios después por modalidad. Cada bloque explicita supuestos y límites; no busca crear nuevas tipologías.
 
-**Orden:** ejecutar 01–08 y luego 09–12. Los notebooks 09–12 son un primer desarrollo de PE3: sus decisiones de variables, transformaciones, número de componentes y segmentación deben revisarse con el equipo antes de cerrar la entrega. El dashboard queda fuera de esta secuencia. Las ejecuciones finales deben conservar outputs visibles y producir las salidas en `data/processed/` o `data/processed/reports/`.
+**Orden:** ejecutar 01–08 y luego 09–13. El notebook 13 parte de la base enriquecida estable generada en 07 y agrega un análisis complementario a la segmentación territorial de 10–11; no usa etiquetas de cluster previas como insumo. Los notebooks PE3 son un primer desarrollo: deben revisarse variables, cobertura y resultados reales con el equipo. El dashboard queda fuera de esta secuencia. Las ejecuciones finales deben conservar outputs visibles y producir salidas en `data/processed/` o `data/processed/reports/`.

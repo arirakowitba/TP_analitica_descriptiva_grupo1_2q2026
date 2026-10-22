@@ -19,8 +19,9 @@
 | 10 | PCA en KPIs barriales y MCA sobre niveles categorizados | cargas, varianza y coordenadas en processed/reports |
 | 11 | K-means y Ward, silueta, estabilidad por submuestras y perfilado | asignación exploratoria de barrios y perfiles |
 | 12 | Modelos log-lineales separados para venta/alquiler, comparación con y sin efecto fijo de fuente, errores agrupados por barrio | tabla de coeficientes e intervalos |
+| 13 | PCA y K-means de publicaciones para evaluar correspondencia con etiquetas ya existentes de operación; permutación condicionada por fuente × barrio y sensibilidad por fuente; precio suplementario | asignación exploratoria, composición, validación AMI/ARI y perfiles |
 
-09 exporta el perfil de servicios y transporte que consume 10. 10 exporta las coordenadas que consume 11. 12 incorpora las etiquetas de 11 en una especificación explicativa separada, sin incluirlas en un modelo con efectos fijos por barrio. El PCA y el clustering no usan precios, para evitar circularidad en la lectura posterior. El notebook 08 recibió una aclaración textual para definir el tamaño medio del hogar como proxy indirecto, no como medida de hogares unipersonales. Los README ahora explicitan la limitación de precios nominales en USD/ARS y la falta de snapshots para estudiar inflación, dolarización y tipo de cambio.
+09 exporta el perfil de servicios y transporte que consume 10. 10 exporta las coordenadas que consume 11. 12 incorpora las etiquetas de 11 en una especificación explicativa separada, sin incluirlas en un modelo con efectos fijos por barrio. El PCA y el clustering de barrios no usan precios. El nuevo 13 es un análisis complementario de otra unidad (publicación): su etiqueta de operación es una referencia externa para evaluar alineación, nunca una variable del PCA o del clustering. Fija k=3 por las tres etiquetas existentes y excluye fuente, operación y precio del espacio de características. La fuente se usa solo para permutar etiquetas dentro de portales con más de una modalidad observada. El precio se analiza después y separado por operación, porque venta y alquiler no comparten unidad.
 
 ## Decisiones provisionales que debemos revisar notebook por notebook
 
@@ -28,11 +29,12 @@
 2. En 10, validar transformaciones logarítmicas, cobertura mínima de 75%, interpretación de las cargas y pertinencia de MCA con 48 barrios.
 3. En 11, elegir el número de grupos mirando en conjunto silueta, ARI de estabilidad e interpretabilidad; no aceptar automáticamente el máximo de silueta.
 4. En 12, revisar cobertura y comparabilidad de fuentes y verificar que la muestra y las variables replican el universo de H3.
-5. Ajustar interpretación de resultados únicamente después de ejecutar los notebooks con los datos definitivos.
-6. Revisar comparaciones múltiples y magnitud de efecto en H1/H2b; mantener el poder bajo de n=15 comunas y la naturaleza proxy de H2a.
-7. El análisis transversal no demuestra que alquiler temporario desplace alquiler permanente; H4 se desagrega entre precios, intensidad publicada y disponibilidad.
-8. Sigue pendiente re-ejecutar 08 con imágenes embebidas: en el estado remoto revisado había salidas de texto/tablas, pero ninguna salida de imagen PNG.
-9. La validación final requerirá ejecución secuencial desde 01, outputs visibles, títulos autosuficientes, n e incertidumbre cuando correspondan.
+5. En 13, revisar las etiquetas reales de operación y el mapeo de alias; inspeccionar la cobertura mínima por modalidad y los atributos retenidos, especialmente por Airbnb y publicaciones temporales. Evaluar la diferencia entre AMI total, la prueba condicionada por fuente × barrio y la sensibilidad por fuente; verificar cuántos estratos y modalidades quedan representados. No concluir que la modalidad de operación constituye una tipología natural si la correspondencia depende de composición de portales o cobertura geográfica. La lista de variables y el umbral de cobertura son provisionales hasta ejecutar el notebook.
+6. Ajustar interpretación de resultados únicamente después de ejecutar los notebooks con los datos definitivos.
+7. Revisar comparaciones múltiples y magnitud de efecto en H1/H2b; mantener el poder bajo de n=15 comunas y la naturaleza proxy de H2a.
+8. El análisis transversal no demuestra que alquiler temporario desplace alquiler permanente; H4 se desagrega entre precios, intensidad publicada y disponibilidad.
+9. Sigue pendiente re-ejecutar 08 con imágenes embebidas: en el estado remoto revisado había salidas de texto/tablas, pero ninguna salida de imagen PNG.
+10. La validación final requerirá ejecución secuencial desde 01, outputs visibles, títulos autosuficientes, n e incertidumbre cuando correspondan.
 
 ## Estado de reproducción
 
