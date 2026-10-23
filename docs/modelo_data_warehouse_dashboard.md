@@ -11,7 +11,6 @@ erDiagram
     dim_moneda ||--o{ fact_publicacion : moneda
     dim_comuna ||--o{ dim_barrio : jerarquia
     dim_barrio ||--o{ fact_publicacion : barrio
-    dim_comuna ||--o{ fact_publicacion : comuna
     dim_barrio ||--o{ fact_barrio_operacion : barrio
     dim_operacion ||--o{ fact_barrio_operacion : operacion
     dim_barrio ||--o{ fact_kpi_barrio : barrio
@@ -42,7 +41,8 @@ erDiagram
 - Airbnb es un indicador de alquiler temporario y queda diferenciable de la oferta inmobiliaria tradicional según cobertura de las fuentes.
 - El Censo y el tamaño medio del hogar se mantienen a nivel comuna; este último es un proxy indirecto para H2a.
 - La fecha de extracción no crea una serie temporal de snapshots. No mostrar evolución temporal con un único corte.
-- La dimensión barrio almacena `comuna_key`; se filtra la comuna a través de la jerarquía comuna → barrio. Los hechos barriales no repiten una FK de comuna.
+- La dimensión barrio almacena `comuna_key`; KPIs y publicaciones barriales se filtran por comuna a través de la jerarquía comuna → barrio. Se evita una segunda FK comuna directa en el hecho de publicaciones para mantener una sola ruta de filtro.
+- Las publicaciones sin barrio oficial asignado no participan de un filtro comunal desde `dim_barrio`; medir y mostrar esa cobertura antes de interpretar totales territoriales.
 - Las dimensiones geográficas actuales reflejan este corte. Para comparar futuras cargas, usar códigos oficiales estables o versionar cambios de nombres/correspondencias.
 - El constructor valida la clave fuente × id × operación y se detiene si encuentra duplicados, en vez de ocultarlos.
 - Ejecución: `python src/build_dashboard_mart.py`. Produce CSV por tabla y `data_model.json` con granos, columnas y número de filas.

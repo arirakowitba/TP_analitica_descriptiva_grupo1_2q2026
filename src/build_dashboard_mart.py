@@ -109,9 +109,8 @@ if currency_src:
 if barrio_src and "dim_barrio" in dims:
     if barrio_src != "barrio_oficial": fp = fp.rename(columns={barrio_src: "barrio_oficial"})
     fp = foreign_key(fp, dims["dim_barrio"], "barrio_oficial", "barrio_oficial", "barrio_key")
-if comuna_src and "dim_comuna" in dims:
-    if comuna_src != "comuna": fp = fp.rename(columns={comuna_src: "comuna"})
-    fp = foreign_key(fp, dims["dim_comuna"], "comuna", "comuna", "comuna_key")
+# Para evitar dos rutas de filtro hacia comuna, publicación se relaciona con barrio;
+# comuna se deriva por dim_barrio.comuna_key. El agregado comunal usa sus propios hechos.
 if date_src and "dim_fecha" in dims:
     fp["fecha"] = pd.to_datetime(fp[date_src], errors="coerce").dt.normalize()
     fp = fp.merge(dims["dim_fecha"][["fecha", "fecha_key"]], on="fecha",
