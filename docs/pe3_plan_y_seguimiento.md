@@ -46,3 +46,15 @@ Los nuevos notebooks son un primer abordaje de estructura y código. No se guard
 - **14, MCA y análisis factorial:** perfiles categóricos de propiedades con operación/fuente como variables suplementarias; estructura factorial de KPIs urbanos solo si KMO, Bartlett y parallel analysis dan sustento. Los cuadrados de coausencia de notebook 03 se explicitan como patrones potenciales de carga por fuente y se excluyen del espacio activo. Se vincula la lectura con H1–H4 y los KPIs, con supuestos y límites.
 - **15 y `src/build_dashboard_mart.py`:** mart desde el dataset enriquecido y los agregados procesados. Los hechos de publicación, operación, KPI territorial, contexto y Censo conservan granos separados para evitar duplicar numeradores o denominadores.
 - **Pendiente de ejecución:** con los CSV del pipeline disponibles, ejecutar los nuevos notebooks en orden y conservar outputs. La solución factorial puede concluir que no hay factores estables; no se anticipan resultados antes de correrla.
+
+## Narrativa visual añadida
+
+- Se incorporó `src/pe3_visuals.py` con tarjetas reutilizables; cada notebook 09–15 muestra métricas centrales con unidad, cobertura o interpretación según corresponda.
+- 09: cobertura general y ranking de densidad Airbnb con n.
+- 10: cargas PCA como mapa de calor y tarjetas de inercia/varianza.
+- 11: silueta, estabilidad y perfiles relativos por cluster.
+- 12: magnitud e IC95% para venta y alquiler por separado.
+- 13: composición porcentual operación-cluster y contraste condicionado.
+- 14: cobertura/inercia MCA y diagnóstico factorial con parallel analysis.
+- 15: tablas/hechos del mart con tamaños comparables en escala logarítmica.
+- Los nuevos paneles son código pendiente de ejecución con los CSV reales; correr en orden y conservar outputs antes de la entrega.

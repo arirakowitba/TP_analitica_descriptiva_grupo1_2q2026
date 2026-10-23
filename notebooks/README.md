@@ -34,3 +34,7 @@ La secuencia propuesta parte de la base enriquecida y de los KPIs generados por 
 15. `15_modelo_data_warehouse_dashboard.ipynb`: ejecución del mart dimensional para consumo del dashboard.
 
 Los notebooks 14–15 se ejecutan después del 13. El notebook 15 genera `data/processed/dashboard_mart/`; consultar `docs/modelo_data_warehouse_dashboard.md` para granularidades, relaciones y reglas de agregación. El notebook 14 recupera los cuadrados de coausencia del notebook 03 como advertencia sobre patrones de carga/cobertura, no como factores de mercado.
+
+## Criterio visual de PE3
+
+Los notebooks 09–15 comparten tarjetas compactas para indicadores de lectura rápida y paneles que responden una pregunta concreta. Cada visual se acompaña de una nota de interpretación y límites; los ejes muestran unidades, las comparaciones territoriales conservan tamaños de muestra y los precios/KPIs se presentan en su grano. Las tarjetas son una síntesis del notebook, no reemplazan las tablas ni el dashboard. El estilo común está en `src/pe3_visuals.py`.
