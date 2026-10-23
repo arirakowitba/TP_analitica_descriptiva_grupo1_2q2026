@@ -28,3 +28,9 @@ La secuencia propuesta parte de la base enriquecida y de los KPIs generados por 
 13. `13_correspondencia_operacion_perfiles_propiedades.ipynb`: valida si las etiquetas preexistentes (venta, alquiler permanente y temporal) se asocian con clusters no supervisados de atributos comparables de propiedad y entorno. Fija k=3 por la pregunta externa, excluye operación/fuente/precio del espacio, contrasta AMI mediante permutaciones dentro de fuente × barrio (con sensibilidad condicionada solo por fuente) y perfila precios después por modalidad. Cada bloque explicita supuestos y límites; no busca crear nuevas tipologías.
 
 **Orden:** ejecutar 01–08 y luego 09–13. El notebook 13 parte de la base enriquecida estable generada en 07 y agrega un análisis complementario a la segmentación territorial de 10–11; no usa etiquetas de cluster previas como insumo. Los notebooks PE3 son un primer desarrollo: deben revisarse variables, cobertura y resultados reales con el equipo. El dashboard queda fuera de esta secuencia. Las ejecuciones finales deben conservar outputs visibles y producir salidas en `data/processed/` o `data/processed/reports/`.
+
+
+14. `14_mca_y_analisis_factorial.ipynb`: MCA de propiedades con etiquetas suplementarias y análisis factorial barrial condicionado a pruebas de adecuación.
+15. `15_modelo_data_warehouse_dashboard.ipynb`: ejecución del mart dimensional para consumo del dashboard.
+
+Los notebooks 14–15 se ejecutan después del 13. El notebook 15 genera `data/processed/dashboard_mart/`; consultar `docs/modelo_data_warehouse_dashboard.md` para granularidades, relaciones y reglas de agregación. El notebook 14 recupera los cuadrados de coausencia del notebook 03 como advertencia sobre patrones de carga/cobertura, no como factores de mercado.

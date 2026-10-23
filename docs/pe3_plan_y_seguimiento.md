@@ -39,3 +39,10 @@
 ## Estado de reproducción
 
 Los nuevos notebooks son un primer abordaje de estructura y código. No se guardaron como notebooks ejecutados: deberán correrse secuencialmente en el entorno del repositorio para materializar outputs y revisar los resultados reales. Las salidas previstas son derivadas y se guardan en `data/processed/` o `data/processed/reports/`; no editan `data/raw/`.
+
+
+## Continuidad incorporada
+
+- **14, MCA y análisis factorial:** perfiles categóricos de propiedades con operación/fuente como variables suplementarias; estructura factorial de KPIs urbanos solo si KMO, Bartlett y parallel analysis dan sustento. Los cuadrados de coausencia de notebook 03 se explicitan como patrones potenciales de carga por fuente y se excluyen del espacio activo. Se vincula la lectura con H1–H4 y los KPIs, con supuestos y límites.
+- **15 y `src/build_dashboard_mart.py`:** mart desde el dataset enriquecido y los agregados procesados. Los hechos de publicación, operación, KPI territorial, contexto y Censo conservan granos separados para evitar duplicar numeradores o denominadores.
+- **Pendiente de ejecución:** con los CSV del pipeline disponibles, ejecutar los nuevos notebooks en orden y conservar outputs. La solución factorial puede concluir que no hay factores estables; no se anticipan resultados antes de correrla.
