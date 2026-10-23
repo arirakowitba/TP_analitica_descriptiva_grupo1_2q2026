@@ -1,6 +1,6 @@
 # Modelo dimensional para el dashboard PE3
 
-El mart separa tablas de hechos por granularidad. No se unen hechos directamente: las dimensiones filtran cada hecho en relaciones 1:N con filtro unidireccional.
+El mart separa tablas de hechos por granularidad. No se unen hechos directamente: las dimensiones filtran cada hecho en relaciones 1:N con filtro unidireccional. La geografía usa una jerarquía normalizada `dim_comuna → dim_barrio`; los hechos barriales se conectan solo al barrio.
 
 ```mermaid
 erDiagram
@@ -9,6 +9,7 @@ erDiagram
     dim_operacion ||--o{ fact_publicacion : operacion
     dim_tipo_propiedad ||--o{ fact_publicacion : tipologia
     dim_moneda ||--o{ fact_publicacion : moneda
+    dim_comuna ||--o{ dim_barrio : jerarquia
     dim_barrio ||--o{ fact_publicacion : barrio
     dim_comuna ||--o{ fact_publicacion : comuna
     dim_barrio ||--o{ fact_barrio_operacion : barrio
@@ -41,6 +42,7 @@ erDiagram
 - Airbnb es un indicador de alquiler temporario y queda diferenciable de la oferta inmobiliaria tradicional según cobertura de las fuentes.
 - El Censo y el tamaño medio del hogar se mantienen a nivel comuna; este último es un proxy indirecto para H2a.
 - La fecha de extracción no crea una serie temporal de snapshots. No mostrar evolución temporal con un único corte.
+- La dimensión barrio almacena `comuna_key`; se filtra la comuna a través de la jerarquía comuna → barrio. Los hechos barriales no repiten una FK de comuna.
 - Las dimensiones geográficas actuales reflejan este corte. Para comparar futuras cargas, usar códigos oficiales estables o versionar cambios de nombres/correspondencias.
 - El constructor valida la clave fuente × id × operación y se detiene si encuentra duplicados, en vez de ocultarlos.
 - Ejecución: `python src/build_dashboard_mart.py`. Produce CSV por tabla y `data_model.json` con granos, columnas y número de filas.

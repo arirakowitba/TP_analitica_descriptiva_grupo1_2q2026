@@ -72,9 +72,15 @@ ops = pd.DataFrame({"operacion": pd.concat([
 dims["dim_operacion"] = make_dim(ops, "operacion", "operacion_key")
 if type_src: dims["dim_tipo_propiedad"] = make_dim(pub, type_src, "tipo_propiedad_key")
 if currency_src: dims["dim_moneda"] = make_dim(pub, currency_src, "moneda_key")
+if "comuna" in kc:
+    dims["dim_comuna"] = make_dim(kc, "comuna", "comuna_key")
 if "barrio_oficial" in kb:
-    dims["dim_barrio"] = make_dim(kb, "barrio_oficial", "barrio_key", ["comuna"])
-if "comuna" in kc: dims["dim_comuna"] = make_dim(kc, "comuna", "comuna_key")
+    db = make_dim(kb, "barrio_oficial", "barrio_key", ["comuna"])
+    if "comuna" in db and "dim_comuna" in dims:
+        db["comuna"] = db["comuna"].fillna("No informado").astype(str)
+        db = db.merge(dims["dim_comuna"][["comuna", "comuna_key"]], on="comuna",
+                      how="left", validate="many_to_one").drop(columns="comuna")
+    dims["dim_barrio"] = db
 
 if date_src:
     dates = pd.to_datetime(pub[date_src], errors="coerce").dropna().dt.normalize().drop_duplicates()
