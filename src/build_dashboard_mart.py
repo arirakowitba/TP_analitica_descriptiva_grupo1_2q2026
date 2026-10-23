@@ -7,6 +7,7 @@ from pathlib import Path
 import json
 import pandas as pd
 import numpy as np
+import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data" / "processed"
@@ -196,6 +197,138 @@ for name, df in facts.items():
     if name == "fact_publicacion" and len(df) != len(pub):
         raise AssertionError("Se alteró el número de publicaciones al incorporar dimensiones.")
     manifest["salidas"].append(save(df, name))
+
+def create_powerbi_assets(dims, facts, manifest):
+    """Escribe metadatos y plantillas para cargar el mart en Power BI."""
+    assets = OUT / "powerbi"
+    assets.mkdir(parents=True, exist_ok=True)
+    tables = {**dims, **facts}
+    candidates = [
+        ("dim_fuente","fuente_key","fact_publicacion","fuente_key"),
+        ("dim_operacion","operacion_key","fact_publicacion","operacion_key"),
+        ("dim_tipo_propiedad","tipo_propiedad_key","fact_publicacion","tipo_propiedad_key"),
+        ("dim_moneda","moneda_key","fact_publicacion","moneda_key"),
+        ("dim_fecha","fecha_key","fact_publicacion","fecha_key"),
+        ("dim_comuna","comuna_key","dim_barrio","comuna_key"),
+        ("dim_barrio","barrio_key","fact_publicacion","barrio_key"),
+        ("dim_barrio","barrio_key","fact_barrio_operacion","barrio_key"),
+        ("dim_operacion","operacion_key","fact_barrio_operacion","operacion_key"),
+        ("dim_barrio","barrio_key","fact_kpi_barrio","barrio_key"),
+        ("dim_comuna","comuna_key","fact_comuna_operacion","comuna_key"),
+        ("dim_operacion","operacion_key","fact_comuna_operacion","operacion_key"),
+        ("dim_comuna","comuna_key","fact_kpi_comuna","comuna_key"),
+        ("dim_barrio","barrio_key","fact_contexto_barrio","barrio_key"),
+        ("dim_comuna","comuna_key","fact_censo_comuna","comuna_key"),
+    ]
+    rels = []
+    for one, one_col, many, many_col in candidates:
+        if one in tables and many in tables and one_col in tables[one] and many_col in tables[many]:
+            rels.append({"tabla_uno":one,"columna_uno":one_col,
+                         "tabla_muchos":many,"columna_muchos":many_col,
+                         "cardinalidad":"1:*","direccion_filtro":"Single","activa":True})
+    pd.DataFrame(rels).to_csv(assets / "relaciones.csv", index=False)
+
+    schema = {"tablas": {}}
+    for name, frame in tables.items():
+        cols = []
+        for col in frame.columns:
+            dtype = str(frame[col].dtype)
+            pbi_type = ("Int64" if pd.api.types.is_integer_dtype(frame[col]) else
+                        "Decimal" if pd.api.types.is_float_dtype(frame[col]) else
+                        "Date/Time" if pd.api.types.is_datetime64_any_dtype(frame[col]) else "Text")
+            cols.append({"nombre":col,"tipo_sugerido":pbi_type,"tipo_pandas":dtype})
+        schema["tablas"][name] = {
+            "rol":"dimension" if name.startswith("dim_") else "hecho",
+            "filas":int(len(frame)),"columnas":cols
+        }
+    (assets / "esquema_powerbi.json").write_text(
+        json.dumps(schema, ensure_ascii=False, indent=2), encoding="utf-8")
+
+    dax = [
+        "// Medidas iniciales. Usar cada una en el grano indicado y validar filtros.",
+        "Publicaciones observadas = SUM(fact_publicacion[cantidad_publicaciones])",
+        "Avisos por barrio y operación = SUM(fact_barrio_operacion[cantidad_publicaciones])",
+        "Avisos por comuna y operación = SUM(fact_comuna_operacion[cantidad_publicaciones])",
+    ]
+    if "hogares_inquilinos" in facts["fact_censo_comuna"]:
+        dax.append("Hogares inquilinos (Censo 2022) = SUM(fact_censo_comuna[hogares_inquilinos])")
+    if "viviendas_total" in facts["fact_censo_comuna"]:
+        dax.append("Viviendas (Censo 2022) = SUM(fact_censo_comuna[viviendas_total])")
+    selected_metrics = [
+        ("fact_kpi_barrio","precio_m2_usd_mediana","Mediana USD/m2 seleccionada"),
+        ("fact_kpi_barrio","airbnb_por_km2","Densidad Airbnb seleccionada"),
+        ("fact_kpi_comuna","venta_por_1000_viviendas","Ventas por 1000 viviendas seleccionada"),
+        ("fact_kpi_comuna","alquiler_por_1000_viviendas","Alquileres por 1000 viviendas seleccionada"),
+        ("fact_kpi_comuna","airbnb_por_1000_viviendas","Airbnb por 1000 viviendas seleccionada"),
+    ]
+    for table, metric, label in selected_metrics:
+        if metric in facts[table]:
+            dax.append(f"{label} = SELECTEDVALUE({table}[{metric}])")
+    dax += [
+        "", "// No sumar precios, medianas, tasas ni densidades entre territorios.",
+        "// SELECTEDVALUE devuelve BLANK si el contexto contiene más de un valor.",
+        "// Los conteos representan oferta publicada observada, no stock ni contratos."
+    ]
+    (assets / "medidas_dax.dax").write_text("\n".join(dax) + "\n", encoding="utf-8")
+
+    m_text = r'''// Crear el parámetro pMartFolder con la ruta a dashboard_mart.
+// Luego crear una consulta por archivo: = fnLoadMartCsv("dim_barrio.csv")
+(fileName as text) as table =>
+let
+    Source = Csv.Document(
+        File.Contents(pMartFolder & "\" & fileName),
+        [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]
+    ),
+    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true])
+in
+    Headers
+'''
+    (assets / "fnLoadMartCsv.m").write_text(m_text, encoding="utf-8")
+
+    guide = """# Importar el mart en Power BI
+
+## Archivos
+- Los CSV de la carpeta raíz son las tablas del modelo; cada archivo es una tabla.
+- relaciones.csv enumera relaciones 1:* con filtro unidireccional.
+- esquema_powerbi.json contiene columnas y tipos sugeridos.
+- medidas_dax.dax ofrece medidas iniciales; fnLoadMartCsv.m es una función de carga opcional.
+- data_model.json documenta fuentes, granos, conteos y reglas metodológicas.
+
+## Carga recomendada
+1. Descomprimir el paquete y usar Obtener datos → Texto/CSV para cargar cada CSV de la carpeta raíz. No cargar los archivos dentro de powerbi/ como tablas del modelo.
+2. Revisar tipos con esquema_powerbi.json: claves enteras, fechas como fecha y métricas como decimal; mantener identificadores y categorías como texto.
+3. En Vista Modelo, crear únicamente las relaciones listadas en relaciones.csv (1:* y dirección Single). No relacionar hechos entre sí.
+4. Ocultar claves técnicas en la vista de informe. Mantener dimensiones visibles para segmentadores.
+5. Incorporar las medidas necesarias desde medidas_dax.dax y comprobarlas con filtros territoriales y de operación.
+
+## Reglas para interpretar
+- fact_publicacion es una fila por publicación capturada; la extracción es un corte, no una serie de snapshots.
+- Precios, medianas, ratios, densidades y porcentajes no son aditivos. Usar la métrica validada al grano de barrio o comuna, o recalcular numerador y denominador compatibles.
+- El Censo 2022 está a nivel comuna. tamano_medio_hogar es un proxy para H2a, no mide adecuación habitacional individual.
+- La jerarquía comuna a barrio está normalizada. En hechos de publicaciones, comuna se deriva desde barrio para evitar rutas de filtro ambiguas; filas sin barrio oficial no se asignan a una comuna mediante inferencia.
+- Los conteos describen oferta publicada y cobertura de fuentes; no equivalen a stock residencial, contratos ni transacciones.
+"""
+    (assets / "README.md").write_text(guide, encoding="utf-8")
+    manifest["powerbi"] = {
+        "paquete":"dashboard_mart_powerbi.zip",
+        "relaciones":"powerbi/relaciones.csv",
+        "esquema":"powerbi/esquema_powerbi.json",
+        "medidas":"powerbi/medidas_dax.dax",
+        "funcion_power_query":"powerbi/fnLoadMartCsv.m",
+        "guia":"powerbi/README.md",
+        "relaciones_cantidad":len(rels)
+    }
+    (OUT / "data_model.json").write_text(
+        json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
+    package = DATA / "dashboard_mart_powerbi.zip"
+    with zipfile.ZipFile(package, "w", compression=zipfile.ZIP_DEFLATED) as zf:
+        for path in OUT.rglob("*"):
+            if path.is_file():
+                zf.write(path, path.relative_to(OUT.parent))
+    return str(package), len(rels)
+
 (OUT / "data_model.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
-print(json.dumps({"salidas":[{"tabla":x["tabla"],"filas":x["filas"]} for x in manifest["salidas"]],
+package_path, relationship_count = create_powerbi_assets(dims, facts, manifest)
+print(json.dumps({"paquete_powerbi":package_path,"relaciones":relationship_count,
+                  "salidas":[{"tabla":x["tabla"],"filas":x["filas"]} for x in manifest["salidas"]],
                   "granos":grains}, ensure_ascii=False, indent=2))

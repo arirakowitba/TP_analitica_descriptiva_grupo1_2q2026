@@ -31,9 +31,9 @@ La secuencia propuesta parte de la base enriquecida y de los KPIs generados por 
 
 
 14. `14_mca_y_analisis_factorial.ipynb`: MCA de propiedades con etiquetas suplementarias y análisis factorial barrial condicionado a pruebas de adecuación.
-15. `15_modelo_data_warehouse_dashboard.ipynb`: ejecución del mart dimensional para consumo del dashboard.
+15. `15_modelo_data_warehouse_dashboard.ipynb`: construcción del mart dimensional y paquete Power BI con tablas CSV, esquema de tipos, relaciones sugeridas, medidas DAX, función de Power Query y guía de importación.
 
-Los notebooks 14–15 se ejecutan después del 13. El notebook 15 genera `data/processed/dashboard_mart/`; consultar `docs/modelo_data_warehouse_dashboard.md` para granularidades, relaciones y reglas de agregación. El notebook 14 recupera los cuadrados de coausencia del notebook 03 como advertencia sobre patrones de carga/cobertura, no como factores de mercado.
+Los notebooks 14–15 se ejecutan después del 13. El notebook 15 genera `data/processed/dashboard_mart/` y `data/processed/dashboard_mart_powerbi.zip`, listo para compartir con el equipo de Power BI; consultar `docs/modelo_data_warehouse_dashboard.md` para granularidades, relaciones y reglas de agregación. El notebook 14 recupera los cuadrados de coausencia del notebook 03 como advertencia sobre patrones de carga/cobertura, no como factores de mercado.
 
 ## Criterio visual de PE3
 

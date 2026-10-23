@@ -46,3 +46,15 @@ erDiagram
 - Las dimensiones geográficas actuales reflejan este corte. Para comparar futuras cargas, usar códigos oficiales estables o versionar cambios de nombres/correspondencias.
 - El constructor valida la clave fuente × id × operación y se detiene si encuentra duplicados, en vez de ocultarlos.
 - Ejecución: `python src/build_dashboard_mart.py`. Produce CSV por tabla y `data_model.json` con granos, columnas y número de filas.
+
+## Paquete de importación para Power BI
+
+Al ejecutar `python src/build_dashboard_mart.py`, además de los CSV y `data_model.json`, se generan la carpeta `data/processed/dashboard_mart/powerbi/` y el archivo `data/processed/dashboard_mart_powerbi.zip`. El ZIP contiene las tablas y los metadatos de carga para compartir con el equipo.
+
+- `relaciones.csv`: relaciones con cardinalidad 1:* y filtro unidireccional.
+- `esquema_powerbi.json`: rol, filas, columnas y tipos sugeridos por tabla.
+- `medidas_dax.dax`: medidas iniciales de conteo y acceso a KPIs no aditivos mediante `SELECTEDVALUE`.
+- `fnLoadMartCsv.m`: función opcional de Power Query para cargar cada archivo desde una carpeta.
+- `README.md`: pasos de importación y reglas de interpretación.
+
+El generador produce un paquete de tablas y configuración; no crea un archivo `.pbix` con páginas visuales ni publica un modelo semántico. Tras importar, el equipo debe revisar tipos, crear las relaciones enumeradas y validar las medidas con filtros antes de diseñar el tablero. Las relaciones se generan según las columnas presentes, por lo que pueden variar ante cambios del esquema.
