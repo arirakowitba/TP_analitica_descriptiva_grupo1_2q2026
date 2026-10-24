@@ -1,0 +1,5 @@
+operacion,modelo,n_entrenamiento,n_prueba,barrios_entrenamiento,barrios_prueba,MAE_log,RMSE_log,R2_prueba
+venta,"Ridge con distancia, superficie, ambientes y fuente",28645,8180,36,12,0.34290735910726694,0.44683169225480746,-0.3085082059478914
+venta,Referencia: mediana del entrenamiento,28645,8180,36,12,0.35560423972379507,0.4621451083942454,-0.3997331061755287
+alquiler,"Ridge con distancia, superficie, ambientes y fuente",6877,1249,36,12,0.29516361670904045,0.3694715854669904,-0.5981100218171336
+alquiler,Referencia: mediana del entrenamiento,6877,1249,36,12,0.2696266260718773,0.33630545503109943,-0.32407446503161097

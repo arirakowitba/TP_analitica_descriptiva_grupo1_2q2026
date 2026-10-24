@@ -1,0 +1,7 @@
+dimension,kpi,unidad,decision_informada,limitacion_clave
+Disponibilidad residencial publicada,alquiler_por_1000_viviendas,Comuna,Fortalecer alquiler permanente,Conteo de avisos / viviendas Censo 2022; no es stock disponible
+Concentración temporaria,airbnb_por_1000_viviendas; airbnb_por_km2,Comuna / barrio,Monitorear alquiler temporario,Airbnb es una fuente específica y un corte de 2026
+Presión temporaria observada,pct_viviendas_uso_temporal; brecha Airbnb/permanente,Comuna / barrio,Monitorear y producir información,Censo 2022 y publicaciones tienen fechas y universos distintos
+Adecuación tipológica,participación 1-2 ambientes; tamano_medio_hogar,Comuna,Priorizar intervención habitacional,"Tamaño medio del hogar es un proxy, no composición individual"
+Accesibilidad urbana,dist_transporte_masivo_m; densidades de servicios,Publicación / barrio,Priorizar infraestructura,Distancias lineales y cobertura desigual por fuente
+Asequibilidad/precio publicado,mediana_precio_m2_venta_usd; mediana_precio_m2_alquiler_usd,Barrio,Orientar diagnóstico habitacional,Precios pedidos; no son precios de cierre ni ingresos de hogares
