@@ -1,13 +1,35 @@
-"""Ejecuta y guarda los notebooks numerados en orden, deteniéndose ante el primer error."""
+"""Ejecuta y guarda notebooks numerados en orden, deteniéndose ante el primer error."""
 from pathlib import Path
+import json
 import os
 import re
 import subprocess
 import sys
+import tempfile
 
 ROOT = Path(__file__).resolve().parents[1]
 NOTEBOOKS = ROOT / "notebooks"
 PATTERN = re.compile(r"^\d{2}_.+\.ipynb$")
+
+
+def add_missing_cell_ids(notebook):
+    """Añade IDs estables requeridos por nbformat sin alterar el contenido analítico."""
+    data = json.loads(notebook.read_text(encoding="utf-8"))
+    used = {cell.get("id") for cell in data.get("cells", []) if cell.get("id")}
+    for index, cell in enumerate(data.get("cells", []), start=1):
+        if cell.get("id"):
+            continue
+        candidate = f"pe3-cell-{index}"
+        suffix = 1
+        while candidate in used:
+            candidate = f"pe3-cell-{index}-{suffix}"
+            suffix += 1
+        cell["id"] = candidate
+        used.add(candidate)
+    notebook.write_text(
+        json.dumps(data, ensure_ascii=False, indent=1) + "\n",
+        encoding="utf-8",
+    )
 
 
 def main():
@@ -20,29 +42,41 @@ def main():
 
     print(f"Se ejecutarán {len(notebooks)} notebooks en orden: "
           f"{notebooks[0].name} → {notebooks[-1].name}", flush=True)
-    for number, notebook in enumerate(notebooks, start=1):
-        relative = notebook.relative_to(ROOT)
-        print(f"\n[{number}/{len(notebooks)}] Ejecutando {relative}", flush=True)
-        command = [
-            sys.executable, "-m", "jupyter", "nbconvert",
-            "--to", "notebook",
-            "--execute",
-            "--inplace",
-            "--ExecutePreprocessor.timeout=-1",
-            "--ExecutePreprocessor.allow_errors=False",
-            str(relative),
-        ]
-        env = os.environ.copy()
-        existing_pythonpath = env.get("PYTHONPATH")
-        env["PYTHONPATH"] = str(ROOT) + (
-            os.pathsep + existing_pythonpath if existing_pythonpath else ""
-        )
-        result = subprocess.run(command, cwd=ROOT, env=env, check=False)
-        if result.returncode != 0:
-            print(f"\nERROR: se detuvo en {relative}. "
-                  "Los notebooks anteriores ya quedaron guardados con outputs.", flush=True)
-            return result.returncode
-        print(f"OK: outputs guardados en {relative}", flush=True)
+
+    with tempfile.TemporaryDirectory(prefix="jupyter-pe3-config-") as config_dir:
+        # nbconvert ejecuta kernels locales. IPC evita el aviso de transporte TCP
+        # sin cifrar en runners POSIX; Windows conserva el transporte soportado allí.
+        if os.name != "nt":
+            (Path(config_dir) / "jupyter_config.py").write_text(
+                "c = get_config()\nc.KernelManager.transport = 'ipc'\n",
+                encoding="utf-8",
+            )
+
+        for number, notebook in enumerate(notebooks, start=1):
+            relative = notebook.relative_to(ROOT)
+            print(f"\n[{number}/{len(notebooks)}] Ejecutando {relative}", flush=True)
+            add_missing_cell_ids(notebook)
+            command = [
+                sys.executable, "-m", "jupyter", "nbconvert",
+                "--to", "notebook",
+                "--execute",
+                "--inplace",
+                "--ExecutePreprocessor.timeout=-1",
+                "--ExecutePreprocessor.allow_errors=False",
+                str(relative),
+            ]
+            env = os.environ.copy()
+            existing_pythonpath = env.get("PYTHONPATH")
+            env["PYTHONPATH"] = str(ROOT) + (
+                os.pathsep + existing_pythonpath if existing_pythonpath else ""
+            )
+            env["JUPYTER_CONFIG_DIR"] = config_dir
+            result = subprocess.run(command, cwd=ROOT, env=env, check=False)
+            if result.returncode != 0:
+                print(f"\nERROR: se detuvo en {relative}. "
+                      "Los notebooks anteriores ya quedaron guardados con outputs.", flush=True)
+                return result.returncode
+            print(f"OK: outputs guardados en {relative}", flush=True)
 
     print("\nEjecución completa: todos los notebooks terminaron sin errores.", flush=True)
     return 0
