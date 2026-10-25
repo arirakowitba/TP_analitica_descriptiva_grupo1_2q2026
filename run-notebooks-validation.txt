@@ -1,1 +1,1 @@
-Reejecución solicitada tras corregir rutas y dependencias del notebook 15.
+Validación completa tras normalizar IDs de celdas y actualizar runtimes de Actions.
