@@ -36,7 +36,7 @@ def kpi_cards(items, title="Indicadores clave", note=None, ncols=4):
         ax.add_patch(card)
         ax.add_patch(FancyBboxPatch((.035,.08),.035,.84,boxstyle="round,pad=0.01,rounding_size=0.03",
                                     facecolor=PALETTE["blue"],edgecolor=PALETTE["blue"],linewidth=0))
-        ax.text(.12,.76,str(label),fontsize=10,color=PALETTE["muted"],weight="medium",
+        ax.text(.12,.76,str(label),fontsize=10,color=PALETTE["muted"],weight="normal",
                 ha="left",va="center",wrap=True)
         ax.text(.12,.47,str(value),fontsize=19,color=PALETTE["ink"],weight="bold",
                 ha="left",va="center",wrap=True)
