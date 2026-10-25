@@ -1,0 +1,258 @@
+{
+  "version": "pe3_mart_v1",
+  "fuentes": [
+    "df_publicaciones_enriquecidas_v1.csv",
+    "kpis_barrio_v1.csv",
+    "kpis_comuna_v1.csv",
+    "features_contextuales_barrio_v1.csv"
+  ],
+  "granos": {
+    "fact_publicacion": "fuente × id_publicacion × operación",
+    "fact_barrio_operacion": "barrio × corte PE2 × operación",
+    "fact_kpi_barrio": "barrio × corte PE2",
+    "fact_comuna_operacion": "comuna × corte PE2 × operación",
+    "fact_kpi_comuna": "comuna × corte PE2 (solo indicadores de mercado)",
+    "fact_contexto_barrio": "barrio × versión contextual",
+    "fact_censo_comuna": "comuna × Censo 2022"
+  },
+  "clave_natural_fact_publicacion": [
+    "fuente_norm",
+    "id_publicacion",
+    "tipo_operacion_norm"
+  ],
+  "reglas": [
+    "No relacionar hechos entre sí; dimensiones filtran hechos con cardinalidad 1:N.",
+    "Precios no son aditivos: mostrar mediana/percentiles separados por operación y moneda.",
+    "Conteos reflejan publicaciones observadas, no stock habitacional ni contratos.",
+    "No inferir tendencias temporales desde una fecha/corte de extracción.",
+    "Los denominadores censales permanecen en granularidad comuna.",
+    "Las tasas no se promedian entre territorios; usar KPI validado o recomponer cociente."
+  ],
+  "salidas": [
+    {
+      "tabla": "dim_fuente",
+      "filas": 4,
+      "columnas": [
+        "fuente_key",
+        "fuente_norm"
+      ]
+    },
+    {
+      "tabla": "dim_operacion",
+      "filas": 4,
+      "columnas": [
+        "operacion_key",
+        "operacion"
+      ]
+    },
+    {
+      "tabla": "dim_tipo_propiedad",
+      "filas": 13,
+      "columnas": [
+        "tipo_propiedad_key",
+        "tipo_propiedad"
+      ]
+    },
+    {
+      "tabla": "dim_moneda",
+      "filas": 3,
+      "columnas": [
+        "moneda_key",
+        "moneda_norm"
+      ]
+    },
+    {
+      "tabla": "dim_comuna",
+      "filas": 15,
+      "columnas": [
+        "comuna_key",
+        "comuna"
+      ]
+    },
+    {
+      "tabla": "dim_barrio",
+      "filas": 48,
+      "columnas": [
+        "barrio_key",
+        "barrio_oficial",
+        "comuna_key"
+      ]
+    },
+    {
+      "tabla": "dim_fecha",
+      "filas": 5,
+      "columnas": [
+        "fecha_key",
+        "fecha",
+        "anio",
+        "mes",
+        "trimestre"
+      ]
+    },
+    {
+      "tabla": "fact_publicacion",
+      "filas": 67887,
+      "columnas": [
+        "id_publicacion",
+        "fuente_norm",
+        "tipo_operacion_norm",
+        "fecha_extraccion",
+        "barrio_oficial",
+        "tipo_propiedad",
+        "moneda_norm",
+        "precio",
+        "superficie_ref_m2",
+        "precio_m2_usd",
+        "ambientes_ref",
+        "dormitorios_ref",
+        "banios_ref",
+        "cantidad_publicaciones",
+        "fuente_key",
+        "operacion_key",
+        "tipo_propiedad_key",
+        "moneda_key",
+        "barrio_key",
+        "fecha",
+        "fecha_key"
+      ]
+    },
+    {
+      "tabla": "fact_barrio_operacion",
+      "filas": 192,
+      "columnas": [
+        "barrio_oficial",
+        "cantidad_publicaciones",
+        "operacion",
+        "grano",
+        "operacion_key",
+        "barrio_key"
+      ]
+    },
+    {
+      "tabla": "fact_kpi_barrio",
+      "filas": 48,
+      "columnas": [
+        "barrio_oficial",
+        "comuna",
+        "area_km2",
+        "n_alquiler",
+        "n_alquiler_temporal",
+        "n_venta",
+        "n_airbnb",
+        "pct_del_total_venta",
+        "pct_del_total_alquiler",
+        "pct_del_total_alquiler_temporal",
+        "participacion_venta_en_barrio_ref",
+        "participacion_alquiler_en_barrio_ref",
+        "participacion_alquiler_temporal_en_barrio_ref",
+        "airbnb_por_km2",
+        "mediana_precio_m2_venta_usd",
+        "mediana_precio_m2_alquiler_usd",
+        "mediana_alquiler_mensual_usd",
+        "brecha_airbnb_vs_permanente_pct",
+        "brecha_meli_temporario_vs_permanente_pct",
+        "densidad_subte_km2",
+        "densidad_tren_km2",
+        "densidad_metrobus_km2",
+        "densidad_hospitales_km2",
+        "densidad_educacion_km2",
+        "densidad_culturales_km2",
+        "densidad_gastronomia_km2",
+        "densidad_espacios_verdes_km2",
+        "pct_superficie_verde",
+        "barrio_key"
+      ]
+    },
+    {
+      "tabla": "fact_comuna_operacion",
+      "filas": 60,
+      "columnas": [
+        "comuna",
+        "cantidad_publicaciones",
+        "operacion",
+        "grano",
+        "operacion_key",
+        "comuna_key"
+      ]
+    },
+    {
+      "tabla": "fact_kpi_comuna",
+      "filas": 15,
+      "columnas": [
+        "comuna",
+        "venta_por_1000_viviendas",
+        "alquiler_por_1000_viviendas",
+        "airbnb_por_1000_viviendas",
+        "alquiler_por_1000_hogares_inquilinos",
+        "publicaciones_por_1000_hab",
+        "airbnb_por_cada_alquiler_permanente",
+        "comuna_key"
+      ]
+    },
+    {
+      "tabla": "fact_contexto_barrio",
+      "filas": 48,
+      "columnas": [
+        "barrio_oficial",
+        "comuna",
+        "area_km2",
+        "n_subte",
+        "densidad_subte_km2",
+        "n_tren",
+        "densidad_tren_km2",
+        "n_metrobus",
+        "densidad_metrobus_km2",
+        "n_hospitales",
+        "densidad_hospitales_km2",
+        "n_educacion",
+        "densidad_educacion_km2",
+        "n_culturales",
+        "densidad_culturales_km2",
+        "n_gastronomia",
+        "densidad_gastronomia_km2",
+        "n_espacios_verdes",
+        "densidad_espacios_verdes_km2",
+        "pct_superficie_verde",
+        "barrio_key"
+      ]
+    },
+    {
+      "tabla": "fact_censo_comuna",
+      "filas": 15,
+      "columnas": [
+        "comuna",
+        "superficie_km2",
+        "poblacion_total",
+        "densidad_hab_km2",
+        "poblacion_viv_particulares",
+        "viviendas_total",
+        "viviendas_particulares",
+        "viviendas_ocupadas",
+        "viviendas_uso_temporal",
+        "viviendas_uso_oficina",
+        "viviendas_en_alquiler_o_venta",
+        "hogares",
+        "viviendas_ocupadas_casa",
+        "viviendas_ocupadas_departamento",
+        "hogares_propietarios",
+        "hogares_inquilinos",
+        "tamano_medio_hogar",
+        "pct_hogares_inquilinos",
+        "pct_viviendas_departamento",
+        "pct_viviendas_uso_temporal",
+        "pct_viviendas_en_alquiler_o_venta",
+        "comuna_key",
+        "anio_censo"
+      ]
+    }
+  ],
+  "powerbi": {
+    "paquete": "dashboard_mart_powerbi.zip",
+    "relaciones": "powerbi/relaciones.csv",
+    "esquema": "powerbi/esquema_powerbi.json",
+    "medidas": "powerbi/medidas_dax.dax",
+    "funcion_power_query": "powerbi/fnLoadMartCsv.m",
+    "guia": "powerbi/README.md",
+    "relaciones_cantidad": 15
+  }
+}

@@ -1,0 +1,193 @@
+barrio_oficial,cantidad_publicaciones,operacion,grano,operacion_key,barrio_key
+Agronomia,25,alquiler,barrio × corte PE2 × operación,2,1
+Almagro,450,alquiler,barrio × corte PE2 × operación,2,2
+Balvanera,335,alquiler,barrio × corte PE2 × operación,2,3
+Barracas,104,alquiler,barrio × corte PE2 × operación,2,4
+Belgrano,743,alquiler,barrio × corte PE2 × operación,2,5
+La Boca,65,alquiler,barrio × corte PE2 × operación,2,14
+Boedo,69,alquiler,barrio × corte PE2 × operación,2,6
+Caballito,689,alquiler,barrio × corte PE2 × operación,2,7
+Chacarita,132,alquiler,barrio × corte PE2 × operación,2,8
+Coghlan,57,alquiler,barrio × corte PE2 × operación,2,9
+Colegiales,243,alquiler,barrio × corte PE2 × operación,2,10
+Constitucion,118,alquiler,barrio × corte PE2 × operación,2,11
+Flores,347,alquiler,barrio × corte PE2 × operación,2,12
+Floresta,86,alquiler,barrio × corte PE2 × operación,2,13
+Liniers,107,alquiler,barrio × corte PE2 × operación,2,15
+Mataderos,65,alquiler,barrio × corte PE2 × operación,2,16
+Monserrat,332,alquiler,barrio × corte PE2 × operación,2,17
+Monte Castro,62,alquiler,barrio × corte PE2 × operación,2,18
+Nueva Pompeya,16,alquiler,barrio × corte PE2 × operación,2,19
+Nuñez,404,alquiler,barrio × corte PE2 × operación,2,20
+Palermo,1431,alquiler,barrio × corte PE2 × operación,2,21
+Parque Avellaneda,37,alquiler,barrio × corte PE2 × operación,2,22
+Parque Chacabuco,105,alquiler,barrio × corte PE2 × operación,2,23
+Parque Chas,43,alquiler,barrio × corte PE2 × operación,2,24
+Parque Patricios,52,alquiler,barrio × corte PE2 × operación,2,25
+Paternal,29,alquiler,barrio × corte PE2 × operación,2,26
+Puerto Madero,608,alquiler,barrio × corte PE2 × operación,2,27
+Recoleta,1007,alquiler,barrio × corte PE2 × operación,2,28
+Retiro,343,alquiler,barrio × corte PE2 × operación,2,29
+Saavedra,138,alquiler,barrio × corte PE2 × operación,2,30
+San Cristobal,143,alquiler,barrio × corte PE2 × operación,2,31
+San Nicolas,286,alquiler,barrio × corte PE2 × operación,2,32
+San Telmo,132,alquiler,barrio × corte PE2 × operación,2,33
+Velez Sarsfield,48,alquiler,barrio × corte PE2 × operación,2,34
+Versalles,11,alquiler,barrio × corte PE2 × operación,2,35
+Villa Crespo,325,alquiler,barrio × corte PE2 × operación,2,36
+Villa Del Parque,153,alquiler,barrio × corte PE2 × operación,2,37
+Villa Devoto,201,alquiler,barrio × corte PE2 × operación,2,38
+Villa Gral. Mitre,49,alquiler,barrio × corte PE2 × operación,2,39
+Villa Lugano,81,alquiler,barrio × corte PE2 × operación,2,40
+Villa Luro,88,alquiler,barrio × corte PE2 × operación,2,41
+Villa Ortuzar,74,alquiler,barrio × corte PE2 × operación,2,42
+Villa Pueyrredon,99,alquiler,barrio × corte PE2 × operación,2,43
+Villa Real,9,alquiler,barrio × corte PE2 × operación,2,44
+Villa Riachuelo,13,alquiler,barrio × corte PE2 × operación,2,45
+Villa Santa Rita,42,alquiler,barrio × corte PE2 × operación,2,46
+Villa Soldati,6,alquiler,barrio × corte PE2 × operación,2,47
+Villa Urquiza,428,alquiler,barrio × corte PE2 × operación,2,48
+Agronomia,15,alquiler_temporal,barrio × corte PE2 × operación,3,1
+Almagro,617,alquiler_temporal,barrio × corte PE2 × operación,3,2
+Balvanera,517,alquiler_temporal,barrio × corte PE2 × operación,3,3
+Barracas,114,alquiler_temporal,barrio × corte PE2 × operación,3,4
+Belgrano,703,alquiler_temporal,barrio × corte PE2 × operación,3,5
+La Boca,87,alquiler_temporal,barrio × corte PE2 × operación,3,14
+Boedo,54,alquiler_temporal,barrio × corte PE2 × operación,3,6
+Caballito,265,alquiler_temporal,barrio × corte PE2 × operación,3,7
+Chacarita,240,alquiler_temporal,barrio × corte PE2 × operación,3,8
+Coghlan,73,alquiler_temporal,barrio × corte PE2 × operación,3,9
+Colegiales,373,alquiler_temporal,barrio × corte PE2 × operación,3,10
+Constitucion,172,alquiler_temporal,barrio × corte PE2 × operación,3,11
+Flores,86,alquiler_temporal,barrio × corte PE2 × operación,3,12
+Floresta,33,alquiler_temporal,barrio × corte PE2 × operación,3,13
+Liniers,43,alquiler_temporal,barrio × corte PE2 × operación,3,15
+Mataderos,6,alquiler_temporal,barrio × corte PE2 × operación,3,16
+Monserrat,581,alquiler_temporal,barrio × corte PE2 × operación,3,17
+Monte Castro,43,alquiler_temporal,barrio × corte PE2 × operación,3,18
+Nueva Pompeya,5,alquiler_temporal,barrio × corte PE2 × operación,3,19
+Nuñez,374,alquiler_temporal,barrio × corte PE2 × operación,3,20
+Palermo,4216,alquiler_temporal,barrio × corte PE2 × operación,3,21
+Parque Avellaneda,30,alquiler_temporal,barrio × corte PE2 × operación,3,22
+Parque Chacabuco,61,alquiler_temporal,barrio × corte PE2 × operación,3,23
+Parque Chas,52,alquiler_temporal,barrio × corte PE2 × operación,3,24
+Parque Patricios,54,alquiler_temporal,barrio × corte PE2 × operación,3,25
+Paternal,32,alquiler_temporal,barrio × corte PE2 × operación,3,26
+Puerto Madero,373,alquiler_temporal,barrio × corte PE2 × operación,3,27
+Recoleta,1770,alquiler_temporal,barrio × corte PE2 × operación,3,28
+Retiro,627,alquiler_temporal,barrio × corte PE2 × operación,3,29
+Saavedra,92,alquiler_temporal,barrio × corte PE2 × operación,3,30
+San Cristobal,117,alquiler_temporal,barrio × corte PE2 × operación,3,31
+San Nicolas,784,alquiler_temporal,barrio × corte PE2 × operación,3,32
+San Telmo,354,alquiler_temporal,barrio × corte PE2 × operación,3,33
+Velez Sarsfield,39,alquiler_temporal,barrio × corte PE2 × operación,3,34
+Versalles,8,alquiler_temporal,barrio × corte PE2 × operación,3,35
+Villa Crespo,426,alquiler_temporal,barrio × corte PE2 × operación,3,36
+Villa Del Parque,76,alquiler_temporal,barrio × corte PE2 × operación,3,37
+Villa Devoto,90,alquiler_temporal,barrio × corte PE2 × operación,3,38
+Villa Gral. Mitre,29,alquiler_temporal,barrio × corte PE2 × operación,3,39
+Villa Lugano,30,alquiler_temporal,barrio × corte PE2 × operación,3,40
+Villa Luro,32,alquiler_temporal,barrio × corte PE2 × operación,3,41
+Villa Ortuzar,59,alquiler_temporal,barrio × corte PE2 × operación,3,42
+Villa Pueyrredon,47,alquiler_temporal,barrio × corte PE2 × operación,3,43
+Villa Real,5,alquiler_temporal,barrio × corte PE2 × operación,3,44
+Villa Riachuelo,3,alquiler_temporal,barrio × corte PE2 × operación,3,45
+Villa Santa Rita,13,alquiler_temporal,barrio × corte PE2 × operación,3,46
+Villa Soldati,0,alquiler_temporal,barrio × corte PE2 × operación,3,47
+Villa Urquiza,166,alquiler_temporal,barrio × corte PE2 × operación,3,48
+Agronomia,138,venta,barrio × corte PE2 × operación,4,1
+Almagro,2197,venta,barrio × corte PE2 × operación,4,2
+Balvanera,2273,venta,barrio × corte PE2 × operación,4,3
+Barracas,828,venta,barrio × corte PE2 × operación,4,4
+Belgrano,2108,venta,barrio × corte PE2 × operación,4,5
+La Boca,395,venta,barrio × corte PE2 × operación,4,14
+Boedo,731,venta,barrio × corte PE2 × operación,4,6
+Caballito,1938,venta,barrio × corte PE2 × operación,4,7
+Chacarita,770,venta,barrio × corte PE2 × operación,4,8
+Coghlan,494,venta,barrio × corte PE2 × operación,4,9
+Colegiales,1275,venta,barrio × corte PE2 × operación,4,10
+Constitucion,855,venta,barrio × corte PE2 × operación,4,11
+Flores,1931,venta,barrio × corte PE2 × operación,4,12
+Floresta,375,venta,barrio × corte PE2 × operación,4,13
+Liniers,834,venta,barrio × corte PE2 × operación,4,15
+Mataderos,577,venta,barrio × corte PE2 × operación,4,16
+Monserrat,1260,venta,barrio × corte PE2 × operación,4,17
+Monte Castro,371,venta,barrio × corte PE2 × operación,4,18
+Nueva Pompeya,99,venta,barrio × corte PE2 × operación,4,19
+Nuñez,1788,venta,barrio × corte PE2 × operación,4,20
+Palermo,2592,venta,barrio × corte PE2 × operación,4,21
+Parque Avellaneda,187,venta,barrio × corte PE2 × operación,4,22
+Parque Chacabuco,526,venta,barrio × corte PE2 × operación,4,23
+Parque Chas,270,venta,barrio × corte PE2 × operación,4,24
+Parque Patricios,299,venta,barrio × corte PE2 × operación,4,25
+Paternal,138,venta,barrio × corte PE2 × operación,4,26
+Puerto Madero,1282,venta,barrio × corte PE2 × operación,4,27
+Recoleta,2001,venta,barrio × corte PE2 × operación,4,28
+Retiro,982,venta,barrio × corte PE2 × operación,4,29
+Saavedra,1342,venta,barrio × corte PE2 × operación,4,30
+San Cristobal,922,venta,barrio × corte PE2 × operación,4,31
+San Nicolas,1096,venta,barrio × corte PE2 × operación,4,32
+San Telmo,583,venta,barrio × corte PE2 × operación,4,33
+Velez Sarsfield,287,venta,barrio × corte PE2 × operación,4,34
+Versalles,99,venta,barrio × corte PE2 × operación,4,35
+Villa Crespo,1976,venta,barrio × corte PE2 × operación,4,36
+Villa Del Parque,1040,venta,barrio × corte PE2 × operación,4,37
+Villa Devoto,1426,venta,barrio × corte PE2 × operación,4,38
+Villa Gral. Mitre,265,venta,barrio × corte PE2 × operación,4,39
+Villa Lugano,455,venta,barrio × corte PE2 × operación,4,40
+Villa Luro,831,venta,barrio × corte PE2 × operación,4,41
+Villa Ortuzar,546,venta,barrio × corte PE2 × operación,4,42
+Villa Pueyrredon,388,venta,barrio × corte PE2 × operación,4,43
+Villa Real,50,venta,barrio × corte PE2 × operación,4,44
+Villa Riachuelo,89,venta,barrio × corte PE2 × operación,4,45
+Villa Santa Rita,296,venta,barrio × corte PE2 × operación,4,46
+Villa Soldati,71,venta,barrio × corte PE2 × operación,4,47
+Villa Urquiza,2000,venta,barrio × corte PE2 × operación,4,48
+Agronomia,9,airbnb,barrio × corte PE2 × operación,1,1
+Almagro,371,airbnb,barrio × corte PE2 × operación,1,2
+Balvanera,355,airbnb,barrio × corte PE2 × operación,1,3
+Barracas,66,airbnb,barrio × corte PE2 × operación,1,4
+Belgrano,491,airbnb,barrio × corte PE2 × operación,1,5
+La Boca,47,airbnb,barrio × corte PE2 × operación,1,14
+Boedo,28,airbnb,barrio × corte PE2 × operación,1,6
+Caballito,140,airbnb,barrio × corte PE2 × operación,1,7
+Chacarita,164,airbnb,barrio × corte PE2 × operación,1,8
+Coghlan,33,airbnb,barrio × corte PE2 × operación,1,9
+Colegiales,242,airbnb,barrio × corte PE2 × operación,1,10
+Constitucion,100,airbnb,barrio × corte PE2 × operación,1,11
+Flores,44,airbnb,barrio × corte PE2 × operación,1,12
+Floresta,11,airbnb,barrio × corte PE2 × operación,1,13
+Liniers,4,airbnb,barrio × corte PE2 × operación,1,15
+Mataderos,3,airbnb,barrio × corte PE2 × operación,1,16
+Monserrat,408,airbnb,barrio × corte PE2 × operación,1,17
+Monte Castro,6,airbnb,barrio × corte PE2 × operación,1,18
+Nueva Pompeya,3,airbnb,barrio × corte PE2 × operación,1,19
+Nuñez,218,airbnb,barrio × corte PE2 × operación,1,20
+Palermo,3222,airbnb,barrio × corte PE2 × operación,1,21
+Parque Avellaneda,8,airbnb,barrio × corte PE2 × operación,1,22
+Parque Chacabuco,16,airbnb,barrio × corte PE2 × operación,1,23
+Parque Chas,11,airbnb,barrio × corte PE2 × operación,1,24
+Parque Patricios,21,airbnb,barrio × corte PE2 × operación,1,25
+Paternal,9,airbnb,barrio × corte PE2 × operación,1,26
+Puerto Madero,186,airbnb,barrio × corte PE2 × operación,1,27
+Recoleta,1322,airbnb,barrio × corte PE2 × operación,1,28
+Retiro,471,airbnb,barrio × corte PE2 × operación,1,29
+Saavedra,59,airbnb,barrio × corte PE2 × operación,1,30
+San Cristobal,50,airbnb,barrio × corte PE2 × operación,1,31
+San Nicolas,568,airbnb,barrio × corte PE2 × operación,1,32
+San Telmo,256,airbnb,barrio × corte PE2 × operación,1,33
+Velez Sarsfield,7,airbnb,barrio × corte PE2 × operación,1,34
+Versalles,0,airbnb,barrio × corte PE2 × operación,1,35
+Villa Crespo,293,airbnb,barrio × corte PE2 × operación,1,36
+Villa Del Parque,51,airbnb,barrio × corte PE2 × operación,1,37
+Villa Devoto,49,airbnb,barrio × corte PE2 × operación,1,38
+Villa Gral. Mitre,15,airbnb,barrio × corte PE2 × operación,1,39
+Villa Lugano,2,airbnb,barrio × corte PE2 × operación,1,40
+Villa Luro,10,airbnb,barrio × corte PE2 × operación,1,41
+Villa Ortuzar,25,airbnb,barrio × corte PE2 × operación,1,42
+Villa Pueyrredon,14,airbnb,barrio × corte PE2 × operación,1,43
+Villa Real,2,airbnb,barrio × corte PE2 × operación,1,44
+Villa Riachuelo,0,airbnb,barrio × corte PE2 × operación,1,45
+Villa Santa Rita,10,airbnb,barrio × corte PE2 × operación,1,46
+Villa Soldati,0,airbnb,barrio × corte PE2 × operación,1,47
+Villa Urquiza,100,airbnb,barrio × corte PE2 × operación,1,48

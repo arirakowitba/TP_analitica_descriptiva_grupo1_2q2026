@@ -1,0 +1,748 @@
+{
+  "tablas": {
+    "dim_fuente": {
+      "rol": "dimension",
+      "filas": 4,
+      "columnas": [
+        {
+          "nombre": "fuente_key",
+          "tipo_sugerido": "Int64",
+          "tipo_pandas": "int64"
+        },
+        {
+          "nombre": "fuente_norm",
+          "tipo_sugerido": "Text",
+          "tipo_pandas": "str"
+        }
+      ]
+    },
+    "dim_operacion": {
+      "rol": "dimension",
+      "filas": 4,
+      "columnas": [
+        {
+          "nombre": "operacion_key",
+          "tipo_sugerido": "Int64",
+          "tipo_pandas": "int64"
+        },
+        {
+          "nombre": "operacion",
+          "tipo_sugerido": "Text",
+          "tipo_pandas": "str"
+        }
+      ]
+    },
+    "dim_tipo_propiedad": {
+      "rol": "dimension",
+      "filas": 13,
+      "columnas": [
+        {
+          "nombre": "tipo_propiedad_key",
+          "tipo_sugerido": "Int64",
+          "tipo_pandas": "int64"
+        },
+        {
+          "nombre": "tipo_propiedad",
+          "tipo_sugerido": "Text",
+          "tipo_pandas": "str"
+        }
+      ]
+    },
+    "dim_moneda": {
+      "rol": "dimension",
+      "filas": 3,
+      "columnas": [
+        {
+          "nombre": "moneda_key",
+          "tipo_sugerido": "Int64",
+          "tipo_pandas": "int64"
+        },
+        {
+          "nombre": "moneda_norm",
+          "tipo_sugerido": "Text",
+          "tipo_pandas": "str"
+        }
+      ]
+    },
+    "dim_comuna": {
+      "rol": "dimension",
+      "filas": 15,
+      "columnas": [
+        {
+          "nombre": "comuna_key",
+          "tipo_sugerido": "Int64",
+          "tipo_pandas": "int64"
+        },
+        {
+          "nombre": "comuna",
+          "tipo_sugerido": "Text",
+          "tipo_pandas": "str"
+        }
+      ]
+    },
+    "dim_barrio": {
+      "rol": "dimension",
+      "filas": 48,
+      "columnas": [
+        {
+          "nombre": "barrio_key",
+          "tipo_sugerido": "Int64",
+          "tipo_pandas": "int64"
+        },
+        {
+          "nombre": "barrio_oficial",
+          "tipo_sugerido": "Text",
+          "tipo_pandas": "str"
+        },
+        {
+          "nombre": "comuna_key",
+          "tipo_sugerido": "Int64",
+          "tipo_pandas": "int64"
+        }
+      ]
+    },
+    "dim_fecha": {
+      "rol": "dimension",
+      "filas": 5,
+      "columnas": [
+        {
+          "nombre": "fecha_key",
+          "tipo_sugerido": "Int64",
+          "tipo_pandas": "int64"
+        },
+        {
+          "nombre": "fecha",
+          "tipo_sugerido": "Date/Time",
+          "tipo_pandas": "datetime64[us, UTC]"
+        },
+        {
+          "nombre": "anio",
+          "tipo_sugerido": "Int64",
+          "tipo_pandas": "int32"
+        },
+        {
+          "nombre": "mes",
+          "tipo_sugerido": "Int64",
+          "tipo_pandas": "int32"
+        },
+        {
+          "nombre": "trimestre",
+          "tipo_sugerido": "Int64",
+          "tipo_pandas": "int32"
+        }
+      ]
+    },
+    "fact_publicacion": {
+      "rol": "hecho",
+      "filas": 67887,
+      "columnas": [
+        {
+          "nombre": "id_publicacion",
+          "tipo_sugerido": "Text",
+          "tipo_pandas": "str"
+        },
+        {
+          "nombre": "fuente_norm",
+          "tipo_sugerido": "Text",
+          "tipo_pandas": "str"
+        },
+        {
+          "nombre": "tipo_operacion_norm",
+          "tipo_sugerido": "Text",
+          "tipo_pandas": "str"
+        },
+        {
+          "nombre": "fecha_extraccion",
+          "tipo_sugerido": "Text",
+          "tipo_pandas": "str"
+        },
+        {
+          "nombre": "barrio_oficial",
+          "tipo_sugerido": "Text",
+          "tipo_pandas": "str"
+        },
+        {
+          "nombre": "tipo_propiedad",
+          "tipo_sugerido": "Text",
+          "tipo_pandas": "str"
+        },
+        {
+          "nombre": "moneda_norm",
+          "tipo_sugerido": "Text",
+          "tipo_pandas": "str"
+        },
+        {
+          "nombre": "precio",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "superficie_ref_m2",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "precio_m2_usd",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "ambientes_ref",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "dormitorios_ref",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "banios_ref",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "cantidad_publicaciones",
+          "tipo_sugerido": "Int64",
+          "tipo_pandas": "int64"
+        },
+        {
+          "nombre": "fuente_key",
+          "tipo_sugerido": "Int64",
+          "tipo_pandas": "int64"
+        },
+        {
+          "nombre": "operacion_key",
+          "tipo_sugerido": "Int64",
+          "tipo_pandas": "int64"
+        },
+        {
+          "nombre": "tipo_propiedad_key",
+          "tipo_sugerido": "Int64",
+          "tipo_pandas": "int64"
+        },
+        {
+          "nombre": "moneda_key",
+          "tipo_sugerido": "Int64",
+          "tipo_pandas": "int64"
+        },
+        {
+          "nombre": "barrio_key",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "fecha",
+          "tipo_sugerido": "Date/Time",
+          "tipo_pandas": "datetime64[us, UTC]"
+        },
+        {
+          "nombre": "fecha_key",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        }
+      ]
+    },
+    "fact_barrio_operacion": {
+      "rol": "hecho",
+      "filas": 192,
+      "columnas": [
+        {
+          "nombre": "barrio_oficial",
+          "tipo_sugerido": "Text",
+          "tipo_pandas": "str"
+        },
+        {
+          "nombre": "cantidad_publicaciones",
+          "tipo_sugerido": "Int64",
+          "tipo_pandas": "int64"
+        },
+        {
+          "nombre": "operacion",
+          "tipo_sugerido": "Text",
+          "tipo_pandas": "str"
+        },
+        {
+          "nombre": "grano",
+          "tipo_sugerido": "Text",
+          "tipo_pandas": "str"
+        },
+        {
+          "nombre": "operacion_key",
+          "tipo_sugerido": "Int64",
+          "tipo_pandas": "int64"
+        },
+        {
+          "nombre": "barrio_key",
+          "tipo_sugerido": "Int64",
+          "tipo_pandas": "int64"
+        }
+      ]
+    },
+    "fact_kpi_barrio": {
+      "rol": "hecho",
+      "filas": 48,
+      "columnas": [
+        {
+          "nombre": "barrio_oficial",
+          "tipo_sugerido": "Text",
+          "tipo_pandas": "str"
+        },
+        {
+          "nombre": "comuna",
+          "tipo_sugerido": "Int64",
+          "tipo_pandas": "int64"
+        },
+        {
+          "nombre": "area_km2",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "n_alquiler",
+          "tipo_sugerido": "Int64",
+          "tipo_pandas": "int64"
+        },
+        {
+          "nombre": "n_alquiler_temporal",
+          "tipo_sugerido": "Int64",
+          "tipo_pandas": "int64"
+        },
+        {
+          "nombre": "n_venta",
+          "tipo_sugerido": "Int64",
+          "tipo_pandas": "int64"
+        },
+        {
+          "nombre": "n_airbnb",
+          "tipo_sugerido": "Int64",
+          "tipo_pandas": "int64"
+        },
+        {
+          "nombre": "pct_del_total_venta",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "pct_del_total_alquiler",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "pct_del_total_alquiler_temporal",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "participacion_venta_en_barrio_ref",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "participacion_alquiler_en_barrio_ref",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "participacion_alquiler_temporal_en_barrio_ref",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "airbnb_por_km2",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "mediana_precio_m2_venta_usd",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "mediana_precio_m2_alquiler_usd",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "mediana_alquiler_mensual_usd",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "brecha_airbnb_vs_permanente_pct",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "brecha_meli_temporario_vs_permanente_pct",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "densidad_subte_km2",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "densidad_tren_km2",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "densidad_metrobus_km2",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "densidad_hospitales_km2",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "densidad_educacion_km2",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "densidad_culturales_km2",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "densidad_gastronomia_km2",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "densidad_espacios_verdes_km2",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "pct_superficie_verde",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "barrio_key",
+          "tipo_sugerido": "Int64",
+          "tipo_pandas": "int64"
+        }
+      ]
+    },
+    "fact_comuna_operacion": {
+      "rol": "hecho",
+      "filas": 60,
+      "columnas": [
+        {
+          "nombre": "comuna",
+          "tipo_sugerido": "Text",
+          "tipo_pandas": "str"
+        },
+        {
+          "nombre": "cantidad_publicaciones",
+          "tipo_sugerido": "Int64",
+          "tipo_pandas": "int64"
+        },
+        {
+          "nombre": "operacion",
+          "tipo_sugerido": "Text",
+          "tipo_pandas": "str"
+        },
+        {
+          "nombre": "grano",
+          "tipo_sugerido": "Text",
+          "tipo_pandas": "str"
+        },
+        {
+          "nombre": "operacion_key",
+          "tipo_sugerido": "Int64",
+          "tipo_pandas": "int64"
+        },
+        {
+          "nombre": "comuna_key",
+          "tipo_sugerido": "Int64",
+          "tipo_pandas": "int64"
+        }
+      ]
+    },
+    "fact_kpi_comuna": {
+      "rol": "hecho",
+      "filas": 15,
+      "columnas": [
+        {
+          "nombre": "comuna",
+          "tipo_sugerido": "Text",
+          "tipo_pandas": "str"
+        },
+        {
+          "nombre": "venta_por_1000_viviendas",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "alquiler_por_1000_viviendas",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "airbnb_por_1000_viviendas",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "alquiler_por_1000_hogares_inquilinos",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "publicaciones_por_1000_hab",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "airbnb_por_cada_alquiler_permanente",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "comuna_key",
+          "tipo_sugerido": "Int64",
+          "tipo_pandas": "int64"
+        }
+      ]
+    },
+    "fact_contexto_barrio": {
+      "rol": "hecho",
+      "filas": 48,
+      "columnas": [
+        {
+          "nombre": "barrio_oficial",
+          "tipo_sugerido": "Text",
+          "tipo_pandas": "str"
+        },
+        {
+          "nombre": "comuna",
+          "tipo_sugerido": "Int64",
+          "tipo_pandas": "int64"
+        },
+        {
+          "nombre": "area_km2",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "n_subte",
+          "tipo_sugerido": "Int64",
+          "tipo_pandas": "int64"
+        },
+        {
+          "nombre": "densidad_subte_km2",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "n_tren",
+          "tipo_sugerido": "Int64",
+          "tipo_pandas": "int64"
+        },
+        {
+          "nombre": "densidad_tren_km2",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "n_metrobus",
+          "tipo_sugerido": "Int64",
+          "tipo_pandas": "int64"
+        },
+        {
+          "nombre": "densidad_metrobus_km2",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "n_hospitales",
+          "tipo_sugerido": "Int64",
+          "tipo_pandas": "int64"
+        },
+        {
+          "nombre": "densidad_hospitales_km2",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "n_educacion",
+          "tipo_sugerido": "Int64",
+          "tipo_pandas": "int64"
+        },
+        {
+          "nombre": "densidad_educacion_km2",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "n_culturales",
+          "tipo_sugerido": "Int64",
+          "tipo_pandas": "int64"
+        },
+        {
+          "nombre": "densidad_culturales_km2",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "n_gastronomia",
+          "tipo_sugerido": "Int64",
+          "tipo_pandas": "int64"
+        },
+        {
+          "nombre": "densidad_gastronomia_km2",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "n_espacios_verdes",
+          "tipo_sugerido": "Int64",
+          "tipo_pandas": "int64"
+        },
+        {
+          "nombre": "densidad_espacios_verdes_km2",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "pct_superficie_verde",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "barrio_key",
+          "tipo_sugerido": "Int64",
+          "tipo_pandas": "int64"
+        }
+      ]
+    },
+    "fact_censo_comuna": {
+      "rol": "hecho",
+      "filas": 15,
+      "columnas": [
+        {
+          "nombre": "comuna",
+          "tipo_sugerido": "Text",
+          "tipo_pandas": "str"
+        },
+        {
+          "nombre": "superficie_km2",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "poblacion_total",
+          "tipo_sugerido": "Int64",
+          "tipo_pandas": "int64"
+        },
+        {
+          "nombre": "densidad_hab_km2",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "poblacion_viv_particulares",
+          "tipo_sugerido": "Int64",
+          "tipo_pandas": "int64"
+        },
+        {
+          "nombre": "viviendas_total",
+          "tipo_sugerido": "Int64",
+          "tipo_pandas": "int64"
+        },
+        {
+          "nombre": "viviendas_particulares",
+          "tipo_sugerido": "Int64",
+          "tipo_pandas": "int64"
+        },
+        {
+          "nombre": "viviendas_ocupadas",
+          "tipo_sugerido": "Int64",
+          "tipo_pandas": "int64"
+        },
+        {
+          "nombre": "viviendas_uso_temporal",
+          "tipo_sugerido": "Int64",
+          "tipo_pandas": "int64"
+        },
+        {
+          "nombre": "viviendas_uso_oficina",
+          "tipo_sugerido": "Int64",
+          "tipo_pandas": "int64"
+        },
+        {
+          "nombre": "viviendas_en_alquiler_o_venta",
+          "tipo_sugerido": "Int64",
+          "tipo_pandas": "int64"
+        },
+        {
+          "nombre": "hogares",
+          "tipo_sugerido": "Int64",
+          "tipo_pandas": "int64"
+        },
+        {
+          "nombre": "viviendas_ocupadas_casa",
+          "tipo_sugerido": "Int64",
+          "tipo_pandas": "int64"
+        },
+        {
+          "nombre": "viviendas_ocupadas_departamento",
+          "tipo_sugerido": "Int64",
+          "tipo_pandas": "int64"
+        },
+        {
+          "nombre": "hogares_propietarios",
+          "tipo_sugerido": "Int64",
+          "tipo_pandas": "int64"
+        },
+        {
+          "nombre": "hogares_inquilinos",
+          "tipo_sugerido": "Int64",
+          "tipo_pandas": "int64"
+        },
+        {
+          "nombre": "tamano_medio_hogar",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "pct_hogares_inquilinos",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "pct_viviendas_departamento",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "pct_viviendas_uso_temporal",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "pct_viviendas_en_alquiler_o_venta",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "comuna_key",
+          "tipo_sugerido": "Int64",
+          "tipo_pandas": "int64"
+        },
+        {
+          "nombre": "anio_censo",
+          "tipo_sugerido": "Int64",
+          "tipo_pandas": "int64"
+        }
+      ]
+    }
+  }
+}

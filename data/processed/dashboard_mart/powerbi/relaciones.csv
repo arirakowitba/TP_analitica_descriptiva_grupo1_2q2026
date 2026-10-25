@@ -1,0 +1,16 @@
+tabla_uno,columna_uno,tabla_muchos,columna_muchos,cardinalidad,direccion_filtro,activa
+dim_fuente,fuente_key,fact_publicacion,fuente_key,1:*,Single,True
+dim_operacion,operacion_key,fact_publicacion,operacion_key,1:*,Single,True
+dim_tipo_propiedad,tipo_propiedad_key,fact_publicacion,tipo_propiedad_key,1:*,Single,True
+dim_moneda,moneda_key,fact_publicacion,moneda_key,1:*,Single,True
+dim_fecha,fecha_key,fact_publicacion,fecha_key,1:*,Single,True
+dim_comuna,comuna_key,dim_barrio,comuna_key,1:*,Single,True
+dim_barrio,barrio_key,fact_publicacion,barrio_key,1:*,Single,True
+dim_barrio,barrio_key,fact_barrio_operacion,barrio_key,1:*,Single,True
+dim_operacion,operacion_key,fact_barrio_operacion,operacion_key,1:*,Single,True
+dim_barrio,barrio_key,fact_kpi_barrio,barrio_key,1:*,Single,True
+dim_comuna,comuna_key,fact_comuna_operacion,comuna_key,1:*,Single,True
+dim_operacion,operacion_key,fact_comuna_operacion,operacion_key,1:*,Single,True
+dim_comuna,comuna_key,fact_kpi_comuna,comuna_key,1:*,Single,True
+dim_barrio,barrio_key,fact_contexto_barrio,barrio_key,1:*,Single,True
+dim_comuna,comuna_key,fact_censo_comuna,comuna_key,1:*,Single,True

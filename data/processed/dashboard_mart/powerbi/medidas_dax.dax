@@ -1,0 +1,14 @@
+// Medidas iniciales. Usar cada una en el grano indicado y validar filtros.
+Publicaciones observadas = SUM(fact_publicacion[cantidad_publicaciones])
+Avisos por barrio y operación = SUM(fact_barrio_operacion[cantidad_publicaciones])
+Avisos por comuna y operación = SUM(fact_comuna_operacion[cantidad_publicaciones])
+Hogares inquilinos (Censo 2022) = SUM(fact_censo_comuna[hogares_inquilinos])
+Viviendas (Censo 2022) = SUM(fact_censo_comuna[viviendas_total])
+Densidad Airbnb seleccionada = SELECTEDVALUE(fact_kpi_barrio[airbnb_por_km2])
+Ventas por 1000 viviendas seleccionada = SELECTEDVALUE(fact_kpi_comuna[venta_por_1000_viviendas])
+Alquileres por 1000 viviendas seleccionada = SELECTEDVALUE(fact_kpi_comuna[alquiler_por_1000_viviendas])
+Airbnb por 1000 viviendas seleccionada = SELECTEDVALUE(fact_kpi_comuna[airbnb_por_1000_viviendas])
+
+// No sumar precios, medianas, tasas ni densidades entre territorios.
+// SELECTEDVALUE devuelve BLANK si el contexto contiene más de un valor.
+// Los conteos representan oferta publicada observada, no stock ni contratos.
