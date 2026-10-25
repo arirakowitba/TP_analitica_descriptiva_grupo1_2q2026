@@ -1,1 +1,1 @@
-Reejecución solicitada tras añadir la raíz del repositorio al PYTHONPATH del kernel.
+Reejecución solicitada tras corregir la iteración de estratos por fuente en el notebook 13.
