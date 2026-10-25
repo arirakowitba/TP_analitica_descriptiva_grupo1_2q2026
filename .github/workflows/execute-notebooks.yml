@@ -16,11 +16,11 @@ jobs:
     timeout-minutes: 360
     steps:
       - name: Descargar repositorio
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           ref: main
       - name: Configurar Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
           python-version: "3.12"
           cache: pip
@@ -31,7 +31,7 @@ jobs:
         run: python src/run_notebooks_sequential.py
       - name: Guardar notebooks y registro aunque haya error
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: notebooks-ejecutados
           path: notebooks/*.ipynb
