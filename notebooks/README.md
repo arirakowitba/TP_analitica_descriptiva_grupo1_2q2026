@@ -38,3 +38,13 @@ Los notebooks 14–15 se ejecutan después del 13. El notebook 15 genera `data/p
 ## Criterio visual de PE3
 
 Los notebooks 09–15 comparten tarjetas compactas para indicadores de lectura rápida y paneles que responden una pregunta concreta. Cada visual se acompaña de una nota de interpretación y límites; los ejes muestran unidades, las comparaciones territoriales conservan tamaños de muestra y los precios/KPIs se presentan en su grano. Las tarjetas son una síntesis del notebook, no reemplazan las tablas ni el dashboard. El estilo común está en `src/pe3_visuals.py`.
+
+## Ejecución completa y secuencial
+
+Desde la raíz del repositorio, instalar dependencias con `pip install -r requirements.txt` y ejecutar:
+
+```bash
+python src/run_notebooks_sequential.py
+```
+
+El ejecutor procesa los notebooks numerados en orden ascendente (01–15), guarda los outputs en cada archivo al terminarlo y se detiene ante el primer error. Corregir ese error y volver a ejecutar desde el inicio para validar la secuencia completa con el mismo estado de datos.
