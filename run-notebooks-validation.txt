@@ -1,1 +1,1 @@
-Validación completa tras normalizar IDs de celdas y actualizar runtimes de Actions.
+Validación completa con IDs normalizados y transporte CurveZMQ para kernels.
