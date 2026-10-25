@@ -1,1 +1,1 @@
-Reejecución solicitada tras corregir la dependencia de estado en el notebook 02.
+Reejecución solicitada tras añadir la raíz del repositorio al PYTHONPATH del kernel.

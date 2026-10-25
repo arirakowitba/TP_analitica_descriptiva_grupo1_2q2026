@@ -1,5 +1,6 @@
 """Ejecuta y guarda los notebooks numerados en orden, deteniéndose ante el primer error."""
 from pathlib import Path
+import os
 import re
 import subprocess
 import sys
@@ -31,7 +32,12 @@ def main():
             "--ExecutePreprocessor.allow_errors=False",
             str(relative),
         ]
-        result = subprocess.run(command, cwd=ROOT, check=False)
+        env = os.environ.copy()
+        existing_pythonpath = env.get("PYTHONPATH")
+        env["PYTHONPATH"] = str(ROOT) + (
+            os.pathsep + existing_pythonpath if existing_pythonpath else ""
+        )
+        result = subprocess.run(command, cwd=ROOT, env=env, check=False)
         if result.returncode != 0:
             print(f"\nERROR: se detuvo en {relative}. "
                   "Los notebooks anteriores ya quedaron guardados con outputs.", flush=True)
