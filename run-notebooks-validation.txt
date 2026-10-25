@@ -1,1 +1,1 @@
-Reejecución solicitada tras corregir la iteración de estratos por fuente en el notebook 13.
+Reejecución solicitada tras corregir 1 llamadas a índices de grupos en el notebook 13.
