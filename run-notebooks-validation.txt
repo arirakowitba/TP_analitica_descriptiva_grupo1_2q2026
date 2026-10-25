@@ -1,1 +1,1 @@
-Validación completa con IDs normalizados y transporte CurveZMQ para kernels.
+Validación final tras corregir el peso tipográfico de las tarjetas KPI.
