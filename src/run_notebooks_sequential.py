@@ -44,13 +44,12 @@ def main():
           f"{notebooks[0].name} → {notebooks[-1].name}", flush=True)
 
     with tempfile.TemporaryDirectory(prefix="jupyter-pe3-config-") as config_dir:
-        # nbconvert ejecuta kernels locales. IPC evita el aviso de transporte TCP
-        # sin cifrar en runners POSIX; Windows conserva el transporte soportado allí.
-        if os.name != "nt":
-            (Path(config_dir) / "jupyter_config.py").write_text(
-                "c = get_config()\nc.KernelManager.transport = 'ipc'\n",
-                encoding="utf-8",
-            )
+        # Cifrar el tráfico local del kernel para no degradar la validación
+        # ni emitir el aviso de IPKernelApp sobre sockets TCP sin cifrado.
+        (Path(config_dir) / "jupyter_config.py").write_text(
+            "c = get_config()\nc.KernelManager.transport_encryption = 'auto'\n",
+            encoding="utf-8",
+        )
 
         for number, notebook in enumerate(notebooks, start=1):
             relative = notebook.relative_to(ROOT)
