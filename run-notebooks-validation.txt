@@ -1,0 +1,1 @@
+Ejecución solicitada para validar la secuencia completa de notebooks 01–15. El workflow solo se dispara cuando se modifica este archivo.
