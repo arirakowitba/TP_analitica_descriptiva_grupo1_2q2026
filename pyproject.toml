@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tp-analitica-descriptiva-grupo1"
+version = "0.1.0"
+description = "Código reutilizable del análisis inmobiliario y habitacional de CABA"
+requires-python = ">=3.10"
+dependencies = [
+    "beautifulsoup4", "ipykernel", "jupyter", "lxml", "matplotlib",
+    "nbconvert", "numpy", "openpyxl", "pandas", "playwright", "requests",
+    "scikit-learn", "scipy", "seaborn", "statsmodels", "truststore", "urllib3",
+]
+
+[tool.setuptools]
+# src es el nombre del paquete existente, no un directorio de layout src/.
+# La lista explícita evita incluir data/, notebooks/ o scrappers/ como paquetes.
+packages = ["src"]

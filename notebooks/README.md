@@ -41,10 +41,23 @@ Los notebooks 09–15 comparten tarjetas compactas para indicadores de lectura r
 
 ## Ejecución completa y secuencial
 
-Desde la raíz del repositorio, instalar dependencias con `pip install -r requirements.txt` y ejecutar:
+Desde la raíz del repositorio, instalar dependencias con `python -m pip install -r requirements.txt` y ejecutar:
 
 ```bash
-python src/run_notebooks_sequential.py
+python -m src.run_notebooks_sequential
 ```
 
 El ejecutor procesa los notebooks numerados en orden ascendente (01–15), guarda los outputs en cada archivo al terminarlo y se detiene ante el primer error. Corregir ese error y volver a ejecutar desde el inicio para validar la secuencia completa con el mismo estado de datos.
+
+Para retomar solamente PE3 con los insumos de 01–08 ya disponibles:
+
+```bash
+python -m src.run_notebooks_sequential --start 9 --end 15
+```
+
+El ejecutor usa el mismo intérprete para nbconvert y para un kernel temporal;
+no depende del kernelspec `python3` global ni modifica los kernels registrados.
+
+La instalación editable de la raíz hace que `src` esté disponible también al abrir
+un notebook desde esta carpeta. Usar el kernel del entorno instalado; no es
+necesario modificar `sys.path` ni instalar un paquete llamado `src` desde PyPI.

@@ -1,6 +1,6 @@
 # Codigo reutilizable
 
-Funciones y modulos auxiliares usados por los notebooks. Se importan desde los notebooks con `from src import ...` despues de agregar la raiz del repo a `sys.path`.
+Funciones y modulos auxiliares usados por los notebooks. Desde la raíz del repositorio, ejecutar `python -m pip install -r requirements.txt` para instalar el proyecto en modo editable. Luego se importan con `from src import ...` desde cualquier directorio, usando el mismo entorno de Python. Las dependencias se declaran en `pyproject.toml`; `src` es el paquete local y no debe instalarse desde PyPI.
 
 | Modulo | Contenido |
 |---|---|

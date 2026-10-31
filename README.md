@@ -50,13 +50,41 @@ Para preparar el entorno de trabajo:
 ```bash
 python -m venv .venv
 source .venv/bin/activate
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
 ```
 
 En Windows, la activacion del entorno puede realizarse con:
 
 ```bash
 .venv\Scripts\activate
+```
+
+La instalación debe ejecutarse desde la raíz del repositorio. `requirements.txt` instala
+el proyecto en modo editable (`-e .`) y sus dependencias declaradas en
+`pyproject.toml`. El paquete importable conserva el nombre `src`: es código local,
+no una dependencia para buscar en PyPI. Los cambios en `src/` se reflejan sin
+reinstalar; al modificar dependencias, repetir la instalación.
+
+Para usar el mismo entorno en Jupyter o VS Code:
+
+```bash
+python -m ipykernel install --user --name tp-analitica --display-name "TP Analítica (.venv)"
+python -m jupyter lab
+```
+
+Seleccionar **TP Analítica (.venv)** en el notebook y reiniciar el kernel si estaba
+abierto durante la instalación. Comprobar desde `notebooks/`:
+
+```bash
+python -c "from src import config; print(config.REPO_ROOT)"
+```
+
+La instalación editable permite importar desde cualquier directorio; las rutas de
+`src.config` apuntan al checkout donde se instaló el proyecto. Conservar allí los
+datos versionados. Para validar la secuencia:
+
+```bash
+python -m src.run_notebooks_sequential
 ```
 
 Los scripts principales aceptan `--help` para revisar parametros, rutas de salida y limites de ejecucion:
