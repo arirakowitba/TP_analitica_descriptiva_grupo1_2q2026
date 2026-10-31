@@ -1,8 +1,8 @@
-variable,n,estadistico_kruskal,p_valor,eta2_aproximado,p_ajustado_BH
-airbnb_por_km2,48,22.661400944918867,1.1998841284548252e-05,0.45914224322041924,8.399188899183776e-05
-mediana_precio_m2_venta_usd,48,3.2829680728388757,0.19369238234520036,0.02851040161864168,0.19369238234520036
-mediana_precio_m2_alquiler_usd,41,5.9833318814066345,0.05020373057998394,0.10482452319491144,0.05857101900998126
-densidad_culturales_km2,48,18.19590457804742,0.00011189470206579848,0.35990899062327597,0.0003916314572302947
-densidad_subte_km2,48,13.972487053742945,0.0009245129248459136,0.26605526786095435,0.002157196824640465
-densidad_educacion_km2,48,6.720118587975719,0.034733199413775895,0.1048915241772382,0.04862647917928625
-pct_superficie_verde,48,6.922324875896322,0.03139324809699147,0.1093849972421405,0.04862647917928625
+variable,n,estadistico_kruskal,p_valor,eta2_aproximado,estado,p_ajustado_BH
+airbnb_por_km2,48,,,,No estimable: al menos un grupo con menos de 5 barrios,
+mediana_precio_m2_venta_usd,48,,,,No estimable: al menos un grupo con menos de 5 barrios,
+mediana_precio_m2_alquiler_usd,41,,,,No estimable: al menos un grupo con menos de 5 barrios,
+densidad_culturales_km2,48,,,,No estimable: al menos un grupo con menos de 5 barrios,
+densidad_subte_km2,48,,,,No estimable: al menos un grupo con menos de 5 barrios,
+densidad_educacion_km2,48,,,,No estimable: al menos un grupo con menos de 5 barrios,
+pct_superficie_verde,48,,,,No estimable: al menos un grupo con menos de 5 barrios,

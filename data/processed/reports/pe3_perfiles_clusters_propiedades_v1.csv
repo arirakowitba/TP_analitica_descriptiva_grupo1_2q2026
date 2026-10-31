@@ -1,0 +1,4 @@
+cluster_propiedad,n_publicaciones,ambientes_ref,banios_ref,dist_transporte_masivo_m,dist_espacio_verde_m,dist_hospitales_m,densidad_subte_km2,densidad_tren_km2,densidad_metrobus_km2,densidad_educacion_km2,densidad_hospitales_km2,densidad_culturales_km2,densidad_gastronomia_km2,pct_superficie_verde
+1,4495,2.0,1.0,200.338,247.285,1719.892,4.093,0.0,18.193,9.611,0.0,111.888,67.77,2.511
+2,16527,2.0,1.0,375.98,315.034,704.299,1.088,0.146,0.0,11.969,0.466,36.536,18.245,1.549
+3,34136,2.0,1.0,396.829,279.285,1436.502,0.277,0.277,1.093,7.561,0.0,11.792,8.809,2.079
