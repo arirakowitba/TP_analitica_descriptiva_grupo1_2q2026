@@ -24,11 +24,15 @@ jobs:
         with:
           python-version: "3.12"
           cache: pip
-          cache-dependency-path: requirements.txt
+          cache-dependency-path: |
+            requirements.txt
+            pyproject.toml
       - name: Instalar dependencias
-        run: python -m pip install --upgrade pip && pip install -r requirements.txt
+        run: python -m pip install --upgrade pip && python -m pip install -r requirements.txt
+      - name: Comprobar instalación e importaciones sin PYTHONPATH
+        run: python -m unittest discover -s tests -v
       - name: Ejecutar notebooks 01 a 15
-        run: python src/run_notebooks_sequential.py
+        run: python -m src.run_notebooks_sequential
       - name: Guardar notebooks y registro aunque haya error
         if: always()
         uses: actions/upload-artifact@v7
