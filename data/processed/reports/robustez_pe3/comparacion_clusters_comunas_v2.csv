@@ -1,0 +1,13 @@
+objetivo,modelo,MAE_log,barrios,fallbacks
+airbnb_por_km2,cluster_k2,0.8671217677400703,48,0
+airbnb_por_km2,cluster_k3,0.9119219970137107,48,0
+airbnb_por_km2,comuna,0.8266007154258798,48,3
+airbnb_por_km2,global,1.3877689774245352,48,0
+mediana_precio_m2_alquiler_usd,cluster_k2,0.11483525590853512,41,0
+mediana_precio_m2_alquiler_usd,cluster_k3,0.11344340295100203,41,0
+mediana_precio_m2_alquiler_usd,comuna,0.0932481054581579,41,4
+mediana_precio_m2_alquiler_usd,global,0.112450271336177,41,0
+mediana_precio_m2_venta_usd,cluster_k2,0.24073918015953352,48,0
+mediana_precio_m2_venta_usd,cluster_k3,0.24717391410500797,48,0
+mediana_precio_m2_venta_usd,comuna,0.17325309813755108,48,3
+mediana_precio_m2_venta_usd,global,0.22517564958499817,48,0

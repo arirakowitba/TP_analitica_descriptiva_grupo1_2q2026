@@ -1,0 +1,11 @@
+operacion,test,p,H0,q_BH
+alquiler,RESET_agrupado,0.01618039239470698,Coeficientes de predicción al cuadrado y cubo iguales a cero,0.023114846278152832
+alquiler,curvatura_distancia,0.007223852706920406,Coeficiente cuadrático de distancia igual a cero,0.014447705413840812
+alquiler,RESET_cuadratico,0.015798131630076366,Potencias de valores ajustados no agregan explicación condicional,0.023114846278152832
+alquiler,RESET_log_distancia,0.004727783821705796,Potencias de valores ajustados no agregan explicación condicional,0.011819459554264488
+alquiler,fuente_conjunta,0.2926420899323331,"Coeficientes de fuente iguales a cero, condicionales a controles",0.3251578777025923
+venta,RESET_agrupado,0.003593158138066448,Coeficientes de predicción al cuadrado y cubo iguales a cero,0.011819459554264488
+venta,curvatura_distancia,0.41337954549273764,Coeficiente cuadrático de distancia igual a cero,0.41337954549273764
+venta,RESET_cuadratico,0.0003025183048779856,Potencias de valores ajustados no agregan explicación condicional,0.0025955782750003388
+venta,RESET_log_distancia,0.0005191156550000678,Potencias de valores ajustados no agregan explicación condicional,0.0025955782750003388
+venta,fuente_conjunta,0.2752755435845981,"Coeficientes de fuente iguales a cero, condicionales a controles",0.3251578777025923
