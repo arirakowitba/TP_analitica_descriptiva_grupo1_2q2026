@@ -1,60 +1,52 @@
-# Seguimiento de PE3
+# Cierre y trazabilidad de PE3
 
-**Estado al 22 de octubre de 2026.** Primer esqueleto de la tercera pre-entrega agregado a `main`, basado en la devolución PE2 (nota 8,8), la consigna PE3 y la secuencia actual 01–08.
+**Estado final al 5 de noviembre de 2026.** La secuencia 01–16 está ejecutada, el paquete local es instalable, los outputs analíticos están embebidos y el dashboard de Power BI está publicado. Este documento conserva las decisiones de PE3 y su estado final; el README contiene la narrativa ejecutiva.
 
-## Acuerdos que guían los cambios
+## Acuerdos metodológicos aplicados
 
-- Mantener intacta la limpieza y el feature engineering de 01–07 salvo que aparezca un error concreto.
-- Priorizar aclaraciones de interpretación, README y nuevas celdas analíticas de bajo impacto.
-- No mezclar unidades, fuentes ni modalidades de operación sin justificarlo.
-- Mantener la distinción entre oferta publicada, stock censal, asociaciones y recomendaciones.
-- Dashboard queda fuera de la secuencia de notebooks analíticos.
-- Ejecutar todos los notebooks completos, en orden, y conservar outputs visibles para la entrega revisada.
+- No mezclar unidades, fuentes ni modalidades sin declarar comparabilidad y grano.
+- Distinguir oferta publicada, stock censal, contratos, demanda y transacciones.
+- Reportar magnitud, incertidumbre, dirección, soporte y limitaciones; no decidir solo por p-valores.
+- Tratar “sin evidencia suficiente” como distinto de “efecto inexistente”.
+- No convertir asociaciones transversales en efectos causales ni en desplazamiento de alquiler permanente.
+- No usar clusters, componentes o factores como índices normativos sin estabilidad y valor incremental.
+- Conservar resultados negativos, escenarios no estimables y sensibilidades que cambian la conclusión.
 
-## Notebooks incorporados
+## Secuencia PE3 y decisiones finales
 
-| Notebook | Contenido inicial | Salida principal |
+| Notebook | Aporte | Decisión final |
 |---|---|---|
-| 09 | Cierre del EDA, síntesis de hipótesis, catálogo y jerarquía de KPIs, señales comunales exploratorias | síntesis PE3 y señales de diagnóstico en reports |
-| 10 | PCA en KPIs barriales y MCA sobre niveles categorizados | cargas, varianza y coordenadas en processed/reports |
-| 11 | K-means y Ward, silueta, estabilidad por submuestras y perfilado | asignación exploratoria de barrios y perfiles |
-| 12 | Modelos log-lineales separados para venta/alquiler, comparación con y sin efecto fijo de fuente, errores agrupados por barrio | tabla de coeficientes e intervalos |
-| 13 | PCA y K-means de publicaciones para evaluar correspondencia con etiquetas ya existentes de operación; permutación condicionada por fuente × barrio y sensibilidad por fuente; precio suplementario | asignación exploratoria, composición, validación AMI/ARI y perfiles |
+| 09 | Cierre del EDA, jerarquía de KPIs y señales comunales | Las señales se muestran separadas; la regla conjunta no se usa como ranking normativo. |
+| 10 | PCA y MCA territorial | Representaciones exploratorias sin precios activos; no constituyen índices oficiales. |
+| 11 | K-means y Ward | Los clusters describen perfiles, pero su estabilidad es moderada y no reemplazan comuna. |
+| 12 | Modelos log-lineales de precio | H3 se interpreta como asociación observacional; venta pierde estabilidad en algunas sensibilidades. |
+| 13 | Perfiles de publicaciones y operación | La referencia es la permutación condicionada por fuente × barrio; no se afirma una tipología natural. |
+| 14 | MCA de propiedades y análisis factorial barrial | La adecuación permite explorar un factor, no certificar un índice habitacional. |
+| 15 | Mart dimensional para Power BI | Granularidades separadas, relaciones 1:N y métricas no aditivas documentadas. |
+| 16 | Validación transversal | Centralidad, espacio, multiplicidad, umbrales, factores, clusters y H3 quedan auditados. |
 
-09 exporta el perfil de servicios y transporte que consume 10. 10 exporta las coordenadas que consume 11. 12 incorpora las etiquetas de 11 en una especificación explicativa separada, sin incluirlas en un modelo con efectos fijos por barrio. El PCA y el clustering de barrios no usan precios. El nuevo 13 es un análisis complementario de otra unidad (publicación): su etiqueta de operación es una referencia externa para evaluar alineación, nunca una variable del PCA o del clustering. Fija k=3 por las tres etiquetas existentes y excluye fuente, operación y precio del espacio de características. La fuente se usa solo para permutar etiquetas dentro de portales con más de una modalidad observada. El precio se analiza después y separado por operación, porque venta y alquiler no comparten unidad.
+## Resultado por hipótesis
 
-## Decisiones provisionales que debemos revisar notebook por notebook
+- **H1:** asociación positiva y robusta entre densidad cultural/gastronómica y concentración Airbnb; conserva dependencia espacial y no se interpreta causalmente.
+- **H2a:** evidencia insuficiente con tamaño medio del hogar como proxy; no se usa para priorizar.
+- **H2b:** evidencia parcial, concentrada en cultura; educación y espacios verdes no muestran apoyo concluyente.
+- **H3:** la dirección esperada no se confirma. La asociación estimada es pequeña, contraria y sensible en venta; hay problemas de especificación.
+- **H4:** Airbnb coexiste con precios altos, pero también con mayor —no menor— disponibilidad permanente publicada; no prueba sustitución.
 
-1. En 09, revisar si los cortes P75/P25 y la combinación de tres señales son útiles para priorizar diagnóstico adicional; no son umbrales normativos.
-2. En 10, validar transformaciones logarítmicas, cobertura mínima de 75%, interpretación de las cargas y pertinencia de MCA con 48 barrios.
-3. En 11, elegir el número de grupos mirando en conjunto silueta, ARI de estabilidad e interpretabilidad; no aceptar automáticamente el máximo de silueta.
-4. En 12, revisar cobertura y comparabilidad de fuentes y verificar que la muestra y las variables replican el universo de H3.
-5. En 13, revisar las etiquetas reales de operación y el mapeo de alias; inspeccionar la cobertura mínima por modalidad y los atributos retenidos, especialmente por Airbnb y publicaciones temporales. Evaluar la diferencia entre AMI total, la prueba condicionada por fuente × barrio y la sensibilidad por fuente; verificar cuántos estratos y modalidades quedan representados. No concluir que la modalidad de operación constituye una tipología natural si la correspondencia depende de composición de portales o cobertura geográfica. La lista de variables y el umbral de cobertura son provisionales hasta ejecutar el notebook.
-6. Ajustar interpretación de resultados únicamente después de ejecutar los notebooks con los datos definitivos.
-7. Revisar comparaciones múltiples y magnitud de efecto en H1/H2b; mantener el poder bajo de n=15 comunas y la naturaleza proxy de H2a.
-8. El análisis transversal no demuestra que alquiler temporario desplace alquiler permanente; H4 se desagrega entre precios, intensidad publicada y disponibilidad.
-9. Sigue pendiente re-ejecutar 08 con imágenes embebidas: en el estado remoto revisado había salidas de texto/tablas, pero ninguna salida de imagen PNG.
-10. La validación final requerirá ejecución secuencial desde 01, outputs visibles, títulos autosuficientes, n e incertidumbre cuando correspondan.
+## Dashboard
 
-## Estado de reproducción
+El mart del notebook 15 alimenta un informe público de seis páginas con filtros por operación, fuente y territorio. El recorrido, los hallazgos y la relación con H1–H4 se documentan en la sección 8 del README. El generador conserva el enlace público al regenerar `data/processed/dashboard_mart/powerbi/README.md`.
 
-Los nuevos notebooks son un primer abordaje de estructura y código. No se guardaron como notebooks ejecutados: deberán correrse secuencialmente en el entorno del repositorio para materializar outputs y revisar los resultados reales. Las salidas previstas son derivadas y se guardan en `data/processed/` o `data/processed/reports/`; no editan `data/raw/`.
+## Validación final
 
+- Ejecución secuencial aislada de 01–16: **202 celdas de código, 178 imágenes PNG y 0 outputs de error**.
+- Once pruebas automatizadas aprobadas y `pip check` sin dependencias incompatibles.
+- Los notebooks 04 y 08 eliminan avisos evitables: el diagnóstico multivariado registra un fallback numérico y el resumen territorial usa tipos compatibles con pandas.
+- Los datos crudos no se modifican. Las tablas y figuras derivadas permanecen en `data/processed/` y `data/processed/reports/`.
 
-## Continuidad incorporada
+## Evidencia auditable
 
-- **14, MCA y análisis factorial:** perfiles categóricos de propiedades con operación/fuente como variables suplementarias; estructura factorial de KPIs urbanos solo si KMO, Bartlett y parallel analysis dan sustento. Los cuadrados de coausencia de notebook 03 se explicitan como patrones potenciales de carga por fuente y se excluyen del espacio activo. Se vincula la lectura con H1–H4 y los KPIs, con supuestos y límites.
-- **15 y `src/build_dashboard_mart.py`:** mart desde el dataset enriquecido y los agregados procesados. Los hechos de publicación, operación, KPI territorial, contexto y Censo conservan granos separados para evitar duplicar numeradores o denominadores.
-- **Pendiente de ejecución:** con los CSV del pipeline disponibles, ejecutar los nuevos notebooks en orden y conservar outputs. La solución factorial puede concluir que no hay factores estables; no se anticipan resultados antes de correrla.
-
-## Narrativa visual añadida
-
-- Se incorporó `src/pe3_visuals.py` con tarjetas reutilizables; cada notebook 09–15 muestra métricas centrales con unidad, cobertura o interpretación según corresponda.
-- 09: cobertura general y ranking de densidad Airbnb con n.
-- 10: cargas PCA como mapa de calor y tarjetas de inercia/varianza.
-- 11: silueta, estabilidad y perfiles relativos por cluster.
-- 12: magnitud e IC95% para venta y alquiler por separado.
-- 13: composición porcentual operación-cluster y contraste condicionado.
-- 14: cobertura/inercia MCA y diagnóstico factorial con parallel analysis.
-- 15: tablas/hechos del mart con tamaños comparables en escala logarítmica.
-- Los nuevos paneles son código pendiente de ejecución con los CSV reales; correr en orden y conservar outputs antes de la entrega.
+- Protocolo inferencial: [`protocolo_robustez_pe3.md`](protocolo_robustez_pe3.md).
+- Modelo dimensional: [`modelo_data_warehouse_dashboard.md`](modelo_data_warehouse_dashboard.md).
+- Matriz final: `data/processed/reports/robustez_pe3/matriz_evidencia_v2.csv`.
+- Ejecución: `python -m src.run_notebooks_sequential`.

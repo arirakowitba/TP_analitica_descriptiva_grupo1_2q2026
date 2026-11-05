@@ -1,21 +1,21 @@
 # Protocolo de reconciliación y robustez PE3
 
-Esta revisión agrega evidencia y borradores de interpretación. La definición final
-de interpretaciones, la narrativa ejecutiva y la escritura del README se reservan
-para el cierre con el equipo. No modifica limpieza, fuentes crudas ni enriquecimiento
-de 01–07. Tampoco construye el dashboard visual: conserva el mart de 15.
+Este protocolo documenta la evidencia que sustenta las interpretaciones finales
+del README. La auditoría analítica no modifica fuentes crudas; separa limpieza,
+enriquecimiento, inferencia y visualización. El notebook 15 construye el mart y el
+dashboard visual se publica por separado a partir de ese modelo reproducible.
 
 ## Cambios por notebook
 
 | Notebook | Reconciliación o validación |
 |---|---|
-| 08 | Elimina cifras narrativas desactualizadas; síntesis calculada desde tablas y lectura provisional por hipótesis. |
+| 08 | Elimina cifras narrativas desactualizadas; síntesis calculada desde tablas y lectura por hipótesis. |
 | 09 | Lectura calculada del soporte y de las tres señales; remisión a sensibilidad de cortes. |
 | 10 | Interpreta las variables realmente activas, varianza, pesos y calidad del plano; normaliza coordenadas principales MCA por masa de fila. |
 | 11 | Perfiles con tamaños/KPIs reales; no emite inferencia asintótica si hay grupos con menos de cinco barrios; distingue descripción postselección y validación externa. |
 | 12 | Efectos e IC calculados desde cada especificación; elimina atribuciones no medidas a ruido, tranquilidad o preferencias y afirmaciones de ausencia de sesgo. |
 | 13 | Explicita soporte de la permutación fuente×barrio, AMI observado y media nula; gráfico de la distribución nula condicionada. |
-| 14 | Revisa esperados del chi-cuadrado, conserva no estimables, reporta comunalidades y adecuación con interpretación provisional. |
+| 14 | Revisa esperados del chi-cuadrado, conserva no estimables, reporta comunalidades y adecuación con lectura condicionada. |
 | 15 | Repara saltos de línea literales y mantiene explícito que paquete de datos no equivale a PBIX terminado. |
 | 16 | Auditoría transversal de hipótesis, centralidad, espacio, sensibilidad, PCA/factor, clusters y modelos. |
 
@@ -87,16 +87,17 @@ sintéticos con asociación conocida, confusión conocida, valores degenerados y
 geografía sin soporte; comprueban además que el objetivo del barrio evaluado no
 se filtre a su propia predicción LOO.
 
-## Validación técnica de esta revisión (31/10/2026)
+## Validación técnica final (05/11/2026)
 
-- Notebooks 08–16 ejecutados: 79 celdas de código, ninguna salida de tipo error;
-  61 imágenes PNG embebidas entre los nueve notebooks.
+- Secuencia 01–16 ejecutada en orden desde una copia aislada: **202 celdas de
+  código, 178 imágenes PNG y ninguna salida de tipo error**.
 - Once pruebas automatizadas aprobadas, incluidas importaciones desde otra
   carpeta, casos degenerados, confusión conocida, aislamiento LOO, igualdad de
   referencia del clustering y recuperación de una asociación de precios conocida.
-- Se revisaron visualmente los paneles de hipótesis y las sensibilidades de H3.
-- README, fuentes crudas y notebooks 01–07 sin cambios. Esas etapas habían sido
-  ejecutadas en la validación técnica anterior; esta revisión reejecuta las
-  etapas analíticas modificadas y el nuevo notebook transversal.
-- Las interpretaciones son provisionales. El paso posterior es acordar su
-  formulación final, la narrativa de entrega y el dashboard visual.
+- `pip check` no encontró dependencias incompatibles.
+- Se revisaron visualmente los paneles de hipótesis, las sensibilidades de H3 y
+  las seis páginas del dashboard publicado.
+- Los notebooks 04 y 08 eliminan avisos evitables; el 04 registra el método de
+  covarianza y usa un fallback regularizado solo ante inestabilidad numérica.
+- Las interpretaciones finales, decisiones y limitaciones están consolidadas en
+  el README; la matriz de evidencia conserva resultados negativos e inestables.

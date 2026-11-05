@@ -1,6 +1,6 @@
 # Instalación del paquete local y validación
 
-Revisión del 31/10/2026 sobre el commit base `2cf13d2`.
+Corrección iniciada el 31/10/2026 y revalidada sobre la versión final el 05/11/2026.
 
 ## Fallo reproducido
 
@@ -48,8 +48,8 @@ entre otras, NumPy 2.5.4, pandas 3.1.0, SciPy 1.18.1, scikit-learn 1.9.1,
 statsmodels 0.15.0, Matplotlib 3.11.2 y nbconvert 7.17.2. No se cambiaron las
 versiones del Python global.
 
-La secuencia 01–15 terminó con código de salida 0: **15 notebooks, 187 celdas
-de código ejecutadas, 0 outputs de error**. La revisión posterior comprobó que
+La secuencia 01–16 terminó con código de salida 0: **16 notebooks, 202 celdas
+de código ejecutadas, 178 imágenes PNG y 0 outputs de error**. La revisión posterior comprobó que
 todas las celdas no vacías tuvieran contador de ejecución y que ninguna salida
 fuera de tipo `error`. El notebook 09 se ejecutó completo con la importación
 `from src import config`, sin agregar rutas manualmente.
@@ -63,7 +63,7 @@ versionados y no incorpora las regeneraciones de CSV ni de imágenes.
 Para comprobar solo la continuación de PE3 con insumos previos disponibles:
 
 ```bash
-python -m src.run_notebooks_sequential --start 9 --end 15
+python -m src.run_notebooks_sequential --start 9 --end 16
 ```
 
 La instalación editable requiere conservar el checkout y sus datos. Si se mueve

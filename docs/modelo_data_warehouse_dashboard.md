@@ -1,5 +1,7 @@
 # Modelo dimensional para el dashboard PE3
 
+**Informe publicado:** [abrir el dashboard de Power BI](https://app.powerbi.com/view?r=eyJrIjoiOGQ5ODllNTItODU4MS00OTEyLWFhMWItNjQwMGRhMjExYWE4IiwidCI6ImExZjUwYTk3LTIxYzAtNDlhNy1hOWQ0LWYyNDRlYmI0MmRhNyIsImMiOjR9&pageName=e377f501cce641b0905d). El README principal documenta sus seis páginas, hallazgos y relación con H1–H4.
+
 El mart separa tablas de hechos por granularidad. No se unen hechos directamente: las dimensiones filtran cada hecho en relaciones 1:N con filtro unidireccional. La geografía usa una jerarquía normalizada `dim_comuna → dim_barrio`; los hechos barriales se conectan solo al barrio.
 
 ```mermaid
@@ -57,4 +59,4 @@ Al ejecutar `python src/build_dashboard_mart.py`, además de los CSV y `data_mod
 - `fnLoadMartCsv.m`: función opcional de Power Query para cargar cada archivo desde una carpeta.
 - `README.md`: pasos de importación y reglas de interpretación.
 
-El generador produce un paquete de tablas y configuración; no crea un archivo `.pbix` con páginas visuales ni publica un modelo semántico. Tras importar, el equipo debe revisar tipos, crear las relaciones enumeradas y validar las medidas con filtros antes de diseñar el tablero. Las relaciones se generan según las columnas presentes, por lo que pueden variar ante cambios del esquema.
+El generador produce el paquete de tablas y configuración; no crea por sí solo un archivo `.pbix` ni publica un modelo semántico. El informe enlazado arriba fue construido y publicado como artefacto visual separado. Para reconstruirlo, se deben revisar tipos, crear las relaciones enumeradas y validar las medidas con filtros antes de diseñar las páginas. Las relaciones se generan según las columnas presentes, por lo que pueden variar ante cambios del esquema.
