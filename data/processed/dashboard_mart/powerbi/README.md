@@ -1,5 +1,11 @@
 # Importar el mart en Power BI
 
+## Informe publicado
+
+[Abrir el dashboard público](https://app.powerbi.com/view?r=eyJrIjoiOGQ5ODllNTItODU4MS00OTEyLWFhMWItNjQwMGRhMjExYWE4IiwidCI6ImExZjUwYTk3LTIxYzAtNDlhNy1hOWQ0LWYyNDRlYmI0MmRhNyIsImMiOjR9&pageName=e377f501cce641b0905d)
+
+El informe contiene seis páginas: menú, panorama de la oferta, alquiler permanente, concentración del alquiler temporario, accesibilidad/servicios y precios. El enlace fue verificado con acceso público.
+
 ## Archivos
 - Los CSV de la carpeta raíz son las tablas del modelo; cada archivo es una tabla.
 - relaciones.csv enumera relaciones 1:* con filtro unidireccional.

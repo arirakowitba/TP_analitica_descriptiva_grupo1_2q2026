@@ -27,17 +27,20 @@ La secuencia propuesta parte de la base enriquecida y de los KPIs generados por 
 12. `12_modelos_explicativos_precios.ipynb`: estima modelos log-lineales separados para venta y alquiler, compara especificaciones con y sin controles por fuente y reporta asociaciones con incertidumbre agrupada por barrio. No se usa como modelo causal ni como pronóstico.
 13. `13_correspondencia_operacion_perfiles_propiedades.ipynb`: valida si las etiquetas preexistentes (venta, alquiler permanente y temporal) se asocian con clusters no supervisados de atributos comparables de propiedad y entorno. Fija k=3 por la pregunta externa, excluye operación/fuente/precio del espacio, contrasta AMI mediante permutaciones dentro de fuente × barrio (con sensibilidad condicionada solo por fuente) y perfila precios después por modalidad. Cada bloque explicita supuestos y límites; no busca crear nuevas tipologías.
 
-**Orden:** ejecutar 01–08 y luego 09–13. El notebook 13 parte de la base enriquecida estable generada en 07 y agrega un análisis complementario a la segmentación territorial de 10–11; no usa etiquetas de cluster previas como insumo. Los notebooks PE3 son un primer desarrollo: deben revisarse variables, cobertura y resultados reales con el equipo. El dashboard queda fuera de esta secuencia. Las ejecuciones finales deben conservar outputs visibles y producir salidas en `data/processed/` o `data/processed/reports/`.
+**Orden:** ejecutar 01–08 y luego 09–16. El notebook 13 parte de la base enriquecida estable generada en 07 y agrega un análisis complementario a la segmentación territorial de 10–11; no usa etiquetas de cluster previas como insumo. Las ejecuciones finales deben conservar outputs visibles y producir salidas en `data/processed/` o `data/processed/reports/`.
 
 
 14. `14_mca_y_analisis_factorial.ipynb`: MCA de propiedades con etiquetas suplementarias y análisis factorial barrial condicionado a pruebas de adecuación.
 15. `15_modelo_data_warehouse_dashboard.ipynb`: construcción del mart dimensional y paquete Power BI con tablas CSV, esquema de tipos, relaciones sugeridas, medidas DAX, función de Power Query y guía de importación.
+16. `16_validacion_transversal_y_sensibilidad.ipynb`: auditoría de hipótesis, multiplicidad, centralidad, dependencia espacial, sensibilidad de cortes, estabilidad de PCA/factor, valor incremental de clusters y diagnósticos de H3.
 
-Los notebooks 14–15 se ejecutan después del 13. El notebook 15 genera `data/processed/dashboard_mart/` y `data/processed/dashboard_mart_powerbi.zip`, listo para compartir con el equipo de Power BI; consultar `docs/modelo_data_warehouse_dashboard.md` para granularidades, relaciones y reglas de agregación. El notebook 14 recupera los cuadrados de coausencia del notebook 03 como advertencia sobre patrones de carga/cobertura, no como factores de mercado.
+Los notebooks 14–16 se ejecutan después del 13. El notebook 15 genera `data/processed/dashboard_mart/` y `data/processed/dashboard_mart_powerbi.zip`, listo para compartir con el equipo de Power BI; consultar `docs/modelo_data_warehouse_dashboard.md` para granularidades, relaciones y reglas de agregación. El notebook 14 recupera los cuadrados de coausencia del notebook 03 como advertencia sobre patrones de carga/cobertura, no como factores de mercado. El notebook 16 consolida la evidencia final sin reescribir los datos crudos.
+
+**Dashboard publicado:** [abrir Power BI](https://app.powerbi.com/view?r=eyJrIjoiOGQ5ODllNTItODU4MS00OTEyLWFhMWItNjQwMGRhMjExYWE4IiwidCI6ImExZjUwYTk3LTIxYzAtNDlhNy1hOWQ0LWYyNDRlYmI0MmRhNyIsImMiOjR9&pageName=e377f501cce641b0905d).
 
 ## Criterio visual de PE3
 
-Los notebooks 09–15 comparten tarjetas compactas para indicadores de lectura rápida y paneles que responden una pregunta concreta. Cada visual se acompaña de una nota de interpretación y límites; los ejes muestran unidades, las comparaciones territoriales conservan tamaños de muestra y los precios/KPIs se presentan en su grano. Las tarjetas son una síntesis del notebook, no reemplazan las tablas ni el dashboard. El estilo común está en `src/pe3_visuals.py`.
+Los notebooks 09–16 comparten tarjetas compactas para indicadores de lectura rápida y paneles que responden una pregunta concreta. Cada visual se acompaña de una nota de interpretación y límites; los ejes muestran unidades, las comparaciones territoriales conservan tamaños de muestra y los precios/KPIs se presentan en su grano. Las tarjetas son una síntesis del notebook, no reemplazan las tablas ni el dashboard. El estilo común está en `src/pe3_visuals.py`.
 
 ## Ejecución completa y secuencial
 
@@ -47,12 +50,12 @@ Desde la raíz del repositorio, instalar dependencias con `python -m pip install
 python -m src.run_notebooks_sequential
 ```
 
-El ejecutor procesa los notebooks numerados en orden ascendente (01–15), guarda los outputs en cada archivo al terminarlo y se detiene ante el primer error. Corregir ese error y volver a ejecutar desde el inicio para validar la secuencia completa con el mismo estado de datos.
+El ejecutor procesa los notebooks numerados en orden ascendente (01–16), guarda los outputs en cada archivo al terminarlo y se detiene ante el primer error. Corregir ese error y volver a ejecutar desde el inicio para validar la secuencia completa con el mismo estado de datos.
 
 Para retomar solamente PE3 con los insumos de 01–08 ya disponibles:
 
 ```bash
-python -m src.run_notebooks_sequential --start 9 --end 15
+python -m src.run_notebooks_sequential --start 9 --end 16
 ```
 
 El ejecutor usa el mismo intérprete para nbconvert y para un kernel temporal;
