@@ -546,15 +546,73 @@ Los precios ARS se convierten a USD con MEP de la fecha del aviso para comparabi
 
 **Acceso:** [Dashboard público de Power BI](https://app.powerbi.com/view?r=eyJrIjoiOGQ5ODllNTItODU4MS00OTEyLWFhMWItNjQwMGRhMjExYWE4IiwidCI6ImExZjUwYTk3LTIxYzAtNDlhNy1hOWQ0LWYyNDRlYmI0MmRhNyIsImMiOjR9&pageName=e377f501cce641b0905d)
 
-El informe fue verificado con acceso público. Contiene una portada y cinco páginas analíticas:
+El informe fue verificado con acceso público. Incluye un menú y cinco páginas analíticas. Los filtros permiten explorar operación, fuente, comuna, barrio o tipo de propiedad según la página. Los valores que siguen corresponden al estado sin filtros observado en la publicación; al aplicar segmentadores, el dashboard recalcula las vistas compatibles.
 
-1. **Panorama de la oferta:** volumen por operación, composición monetaria, mezcla territorial, densidad Airbnb y filtros por operación, fuente, comuna y tipología.
-2. **Oportunidades para el alquiler permanente:** cruza oferta publicada con hogares inquilinos, stock habitacional y tamaño medio del hogar. Es una pantalla de diagnóstico, no una estimación de demanda insatisfecha.
-3. **Concentración territorial del alquiler temporario:** muestra densidad, relación con cultura y coexistencia con alquiler permanente. Se vincula con H1 y H4; la línea de tendencia es descriptiva.
-4. **Accesibilidad y servicios:** permite elegir familias de servicios y comparar su distribución territorial con precios. Se vincula con H2b y sirve de contexto para H3.
-5. **Precios y valorización de la oferta:** presenta medianas de venta/alquiler y relaciones con superficie, separando unidades y modalidades comparables.
+## 8.1 Menú principal
 
-El tablero tiene capacidad exploratoria mediante segmentadores y navegación interna. Los conteos son publicaciones observadas; las medianas, tasas y densidades no son aditivas. La guía del modelo y sus reglas de agregación están en [`docs/modelo_data_warehouse_dashboard.md`](docs/modelo_data_warehouse_dashboard.md).
+**Propósito.** Ordena la lectura desde el panorama general hacia las tres decisiones del Instituto: disponibilidad de alquiler permanente, monitoreo del temporario y accesibilidad/valorización territorial. No contiene evidencia propia; evita presentar el tablero como una colección de gráficos sin secuencia.
+
+**Relación con las hipótesis.** La navegación separa H1/H4 —concentración temporaria—, H2a —adecuación demográfica—, H2b —servicios y oferta— y H3 —transporte y precio—. Esa separación es metodológica: cada hipótesis usa unidades, variables y límites distintos.
+
+## 8.2 Panorama de la oferta
+
+**Qué muestra.** Cuatro tarjetas de volumen, composición por operación y moneda, mapa de Airbnb relativo al alquiler permanente, composición de la oferta por comuna y ranking de densidad Airbnb. Incluye filtros por operación, fuente, comuna y tipo de propiedad.
+
+**Hallazgos.** El corte reúne aproximadamente **68 mil publicaciones**: **43 mil de venta**, **10 mil de alquiler permanente** y **14 mil de alquiler temporario**. La venta domina el volumen y está casi completamente expresada en USD; los alquileres combinan monedas, lo que justifica la normalización con MEP antes de comparar. La participación de modalidades cambia entre comunas. San Nicolás, San Telmo, Recoleta, Palermo y Monserrat encabezan la densidad Airbnb, con aproximadamente 248, 208, 205, 202 y 186 publicaciones por km², respectivamente.
+
+**Relación con las hipótesis.** Es la base descriptiva para H1 y H4: confirma que el temporario está territorialmente concentrado y que los conteos absolutos no alcanzan para comparar zonas. También define el universo para H2a/H2b y H3. No contrasta por sí sola ninguna hipótesis porque mezcla composición de fuentes, tamaños territoriales y modalidades con unidades de precio distintas.
+
+**Decisión y límite.** Sirve para seleccionar el territorio y la modalidad que se desea diagnosticar. Los avisos son oferta publicada capturada; no equivalen a viviendas únicas, stock disponible ni operaciones cerradas.
+
+## 8.3 Oportunidades para el alquiler permanente
+
+**Qué muestra.** Indicadores del Censo 2022 —hogares inquilinos, viviendas, tamaño medio del hogar y proporción de departamentos—, un perfil comunal de alquiler frente a hogares inquilinos, un mapa de contexto habitacional y una comparación entre oferta publicada y presencia de hogares inquilinos.
+
+**Hallazgos.** La vista contextualiza la oferta con aproximadamente **518 mil hogares inquilinos**, **1,62 millones de viviendas**, un tamaño medio de **2,23 personas por hogar** y **71,5%** de viviendas en departamento. Las comunas no combinan del mismo modo cantidad de hogares inquilinos y avisos de alquiler por 1.000 viviendas: una comuna con más publicaciones no necesariamente es la que exhibe mayor presión o necesidad habitacional. La comuna 14 presenta alrededor de 9,5 alquileres permanentes publicados por 1.000 viviendas y una presencia elevada de oferta temporaria; el patrón requiere diagnóstico conjunto, no una etiqueta automática de oportunidad.
+
+**Relación con las hipótesis.** Aporta contexto para **H2a**, pero el tamaño medio del hogar es un proxy débil de hogares unipersonales: el contraste no encontró una relación concluyente con unidades pequeñas. También aporta el componente de disponibilidad de **H4**; en este corte, Airbnb se asocia positivamente —no negativamente— con alquiler permanente por 1.000 viviendas (`rho=0,83`).
+
+**Decisión y límite.** Permite localizar comunas para diagnóstico adicional de oferta permanente. No mide demanda insatisfecha, vacancia, contratos ni accesibilidad económica de los hogares; por eso no se interpreta como mapa de déficit.
+
+## 8.4 Concentración territorial del alquiler temporario
+
+**Qué muestra.** Densidad Airbnb por barrio, relación con densidad cultural, comparación de Airbnb y alquiler permanente por 1.000 viviendas y ranking comunal de la razón entre ambas ofertas. Incluye filtros por operación, fuente, comuna y barrio.
+
+**Hallazgos.** Las publicaciones Airbnb se concentran en el centro y norte de CABA. La densidad cultural tiene una asociación fuerte con Airbnb por km² (`rho=0,85`; IC95% `[0,71; 0,92]`) y se mantiene al controlar centralidad (`rho_parcial=0,63`; `q=0,005`). La asociación entre Airbnb y alquiler permanente es positiva, por lo que las comunas con más temporario también tienden a concentrar más oferta permanente publicada.
+
+**Relación con las hipótesis.** La página comunica el principal resultado de **H1** y los dos componentes de **H4**. H1 recibe apoyo como asociación territorial; H4 recibe apoyo respecto de precios altos, pero no respecto de menor disponibilidad permanente. La línea de tendencia no demuestra que la oferta cultural cause Airbnb ni que Airbnb desplace alquileres.
+
+**Decisión y límite.** Sirve para priorizar monitoreo y fiscalización donde la concentración temporaria es alta. La autocorrelación espacial, la centralidad y la cobertura de portales impiden convertir la co-ubicación en una conclusión causal.
+
+## 8.5 Accesibilidad y servicios
+
+**Qué muestra.** Tarjetas de cobertura territorial, mapa seleccionable por tipo de servicio y dispersión entre densidad del servicio elegido y precio mediano por m². Los segmentadores permiten cambiar comuna, barrio y familia de servicio.
+
+**Hallazgos.** Según los puntos y límites usados en el mart, **28 barrios no tienen estación de subte dentro de su polígono**, **15 no tienen MetroBus**, **21 no tienen tren** y **29 no tienen hospitales**. Estos conteos describen presencia territorial, no distancia real de los residentes al punto más cercano: un barrio puede no contener una estación y, aun así, estar próximo a una situada en el límite. En los contrastes, cultura se asocia con intensidad de alquiler (`rho=0,69`; controlada `rho=0,80`), mientras que educación y espacios verdes no muestran evidencia concluyente.
+
+**Relación con las hipótesis.** La página corresponde principalmente a **H2b** y da contexto a **H3**. H2b recibe apoyo parcial y específico para cultura, no para un concepto genérico de “más servicios”. H3 no confirma la prima esperada por proximidad: los modelos encuentran asociaciones pequeñas de signo contrario y problemas de especificación.
+
+**Decisión y límite.** Permite identificar brechas de cobertura y decidir qué servicio explorar. No debe sumar equipamientos heterogéneos en un índice único ni interpretar presencia, calidad, capacidad y acceso como equivalentes. Las distancias del análisis son lineales, no tiempos de viaje por red.
+
+## 8.6 Precios y valorización de la oferta
+
+**Qué muestra.** Medianas de precio, dispersión de precio por m² frente a superficie y ranking de alquiler mensual por barrio. Incluye filtros por operación, fuente, comuna y barrio; venta y alquiler se mantienen como métricas separadas.
+
+**Hallazgos.** Sin filtros, el tablero muestra una mediana aproximada de **USD 2,51 mil/m² en venta**, **USD 13,11/m² en alquiler**, **USD 138 mil** de precio total de venta y **USD 1,35 mil** de alquiler mensual dentro del universo compatible de la tarjeta. Puerto Madero encabeza el ranking de alquiler mensual publicado, seguido a distancia por Retiro, Palermo, Núñez y Belgrano. La nube de superficie y precio por m² confirma dispersión, asimetría y submercados, por lo que una media general ocultaría heterogeneidad.
+
+**Relación con las hipótesis.** Resume el resultado de precios de **H3** y el componente de precios de **H4**. H3 no recibe apoyo en la dirección planteada; H4 sí encuentra asociación positiva entre concentración Airbnb y precio de alquiler (`rho=0,91`; IC95% `[0,62; 0,99]`), sin demostrar que Airbnb sea la causa.
+
+**Decisión y límite.** Permite comparar órdenes de magnitud y detectar barrios que requieren análisis. Los precios son de publicación, el alquiler no siempre incluye expensas o servicios, Airbnb no informa superficie comparable y la conversión a USD no convierte el corte en una serie de precios reales.
+
+## 8.7 Reglas de lectura transversal
+
+- Los conteos son publicaciones observadas, no stock ni transacciones.
+- Medianas, ratios, densidades y porcentajes no son aditivos; se recalculan en su grano.
+- Los filtros cambian el universo: toda lectura debe registrar operación, fuente y territorio activos.
+- Una asociación visual no reemplaza los contrastes de los notebooks 08, 12 y 16.
+- “Sin evidencia suficiente” no significa “efecto inexistente”, y una asociación robusta no implica causalidad.
+
+La guía del modelo, relaciones y reglas de agregación está en [`docs/modelo_data_warehouse_dashboard.md`](docs/modelo_data_warehouse_dashboard.md).
 
 # 9 Trazabilidad entre hipótesis, notebooks y decisiones
 
