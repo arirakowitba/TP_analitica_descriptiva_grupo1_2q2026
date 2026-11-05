@@ -13,6 +13,11 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data" / "processed"
 OUT = DATA / "dashboard_mart"
 OUT.mkdir(parents=True, exist_ok=True)
+POWER_BI_PUBLIC_URL = (
+    "https://app.powerbi.com/view?"
+    "r=eyJrIjoiOGQ5ODllNTItODU4MS00OTEyLWFhMWItNjQwMGRhMjExYWE4IiwidCI6ImExZjUwYTk3LTIxYzAtNDlhNy1hOWQ0LWYyNDRlYmI0MmRhNyIsImMiOjR9"
+    "&pageName=e377f501cce641b0905d"
+)
 
 def load(name):
     p = DATA / name
@@ -285,7 +290,13 @@ in
 '''
     (assets / "fnLoadMartCsv.m").write_text(m_text, encoding="utf-8")
 
-    guide = """# Importar el mart en Power BI
+    guide = f"""# Importar el mart en Power BI
+
+## Informe publicado
+
+[Abrir el dashboard público]({POWER_BI_PUBLIC_URL})
+
+El informe contiene seis páginas: menú, panorama de la oferta, alquiler permanente, concentración del alquiler temporario, accesibilidad/servicios y precios. El enlace fue verificado con acceso público.
 
 ## Archivos
 - Los CSV de la carpeta raíz son las tablas del modelo; cada archivo es una tabla.
