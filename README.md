@@ -10,6 +10,8 @@ Analítica Descriptiva
 
 2Q 2026
 
+> **Dashboard publicado:** [abrir el informe interactivo en Power BI](https://app.powerbi.com/view?r=eyJrIjoiOGQ5ODllNTItODU4MS00OTEyLWFhMWItNjQwMGRhMjExYWE4IiwidCI6ImExZjUwYTk3LTIxYzAtNDlhNy1hOWQ0LWYyNDRlYmI0MmRhNyIsImMiOjR9&pageName=e377f501cce641b0905d). El enlace fue verificado con acceso público y contiene seis páginas de navegación.
+
 ## Índice
 
 - [0 Organización del repositorio](#0-organización-del-repositorio)
@@ -19,6 +21,9 @@ Analítica Descriptiva
 - [4 Formulación final](#4-formulación-final)
 - [5 Estado analítico actual](#5-estado-analítico-actual)
 - [6 Fuentes bibliográficas](#6-fuentes-bibliográficas)
+- [7 Respuesta a la devolución y rúbrica de PE3](#7-respuesta-a-la-devolución-y-rúbrica-de-pe3)
+- [8 Dashboard y recorrido narrativo](#8-dashboard-y-recorrido-narrativo)
+- [9 Trazabilidad entre hipótesis, notebooks y decisiones](#9-trazabilidad-entre-hipótesis-notebooks-y-decisiones)
 
 # 0 Organización del repositorio
 
@@ -116,7 +121,15 @@ python scrappers/scraper_zonaprop_inmuebles.py --help
 | `05_feature_engineering_y_eda_inicial.ipynb` | EDA previo a fuentes externas: composición, cobertura, precios, superficies, barrios y calidad remanente. | Reportes de EDA inicial. |
 | `06_fuentes_externas.ipynb` | Carga, documentación e integración de fuentes externas; geocodificación y validación territorial. | Inventario de fuentes, ubicación de publicaciones, contexto urbano por barrio. |
 | `07_feature_engineering.ipynb` | Normalización monetaria, precios comparables, distancias, conteos cercanos y KPIs por barrio/comuna. | `df_publicaciones_enriquecidas_v1.csv`, `kpis_barrio_v1.csv`, `kpis_comuna_v1.csv`. |
-| `08_eda_con_fuentes_externas.ipynb` | EDA con fuentes externas, KPIs y primeras pruebas para contrastar las hipótesis del README. | Correlaciones, modelos, gráficos y síntesis de hipótesis. |
+| `08_eda_con_fuentes_externas.ipynb` | EDA con fuentes externas y primera contrastación de H1-H4. | Correlaciones, modelos, cuadrantes y síntesis de hipótesis. |
+| `09_cierre_eda_y_priorizacion_kpis.ipynb` | Jerarquización de KPIs y reglas transparentes de diagnóstico. | Soporte, señales y candidatos comunales. |
+| `10_reduccion_dimensionalidad_perfiles.ipynb` | PCA y MCA de perfiles territoriales sin usar precios como variables activas. | Varianza, cargas, contribuciones y coordenadas. |
+| `11_segmentacion_y_validacion.ipynb` | K-means y Ward con silueta, estabilidad y perfilado. | Etiquetas de cluster y validaciones internas. |
+| `12_modelos_explicativos_precios.ipynb` | Modelos log-lineales separados para venta y alquiler. | Coeficientes, IC agrupados por barrio y comparación de especificaciones. |
+| `13_correspondencia_operacion_perfiles_propiedades.ipynb` | Correspondencia entre operación y perfiles no supervisados de publicaciones. | PCA, K-means, AMI/ARI y permutación condicionada. |
+| `14_mca_y_analisis_factorial.ipynb` | MCA de propiedades y análisis factorial barrial condicionado a adecuación. | Dimensiones categóricas, KMO, Bartlett, comunalidades y factores. |
+| `15_modelo_data_warehouse_dashboard.ipynb` | Construcción reproducible del mart dimensional para Power BI. | Tablas, relaciones, esquema, medidas DAX y paquete de importación. |
+| `16_validacion_transversal_y_sensibilidad.ipynb` | Auditoría transversal de inferencia, espacio, sensibilidad, factores, clusters y H3. | Matriz de evidencia, 22 tablas y 9 visuales de robustez. |
 
 # 1 Caso de negocio
 
@@ -445,9 +458,9 @@ Variables derivadas relevantes:
 
 La cobertura de variables enriquecidas es desigual: precios por ambiente están disponibles en el **98,6%** de los registros, precio por m² en el **79,1%**, y distancias/servicios cercanos en el **86,9%**, atados a la disponibilidad de coordenadas.
 
-## 5.6 Hallazgos preliminares del EDA
+## 5.6 Hallazgos descriptivos consolidados
 
-Estos resultados son descriptivos y sirven para orientar el análisis posterior, no para afirmar causalidad.
+Estos resultados describen la oferta publicada capturada; no representan el stock total de viviendas, contratos cerrados ni demanda efectiva.
 
 - La oferta de venta domina el volumen total: 43.345 publicaciones frente a 10.452 alquileres permanentes y 14.090 temporarios.
 - El alquiler temporario está mucho más concentrado territorialmente. Palermo reúne 3.222 anuncios de Airbnb, Recoleta 1.322 y San Nicolás 568.
@@ -456,21 +469,33 @@ Estos resultados son descriptivos y sirven para orientar el análisis posterior,
 - En precios publicados, las ventas se expresan casi siempre en USD, mientras que los alquileres combinan ARS y USD. Por eso la normalización monetaria con MEP es necesaria antes de comparar.
 - El precio por m² y el precio por ambiente se usan de forma complementaria: Airbnb no tiene superficie, y Mercado Libre casi no informa dormitorios de manera comparable.
 
-## 5.7 Primera contrastación de hipótesis
+## 5.7 Contrastación final de hipótesis
 
-El notebook 08 evalúa las hipótesis formuladas en este README con variables observables. En algunos casos se usan proxies porque la fuente ideal no está disponible al nivel geográfico necesario. La lectura prioriza tamaño de efecto, dirección, consistencia entre unidades geográficas y limitaciones, no solo significancia estadística.
+La contrastación principal usa Spearman, intervalos bootstrap pareados y permutaciones bilaterales. La auditoría del notebook 16 agrega corrección por multiplicidad, controles de centralidad, sensibilidad leave-one-out y diagnóstico espacial. Para H3 se estiman modelos por publicación con errores agrupados por barrio y formas funcionales alternativas. `rho` es la correlación de Spearman; `q` es el p-valor ajustado por Benjamini-Hochberg.
 
-| Hipótesis | Evidencia actual | Lectura preliminar | Limitación principal |
+| Hipótesis y formulación nula | Resultado principal | Robustez y lectura | Implicación para el Instituto |
 |---|---|---|---|
-| H1 - Concentración turística | Cultura por km² se asocia fuertemente con Airbnb relativo: rho = 0,85 por barrio y 0,86 por comuna. Gastronomía también acompaña: rho = 0,65 por barrio. | Evidencia a favor. | Puede estar confundida con centralidad urbana. |
-| H2a - Adecuación demográfica | La relación entre tamaño medio del hogar y unidades chicas queda entre rho = -0,50 y 0,01 según operación. | Sin evidencia clara. | El Censo disponible no trae hogares unipersonales por comuna; se usa tamaño medio como proxy débil. |
-| H2b - Servicios y oferta | En alquiler por 1.000 viviendas, cultura rho = 0,69, gastronomía rho = 0,66 y subte rho = 0,54. Escuelas, hospitales y verdes no muestran relación clara. | Evidencia parcial. | Los servicios asociados parecen capturar centralidad más que servicios barriales en general. |
-| H3 - Transporte y precio | En modelos con controles, el efecto por 100 m más lejos del transporte masivo es pequeño y de signo contrario a lo esperado: venta +0,8% y alquiler +1,0%. | Sin apoyo para la hipótesis original. | Distancia en línea recta, geocodificación parcial y posible confusión con avenidas o corredores caros. |
-| H4 - Presión temporaria | Airbnb se asocia positivamente con precio de alquiler (rho = 0,91) y también con alquileres permanentes por 1.000 viviendas (rho = 0,83). | Hay asociación compatible con la parte de precios, pero no evidencia de menor disponibilidad permanente ni de desplazamiento. | Con corte transversal y 15 comunas no se puede separar presión temporaria de centralidad/coubicación. |
+| **H1.** H0: la densidad cultural/gastronómica no se asocia con Airbnb por km². H1: la asociación es positiva. | Cultura: `rho=0,85`, IC95% `[0,71; 0,92]`, `p_perm=0,0005`, 48 barrios. Gastronomía: `rho=0,65`, IC95% `[0,39; 0,81]`, `p_perm=0,0005`. | Con controles de centralidad, cultura conserva `rho_parcial=0,63`, `q=0,005`; gastronomía `rho_parcial=0,35`, `q=0,034`. Hay autocorrelación espacial y el residuo cultural también conserva estructura espacial, por lo que no se interpreta causalmente. **Evidencia consistente a favor de asociación territorial.** | Priorizar monitoreo en áreas con alta concentración temporaria y cultural, sin atribuir a los equipamientos culturales la causa de la concentración. |
+| **H2a.** H0: el proxy de tamaño de hogar no se asocia con la oferta de unidades pequeñas. H1: hogares más pequeños se asocian con mayor participación de unidades chicas. | Venta `rho=-0,29`, alquiler `rho=0,03`, temporal `rho=-0,50`; todos los IC incluyen cero y las permutaciones no rechazan H0 al 5%. | El resultado no cambia al controlar centralidad. El tamaño medio del hogar no equivale a hogares unipersonales y solo hay 15 comunas. **Evidencia insuficiente; no se demuestra ausencia de relación.** | No usar este proxy como regla de adecuación habitacional. Requiere una fuente específica de hogares unipersonales y mejor granularidad. |
+| **H2b.** H0: la disponibilidad de servicios no se asocia con la intensidad de alquiler publicado. H1: la asociación es positiva. | Cultura `rho=0,69`, IC95% `[0,19; 0,92]`, `p_perm=0,008`; educación `rho=0,11`, `p_perm=0,693`; verdes `rho=0,41`, `p_perm=0,130`. | Cultura se fortalece con control de centralidad (`rho_parcial=0,80`, `q=0,00875`); educación y verdes siguen sin evidencia concluyente. **Apoyo parcial y específico, no generalizable a todos los servicios.** | Separar tipos de servicio; no construir una única puntuación de “servicios” suponiendo efectos equivalentes. |
+| **H3.** H0: condicional a atributos comparables, la distancia al transporte no se asocia con el precio por m². H1: mayor distancia se asocia con menor precio. | El modelo lineal encuentra el signo contrario: por 100 m adicionales, alquiler `+1,0%` y venta `+0,8%`, con IC agrupados que no incluyen cero. | Formas cuadrática y logarítmica conservan efectos positivos pequeños, pero RESET rechaza especificación correcta y hay heterocedasticidad, no normalidad e influencia. Por ejemplo, en alquiler el efecto cae de `+1,60%` a `+0,89%` entre los percentiles 25 y 75 de distancia. **La hipótesis direccional no recibe apoyo; el coeficiente no debe interpretarse causalmente.** | No usar distancia lineal al transporte como prima de precio ni como criterio aislado. Se requieren accesibilidad de red, calidad del servicio y controles espaciales más ricos. |
+| **H4.** H0: Airbnb no se asocia con precio ni disponibilidad permanente. H1: mayor Airbnb se asocia con precios más altos y menor disponibilidad permanente. | Precio de alquiler: `rho=0,91`, IC95% `[0,62; 0,99]`, `p_perm=0,0005`. Disponibilidad permanente: `rho=+0,83`, IC95% `[0,51; 0,97]`, `p_perm=0,001`, signo contrario al esperado. | Con controles, ambos resultados se mantienen (`rho_parcial=0,91` y `0,83`; `q=0,005`). La co-ubicación en zonas centrales y atractivas es una explicación compatible. **Apoyo para coexistencia con precios altos, pero no para menor oferta permanente ni desplazamiento.** | Usar la concentración temporaria como señal de monitoreo, no como prueba automática de sustitución; complementar con series de stock, contratos y ocupación. |
 
-## 5.8 Lectura metodológica y próximos pasos
+![Síntesis de hipótesis con controles](data/processed/reports/robustez_pe3/hipotesis_forest_controles_v2.png)
 
-El proyecto ya cuenta con una base sólida para avanzar hacia la entrega final: el pipeline distingue datos observados, variables reconstruidas, variables derivadas, flags de calidad y fuentes externas. Esto reduce el riesgo de construir KPIs sobre transformaciones opacas.
+## 5.8 Patrones multivariados, segmentación y modelos
+
+- **PCA y análisis factorial.** Los indicadores barriales permiten exploración factorial (`KMO=0,73`, Bartlett `p<0,001`; el análisis paralelo sugiere un factor), pero la estabilidad bootstrap se evalúa antes de asignarle un significado sustantivo. Se conserva como representación exploratoria, no como índice oficial de necesidad habitacional.
+- **Clustering territorial.** La solución de referencia tiene silueta moderada (`0,28` para `k=2`; `0,33` para `k=3`) y cambia con escalado o transformación. Al retirar Puerto Madero o reducir a dos componentes también se observan cambios. Los clusters mejoran el baseline global para densidad Airbnb, pero no superan de forma clara a comuna; para precios de venta, comuna es significativamente mejor. Por lo tanto, los clusters describen perfiles, pero **no aportan valor incremental suficiente para reemplazar la geografía administrativa**.
+- **Perfiles de propiedades.** El notebook 13 compara grupos no supervisados con las etiquetas venta/alquiler/temporal mediante AMI, ARI y permutaciones condicionadas por fuente y barrio. Esa condición evita confundir una separación de portales con una tipología inmobiliaria natural.
+- **Modelos explicativos.** Los modelos de H3 explican parte de la variación interna (`R² ajustado≈0,32` en alquiler y `0,46` en venta), pero esos valores no son precisión predictiva. Los diagnósticos rechazan varios supuestos funcionales y justifican una lectura prudente de coeficientes e intervalos agrupados.
+- **Priorización.** Ninguna comuna permanece candidata bajo la regla conjuntiva exigente en los escenarios de sensibilidad probados. Esto muestra que el umbral es frágil o demasiado restrictivo; no se fuerza un ranking normativo y se mantienen señales separadas.
+
+![Valor incremental de clusters frente a comuna](data/processed/reports/robustez_pe3/valor_incremental_clusters_v2.png)
+
+## 5.9 Robustez, alcance y reglas de interpretación
+
+El pipeline distingue variables observadas, reconstruidas, imputadas y derivadas. La robustez no se reduce a “más pruebas”: cada familia responde a un riesgo concreto —multiplicidad, dependencia espacial, definición de umbrales, forma funcional, influencia o inestabilidad de componentes— y conserva resultados negativos.
 
 | Tipo de variable | Uso recomendado | Ejemplos |
 |---|---|---|
@@ -480,13 +505,7 @@ El proyecto ya cuenta con una base sólida para avanzar hacia la entrega final: 
 | Derivada | Recalcular siempre desde componentes válidos y documentar fórmula. | `precio_m2_usd`, `precio_por_ambiente_usd`, densidades y distancias. |
 | Solo descriptiva o de control de calidad | No usar como variable objetivo ni causal sin revisión adicional. | flags de nulos, flags de outliers, variables con alta reconstrucción o baja cobertura. |
 
-Próximos pasos:
-
-- Refinar las visualizaciones y narrativa del notebook 08, separando evidencia, interpretación y limitaciones.
-- Incorporar controles de centralidad en H1, H2b y H4, por ejemplo con distancia al microcentro o efectos territoriales.
-- Explorar segmentación de barrios/comunas a partir de KPIs inmobiliarios, censales y de entorno urbano.
-- Definir variables modelables y variables solo descriptivas, especialmente aquellas afectadas por imputaciones o reconstrucción.
-- Preparar un pipeline más determinístico para las transformaciones ya validadas durante la exploración.
+La matriz auditable se encuentra en [`matriz_evidencia_v2.csv`](data/processed/reports/robustez_pe3/matriz_evidencia_v2.csv) y el protocolo completo en [`docs/protocolo_robustez_pe3.md`](docs/protocolo_robustez_pe3.md). Las conclusiones son transferibles al corte y fuentes observados, pero no a todo el mercado sin una estrategia de muestreo o snapshots repetidos.
 
 # 6 Fuentes bibliográficas
 
@@ -508,15 +527,103 @@ Próximos pasos:
 [^5]: Para calcular esta brecha, los precios se normalizan a una escala mensual comparable. En Airbnb se usa la serie de 30 noches; en Mercado Libre temporario y alquiler permanente se trabaja con precio mensual publicado o normalizado. La brecha se interpreta como comparación de oferta publicada, no como costo final de contrato.
 
 
-## 7. Incorporación de la devolución de PE2 y enfoque de PE3
+## 7 Respuesta a la devolución y rúbrica de PE3
 
-La PE2 obtuvo una nota final de **8,8**. La devolución valoró la curaduría, la ingeniería de variables, la profundidad del EDA y la coherencia con el caso de negocio. Para la etapa siguiente se incorporan estas prioridades:
+La entrega aplica explícitamente los criterios valorados en la rúbrica usada como referencia:
 
-- **Contexto económico y comparabilidad:** los precios se convierten a USD con el dólar MEP de la fecha del aviso cuando la publicación está en ARS. Esta conversión facilita comparar monedas dentro del corte relevado, pero no transforma precios nominales en precios reales ni permite medir tendencias. Las publicaciones de agosto y septiembre de 2026 son un corte transversal; para evaluar la evolución de precios frente a inflación, dolarización y tipo de cambio se necesitarían snapshots comparables y series macroeconómicas del mismo período. Los avisos publicados en USD también pueden responder a cambios en el poder adquisitivo del dólar.
-- **Alcance de los proxies:** el tamaño medio del hogar del Censo 2022 se usa como proxy indirecto de la composición de los hogares para H2a; no equivale a la proporción de hogares unipersonales. Los indicadores de publicaciones miden oferta publicada capturada, no el stock total ni la demanda habitacional.
-- **Jerarquía de KPIs:** los indicadores se priorizan según su vínculo con las tres decisiones del Instituto, cobertura, denominador y estabilidad. Se mantienen separadas las dimensiones habitacional, urbana y de mercado hasta contar con evidencia para combinarlas.
-- **Reglas de priorización:** los cortes de distribución que se exploran en PE3 sirven para seleccionar comunas que requieren diagnóstico adicional. No constituyen umbrales normativos ni recomendaciones automáticas de intervención.
-- **Ejecución y outputs:** la devolución señaló específicamente que el notebook 08 no conservaba imágenes embebidas. Para la entrega siguiente se deben volver a ejecutar los notebooks en orden y guardar outputs visibles, con títulos autosuficientes, cantidad de casos e incertidumbre cuando haya comparaciones territoriales.
-- **Limitación temporal:** el proyecto todavía no cuenta con una serie de snapshots del mercado. Las diferencias entre modalidades y zonas se interpretan como asociaciones de un corte transversal, sin atribuir causalidad ni afirmar desplazamiento o sustitución entre alquiler temporal y permanente.
+| Dimensión | Respuesta implementada | Evidencia auditable |
+|---|---|---|
+| Validación estadística e inferencia | H0/H1, unidad y familia declaradas; tamaños de efecto; IC bootstrap; permutaciones; BH/Holm; leave-one-out; controles de centralidad; Moran I y resultados negativos. | Notebooks 08 y 16; `docs/protocolo_robustez_pe3.md`; `reports/robustez_pe3/`. |
+| Análisis avanzado y patrones | PCA, MCA, análisis factorial, K-means, Ward, estabilidad, sensibilidad al escalado y comparación del valor incremental contra comuna/global. | Notebooks 10, 11, 13, 14 y 16. |
+| Modelos explicativos | Modelos separados por operación, coeficientes como cambios porcentuales, errores agrupados, especificaciones alternativas, residuos, influencia y RESET. | Notebooks 12 y 16; `src/robustez_precios.py`. |
+| Dashboard e integración narrativa | Mart dimensional reproducible y dashboard público de seis páginas con filtros y recorrido alineado a las decisiones del Instituto. | Notebook 15, `data/processed/dashboard_mart/` y enlace público. |
+| Coherencia negocio-análisis | Cada hallazgo se traduce a una decisión posible y conserva una limitación; “sin evidencia” no se presenta como “efecto inexistente”. | Secciones 1, 5, 8 y 9 de este README. |
+| Robustez técnica y documentación | Paquete local instalable, funciones reutilizables, ejecución secuencial, semillas, tests, CI, datos crudos inmutables y outputs versionados. | `pyproject.toml`, `src/`, `tests/`, `.github/workflows/` y documentación. |
 
-El avance y los puntos pendientes se registran en [docs/pe3_plan_y_seguimiento.md](docs/pe3_plan_y_seguimiento.md). La secuencia de PE3 agrega el cierre del EDA, una exploración factorial y de segmentación territorial, y un modelo explicativo de precios. El dashboard se desarrollará por separado. Las salidas nuevas se guardarán en `data/processed/` y `data/processed/reports/`; los notebooks analíticos no modifican los datos crudos.
+Los precios ARS se convierten a USD con MEP de la fecha del aviso para comparabilidad transversal. La conversión no produce precios reales ni tendencias. El tamaño medio del hogar sigue siendo un proxy débil para H2a; las reglas de prioridad son diagnósticas y no umbrales normativos.
+
+# 8 Dashboard y recorrido narrativo
+
+**Acceso:** [Dashboard público de Power BI](https://app.powerbi.com/view?r=eyJrIjoiOGQ5ODllNTItODU4MS00OTEyLWFhMWItNjQwMGRhMjExYWE4IiwidCI6ImExZjUwYTk3LTIxYzAtNDlhNy1hOWQ0LWYyNDRlYmI0MmRhNyIsImMiOjR9&pageName=e377f501cce641b0905d)
+
+El informe fue verificado con acceso público. Incluye un menú y cinco páginas analíticas. Los filtros permiten explorar operación, fuente, comuna, barrio o tipo de propiedad según la página. Los valores que siguen corresponden al estado sin filtros observado en la publicación; al aplicar segmentadores, el dashboard recalcula las vistas compatibles.
+
+## 8.1 Menú principal
+
+**Propósito.** Ordena la lectura desde el panorama general hacia las tres decisiones del Instituto: disponibilidad de alquiler permanente, monitoreo del temporario y accesibilidad/valorización territorial. No contiene evidencia propia; evita presentar el tablero como una colección de gráficos sin secuencia.
+
+**Relación con las hipótesis.** La navegación separa H1/H4 —concentración temporaria—, H2a —adecuación demográfica—, H2b —servicios y oferta— y H3 —transporte y precio—. Esa separación es metodológica: cada hipótesis usa unidades, variables y límites distintos.
+
+## 8.2 Panorama de la oferta
+
+**Qué muestra.** Cuatro tarjetas de volumen, composición por operación y moneda, mapa de Airbnb relativo al alquiler permanente, composición de la oferta por comuna y ranking de densidad Airbnb. Incluye filtros por operación, fuente, comuna y tipo de propiedad.
+
+**Hallazgos.** El corte reúne aproximadamente **68 mil publicaciones**: **43 mil de venta**, **10 mil de alquiler permanente** y **14 mil de alquiler temporario**. La venta domina el volumen y está casi completamente expresada en USD; los alquileres combinan monedas, lo que justifica la normalización con MEP antes de comparar. La participación de modalidades cambia entre comunas. San Nicolás, San Telmo, Recoleta, Palermo y Monserrat encabezan la densidad Airbnb, con aproximadamente 248, 208, 205, 202 y 186 publicaciones por km², respectivamente.
+
+**Relación con las hipótesis.** Es la base descriptiva para H1 y H4: confirma que el temporario está territorialmente concentrado y que los conteos absolutos no alcanzan para comparar zonas. También define el universo para H2a/H2b y H3. No contrasta por sí sola ninguna hipótesis porque mezcla composición de fuentes, tamaños territoriales y modalidades con unidades de precio distintas.
+
+**Decisión y límite.** Sirve para seleccionar el territorio y la modalidad que se desea diagnosticar. Los avisos son oferta publicada capturada; no equivalen a viviendas únicas, stock disponible ni operaciones cerradas.
+
+## 8.3 Oportunidades para el alquiler permanente
+
+**Qué muestra.** Indicadores del Censo 2022 —hogares inquilinos, viviendas, tamaño medio del hogar y proporción de departamentos—, un perfil comunal de alquiler frente a hogares inquilinos, un mapa de contexto habitacional y una comparación entre oferta publicada y presencia de hogares inquilinos.
+
+**Hallazgos.** La vista contextualiza la oferta con aproximadamente **518 mil hogares inquilinos**, **1,62 millones de viviendas**, un tamaño medio de **2,23 personas por hogar** y **71,5%** de viviendas en departamento. Las comunas no combinan del mismo modo cantidad de hogares inquilinos y avisos de alquiler por 1.000 viviendas: una comuna con más publicaciones no necesariamente es la que exhibe mayor presión o necesidad habitacional. La comuna 14 presenta alrededor de 9,5 alquileres permanentes publicados por 1.000 viviendas y una presencia elevada de oferta temporaria; el patrón requiere diagnóstico conjunto, no una etiqueta automática de oportunidad.
+
+**Relación con las hipótesis.** Aporta contexto para **H2a**, pero el tamaño medio del hogar es un proxy débil de hogares unipersonales: el contraste no encontró una relación concluyente con unidades pequeñas. También aporta el componente de disponibilidad de **H4**; en este corte, Airbnb se asocia positivamente —no negativamente— con alquiler permanente por 1.000 viviendas (`rho=0,83`).
+
+**Decisión y límite.** Permite localizar comunas para diagnóstico adicional de oferta permanente. No mide demanda insatisfecha, vacancia, contratos ni accesibilidad económica de los hogares; por eso no se interpreta como mapa de déficit.
+
+## 8.4 Concentración territorial del alquiler temporario
+
+**Qué muestra.** Densidad Airbnb por barrio, relación con densidad cultural, comparación de Airbnb y alquiler permanente por 1.000 viviendas y ranking comunal de la razón entre ambas ofertas. Incluye filtros por operación, fuente, comuna y barrio.
+
+**Hallazgos.** Las publicaciones Airbnb se concentran en el centro y norte de CABA. La densidad cultural tiene una asociación fuerte con Airbnb por km² (`rho=0,85`; IC95% `[0,71; 0,92]`) y se mantiene al controlar centralidad (`rho_parcial=0,63`; `q=0,005`). La asociación entre Airbnb y alquiler permanente es positiva, por lo que las comunas con más temporario también tienden a concentrar más oferta permanente publicada.
+
+**Relación con las hipótesis.** La página comunica el principal resultado de **H1** y los dos componentes de **H4**. H1 recibe apoyo como asociación territorial; H4 recibe apoyo respecto de precios altos, pero no respecto de menor disponibilidad permanente. La línea de tendencia no demuestra que la oferta cultural cause Airbnb ni que Airbnb desplace alquileres.
+
+**Decisión y límite.** Sirve para priorizar monitoreo y fiscalización donde la concentración temporaria es alta. La autocorrelación espacial, la centralidad y la cobertura de portales impiden convertir la co-ubicación en una conclusión causal.
+
+## 8.5 Accesibilidad y servicios
+
+**Qué muestra.** Tarjetas de cobertura territorial, mapa seleccionable por tipo de servicio y dispersión entre densidad del servicio elegido y precio mediano por m². Los segmentadores permiten cambiar comuna, barrio y familia de servicio.
+
+**Hallazgos.** Según los puntos y límites usados en el mart, **28 barrios no tienen estación de subte dentro de su polígono**, **15 no tienen MetroBus**, **21 no tienen tren** y **29 no tienen hospitales**. Estos conteos describen presencia territorial, no distancia real de los residentes al punto más cercano: un barrio puede no contener una estación y, aun así, estar próximo a una situada en el límite. En los contrastes, cultura se asocia con intensidad de alquiler (`rho=0,69`; controlada `rho=0,80`), mientras que educación y espacios verdes no muestran evidencia concluyente.
+
+**Relación con las hipótesis.** La página corresponde principalmente a **H2b** y da contexto a **H3**. H2b recibe apoyo parcial y específico para cultura, no para un concepto genérico de “más servicios”. H3 no confirma la prima esperada por proximidad: los modelos encuentran asociaciones pequeñas de signo contrario y problemas de especificación.
+
+**Decisión y límite.** Permite identificar brechas de cobertura y decidir qué servicio explorar. No debe sumar equipamientos heterogéneos en un índice único ni interpretar presencia, calidad, capacidad y acceso como equivalentes. Las distancias del análisis son lineales, no tiempos de viaje por red.
+
+## 8.6 Precios y valorización de la oferta
+
+**Qué muestra.** Medianas de precio, dispersión de precio por m² frente a superficie y ranking de alquiler mensual por barrio. Incluye filtros por operación, fuente, comuna y barrio; venta y alquiler se mantienen como métricas separadas.
+
+**Hallazgos.** Sin filtros, el tablero muestra una mediana aproximada de **USD 2,51 mil/m² en venta**, **USD 13,11/m² en alquiler**, **USD 138 mil** de precio total de venta y **USD 1,35 mil** de alquiler mensual dentro del universo compatible de la tarjeta. Puerto Madero encabeza el ranking de alquiler mensual publicado, seguido a distancia por Retiro, Palermo, Núñez y Belgrano. La nube de superficie y precio por m² confirma dispersión, asimetría y submercados, por lo que una media general ocultaría heterogeneidad.
+
+**Relación con las hipótesis.** Resume el resultado de precios de **H3** y el componente de precios de **H4**. H3 no recibe apoyo en la dirección planteada; H4 sí encuentra asociación positiva entre concentración Airbnb y precio de alquiler (`rho=0,91`; IC95% `[0,62; 0,99]`), sin demostrar que Airbnb sea la causa.
+
+**Decisión y límite.** Permite comparar órdenes de magnitud y detectar barrios que requieren análisis. Los precios son de publicación, el alquiler no siempre incluye expensas o servicios, Airbnb no informa superficie comparable y la conversión a USD no convierte el corte en una serie de precios reales.
+
+## 8.7 Reglas de lectura transversal
+
+- Los conteos son publicaciones observadas, no stock ni transacciones.
+- Medianas, ratios, densidades y porcentajes no son aditivos; se recalculan en su grano.
+- Los filtros cambian el universo: toda lectura debe registrar operación, fuente y territorio activos.
+- Una asociación visual no reemplaza los contrastes de los notebooks 08, 12 y 16.
+- “Sin evidencia suficiente” no significa “efecto inexistente”, y una asociación robusta no implica causalidad.
+
+La guía del modelo, relaciones y reglas de agregación está en [`docs/modelo_data_warehouse_dashboard.md`](docs/modelo_data_warehouse_dashboard.md).
+
+# 9 Trazabilidad entre hipótesis, notebooks y decisiones
+
+| Hipótesis o decisión | Preparación | Contraste/modelo | Validación | Página del dashboard | Estado final |
+|---|---|---|---|---|---|
+| H1: concentración turística | 06-07 | 08 | 16 | Concentración temporaria | Asociación positiva robusta; no causal. |
+| H2a: adecuación demográfica | 06-07 | 08 | 16 | Alquiler permanente | Evidencia insuficiente con el proxy disponible. |
+| H2b: servicios y oferta | 06-07 | 08 | 10, 14 y 16 | Accesibilidad y servicios | Apoyo parcial, concentrado en cultura; no en todos los servicios. |
+| H3: transporte y precio | 06-07 | 08 y 12 | 16 | Accesibilidad; precios | La dirección esperada no se confirma y hay problemas de especificación. |
+| H4: presión temporaria | 07 | 08 | 16 | Concentración temporaria | Coexiste con precios altos, pero no con menor oferta permanente en este corte. |
+| Priorizar zonas | 07-09 | 09 | 16 | Panorama; alquiler permanente | Las señales sirven para diagnóstico; la regla conjunta no es estable como ranking normativo. |
+| Descubrir perfiles territoriales | 10 | 11, 13 y 14 | 16 | Uso analítico complementario | Los clusters describen, pero no reemplazan a comuna. |
+
+La secuencia completa se ejecuta con `python -m src.run_notebooks_sequential`. Los notebooks conservan outputs visibles; las tablas que sustentan estas conclusiones se encuentran en `data/processed/reports/`.
