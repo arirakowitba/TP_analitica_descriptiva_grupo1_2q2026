@@ -1,8 +1,0 @@
-variable,n,estadistico_kruskal,p_valor,eta2_aproximado,estado,p_ajustado_BH
-airbnb_por_km2,48,,,,No estimable: al menos un grupo con menos de 5 barrios,
-mediana_precio_m2_venta_usd,48,,,,No estimable: al menos un grupo con menos de 5 barrios,
-mediana_precio_m2_alquiler_usd,41,,,,No estimable: al menos un grupo con menos de 5 barrios,
-densidad_culturales_km2,48,,,,No estimable: al menos un grupo con menos de 5 barrios,
-densidad_subte_km2,48,,,,No estimable: al menos un grupo con menos de 5 barrios,
-densidad_educacion_km2,48,,,,No estimable: al menos un grupo con menos de 5 barrios,
-pct_superficie_verde,48,,,,No estimable: al menos un grupo con menos de 5 barrios,

@@ -78,6 +78,8 @@ def main(argv=None):
                 str(relative),
             ]
             env = os.environ.copy()
+            for variable in ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS", "NUMEXPR_NUM_THREADS"):
+                env.setdefault(variable, "1")
             existing_jupyter_path = env.get("JUPYTER_PATH")
             env["JUPYTER_PATH"] = kernel_dir + (
                 os.pathsep + existing_jupyter_path if existing_jupyter_path else ""

@@ -1,0 +1,97 @@
+barrio_oficial,fuente_temporario,n_permanente,n_temporario,brecha_pct,ic95_lo,ic95_hi,estado,comuna
+Agronomia,airbnb,25,9,,,,Soporte insuficiente: minimo 30 avisos por lado,15
+Agronomia,mercado_libre,25,6,,,,Soporte insuficiente: minimo 30 avisos por lado,15
+Almagro,airbnb,430,369,160.47982994209366,148.66666666666669,185.8591647058823,"IC condicional a captura; productos y gastos distintos, no rentabilidad",5
+Almagro,mercado_libre,430,176,36.02079892537529,24.246254548236674,44.259661507914835,"IC condicional a captura; productos y gastos distintos, no rentabilidad",5
+Balvanera,airbnb,321,342,189.28924999999998,169.29648156249996,220.50759777777776,"IC condicional a captura; productos y gastos distintos, no rentabilidad",3
+Balvanera,mercado_libre,321,109,25.811315806726554,14.397499999999974,50.0,"IC condicional a captura; productos y gastos distintos, no rentabilidad",3
+Barracas,airbnb,103,65,187.43431111111107,150.63087368421048,311.2621926470588,"IC condicional a captura; productos y gastos distintos, no rentabilidad",4
+Barracas,mercado_libre,103,44,-14.444444444444448,-28.0701754385965,12.037037037037024,"IC condicional a captura; productos y gastos distintos, no rentabilidad",4
+Belgrano,airbnb,719,489,145.7004083333333,128.09840000000003,172.45096749058376,"IC condicional a captura; productos y gastos distintos, no rentabilidad",13
+Belgrano,mercado_libre,719,194,24.354319444444418,12.5,34.73483333333331,"IC condicional a captura; productos y gastos distintos, no rentabilidad",13
+Boedo,airbnb,69,24,,,,Soporte insuficiente: minimo 30 avisos por lado,5
+Boedo,mercado_libre,69,26,,,,Soporte insuficiente: minimo 30 avisos por lado,5
+Caballito,airbnb,676,139,160.0187882352941,145.05446160112925,178.72377518495847,"IC condicional a captura; productos y gastos distintos, no rentabilidad",6
+Caballito,mercado_libre,676,112,43.5576470588235,32.43015319344113,60.46437759236279,"IC condicional a captura; productos y gastos distintos, no rentabilidad",6
+Chacarita,airbnb,129,164,118.39330138888884,88.60921153846152,147.79557318181818,"IC condicional a captura; productos y gastos distintos, no rentabilidad",15
+Chacarita,mercado_libre,129,70,26.054166666666646,-5.337110618279567,39.331818181818164,"IC condicional a captura; productos y gastos distintos, no rentabilidad",15
+Coghlan,airbnb,56,33,96.1249894505255,55.33976315789473,150.752432774888,"IC condicional a captura; productos y gastos distintos, no rentabilidad",12
+Coghlan,mercado_libre,56,34,-5.86787532901305,-18.17594623187983,6.840626830325526,"IC condicional a captura; productos y gastos distintos, no rentabilidad",12
+Colegiales,airbnb,238,235,256.3611238727166,202.77204999999995,323.11821999999995,"IC condicional a captura; productos y gastos distintos, no rentabilidad",13
+Colegiales,mercado_libre,238,122,53.724406376465986,29.131821637523547,84.22708571428572,"IC condicional a captura; productos y gastos distintos, no rentabilidad",13
+Constitucion,airbnb,113,99,180.99415555555552,139.16704,242.63446341463415,"IC condicional a captura; productos y gastos distintos, no rentabilidad",1
+Constitucion,mercado_libre,113,53,0.0,-14.795377066078066,33.33333333333333,"IC condicional a captura; productos y gastos distintos, no rentabilidad",1
+Flores,airbnb,335,42,183.81000000000003,142.8352369607843,222.39200000000002,"IC condicional a captura; productos y gastos distintos, no rentabilidad",7
+Flores,mercado_libre,335,40,20.194833803186253,-6.08748674443266,36.37422203423243,"IC condicional a captura; productos y gastos distintos, no rentabilidad",7
+Floresta,airbnb,85,9,,,,Soporte insuficiente: minimo 30 avisos por lado,10
+Floresta,mercado_libre,85,20,,,,Soporte insuficiente: minimo 30 avisos por lado,10
+La Boca,airbnb,60,47,304.7571449275362,189.99766249999993,462.95303076923074,"IC condicional a captura; productos y gastos distintos, no rentabilidad",4
+La Boca,mercado_libre,60,36,-5.797101449275354,-22.016647109377562,15.384615384615374,"IC condicional a captura; productos y gastos distintos, no rentabilidad",4
+Liniers,airbnb,102,4,,,,Soporte insuficiente: minimo 30 avisos por lado,9
+Liniers,mercado_libre,102,33,-12.770821040669588,-25.0,13.333333333333353,"IC condicional a captura; productos y gastos distintos, no rentabilidad",9
+Mataderos,airbnb,65,3,,,,Soporte insuficiente: minimo 30 avisos por lado,9
+Mataderos,mercado_libre,65,3,,,,Soporte insuficiente: minimo 30 avisos por lado,9
+Monserrat,airbnb,316,403,73.5221238938053,46.19311501466273,95.28870169300214,"IC condicional a captura; productos y gastos distintos, no rentabilidad",1
+Monserrat,mercado_libre,316,153,-0.8849557522123908,-21.22034782528768,20.2521798118888,"IC condicional a captura; productos y gastos distintos, no rentabilidad",1
+Monte Castro,airbnb,59,6,,,,Soporte insuficiente: minimo 30 avisos por lado,10
+Monte Castro,mercado_libre,59,35,-7.63969286659133,-19.248823529411773,8.980186480186488,"IC condicional a captura; productos y gastos distintos, no rentabilidad",10
+Nueva Pompeya,airbnb,16,3,,,,Soporte insuficiente: minimo 30 avisos por lado,4
+Nueva Pompeya,mercado_libre,16,2,,,,Soporte insuficiente: minimo 30 avisos por lado,4
+Nuñez,airbnb,388,217,116.94459230769229,100.45325714285713,134.66153846153847,"IC condicional a captura; productos y gastos distintos, no rentabilidad",13
+Nuñez,mercado_libre,388,146,12.930865384615387,-0.7162631907215854,18.092307692307696,"IC condicional a captura; productos y gastos distintos, no rentabilidad",13
+Palermo,airbnb,1381,3177,152.33105454545455,146.13346537842193,166.31153846153848,"IC condicional a captura; productos y gastos distintos, no rentabilidad",14
+Palermo,mercado_libre,1381,907,33.981090909090916,27.286776156217883,40.796923076923065,"IC condicional a captura; productos y gastos distintos, no rentabilidad",14
+Parque Avellaneda,airbnb,36,8,,,,Soporte insuficiente: minimo 30 avisos por lado,9
+Parque Avellaneda,mercado_libre,36,21,,,,Soporte insuficiente: minimo 30 avisos por lado,9
+Parque Chacabuco,airbnb,103,16,,,,Soporte insuficiente: minimo 30 avisos por lado,7
+Parque Chacabuco,mercado_libre,103,41,4.584350401799164,-9.428917584484973,14.397499999999997,"IC condicional a captura; productos y gastos distintos, no rentabilidad",7
+Parque Chas,airbnb,42,11,,,,Soporte insuficiente: minimo 30 avisos por lado,15
+Parque Chas,mercado_libre,42,41,2.1874400555256246,-2.935454545454552,22.22222222222221,"IC condicional a captura; productos y gastos distintos, no rentabilidad",15
+Parque Patricios,airbnb,49,21,,,,Soporte insuficiente: minimo 30 avisos por lado,4
+Parque Patricios,mercado_libre,49,31,7.14285714285714,-13.33333333333333,33.46211879632581,"IC condicional a captura; productos y gastos distintos, no rentabilidad",4
+Paternal,airbnb,27,9,,,,Soporte insuficiente: minimo 30 avisos por lado,15
+Paternal,mercado_libre,27,20,,,,Soporte insuficiente: minimo 30 avisos por lado,15
+Puerto Madero,airbnb,601,182,68.15,49.94880952380952,83.3,"IC condicional a captura; productos y gastos distintos, no rentabilidad",1
+Puerto Madero,mercado_libre,601,181,5.000000000000004,-8.064516129032251,12.5,"IC condicional a captura; productos y gastos distintos, no rentabilidad",1
+Recoleta,airbnb,984,1310,142.33203749999998,134.50000000000003,157.86901333333333,"IC condicional a captura; productos y gastos distintos, no rentabilidad",2
+Recoleta,mercado_libre,984,416,27.108333333333334,25.0,33.33333333333333,"IC condicional a captura; productos y gastos distintos, no rentabilidad",2
+Retiro,airbnb,337,469,110.11764705882352,94.0,129.87784615384618,"IC condicional a captura; productos y gastos distintos, no rentabilidad",1
+Retiro,mercado_libre,337,150,17.647058823529417,0.0,38.95963493000069,"IC condicional a captura; productos y gastos distintos, no rentabilidad",1
+Saavedra,airbnb,135,58,113.5208152777778,88.637485520362,164.65312593939393,"IC condicional a captura; productos y gastos distintos, no rentabilidad",12
+Saavedra,mercado_libre,135,22,,,,Soporte insuficiente: minimo 30 avisos por lado,12
+San Cristobal,airbnb,135,49,108.79662222222221,85.53846153846155,146.6479431818181,"IC condicional a captura; productos y gastos distintos, no rentabilidad",3
+San Cristobal,mercado_libre,135,54,-1.9812962962963088,-24.52466339222772,19.022652265226473,"IC condicional a captura; productos y gastos distintos, no rentabilidad",3
+San Nicolas,airbnb,278,566,252.4,222.18109096309297,288.31862428571424,"IC condicional a captura; productos y gastos distintos, no rentabilidad",1
+San Nicolas,mercado_libre,278,181,52.0,29.128826813175774,68.18118710383477,"IC condicional a captura; productos y gastos distintos, no rentabilidad",1
+San Telmo,airbnb,122,253,229.98938196442768,198.7893222222222,286.1990185667879,"IC condicional a captura; productos y gastos distintos, no rentabilidad",1
+San Telmo,mercado_libre,122,89,36.78316350857107,22.666445061602623,77.80653124943272,"IC condicional a captura; productos y gastos distintos, no rentabilidad",1
+Velez Sarsfield,airbnb,48,6,,,,Soporte insuficiente: minimo 30 avisos por lado,10
+Velez Sarsfield,mercado_libre,48,31,1.2658227848101333,-14.66193269527632,20.000000000000018,"IC condicional a captura; productos y gastos distintos, no rentabilidad",10
+Versalles,airbnb,11,0,,,,Soporte insuficiente: minimo 30 avisos por lado,10
+Versalles,mercado_libre,11,8,,,,Soporte insuficiente: minimo 30 avisos por lado,10
+Villa Crespo,airbnb,315,288,124.85025862068962,98.16082352941176,167.01931192190668,"IC condicional a captura; productos y gastos distintos, no rentabilidad",15
+Villa Crespo,mercado_libre,315,113,19.911367271028357,9.243697478991608,36.1963068181818,"IC condicional a captura; productos y gastos distintos, no rentabilidad",15
+Villa Del Parque,airbnb,147,48,161.2942897727273,129.8079620315904,227.52884230769226,"IC condicional a captura; productos y gastos distintos, no rentabilidad",11
+Villa Del Parque,mercado_libre,147,21,,,,Soporte insuficiente: minimo 30 avisos por lado,11
+Villa Devoto,airbnb,194,48,246.1389280653488,181.9019912053749,346.0661035106381,"IC condicional a captura; productos y gastos distintos, no rentabilidad",11
+Villa Devoto,mercado_libre,194,38,-2.358705030768393,-28.57142857142857,28.928023571289533,"IC condicional a captura; productos y gastos distintos, no rentabilidad",11
+Villa Gral. Mitre,airbnb,48,15,,,,Soporte insuficiente: minimo 30 avisos por lado,11
+Villa Gral. Mitre,mercado_libre,48,12,,,,Soporte insuficiente: minimo 30 avisos por lado,11
+Villa Lugano,airbnb,80,2,,,,Soporte insuficiente: minimo 30 avisos por lado,8
+Villa Lugano,mercado_libre,80,27,,,,Soporte insuficiente: minimo 30 avisos por lado,8
+Villa Luro,airbnb,87,10,,,,Soporte insuficiente: minimo 30 avisos por lado,10
+Villa Luro,mercado_libre,87,20,,,,Soporte insuficiente: minimo 30 avisos por lado,10
+Villa Ortuzar,airbnb,71,24,,,,Soporte insuficiente: minimo 30 avisos por lado,15
+Villa Ortuzar,mercado_libre,71,33,2.857142857142847,-26.824290899554764,22.46612282361314,"IC condicional a captura; productos y gastos distintos, no rentabilidad",15
+Villa Pueyrredon,airbnb,95,14,,,,Soporte insuficiente: minimo 30 avisos por lado,12
+Villa Pueyrredon,mercado_libre,95,27,,,,Soporte insuficiente: minimo 30 avisos por lado,12
+Villa Real,airbnb,9,2,,,,Soporte insuficiente: minimo 30 avisos por lado,10
+Villa Real,mercado_libre,9,3,,,,Soporte insuficiente: minimo 30 avisos por lado,10
+Villa Riachuelo,airbnb,13,0,,,,Soporte insuficiente: minimo 30 avisos por lado,8
+Villa Riachuelo,mercado_libre,13,3,,,,Soporte insuficiente: minimo 30 avisos por lado,8
+Villa Santa Rita,airbnb,42,10,,,,Soporte insuficiente: minimo 30 avisos por lado,11
+Villa Santa Rita,mercado_libre,42,3,,,,Soporte insuficiente: minimo 30 avisos por lado,11
+Villa Soldati,airbnb,6,0,,,,Soporte insuficiente: minimo 30 avisos por lado,8
+Villa Soldati,mercado_libre,6,0,,,,Soporte insuficiente: minimo 30 avisos por lado,8
+Villa Urquiza,airbnb,397,100,163.800635,138.35493950000003,197.34468548245613,"IC condicional a captura; productos y gastos distintos, no rentabilidad",12
+Villa Urquiza,mercado_libre,397,57,30.000000000000004,15.766351974474972,53.52821052631579,"IC condicional a captura; productos y gastos distintos, no rentabilidad",12

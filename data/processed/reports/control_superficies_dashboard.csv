@@ -1,0 +1,3 @@
+operacion,n_precio,n_scatter,n_sin_superficie_visual,regla
+venta,43130,43119,11,Scatter: superficie valida entre 10 y 2000 m2; tarjeta sin recorte visual
+alquiler,10293,10290,3,Scatter: superficie valida entre 10 y 2000 m2; tarjeta sin recorte visual

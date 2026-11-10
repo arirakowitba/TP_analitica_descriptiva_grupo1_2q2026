@@ -1,4 +1,4 @@
-"""Construye el mart dimensional PE3 para el dashboard.
+"""Construye el mart dimensional para el dashboard.
 
 Hechos separados por granularidad; no unir hechos directamente.
 La clave natural de publicación se valida y nunca se deduplica silenciosamente.
@@ -98,13 +98,24 @@ if date_src:
     dims["dim_fecha"] = d[["fecha_key", "fecha", "anio", "mes", "trimestre"]]
 
 # Hecho publicación: oferta capturada; mantener disponibles atributos/precio/moneda originales.
-measure_cols = ["precio_usd", "precio_mep_usd", "precio", "superficie_ref_m2",
+measure_cols = ["en_alcance_territorial", "lat", "lon", "precio_venta_usd", "precio_mensual_usd", "precio_m2_usd_fuera_rango_flag", "precio_mensual_usd_fuera_rango_flag", "precio_venta_usd_fuera_rango_flag", "superficie_ref_m2_valor_invalido_flag", "superficie_ref_m2_outlier_p01_p99_flag", "tc_mep", "fecha_tc", "precio_usd", "precio_mep_usd", "precio", "superficie_ref_m2",
  "precio_m2_usd", "ambientes_ref", "dormitorios_ref", "banios_ref", "latitud", "longitud",
  "es_geocodificado", "flag_geocodificacion"]
 keep = [c for c in [id_src, source_src, op_src, date_src, barrio_src, comuna_src,
                      type_src, currency_src] + measure_cols if c and c in pub]
 fp = pub[keep].copy().rename(columns={id_src: "id_publicacion"})
 fp["cantidad_publicaciones"] = 1
+fp["cantidad_publicaciones_territoriales"] = fp["en_alcance_territorial"].astype(int)
+fp["regla_moneda"] = np.where(fp[source_src].eq("airbnb"),
+    "USD cotizacion 30 noches", np.where(fp[currency_src].eq("ARS"),
+    "ARS / MEP por fecha; ver tc_mep y fecha_tc", np.where(fp[currency_src].eq("USD"),
+    "USD original", "Moneda sin conversion: precio normalizado nulo")))
+fp["precio_m2_dashboard"] = fp["precio_m2_usd"].where(fp["en_alcance_territorial"] & ~fp["precio_m2_usd_fuera_rango_flag"])
+fp["precio_venta_dashboard"] = fp["precio_venta_usd"].where(fp["en_alcance_territorial"] & ~fp["precio_venta_usd_fuera_rango_flag"])
+fp["precio_mensual_dashboard"] = fp["precio_mensual_usd"].where(fp["en_alcance_territorial"] & ~fp["precio_mensual_usd_fuera_rango_flag"])
+fp["superficie_dashboard_m2"] = fp["superficie_ref_m2"].where(
+    fp["superficie_ref_m2"].between(10, 2000) & fp["superficie_ref_m2_valor_invalido_flag"].eq(False))
+
 fp = foreign_key(fp, dims["dim_fuente"], source_src, source_src, "fuente_key")
 # La dimensión de operación usa nombre natural estándar; la FK respeta el campo original.
 fp = foreign_key(fp, dims["dim_operacion"], op_src, "operacion", "operacion_key")
@@ -141,8 +152,8 @@ def make_operation_fact(source, geo, geo_key, grain):
             out = foreign_key(out, dims[geo_key], geo, geo, "barrio_key" if geo=="barrio_oficial" else "comuna_key")
     return out
 
-fb = make_operation_fact(kb, "barrio_oficial", "dim_barrio", "barrio × corte PE2 × operación")
-fc = make_operation_fact(kc, "comuna", "dim_comuna", "comuna × corte PE2 × operación")
+fb = make_operation_fact(kb, "barrio_oficial", "dim_barrio", "barrio × corte 2026 × operación")
+fc = make_operation_fact(kc, "comuna", "dim_comuna", "comuna × corte 2026 × operación")
 
 # Agregados barriales y comunales permanecen en su grano original, sin expandirlos por operación.
 fkb = kb.copy()
@@ -176,10 +187,10 @@ facts = {"fact_publicacion":fp, "fact_barrio_operacion":fb, "fact_kpi_barrio":fk
  "fact_contexto_barrio":fctx, "fact_censo_comuna":fce}
 grains = {
  "fact_publicacion":"fuente × id_publicacion × operación",
- "fact_barrio_operacion":"barrio × corte PE2 × operación",
- "fact_kpi_barrio":"barrio × corte PE2",
- "fact_comuna_operacion":"comuna × corte PE2 × operación",
- "fact_kpi_comuna":"comuna × corte PE2 (solo indicadores de mercado)",
+ "fact_barrio_operacion":"barrio × corte 2026 × operación",
+ "fact_kpi_barrio":"barrio × corte 2026",
+ "fact_comuna_operacion":"comuna × corte 2026 × operación",
+ "fact_kpi_comuna":"comuna × corte 2026 (solo indicadores de mercado)",
  "fact_contexto_barrio":"barrio × versión contextual",
  "fact_censo_comuna":"comuna × Censo 2022"
 }
@@ -250,8 +261,17 @@ def create_powerbi_assets(dims, facts, manifest):
         json.dumps(schema, ensure_ascii=False, indent=2), encoding="utf-8")
 
     dax = [
-        "// Medidas iniciales. Usar cada una en el grano indicado y validar filtros.",
-        "Publicaciones observadas = SUM(fact_publicacion[cantidad_publicaciones])",
+        "// Precios: mediana de avisos validos normalizados; n cuenta exactamente esos precios.",
+        'Venta USD/m2 = CALCULATE(MEDIAN(fact_publicacion[precio_m2_dashboard]), KEEPFILTERS(dim_operacion[operacion] = "venta"))',
+        'Alquiler USD/m2/mes = CALCULATE(MEDIAN(fact_publicacion[precio_m2_dashboard]), KEEPFILTERS(dim_operacion[operacion] = "alquiler"))',
+        'Alquiler mensual USD = CALCULATE(MEDIAN(fact_publicacion[precio_mensual_dashboard]), KEEPFILTERS(dim_operacion[operacion] = "alquiler"))',
+        'Venta total USD = CALCULATE(MEDIAN(fact_publicacion[precio_venta_dashboard]), KEEPFILTERS(dim_operacion[operacion] = "venta"))',
+        'N venta m2 = CALCULATE(COUNT(fact_publicacion[precio_m2_dashboard]), KEEPFILTERS(dim_operacion[operacion] = "venta"))',
+        'N alquiler m2 = CALCULATE(COUNT(fact_publicacion[precio_m2_dashboard]), KEEPFILTERS(dim_operacion[operacion] = "alquiler"))',
+        'N alquiler mensual = CALCULATE(COUNT(fact_publicacion[precio_mensual_dashboard]), KEEPFILTERS(dim_operacion[operacion] = "alquiler"))',
+        'Airbnb sobre alquiler permanente = DIVIDE(CALCULATE(SUM(fact_barrio_operacion[cantidad_publicaciones]), dim_operacion[operacion] = "airbnb"), CALCULATE(SUM(fact_barrio_operacion[cantidad_publicaciones]), dim_operacion[operacion] = "alquiler"))',
+
+        "Publicaciones observadas = SUM(fact_publicacion[cantidad_publicaciones_territoriales])",
         "Avisos por barrio y operación = SUM(fact_barrio_operacion[cantidad_publicaciones])",
         "Avisos por comuna y operación = SUM(fact_comuna_operacion[cantidad_publicaciones])",
     ]
@@ -335,7 +355,9 @@ El informe contiene seis páginas: menú, panorama de la oferta, alquiler perman
     with zipfile.ZipFile(package, "w", compression=zipfile.ZIP_DEFLATED) as zf:
         for path in OUT.rglob("*"):
             if path.is_file():
-                zf.write(path, path.relative_to(OUT.parent))
+                info = zipfile.ZipInfo(path.relative_to(OUT.parent).as_posix(), date_time=(2026, 1, 1, 0, 0, 0))
+                info.compress_type = zipfile.ZIP_DEFLATED
+                zf.writestr(info, path.read_bytes())
     return str(package), len(rels)
 
 (OUT / "data_model.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")

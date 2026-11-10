@@ -19,7 +19,7 @@ el repositorio no contenía `setup.py` ni `pyproject.toml`.
   explícita de paquetes excluye datos, notebooks y scrapers del descubrimiento.
 - `requirements.txt` instala `-e .` desde la raíz. No se descarga un paquete
   externo llamado `src`; se instala el código de este checkout.
-- Los notebooks 06–08 usan las mismas importaciones normales que PE3.
+- Los notebooks 06–08 usan las mismas importaciones normales que análisis.
 - El ejecutor deja de inyectar `PYTHONPATH`, invoca `nbconvert` como módulo del
   intérprete actual y crea un kernelspec temporal con ese mismo intérprete.
   Esto evita seleccionar por accidente un Jupyter o un kernel global.
@@ -60,7 +60,7 @@ cambiaron. Los notebooks ejecutados y el registro completo se conservaron como
 artefactos de validación; el cambio de instalación conserva los outputs
 versionados y no incorpora las regeneraciones de CSV ni de imágenes.
 
-Para comprobar solo la continuación de PE3 con insumos previos disponibles:
+Para comprobar solo la continuación de análisis con insumos previos disponibles:
 
 ```bash
 python -m src.run_notebooks_sequential --start 9 --end 16

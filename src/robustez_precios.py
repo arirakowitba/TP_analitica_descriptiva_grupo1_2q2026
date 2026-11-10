@@ -79,11 +79,9 @@ def model_audit(base):
             "sin_1pct_Cook":data.loc[cook <= np.quantile(cook,.99)],
             "geocodificacion_directa":data[data.metodo_geo.eq("rest_calle_altura")],
             "sin_Puerto_Madero":data[data.barrio_oficial.ne("Puerto Madero")],
-            "solo_Mercado_Libre":data[data.fuente_norm.eq("mercadolibre")],
         }
         # No asumir alias del portal: identificar mayor fuente observada si difiere.
         scenarios["fuente_mayoritaria"] = data[data.fuente_norm.eq(data.fuente_norm.value_counts().index[0])]
-        scenarios.pop("solo_Mercado_Libre")
         for name, subset in scenarios.items():
             if subset.barrio_oficial.nunique() < 15 or len(subset) < 100:
                 sensitivity.append(dict(operacion=operation, escenario=name, n=len(subset),

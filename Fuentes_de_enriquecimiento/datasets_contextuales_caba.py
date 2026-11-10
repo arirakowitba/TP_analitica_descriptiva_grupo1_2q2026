@@ -36,7 +36,7 @@ link_subte_estaciones = 'https://data.buenosaires.gob.ar/dataset/subte-estacione
 # Uso (pasajeros) de las líneas de Subte, por año, desde junio 2013
 link_subte_pasajeros = 'https://data.buenosaires.gob.ar/dataset/subte-estaciones/resource/4c3ae32b-4639-4e83-8224-eaf32040068e/download'
 
-# Corredores de MetroBus (link provisto en la consigna)
+# Corredores de MetroBus (fuente documentada del relevamiento)
 link_metrobus = 'https://data.buenosaires.gob.ar/dataset/metrobus/resource/Juqdkmgo-1431222-resource/download'
 
 # Estaciones de Ferrocarril

@@ -1,66 +1,9 @@
-# Notebooks
+# Cadena de análisis
 
-Esta carpeta reune los notebooks de la PreEntrega 2 y etapas posteriores. El criterio es separar responsabilidades para que la cadena de trabajo sea trazable y facil de revisar.
+Ejecutar desde la raíz: `python -m src.run_notebooks_sequential`. La instalación editable de `requirements.txt` hace disponible el paquete local `src` desde cualquier notebook. El ejecutor guarda outputs y se detiene ante el primer error.
 
-Orden de ejecucion:
+Orden: 01 perfilado; 02 limpieza; 03 nulos; 04 outliers; 05 descripción; 06 fuentes externas; 07 variables y KPIs; 08 hipótesis; 09 listas operativas; 10 PCA; 11 segmentación; 12 modelos de precio; 13 correspondencia de propiedades/operación; 14 diagnósticos complementarios; 15 mart; 16 validación transversal.
 
-1. `01_perfilado_calidad_raw.ipynb`: inventario de archivos crudos, columnas, tipos de datos, nulos iniciales, cardinalidad, rangos y duplicados.
-2. `02_normalizacion_y_limpieza.ipynb`: normalizacion de textos, categorias, barrios, monedas, operaciones, fechas y construccion de datasets preprocesados.
-3. `03_analisis_de_nulos_con_tests_hipotesis.ipynb`: flags de nulidad, matrices faltante-vs-faltante, faltante-vs-cuantitativas y faltantes por label categorico.
-4. `04_outliers.ipynb`: deteccion de valores imposibles y valores extremos mediante flags, sin eliminacion automatica de casos plausibles.
-5. `05_feature_engineering_y_eda_inicial.ipynb`: EDA inicial sobre la base consolidada, sin fuentes externas.
-6. `06_fuentes_externas.ipynb`: snapshot e inventario de fuentes externas, Censo 2022 por comuna, geocodificacion USIG, barrio y comuna oficiales, contexto urbano por barrio y compatibilidad con la unidad de analisis.
-7. `07_feature_engineering.ipynb`: alcance, normalizacion monetaria (dolar MEP), precios comparables, entorno urbano por publicacion, KPIs por barrio y por comuna, diccionario de variables derivadas.
-8. `08_eda_con_fuentes_externas.ipynb`: EDA con la base enriquecida: distribución territorial de las operaciones, precios y tipologías, servicios y demografía, evidencia preliminar para H1, H2a, H2b, H3 y H4, y síntesis de hallazgos, limitaciones y próximos pasos.
+Los notebooks 13–14 son anexos metodológicos: no alimentan una decisión adicional. Los resultados que informan acciones y sus límites se consolidan en el README raíz. Las conclusiones se escriben en Markdown junto a los resultados; tablas y gráficos se recalculan.
 
-Los notebooks usan rutas relativas al repositorio y guardan datasets limpios, consolidados o reportes tecnicos en `data/processed`. La logica reutilizable de los notebooks 06 y 07 esta en `src/`.
-
-El notebook 06 lee las fuentes externas desde `data/raw/externas/` y la geocodificacion desde `data/processed/geocodificacion_usig_cache.csv`; con ambos presentes no hace llamadas de red. Para regenerar la cache desde cero: `python -m src.usig` (aprox. 25 minutos).
-
-## Continuación: PreEntrega 3
-
-La secuencia propuesta parte de la base enriquecida y de los KPIs generados por 07 y 08. Cada notebook lee las salidas versionadas del anterior o los mismos insumos estables de la etapa previa; no vuelve a ejecutar limpieza ni enriquecimiento.
-
-9. `09_cierre_eda_y_priorizacion_kpis.ipynb`: recupera los resultados de 08, jerarquiza KPIs por decisión y construye una señal exploratoria y transparente para localizar comunas que ameritan un diagnóstico adicional.
-10. `10_reduccion_dimensionalidad_perfiles.ipynb`: estandariza servicios y transporte por barrio exportados por 09; aplica PCA y MCA como representaciones exploratorias y exporta coordenadas y cargas.
-11. `11_segmentacion_y_validacion.ipynb`: compara clustering jerárquico y K-means sobre los componentes de PCA; revisa silueta, estabilidad por submuestras e interpretación de perfiles. Los grupos no se interpretan como tipologías definitivas.
-12. `12_modelos_explicativos_precios.ipynb`: estima modelos log-lineales separados para venta y alquiler, compara especificaciones con y sin controles por fuente y reporta asociaciones con incertidumbre agrupada por barrio. No se usa como modelo causal ni como pronóstico.
-13. `13_correspondencia_operacion_perfiles_propiedades.ipynb`: valida si las etiquetas preexistentes (venta, alquiler permanente y temporal) se asocian con clusters no supervisados de atributos comparables de propiedad y entorno. Fija k=3 por la pregunta externa, excluye operación/fuente/precio del espacio, contrasta AMI mediante permutaciones dentro de fuente × barrio (con sensibilidad condicionada solo por fuente) y perfila precios después por modalidad. Cada bloque explicita supuestos y límites; no busca crear nuevas tipologías.
-
-**Orden:** ejecutar 01–08 y luego 09–16. El notebook 13 parte de la base enriquecida estable generada en 07 y agrega un análisis complementario a la segmentación territorial de 10–11; no usa etiquetas de cluster previas como insumo. Las ejecuciones finales deben conservar outputs visibles y producir salidas en `data/processed/` o `data/processed/reports/`.
-
-
-14. `14_mca_y_analisis_factorial.ipynb`: MCA de propiedades con etiquetas suplementarias y análisis factorial barrial condicionado a pruebas de adecuación.
-15. `15_modelo_data_warehouse_dashboard.ipynb`: construcción del mart dimensional y paquete Power BI con tablas CSV, esquema de tipos, relaciones sugeridas, medidas DAX, función de Power Query y guía de importación.
-16. `16_validacion_transversal_y_sensibilidad.ipynb`: auditoría de hipótesis, multiplicidad, centralidad, dependencia espacial, sensibilidad de cortes, estabilidad de PCA/factor, valor incremental de clusters y diagnósticos de H3.
-
-Los notebooks 14–16 se ejecutan después del 13. El notebook 15 genera `data/processed/dashboard_mart/` y `data/processed/dashboard_mart_powerbi.zip`, listo para compartir con el equipo de Power BI; consultar `docs/modelo_data_warehouse_dashboard.md` para granularidades, relaciones y reglas de agregación. El notebook 14 recupera los cuadrados de coausencia del notebook 03 como advertencia sobre patrones de carga/cobertura, no como factores de mercado. El notebook 16 consolida la evidencia final sin reescribir los datos crudos.
-
-**Dashboard publicado:** [abrir Power BI](https://app.powerbi.com/view?r=eyJrIjoiOGQ5ODllNTItODU4MS00OTEyLWFhMWItNjQwMGRhMjExYWE4IiwidCI6ImExZjUwYTk3LTIxYzAtNDlhNy1hOWQ0LWYyNDRlYmI0MmRhNyIsImMiOjR9&pageName=e377f501cce641b0905d).
-
-## Criterio visual de PE3
-
-Los notebooks 09–16 comparten tarjetas compactas para indicadores de lectura rápida y paneles que responden una pregunta concreta. Cada visual se acompaña de una nota de interpretación y límites; los ejes muestran unidades, las comparaciones territoriales conservan tamaños de muestra y los precios/KPIs se presentan en su grano. Las tarjetas son una síntesis del notebook, no reemplazan las tablas ni el dashboard. El estilo común está en `src/pe3_visuals.py`.
-
-## Ejecución completa y secuencial
-
-Desde la raíz del repositorio, instalar dependencias con `python -m pip install -r requirements.txt` y ejecutar:
-
-```bash
-python -m src.run_notebooks_sequential
-```
-
-El ejecutor procesa los notebooks numerados en orden ascendente (01–16), guarda los outputs en cada archivo al terminarlo y se detiene ante el primer error. Corregir ese error y volver a ejecutar desde el inicio para validar la secuencia completa con el mismo estado de datos.
-
-Para retomar solamente PE3 con los insumos de 01–08 ya disponibles:
-
-```bash
-python -m src.run_notebooks_sequential --start 9 --end 16
-```
-
-El ejecutor usa el mismo intérprete para nbconvert y para un kernel temporal;
-no depende del kernelspec `python3` global ni modifica los kernels registrados.
-
-La instalación editable de la raíz hace que `src` esté disponible también al abrir
-un notebook desde esta carpeta. Usar el kernel del entorno instalado; no es
-necesario modificar `sys.path` ni instalar un paquete llamado `src` desde PyPI.
+No repetir scraping: 06 usa snapshots externos y la cache USIG versionada. Conservarla para una ejecución sin red. Dependencias entre etapas y depuración: `docs/depuracion_datos.md`. Instrucciones para dashboard: `docs/ajustes_dashboard.md`.

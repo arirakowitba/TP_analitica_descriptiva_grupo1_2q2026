@@ -1,0 +1,33 @@
+[1/16] Ejecutando notebooks\01_perfilado_calidad_raw.ipynb
+OK: outputs guardados en notebooks\01_perfilado_calidad_raw.ipynb
+[2/16] Ejecutando notebooks\02_normalizacion_y_limpieza.ipynb
+OK: outputs guardados en notebooks\02_normalizacion_y_limpieza.ipynb
+[3/16] Ejecutando notebooks\03_analisis_de_nulos_con_tests_hipotesis.ipynb
+OK: outputs guardados en notebooks\03_analisis_de_nulos_con_tests_hipotesis.ipynb
+[4/16] Ejecutando notebooks\04_outliers.ipynb
+OK: outputs guardados en notebooks\04_outliers.ipynb
+[5/16] Ejecutando notebooks\05_feature_engineering_y_eda_inicial.ipynb
+OK: outputs guardados en notebooks\05_feature_engineering_y_eda_inicial.ipynb
+[6/16] Ejecutando notebooks\06_fuentes_externas.ipynb
+OK: outputs guardados en notebooks\06_fuentes_externas.ipynb
+[7/16] Ejecutando notebooks\07_feature_engineering.ipynb
+OK: outputs guardados en notebooks\07_feature_engineering.ipynb
+[8/16] Ejecutando notebooks\08_eda_con_fuentes_externas.ipynb
+OK: outputs guardados en notebooks\08_eda_con_fuentes_externas.ipynb
+[9/16] Ejecutando notebooks\09_cierre_eda_y_priorizacion_kpis.ipynb
+OK: outputs guardados en notebooks\09_cierre_eda_y_priorizacion_kpis.ipynb
+[10/16] Ejecutando notebooks\10_reduccion_dimensionalidad_perfiles.ipynb
+OK: outputs guardados en notebooks\10_reduccion_dimensionalidad_perfiles.ipynb
+[11/16] Ejecutando notebooks\11_segmentacion_y_validacion.ipynb
+OK: outputs guardados en notebooks\11_segmentacion_y_validacion.ipynb
+[12/16] Ejecutando notebooks\12_modelos_explicativos_precios.ipynb
+OK: outputs guardados en notebooks\12_modelos_explicativos_precios.ipynb
+[13/16] Ejecutando notebooks\13_correspondencia_operacion_perfiles_propiedades.ipynb
+OK: outputs guardados en notebooks\13_correspondencia_operacion_perfiles_propiedades.ipynb
+[14/16] Ejecutando notebooks\14_mca_y_analisis_factorial.ipynb
+OK: outputs guardados en notebooks\14_mca_y_analisis_factorial.ipynb
+[15/16] Ejecutando notebooks\15_modelo_data_warehouse_dashboard.ipynb
+OK: outputs guardados en notebooks\15_modelo_data_warehouse_dashboard.ipynb
+[16/16] Ejecutando notebooks\16_validacion_transversal_y_sensibilidad.ipynb
+OK: outputs guardados en notebooks\16_validacion_transversal_y_sensibilidad.ipynb
+Ejecuci�n completa: todos los notebooks terminaron sin errores.

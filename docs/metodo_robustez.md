@@ -1,4 +1,4 @@
-# Protocolo de reconciliación y robustez PE3
+# Protocolo de reconciliación y robustez territorial
 
 Este protocolo documenta la evidencia que sustenta las interpretaciones finales
 del README. La auditoría analítica no modifica fuentes crudas; separa limpieza,
@@ -10,7 +10,7 @@ dashboard visual se publica por separado a partir de ese modelo reproducible.
 | Notebook | Reconciliación o validación |
 |---|---|
 | 08 | Elimina cifras narrativas desactualizadas; síntesis calculada desde tablas y lectura por hipótesis. |
-| 09 | Lectura calculada del soporte y de las tres señales; remisión a sensibilidad de cortes. |
+| 09 | Listas por decisión, soporte, incertidumbre, revisión de primeros puestos y sensibilidad. |
 | 10 | Interpreta las variables realmente activas, varianza, pesos y calidad del plano; normaliza coordenadas principales MCA por masa de fila. |
 | 11 | Perfiles con tamaños/KPIs reales; no emite inferencia asintótica si hay grupos con menos de cinco barrios; distingue descripción postselección y validación externa. |
 | 12 | Efectos e IC calculados desde cada especificación; elimina atribuciones no medidas a ruido, tranquilidad o preferencias y afirmaciones de ausencia de sesgo. |

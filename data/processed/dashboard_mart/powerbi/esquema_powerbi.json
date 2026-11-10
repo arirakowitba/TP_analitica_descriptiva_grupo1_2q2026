@@ -172,6 +172,66 @@
           "tipo_pandas": "str"
         },
         {
+          "nombre": "en_alcance_territorial",
+          "tipo_sugerido": "Text",
+          "tipo_pandas": "bool"
+        },
+        {
+          "nombre": "lat",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "lon",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "precio_venta_usd",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "precio_mensual_usd",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "precio_m2_usd_fuera_rango_flag",
+          "tipo_sugerido": "Text",
+          "tipo_pandas": "bool"
+        },
+        {
+          "nombre": "precio_mensual_usd_fuera_rango_flag",
+          "tipo_sugerido": "Text",
+          "tipo_pandas": "bool"
+        },
+        {
+          "nombre": "precio_venta_usd_fuera_rango_flag",
+          "tipo_sugerido": "Text",
+          "tipo_pandas": "bool"
+        },
+        {
+          "nombre": "superficie_ref_m2_valor_invalido_flag",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "superficie_ref_m2_outlier_p01_p99_flag",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "tc_mep",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "fecha_tc",
+          "tipo_sugerido": "Text",
+          "tipo_pandas": "str"
+        },
+        {
           "nombre": "precio",
           "tipo_sugerido": "Decimal",
           "tipo_pandas": "float64"
@@ -205,6 +265,36 @@
           "nombre": "cantidad_publicaciones",
           "tipo_sugerido": "Int64",
           "tipo_pandas": "int64"
+        },
+        {
+          "nombre": "cantidad_publicaciones_territoriales",
+          "tipo_sugerido": "Int64",
+          "tipo_pandas": "int64"
+        },
+        {
+          "nombre": "regla_moneda",
+          "tipo_sugerido": "Text",
+          "tipo_pandas": "str"
+        },
+        {
+          "nombre": "precio_m2_dashboard",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "precio_venta_dashboard",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "precio_mensual_dashboard",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
+        },
+        {
+          "nombre": "superficie_dashboard_m2",
+          "tipo_sugerido": "Decimal",
+          "tipo_pandas": "float64"
         },
         {
           "nombre": "fuente_key",

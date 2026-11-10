@@ -1,0 +1,5 @@
+operacion,variable,n,mediana,regla
+venta,precio_m2_usd,43130,2717.391304347826,Mediana sobre avisos normalizados no marcados fuera de rango
+alquiler,precio_m2_usd,10293,13.86864626882984,Mediana sobre avisos normalizados no marcados fuera de rango
+venta,precio_venta_usd,43256,138000.0,Mediana sobre avisos normalizados no marcados fuera de rango
+alquiler,precio_mensual_usd,10385,586.2428348097967,Mediana sobre avisos normalizados no marcados fuera de rango

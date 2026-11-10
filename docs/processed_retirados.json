@@ -1,0 +1,137 @@
+[
+  {
+    "archivo": "df_preprocesado_airbnb_temp_con_flags_nulos_v1.csv",
+    "bytes": 20272292,
+    "motivo": "Snapshot previo a ajustes sin consumidor; 04 exige las bases post-ajustes de 03"
+  },
+  {
+    "archivo": "df_preprocesado_airbnb_temp_con_outliers_v1.csv",
+    "bytes": 20632349,
+    "motivo": "Copia individual sin consumidor; 04 exporta el consolidado con flags"
+  },
+  {
+    "archivo": "df_preprocesado_argenprop_alq_con_flags_nulos_v1.csv",
+    "bytes": 196464,
+    "motivo": "Snapshot previo a ajustes sin consumidor; 04 exige las bases post-ajustes de 03"
+  },
+  {
+    "archivo": "df_preprocesado_argenprop_alq_con_outliers_v1.csv",
+    "bytes": 185843,
+    "motivo": "Copia individual sin consumidor; 04 exporta el consolidado con flags"
+  },
+  {
+    "archivo": "df_preprocesado_argenprop_con_flags_nulos_v1.csv",
+    "bytes": 448759,
+    "motivo": "Snapshot previo a ajustes sin consumidor; 04 exige las bases post-ajustes de 03"
+  },
+  {
+    "archivo": "df_preprocesado_argenprop_con_outliers_v1.csv",
+    "bytes": 454660,
+    "motivo": "Copia individual sin consumidor; 04 exporta el consolidado con flags"
+  },
+  {
+    "archivo": "df_preprocesado_argenprop_vtas_con_flags_nulos_v1.csv",
+    "bytes": 254755,
+    "motivo": "Snapshot previo a ajustes sin consumidor; 04 exige las bases post-ajustes de 03"
+  },
+  {
+    "archivo": "df_preprocesado_argenprop_vtas_con_outliers_v1.csv",
+    "bytes": 244417,
+    "motivo": "Copia individual sin consumidor; 04 exporta el consolidado con flags"
+  },
+  {
+    "archivo": "df_preprocesado_meli_alq_con_flags_nulos_v1.csv",
+    "bytes": 12309248,
+    "motivo": "Snapshot previo a ajustes sin consumidor; 04 exige las bases post-ajustes de 03"
+  },
+  {
+    "archivo": "df_preprocesado_meli_alq_con_outliers_v1.csv",
+    "bytes": 12341460,
+    "motivo": "Copia individual sin consumidor; 04 exporta el consolidado con flags"
+  },
+  {
+    "archivo": "df_preprocesado_meli_alq_temp_con_flags_nulos_v1.csv",
+    "bytes": 5872324,
+    "motivo": "Snapshot previo a ajustes sin consumidor; 04 exige las bases post-ajustes de 03"
+  },
+  {
+    "archivo": "df_preprocesado_meli_alq_temp_con_outliers_v1.csv",
+    "bytes": 5958996,
+    "motivo": "Copia individual sin consumidor; 04 exporta el consolidado con flags"
+  },
+  {
+    "archivo": "df_preprocesado_meli_vtas_con_flags_nulos_v1.csv",
+    "bytes": 52806011,
+    "motivo": "Snapshot previo a ajustes sin consumidor; 04 exige las bases post-ajustes de 03"
+  },
+  {
+    "archivo": "df_preprocesado_meli_vtas_con_outliers_v1.csv",
+    "bytes": 53594680,
+    "motivo": "Copia individual sin consumidor; 04 exporta el consolidado con flags"
+  },
+  {
+    "archivo": "df_preprocesado_zonaprop_alq_con_flags_nulos_v1.csv",
+    "bytes": 1872234,
+    "motivo": "Snapshot previo a ajustes sin consumidor; 04 exige las bases post-ajustes de 03"
+  },
+  {
+    "archivo": "df_preprocesado_zonaprop_alq_con_outliers_v1.csv",
+    "bytes": 1807353,
+    "motivo": "Copia individual sin consumidor; 04 exporta el consolidado con flags"
+  },
+  {
+    "archivo": "df_preprocesado_zonaprop_con_flags_nulos_v1.csv",
+    "bytes": 4117289,
+    "motivo": "Snapshot previo a ajustes sin consumidor; 04 exige las bases post-ajustes de 03"
+  },
+  {
+    "archivo": "df_preprocesado_zonaprop_con_outliers_v1.csv",
+    "bytes": 4146928,
+    "motivo": "Copia individual sin consumidor; 04 exporta el consolidado con flags"
+  },
+  {
+    "archivo": "df_preprocesado_zonaprop_vtas_con_flags_nulos_v1.csv",
+    "bytes": 2241857,
+    "motivo": "Snapshot previo a ajustes sin consumidor; 04 exige las bases post-ajustes de 03"
+  },
+  {
+    "archivo": "df_preprocesado_zonaprop_vtas_con_outliers_v1.csv",
+    "bytes": 2186337,
+    "motivo": "Copia individual sin consumidor; 04 exporta el consolidado con flags"
+  },
+  {
+    "archivo": "df_publicaciones_consolidadas_con_flags_nulos_v1.csv",
+    "bytes": 68452568,
+    "motivo": "Consolidacion preliminar sin consumidor; 05-07 exigen consolidado final de 04"
+  },
+  {
+    "archivo": "df_publicaciones_consolidadas_v1.csv",
+    "bytes": 62841339,
+    "motivo": "Consolidacion preliminar sin consumidor; 05-07 exigen consolidado final de 04"
+  },
+  {
+    "archivo": "reports/pe3_senales_priorizacion_comunas_v1.csv",
+    "bytes": 6177,
+    "motivo": "Salida reemplazada: regla conjuntiva retirada o contraste sin soporte; ver listas operativas y validacion LOO"
+  },
+  {
+    "archivo": "reports/pe3_diferencias_kpis_entre_clusters_v1.csv",
+    "bytes": 679,
+    "motivo": "Salida reemplazada: regla conjuntiva retirada o contraste sin soporte; ver listas operativas y validacion LOO"
+  },
+  {
+    "archivo": "reports/robustez_pe3/sensibilidad_priorizacion_v2.csv",
+    "bytes": 23233,
+    "motivo": "Salida reemplazada: regla conjuntiva retirada o contraste sin soporte; ver listas operativas y validacion LOO"
+  },
+  {
+    "archivo": "reports/robustez_pe3/estabilidad_priorizacion_v2.csv",
+    "bytes": 284,
+    "motivo": "Salida reemplazada: regla conjuntiva retirada o contraste sin soporte; ver listas operativas y validacion LOO"
+  },
+  {
+    "archivo": "reports/robustez_pe3/sensibilidad_cortes_v2.png",
+    "bytes": 37231,
+    "motivo": "Salida reemplazada: regla conjuntiva retirada o contraste sin soporte; ver listas operativas y validacion LOO"
+  }
+]

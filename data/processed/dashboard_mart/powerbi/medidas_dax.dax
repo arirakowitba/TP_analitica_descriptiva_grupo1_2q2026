@@ -1,5 +1,13 @@
-// Medidas iniciales. Usar cada una en el grano indicado y validar filtros.
-Publicaciones observadas = SUM(fact_publicacion[cantidad_publicaciones])
+// Precios: mediana de avisos validos normalizados; n cuenta exactamente esos precios.
+Venta USD/m2 = CALCULATE(MEDIAN(fact_publicacion[precio_m2_dashboard]), KEEPFILTERS(dim_operacion[operacion] = "venta"))
+Alquiler USD/m2/mes = CALCULATE(MEDIAN(fact_publicacion[precio_m2_dashboard]), KEEPFILTERS(dim_operacion[operacion] = "alquiler"))
+Alquiler mensual USD = CALCULATE(MEDIAN(fact_publicacion[precio_mensual_dashboard]), KEEPFILTERS(dim_operacion[operacion] = "alquiler"))
+Venta total USD = CALCULATE(MEDIAN(fact_publicacion[precio_venta_dashboard]), KEEPFILTERS(dim_operacion[operacion] = "venta"))
+N venta m2 = CALCULATE(COUNT(fact_publicacion[precio_m2_dashboard]), KEEPFILTERS(dim_operacion[operacion] = "venta"))
+N alquiler m2 = CALCULATE(COUNT(fact_publicacion[precio_m2_dashboard]), KEEPFILTERS(dim_operacion[operacion] = "alquiler"))
+N alquiler mensual = CALCULATE(COUNT(fact_publicacion[precio_mensual_dashboard]), KEEPFILTERS(dim_operacion[operacion] = "alquiler"))
+Airbnb sobre alquiler permanente = DIVIDE(CALCULATE(SUM(fact_barrio_operacion[cantidad_publicaciones]), dim_operacion[operacion] = "airbnb"), CALCULATE(SUM(fact_barrio_operacion[cantidad_publicaciones]), dim_operacion[operacion] = "alquiler"))
+Publicaciones observadas = SUM(fact_publicacion[cantidad_publicaciones_territoriales])
 Avisos por barrio y operación = SUM(fact_barrio_operacion[cantidad_publicaciones])
 Avisos por comuna y operación = SUM(fact_comuna_operacion[cantidad_publicaciones])
 Hogares inquilinos (Censo 2022) = SUM(fact_censo_comuna[hogares_inquilinos])

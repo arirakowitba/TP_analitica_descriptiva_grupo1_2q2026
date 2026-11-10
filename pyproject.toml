@@ -10,7 +10,7 @@ requires-python = ">=3.10"
 dependencies = [
     "beautifulsoup4", "ipykernel", "jupyter", "lxml", "matplotlib",
     "nbconvert", "numpy", "openpyxl", "pandas", "playwright", "requests",
-    "scikit-learn", "scipy", "seaborn", "statsmodels", "truststore", "urllib3",
+    "scikit-learn", "scipy", "seaborn", "statsmodels", "truststore", "urllib3", "threadpoolctl",
 ]
 
 [tool.setuptools]

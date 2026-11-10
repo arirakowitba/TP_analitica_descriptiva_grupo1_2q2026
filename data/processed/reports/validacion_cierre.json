@@ -1,0 +1,130 @@
+{
+  "fecha": "2026-11-10",
+  "python": "3.12.7",
+  "notebooks": [
+    {
+      "notebook": "01_perfilado_calidad_raw.ipynb",
+      "celdas_codigo": 11,
+      "errores": 0
+    },
+    {
+      "notebook": "02_normalizacion_y_limpieza.ipynb",
+      "celdas_codigo": 20,
+      "errores": 0
+    },
+    {
+      "notebook": "03_analisis_de_nulos_con_tests_hipotesis.ipynb",
+      "celdas_codigo": 24,
+      "errores": 0
+    },
+    {
+      "notebook": "04_outliers.ipynb",
+      "celdas_codigo": 19,
+      "errores": 0
+    },
+    {
+      "notebook": "05_feature_engineering_y_eda_inicial.ipynb",
+      "celdas_codigo": 18,
+      "errores": 0
+    },
+    {
+      "notebook": "06_fuentes_externas.ipynb",
+      "celdas_codigo": 14,
+      "errores": 0
+    },
+    {
+      "notebook": "07_feature_engineering.ipynb",
+      "celdas_codigo": 16,
+      "errores": 0
+    },
+    {
+      "notebook": "08_eda_con_fuentes_externas.ipynb",
+      "celdas_codigo": 29,
+      "errores": 0
+    },
+    {
+      "notebook": "09_cierre_eda_y_priorizacion_kpis.ipynb",
+      "celdas_codigo": 6,
+      "errores": 0
+    },
+    {
+      "notebook": "10_reduccion_dimensionalidad_perfiles.ipynb",
+      "celdas_codigo": 5,
+      "errores": 0
+    },
+    {
+      "notebook": "11_segmentacion_y_validacion.ipynb",
+      "celdas_codigo": 5,
+      "errores": 0
+    },
+    {
+      "notebook": "12_modelos_explicativos_precios.ipynb",
+      "celdas_codigo": 3,
+      "errores": 0
+    },
+    {
+      "notebook": "13_correspondencia_operacion_perfiles_propiedades.ipynb",
+      "celdas_codigo": 7,
+      "errores": 0
+    },
+    {
+      "notebook": "14_mca_y_analisis_factorial.ipynb",
+      "celdas_codigo": 7,
+      "errores": 0
+    },
+    {
+      "notebook": "15_modelo_data_warehouse_dashboard.ipynb",
+      "celdas_codigo": 3,
+      "errores": 0
+    },
+    {
+      "notebook": "16_validacion_transversal_y_sensibilidad.ipynb",
+      "celdas_codigo": 8,
+      "errores": 0
+    }
+  ],
+  "tests": 13,
+  "retirados": 27,
+  "bytes_retirados": 333305767,
+  "raw_sin_cambios": true,
+  "tarjetas": [
+    {
+      "operacion": "venta",
+      "variable": "precio_m2_usd",
+      "n": 43130,
+      "mediana": 2717.391304347826,
+      "regla": "Mediana sobre avisos normalizados no marcados fuera de rango"
+    },
+    {
+      "operacion": "alquiler",
+      "variable": "precio_m2_usd",
+      "n": 10293,
+      "mediana": 13.86864626882984,
+      "regla": "Mediana sobre avisos normalizados no marcados fuera de rango"
+    },
+    {
+      "operacion": "venta",
+      "variable": "precio_venta_usd",
+      "n": 43256,
+      "mediana": 138000.0,
+      "regla": "Mediana sobre avisos normalizados no marcados fuera de rango"
+    },
+    {
+      "operacion": "alquiler",
+      "variable": "precio_mensual_usd",
+      "n": 10385,
+      "mediana": 586.2428348097967,
+      "regla": "Mediana sobre avisos normalizados no marcados fuera de rango"
+    }
+  ],
+  "versiones": {
+    "pandas": "3.1.0",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "statsmodels": "0.15.0",
+    "matplotlib": "3.11.2",
+    "nbconvert": "7.17.2",
+    "ipykernel": "7.4.0"
+  }
+}

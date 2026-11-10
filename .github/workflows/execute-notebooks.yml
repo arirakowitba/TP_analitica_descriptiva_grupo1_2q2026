@@ -3,12 +3,10 @@ name: Ejecutar notebooks secuencialmente
 on:
   push:
     branches: [main]
-    paths:
-      - "run-notebooks-validation.txt"
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   execute-notebooks:
@@ -17,8 +15,6 @@ jobs:
     steps:
       - name: Descargar repositorio
         uses: actions/checkout@v7
-        with:
-          ref: main
       - name: Configurar Python
         uses: actions/setup-python@v7
         with:
@@ -26,6 +22,7 @@ jobs:
           cache: pip
           cache-dependency-path: |
             requirements.txt
+            constraints.txt
             pyproject.toml
       - name: Instalar dependencias
         run: python -m pip install --upgrade pip && python -m pip install -r requirements.txt
@@ -33,6 +30,10 @@ jobs:
         run: python -m unittest discover -s tests -v
       - name: Ejecutar notebooks 01 a 16
         run: python -m src.run_notebooks_sequential
+      - name: Retirar salidas obsoletas enumeradas
+        run: python -m src.depurar_processed --apply
+      - name: Verificar mart y coherencia final
+        run: python -m src.validar_cierre
       - name: Guardar notebooks y registro aunque haya error
         if: always()
         uses: actions/upload-artifact@v7
@@ -40,15 +41,6 @@ jobs:
           name: notebooks-ejecutados
           path: |
             notebooks/*.ipynb
-            data/processed/reports/robustez_pe3/
+            data/processed/reports/
+            data/processed/dashboard_mart/powerbi/
           retention-days: 7
-      - name: Guardar outputs ejecutados en main
-        if: success()
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add notebooks/*.ipynb
-          if ! git diff --cached --quiet; then
-            git commit -m "ejecuta notebooks 01 a 16 en secuencia"
-            git push origin HEAD:main
-          fi

@@ -1,25 +1,7 @@
 # Datos procesados
 
-Esta carpeta debe contener las salidas limpias, consolidadas o enriquecidas que se usen en notebooks y analisis posteriores.
+Esta carpeta conserva dependencias entre etapas y salidas finales. Ejecutar los notebooks 01–16 en orden para regenerarlas desde snapshots locales y cache USIG. No editar los CSV a mano.
 
-## Criterio esperado
+Las bases preprocesadas alimentan el tratamiento de nulos; las bases post-ajustes alimentan outliers; el consolidado con flags alimenta descripción y enriquecimiento. La base enriquecida, KPIs, scores, asignaciones, reportes y mart sostienen los resultados finales.
 
-Cada dataset procesado debe poder rastrearse hasta sus fuentes crudas e indicar:
-
-- archivos crudos utilizados;
-- fecha o version de procesamiento;
-- filtros aplicados;
-- columnas creadas o transformadas;
-- registros eliminados, corregidos o imputados;
-- limitaciones conocidas.
-
-## Estado actual
-
-Esta carpeta contiene las salidas generadas por los notebooks:
-
-- datasets preprocesados por fuente y tipo de operacion;
-- bases consolidadas para EDA;
-- diccionarios de datos;
-- reportes tecnicos dentro de `reports/`.
-
-Los notebooks deben vivir en `notebooks/`. Esta carpeta queda reservada para datos procesados y anexos reproducibles.
+Ver `docs/depuracion_datos.md` y `docs/processed_retirados.json` para copias retiradas, motivos y dependencias. Las exportaciones innecesarias también se eliminaron del código; no se recrean al ejecutar la cadena final. Los reportes conservan evidencia de calidad y análisis, sin replicar datasets completos.

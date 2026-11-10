@@ -1,4 +1,4 @@
-# Modelo dimensional para el dashboard PE3
+# Modelo dimensional para el dashboard
 
 **Informe publicado:** [abrir el dashboard de Power BI](https://app.powerbi.com/view?r=eyJrIjoiOGQ5ODllNTItODU4MS00OTEyLWFhMWItNjQwMGRhMjExYWE4IiwidCI6ImExZjUwYTk3LTIxYzAtNDlhNy1hOWQ0LWYyNDRlYmI0MmRhNyIsImMiOjR9&pageName=e377f501cce641b0905d). El README principal documenta sus seis páginas, hallazgos y relación con H1–H4.
 
@@ -28,10 +28,10 @@ erDiagram
 | Tabla | Una fila representa |
 |---|---|
 | `fact_publicacion` | fuente × id × operación |
-| `fact_barrio_operacion` | barrio × corte PE2 × operación |
-| `fact_kpi_barrio` | barrio × corte PE2 |
-| `fact_comuna_operacion` | comuna × corte PE2 × operación |
-| `fact_kpi_comuna` | comuna × corte PE2, métricas de mercado |
+| `fact_barrio_operacion` | barrio × corte 2026 × operación |
+| `fact_kpi_barrio` | barrio × corte 2026 |
+| `fact_comuna_operacion` | comuna × corte 2026 × operación |
+| `fact_kpi_comuna` | comuna × corte 2026, métricas de mercado |
 | `fact_contexto_barrio` | barrio × versión de contexto |
 | `fact_censo_comuna` | comuna × Censo 2022 |
 

@@ -132,7 +132,7 @@ Limitaciones:
 - Airbnb no informa superficie en m2, direccion exacta ni expensas.
 - No debe mezclarse la serie corta con la mensual sin explicitar el regimen de precio.
 
-## Criterios generales para la PreEntrega 2
+## Criterios generales para la análisis
 
 - Los archivos en `data/raw` son evidencia cruda y no deben modificarse.
 - Los datasets limpios y consolidados deben guardarse en `data/processed`.

@@ -1,4 +1,4 @@
-"""Visuales reutilizables para la narrativa de los notebooks PE3."""
+"""Visuales reutilizables para la narrativa de los notebooks análisis."""
 import math
 import matplotlib.pyplot as plt
 from matplotlib.patches import FancyBboxPatch

@@ -1,3 +1,4 @@
 # Ejecutar desde la raíz del repositorio. Dependencias en pyproject.toml.
 # Instala también el paquete local src; no instalar "src" desde PyPI.
+-c constraints.txt
 -e .
