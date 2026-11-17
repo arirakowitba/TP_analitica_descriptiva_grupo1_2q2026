@@ -16,6 +16,20 @@ Las decisiones se mantienen separadas:
 
 La accesibilidad y las tipologías contextualizan esas listas. No hay evidencia para asignar obras, subsidios o fiscalizaciones automáticamente. Los perfiles multivariados describen el entorno y no agregan una cuarta prioridad.
 
+## Lectura ejecutiva para el Instituto
+
+**Mensaje central:** la concentración de avisos temporarios coexiste con precios de alquiler elevados, pero **no demuestra desplazamiento ni falta de oferta permanente**. H4 encuentra co-ubicación con la oferta permanente publicada; la respuesta razonable es priorizar diagnósticos y monitoreo, no asignar intervenciones automáticas.
+
+| Decisión | Señal que la activa | Primera acción | Condición antes de intervenir |
+|---|---|---|---|
+| Monitorear concentración temporaria | Airbnb por 1.000 viviendas y precio de alquiler; comunas 14, 1, 2 y 13 como primeros casos revisados | Desagregar por barrio, fuente y tipología; seguir las brechas temporario/permanente | Verificar captura, registros administrativos, ocupación y características de las estadías |
+| Investigar disponibilidad permanente | Menos avisos de alquiler por 1.000 hogares inquilinos; comunas 8, 4 y 9 como primeros casos revisados | Auditar cobertura de portales y contrastar fuentes locales | No equiparar avisos observados con stock disponible ni demanda insatisfecha |
+| Investigar presión de precios | Mayor mediana válida de alquiler en USD/m²/mes; comunas 1, 14 y 13 como primeros casos revisados | Comparar composición y moneda, con n e intervalos de incertidumbre | Incorporar ingresos, contratos y gastos antes de afirmar problemas de asequibilidad |
+
+Estas son **tres listas distintas, no un ranking único de necesidades**. Los primeros puestos proceden de la revisión manual documentada en [revisión de listas](docs/revision_listas_operativas.md) y se recalculan en el notebook 09. Los indicadores ordenan observaciones del corte; no miden por sí solos impacto causal, stock habitacional ni rentabilidad.
+
+Para una lectura de dirección: comenzar por esta tabla, consultar las listas y sus limitaciones, después verificar el método en notebooks. PCA, MCA, análisis factorial y clusters quedan como diagnóstico de contexto, no como cuatro hallazgos independientes ni como sustitutos de la unidad territorial operativa.
+
 ## Resultados y límites
 
 | Hipótesis | Qué se calcula | Lectura final | Evidencia |
