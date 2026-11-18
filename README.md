@@ -16,6 +16,24 @@ Las decisiones se mantienen separadas:
 
 La accesibilidad y las tipologías contextualizan esas listas. No hay evidencia para asignar obras, subsidios o fiscalizaciones automáticamente. Los perfiles multivariados describen el entorno y no agregan una cuarta prioridad.
 
+## Contexto y alcance del proyecto
+
+El mercado inmobiliario porteño combina venta de inmuebles, alquiler permanente y alojamientos temporarios, modalidades que compiten por espacio urbano pero responden a necesidades y condiciones diferentes. Para el **Instituto de Vivienda de la Ciudad (IVC)**, la finalidad de este análisis no es maximizar rentabilidad privada: es identificar territorios donde convenga profundizar el diagnóstico de la oferta habitacional, su relación con los hogares y el acceso al entorno urbano. Las decisiones requieren coordinación con otras áreas públicas y evidencia adicional antes de adoptar medidas.
+
+### Por qué importa el contexto
+
+La inflación, el acceso limitado al crédito hipotecario y la dolarización habitual de los precios de compraventa condicionan la posibilidad de comprar o alquilar. Los alquileres pueden publicarse en pesos o dólares: comparar sus importes sin respetar moneda y fecha de referencia distorsiona el diagnóstico. El pipeline conserva la moneda original y normaliza importes en ARS mediante el MEP correspondiente a la fecha; **precio de publicación no equivale a precio de cierre ni a costo total del hogar**. Los cambios del régimen contractual y las obligaciones específicas del alquiler temporario también afectan incentivos, pero el corte utilizado no permite atribuirles los patrones observados. Este encuadre económico y regulatorio se desarrolló en la formulación original del proyecto a partir de [indicadores oficiales de la Ciudad](https://www.estadisticaciudad.gob.ar/eyc/wp-content/uploads/2026/08/Indicadores-26_08_26.pdf) y un [informe oficial sobre alquileres](https://www.argentina.gob.ar/sites/default/files/ley_alquileres_informe_1410.pdf).
+
+### Qué se observa y qué no
+
+- **Período y territorio:** publicaciones residenciales relevadas principalmente entre agosto y septiembre de 2026 en CABA. Es un corte transversal, no una serie temporal.
+- **Fuentes y operaciones:** Mercado Libre, ZonaProp y ArgenProp para venta y alquiler permanente, más Airbnb para alquiler temporario; la cobertura, las condiciones y las poblaciones de anuncios difieren por portal.
+- **Inmuebles y unidad:** principalmente departamentos, casas y PH de uso residencial, con exclusión de usos comerciales. La unidad es el **aviso por portal y operación**, no una propiedad deduplicada a nivel mercado ni una transacción. Airbnb se restringe a alojamientos completos para la comparación territorial.
+- **Escala:** barrio para descripción de oferta y servicios donde la geocodificación lo permite; comuna para integrar información censal y ordenar las decisiones. Se utilizan datos del Censo 2022 como denominadores de un corte de avisos posterior.
+- **Precio temporario:** la consulta de Airbnb se fijó para dos huéspedes y estadías comparables de cinco y treinta noches con inicio el 20 de octubre de 2026. Es una cotización condicionada por la búsqueda, sin ocupación efectiva; no se calcula precio por m² de Airbnb porque no hay superficie comparable.
+
+En la formulación del proyecto, **desajuste territorial de la oferta habitacional** designa una diferencia observable entre composición de publicaciones y estructura demográfica/habitacional, oferta permanente relativa, concentración temporaria o accesibilidad urbana. Aquí esas dimensiones se evalúan separadamente: una señal territorial no acredita déficit habitacional, demanda insatisfecha, desplazamiento ni sustitución causal. Por eso el producto final propone **monitoreo y verificación**, con reglas auditables y límites explícitos, antes de recomendar intervenciones.
+
 ## Lectura ejecutiva para el Instituto
 
 **Mensaje central:** la concentración de avisos temporarios coexiste con precios de alquiler elevados, pero **no demuestra desplazamiento ni falta de oferta permanente**. H4 encuentra co-ubicación con la oferta permanente publicada; la respuesta razonable es priorizar diagnósticos y monitoreo, no asignar intervenciones automáticas.
